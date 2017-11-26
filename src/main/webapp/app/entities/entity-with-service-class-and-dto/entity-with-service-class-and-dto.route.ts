@@ -1,9 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 
 import { UserRouteAccessService } from '../../shared';
-import { JhiPaginationUtil } from 'ng-jhipster';
-
 import { EntityWithServiceClassAndDTOComponent } from './entity-with-service-class-and-dto.component';
 import { EntityWithServiceClassAndDTODetailComponent } from './entity-with-service-class-and-dto-detail.component';
 import { EntityWithServiceClassAndDTOPopupComponent } from './entity-with-service-class-and-dto-dialog.component';

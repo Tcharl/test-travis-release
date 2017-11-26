@@ -1,9 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 
 import { UserRouteAccessService } from '../../shared';
-import { JhiPaginationUtil } from 'ng-jhipster';
-
 import { FieldTestMapstructEntityComponent } from './field-test-mapstruct-entity.component';
 import { FieldTestMapstructEntityDetailComponent } from './field-test-mapstruct-entity-detail.component';
 import { FieldTestMapstructEntityPopupComponent } from './field-test-mapstruct-entity-dialog.component';

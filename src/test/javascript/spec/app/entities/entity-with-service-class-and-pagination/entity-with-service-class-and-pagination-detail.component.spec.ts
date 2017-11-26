@@ -1,11 +1,8 @@
 /* tslint:disable max-line-length */
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
-import { DatePipe } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
-import { JhiDateUtils, JhiDataUtils, JhiEventManager } from 'ng-jhipster';
+
 import { JhipsterSampleApplicationTestModule } from '../../../test.module';
-import { MockActivatedRoute } from '../../../helpers/mock-route.service';
 import { EntityWithServiceClassAndPaginationDetailComponent } from '../../../../../../main/webapp/app/entities/entity-with-service-class-and-pagination/entity-with-service-class-and-pagination-detail.component';
 import { EntityWithServiceClassAndPaginationService } from '../../../../../../main/webapp/app/entities/entity-with-service-class-and-pagination/entity-with-service-class-and-pagination.service';
 import { EntityWithServiceClassAndPagination } from '../../../../../../main/webapp/app/entities/entity-with-service-class-and-pagination/entity-with-service-class-and-pagination.model';
@@ -22,17 +19,10 @@ describe('Component Tests', () => {
                 imports: [JhipsterSampleApplicationTestModule],
                 declarations: [EntityWithServiceClassAndPaginationDetailComponent],
                 providers: [
-                    JhiDateUtils,
-                    JhiDataUtils,
-                    DatePipe,
-                    {
-                        provide: ActivatedRoute,
-                        useValue: new MockActivatedRoute({id: 123})
-                    },
-                    EntityWithServiceClassAndPaginationService,
-                    JhiEventManager
+                    EntityWithServiceClassAndPaginationService
                 ]
-            }).overrideTemplate(EntityWithServiceClassAndPaginationDetailComponent, '')
+            })
+            .overrideTemplate(EntityWithServiceClassAndPaginationDetailComponent, '')
             .compileComponents();
         }));
 
@@ -44,16 +34,16 @@ describe('Component Tests', () => {
 
         describe('OnInit', () => {
             it('Should call load all on init', () => {
-            // GIVEN
+                // GIVEN
 
-            spyOn(service, 'find').and.returnValue(Observable.of(new EntityWithServiceClassAndPagination(10)));
+                spyOn(service, 'find').and.returnValue(Observable.of(new EntityWithServiceClassAndPagination(123)));
 
-            // WHEN
-            comp.ngOnInit();
+                // WHEN
+                comp.ngOnInit();
 
-            // THEN
-            expect(service.find).toHaveBeenCalledWith(123);
-            expect(comp.entityWithServiceClassAndPagination).toEqual(jasmine.objectContaining({id: 10}));
+                // THEN
+                expect(service.find).toHaveBeenCalledWith(123);
+                expect(comp.entityWithServiceClassAndPagination).toEqual(jasmine.objectContaining({id: 123}));
             });
         });
     });
