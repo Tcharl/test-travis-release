@@ -4,7 +4,7 @@ import { Response } from '@angular/http';
 
 import { Observable } from 'rxjs/Rx';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { JhiEventManager, JhiAlertService, JhiDataUtils } from 'ng-jhipster';
+import { JhiEventManager, JhiDataUtils } from 'ng-jhipster';
 
 import { FieldTestServiceClassEntity } from './field-test-service-class-entity.model';
 import { FieldTestServiceClassEntityPopupService } from './field-test-service-class-entity-popup.service';
@@ -24,7 +24,6 @@ export class FieldTestServiceClassEntityDialogComponent implements OnInit {
     constructor(
         public activeModal: NgbActiveModal,
         private dataUtils: JhiDataUtils,
-        private jhiAlertService: JhiAlertService,
         private fieldTestServiceClassEntityService: FieldTestServiceClassEntityService,
         private elementRef: ElementRef,
         private eventManager: JhiEventManager
@@ -79,10 +78,6 @@ export class FieldTestServiceClassEntityDialogComponent implements OnInit {
 
     private onSaveError() {
         this.isSaving = false;
-    }
-
-    private onError(error: any) {
-        this.jhiAlertService.error(error.message, null, null);
     }
 }
 

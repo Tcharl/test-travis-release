@@ -810,6 +810,8 @@ public class FieldTestMapstructEntityResourceIntTest {
 
         // Update the fieldTestMapstructEntity
         FieldTestMapstructEntity updatedFieldTestMapstructEntity = fieldTestMapstructEntityRepository.findOne(fieldTestMapstructEntity.getId());
+        // Disconnect from session so that the updates on updatedFieldTestMapstructEntity are not directly saved in db
+        em.detach(updatedFieldTestMapstructEntity);
         updatedFieldTestMapstructEntity
             .stringEva(UPDATED_STRING_EVA)
             .stringRequiredEva(UPDATED_STRING_REQUIRED_EVA)

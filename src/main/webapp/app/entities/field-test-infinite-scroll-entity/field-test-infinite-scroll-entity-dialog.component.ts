@@ -4,7 +4,7 @@ import { Response } from '@angular/http';
 
 import { Observable } from 'rxjs/Rx';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { JhiEventManager, JhiAlertService, JhiDataUtils } from 'ng-jhipster';
+import { JhiEventManager, JhiDataUtils } from 'ng-jhipster';
 
 import { FieldTestInfiniteScrollEntity } from './field-test-infinite-scroll-entity.model';
 import { FieldTestInfiniteScrollEntityPopupService } from './field-test-infinite-scroll-entity-popup.service';
@@ -24,7 +24,6 @@ export class FieldTestInfiniteScrollEntityDialogComponent implements OnInit {
     constructor(
         public activeModal: NgbActiveModal,
         private dataUtils: JhiDataUtils,
-        private jhiAlertService: JhiAlertService,
         private fieldTestInfiniteScrollEntityService: FieldTestInfiniteScrollEntityService,
         private elementRef: ElementRef,
         private eventManager: JhiEventManager
@@ -79,10 +78,6 @@ export class FieldTestInfiniteScrollEntityDialogComponent implements OnInit {
 
     private onSaveError() {
         this.isSaving = false;
-    }
-
-    private onError(error: any) {
-        this.jhiAlertService.error(error.message, null, null);
     }
 }
 
