@@ -2484,6 +2484,8 @@ public class FieldTestServiceClassEntityResourceIntTest {
 
         // Update the fieldTestServiceClassEntity
         FieldTestServiceClassEntity updatedFieldTestServiceClassEntity = fieldTestServiceClassEntityRepository.findOne(fieldTestServiceClassEntity.getId());
+        // Disconnect from session so that the updates on updatedFieldTestServiceClassEntity are not directly saved in db
+        em.detach(updatedFieldTestServiceClassEntity);
         updatedFieldTestServiceClassEntity
             .stringBob(UPDATED_STRING_BOB)
             .stringRequiredBob(UPDATED_STRING_REQUIRED_BOB)

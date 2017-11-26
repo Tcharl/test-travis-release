@@ -31,7 +31,7 @@
     "serviceDiscoveryType": false,
     "clientPackageManager": "yarn",
     "clientFramework": "angularX",
-    "jhipsterVersion": "4.11.0",
+    "jhipsterVersion": "4.12.0",
     "jwtSecretKey": "18ea4b385434a950d5c2b2edabea7992f4a763a7"
   }
 }

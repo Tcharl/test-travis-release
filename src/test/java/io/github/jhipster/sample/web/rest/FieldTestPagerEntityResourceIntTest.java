@@ -789,6 +789,8 @@ public class FieldTestPagerEntityResourceIntTest {
 
         // Update the fieldTestPagerEntity
         FieldTestPagerEntity updatedFieldTestPagerEntity = fieldTestPagerEntityRepository.findOne(fieldTestPagerEntity.getId());
+        // Disconnect from session so that the updates on updatedFieldTestPagerEntity are not directly saved in db
+        em.detach(updatedFieldTestPagerEntity);
         updatedFieldTestPagerEntity
             .stringJade(UPDATED_STRING_JADE)
             .stringRequiredJade(UPDATED_STRING_REQUIRED_JADE)

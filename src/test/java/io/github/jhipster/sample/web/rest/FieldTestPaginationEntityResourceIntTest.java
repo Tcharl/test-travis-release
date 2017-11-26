@@ -789,6 +789,8 @@ public class FieldTestPaginationEntityResourceIntTest {
 
         // Update the fieldTestPaginationEntity
         FieldTestPaginationEntity updatedFieldTestPaginationEntity = fieldTestPaginationEntityRepository.findOne(fieldTestPaginationEntity.getId());
+        // Disconnect from session so that the updates on updatedFieldTestPaginationEntity are not directly saved in db
+        em.detach(updatedFieldTestPaginationEntity);
         updatedFieldTestPaginationEntity
             .stringAlice(UPDATED_STRING_ALICE)
             .stringRequiredAlice(UPDATED_STRING_REQUIRED_ALICE)

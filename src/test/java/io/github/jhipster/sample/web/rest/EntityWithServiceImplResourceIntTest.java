@@ -175,6 +175,8 @@ public class EntityWithServiceImplResourceIntTest {
 
         // Update the entityWithServiceImpl
         EntityWithServiceImpl updatedEntityWithServiceImpl = entityWithServiceImplRepository.findOne(entityWithServiceImpl.getId());
+        // Disconnect from session so that the updates on updatedEntityWithServiceImpl are not directly saved in db
+        em.detach(updatedEntityWithServiceImpl);
         updatedEntityWithServiceImpl
             .clara(UPDATED_CLARA);
 
