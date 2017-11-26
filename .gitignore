@@ -1,4 +1,11 @@
 ######################
+# Travis generated key
+######################
+/travis/deploykeys.tar
+/.mvn/parent/target/
+/.mvn/plugins/target/
+/.mvn/reporting/target/
+######################
 # Project Specific
 ######################
 /target/www/**

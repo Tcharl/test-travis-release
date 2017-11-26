@@ -1,0 +1,30 @@
+<settings>
+    <servers>
+        <server>
+            <id>github</id>
+            <username>${env.GITHUB_NAME}</username>
+            <password>${env.GITHUB_PASSPHRASE}</password>
+        </server>
+        <server>
+            <id>github-pages</id>
+            <username>${env.GITHUB_NAME}</username>
+            <password>${env.GITHUB_PASSPHRASE}</password>
+        </server>
+        <server><!-- sonatype staging -->
+            <id>releases</id>
+            <username>${env.RELEASE_NAME}</username>
+            <password>${env.RELEASE_PASSPHRASE}</password>
+        </server>
+    </servers>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <properties>
+                <gpg.executable>gpg</gpg.executable>
+                <gpg.keyname>${env.GPG_KEY_NAME}</gpg.keyname>
+                <gpg.passphrase>${env.GPG_PASSPHRASE}</gpg.passphrase>
+            </properties>
+        </profile>
+    </profiles>
+</settings>
