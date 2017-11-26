@@ -1,0 +1,176 @@
+<div>
+    <h2>
+        <span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.home.title">Field Test Service Class Entities</span>
+        <button class="btn btn-primary float-right jh-create-entity create-field-test-service-class-entity" [routerLink]="['/', { outlets: { popup: ['field-test-service-class-entity-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.home.createLabel">
+            Create new Field Test Service Class Entity
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="fieldTestServiceClassEntities">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.stringBob">String Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.stringRequiredBob">String Required Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.stringMinlengthBob">String Minlength Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.stringMaxlengthBob">String Maxlength Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.stringPatternBob">String Pattern Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.integerBob">Integer Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.integerRequiredBob">Integer Required Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.integerMinBob">Integer Min Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.integerMaxBob">Integer Max Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.longBob">Long Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.longRequiredBob">Long Required Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.longMinBob">Long Min Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.longMaxBob">Long Max Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.floatBob">Float Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.floatRequiredBob">Float Required Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.floatMinBob">Float Min Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.floatMaxBob">Float Max Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.doubleRequiredBob">Double Required Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.doubleMinBob">Double Min Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.doubleMaxBob">Double Max Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.bigDecimalRequiredBob">Big Decimal Required Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.bigDecimalMinBob">Big Decimal Min Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.bigDecimalMaxBob">Big Decimal Max Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.localDateBob">Local Date Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.localDateRequiredBob">Local Date Required Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.instantBob">Instant Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.instanteRequiredBob">Instante Required Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.zonedDateTimeBob">Zoned Date Time Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.zonedDateTimeRequiredBob">Zoned Date Time Required Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.booleanBob">Boolean Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.booleanRequiredBob">Boolean Required Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.enumBob">Enum Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.enumRequiredBob">Enum Required Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.byteImageBob">Byte Image Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.byteImageRequiredBob">Byte Image Required Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.byteImageMinbytesBob">Byte Image Minbytes Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.byteImageMaxbytesBob">Byte Image Maxbytes Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.byteAnyBob">Byte Any Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.byteAnyRequiredBob">Byte Any Required Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.byteAnyMinbytesBob">Byte Any Minbytes Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.byteAnyMaxbytesBob">Byte Any Maxbytes Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.byteTextBob">Byte Text Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.byteTextRequiredBob">Byte Text Required Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.byteTextMinbytesBob">Byte Text Minbytes Bob</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.fieldTestServiceClassEntity.byteTextMaxbytesBob">Byte Text Maxbytes Bob</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let fieldTestServiceClassEntity of fieldTestServiceClassEntities ;trackBy: trackId">
+                <td><a [routerLink]="['../field-test-service-class-entity', fieldTestServiceClassEntity.id ]">{{fieldTestServiceClassEntity.id}}</a></td>
+                <td>{{fieldTestServiceClassEntity.stringBob}}</td>
+                <td>{{fieldTestServiceClassEntity.stringRequiredBob}}</td>
+                <td>{{fieldTestServiceClassEntity.stringMinlengthBob}}</td>
+                <td>{{fieldTestServiceClassEntity.stringMaxlengthBob}}</td>
+                <td>{{fieldTestServiceClassEntity.stringPatternBob}}</td>
+                <td>{{fieldTestServiceClassEntity.integerBob}}</td>
+                <td>{{fieldTestServiceClassEntity.integerRequiredBob}}</td>
+                <td>{{fieldTestServiceClassEntity.integerMinBob}}</td>
+                <td>{{fieldTestServiceClassEntity.integerMaxBob}}</td>
+                <td>{{fieldTestServiceClassEntity.longBob}}</td>
+                <td>{{fieldTestServiceClassEntity.longRequiredBob}}</td>
+                <td>{{fieldTestServiceClassEntity.longMinBob}}</td>
+                <td>{{fieldTestServiceClassEntity.longMaxBob}}</td>
+                <td>{{fieldTestServiceClassEntity.floatBob}}</td>
+                <td>{{fieldTestServiceClassEntity.floatRequiredBob}}</td>
+                <td>{{fieldTestServiceClassEntity.floatMinBob}}</td>
+                <td>{{fieldTestServiceClassEntity.floatMaxBob}}</td>
+                <td>{{fieldTestServiceClassEntity.doubleRequiredBob}}</td>
+                <td>{{fieldTestServiceClassEntity.doubleMinBob}}</td>
+                <td>{{fieldTestServiceClassEntity.doubleMaxBob}}</td>
+                <td>{{fieldTestServiceClassEntity.bigDecimalRequiredBob}}</td>
+                <td>{{fieldTestServiceClassEntity.bigDecimalMinBob}}</td>
+                <td>{{fieldTestServiceClassEntity.bigDecimalMaxBob}}</td>
+                <td>{{fieldTestServiceClassEntity.localDateBob | date:'mediumDate'}}</td>
+                <td>{{fieldTestServiceClassEntity.localDateRequiredBob | date:'mediumDate'}}</td>
+                <td>{{fieldTestServiceClassEntity.instantBob | date:'medium'}}</td>
+                <td>{{fieldTestServiceClassEntity.instanteRequiredBob | date:'medium'}}</td>
+                <td>{{fieldTestServiceClassEntity.zonedDateTimeBob | date:'medium'}}</td>
+                <td>{{fieldTestServiceClassEntity.zonedDateTimeRequiredBob | date:'medium'}}</td>
+                <td>{{fieldTestServiceClassEntity.booleanBob}}</td>
+                <td>{{fieldTestServiceClassEntity.booleanRequiredBob}}</td>
+                <td jhiTranslate="{{'jhipsterSampleApplicationApp.EnumFieldClass.' + fieldTestServiceClassEntity.enumBob}}">{{fieldTestServiceClassEntity.enumBob}}</td>
+                <td jhiTranslate="{{'jhipsterSampleApplicationApp.EnumRequiredFieldClass.' + fieldTestServiceClassEntity.enumRequiredBob}}">{{fieldTestServiceClassEntity.enumRequiredBob}}</td>
+                <td>
+                    <a *ngIf="fieldTestServiceClassEntity.byteImageBob" (click)="openFile(fieldTestServiceClassEntity.byteImageBobContentType, fieldTestServiceClassEntity.byteImageBob)">
+                        <img [src]="'data:' + fieldTestServiceClassEntity.byteImageBobContentType + ';base64,' + fieldTestServiceClassEntity.byteImageBob" style="max-height: 30px;" alt="fieldTestServiceClassEntity image"/>
+                    </a>
+                    <span *ngIf="fieldTestServiceClassEntity.byteImageBob">{{fieldTestServiceClassEntity.byteImageBobContentType}}, {{byteSize(fieldTestServiceClassEntity.byteImageBob)}}</span>
+                </td>
+                <td>
+                    <a *ngIf="fieldTestServiceClassEntity.byteImageRequiredBob" (click)="openFile(fieldTestServiceClassEntity.byteImageRequiredBobContentType, fieldTestServiceClassEntity.byteImageRequiredBob)">
+                        <img [src]="'data:' + fieldTestServiceClassEntity.byteImageRequiredBobContentType + ';base64,' + fieldTestServiceClassEntity.byteImageRequiredBob" style="max-height: 30px;" alt="fieldTestServiceClassEntity image"/>
+                    </a>
+                    <span *ngIf="fieldTestServiceClassEntity.byteImageRequiredBob">{{fieldTestServiceClassEntity.byteImageRequiredBobContentType}}, {{byteSize(fieldTestServiceClassEntity.byteImageRequiredBob)}}</span>
+                </td>
+                <td>
+                    <a *ngIf="fieldTestServiceClassEntity.byteImageMinbytesBob" (click)="openFile(fieldTestServiceClassEntity.byteImageMinbytesBobContentType, fieldTestServiceClassEntity.byteImageMinbytesBob)">
+                        <img [src]="'data:' + fieldTestServiceClassEntity.byteImageMinbytesBobContentType + ';base64,' + fieldTestServiceClassEntity.byteImageMinbytesBob" style="max-height: 30px;" alt="fieldTestServiceClassEntity image"/>
+                    </a>
+                    <span *ngIf="fieldTestServiceClassEntity.byteImageMinbytesBob">{{fieldTestServiceClassEntity.byteImageMinbytesBobContentType}}, {{byteSize(fieldTestServiceClassEntity.byteImageMinbytesBob)}}</span>
+                </td>
+                <td>
+                    <a *ngIf="fieldTestServiceClassEntity.byteImageMaxbytesBob" (click)="openFile(fieldTestServiceClassEntity.byteImageMaxbytesBobContentType, fieldTestServiceClassEntity.byteImageMaxbytesBob)">
+                        <img [src]="'data:' + fieldTestServiceClassEntity.byteImageMaxbytesBobContentType + ';base64,' + fieldTestServiceClassEntity.byteImageMaxbytesBob" style="max-height: 30px;" alt="fieldTestServiceClassEntity image"/>
+                    </a>
+                    <span *ngIf="fieldTestServiceClassEntity.byteImageMaxbytesBob">{{fieldTestServiceClassEntity.byteImageMaxbytesBobContentType}}, {{byteSize(fieldTestServiceClassEntity.byteImageMaxbytesBob)}}</span>
+                </td>
+                <td>
+                    <a *ngIf="fieldTestServiceClassEntity.byteAnyBob" (click)="openFile(fieldTestServiceClassEntity.byteAnyBobContentType, fieldTestServiceClassEntity.byteAnyBob)" jhiTranslate="entity.action.open">open</a>
+                    <span *ngIf="fieldTestServiceClassEntity.byteAnyBob">{{fieldTestServiceClassEntity.byteAnyBobContentType}}, {{byteSize(fieldTestServiceClassEntity.byteAnyBob)}}</span>
+                </td>
+                <td>
+                    <a *ngIf="fieldTestServiceClassEntity.byteAnyRequiredBob" (click)="openFile(fieldTestServiceClassEntity.byteAnyRequiredBobContentType, fieldTestServiceClassEntity.byteAnyRequiredBob)" jhiTranslate="entity.action.open">open</a>
+                    <span *ngIf="fieldTestServiceClassEntity.byteAnyRequiredBob">{{fieldTestServiceClassEntity.byteAnyRequiredBobContentType}}, {{byteSize(fieldTestServiceClassEntity.byteAnyRequiredBob)}}</span>
+                </td>
+                <td>
+                    <a *ngIf="fieldTestServiceClassEntity.byteAnyMinbytesBob" (click)="openFile(fieldTestServiceClassEntity.byteAnyMinbytesBobContentType, fieldTestServiceClassEntity.byteAnyMinbytesBob)" jhiTranslate="entity.action.open">open</a>
+                    <span *ngIf="fieldTestServiceClassEntity.byteAnyMinbytesBob">{{fieldTestServiceClassEntity.byteAnyMinbytesBobContentType}}, {{byteSize(fieldTestServiceClassEntity.byteAnyMinbytesBob)}}</span>
+                </td>
+                <td>
+                    <a *ngIf="fieldTestServiceClassEntity.byteAnyMaxbytesBob" (click)="openFile(fieldTestServiceClassEntity.byteAnyMaxbytesBobContentType, fieldTestServiceClassEntity.byteAnyMaxbytesBob)" jhiTranslate="entity.action.open">open</a>
+                    <span *ngIf="fieldTestServiceClassEntity.byteAnyMaxbytesBob">{{fieldTestServiceClassEntity.byteAnyMaxbytesBobContentType}}, {{byteSize(fieldTestServiceClassEntity.byteAnyMaxbytesBob)}}</span>
+                </td>
+                <td>{{fieldTestServiceClassEntity.byteTextBob}}</td>
+                <td>{{fieldTestServiceClassEntity.byteTextRequiredBob}}</td>
+                <td>{{fieldTestServiceClassEntity.byteTextMinbytesBob}}</td>
+                <td>{{fieldTestServiceClassEntity.byteTextMaxbytesBob}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../field-test-service-class-entity', fieldTestServiceClassEntity.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'field-test-service-class-entity/'+ fieldTestServiceClassEntity.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'field-test-service-class-entity/'+ fieldTestServiceClassEntity.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
