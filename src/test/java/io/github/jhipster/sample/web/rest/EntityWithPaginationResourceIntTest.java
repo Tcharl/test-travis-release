@@ -170,6 +170,8 @@ public class EntityWithPaginationResourceIntTest {
 
         // Update the entityWithPagination
         EntityWithPagination updatedEntityWithPagination = entityWithPaginationRepository.findOne(entityWithPagination.getId());
+        // Disconnect from session so that the updates on updatedEntityWithPagination are not directly saved in db
+        em.detach(updatedEntityWithPagination);
         updatedEntityWithPagination
             .nathan(UPDATED_NATHAN);
 

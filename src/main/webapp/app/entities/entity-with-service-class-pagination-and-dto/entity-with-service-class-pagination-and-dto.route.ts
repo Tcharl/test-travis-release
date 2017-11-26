@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot, Routes } from '@angular/router';
-
-import { UserRouteAccessService } from '../../shared';
 import { JhiPaginationUtil } from 'ng-jhipster';
 
+import { UserRouteAccessService } from '../../shared';
 import { EntityWithServiceClassPaginationAndDTOComponent } from './entity-with-service-class-pagination-and-dto.component';
 import { EntityWithServiceClassPaginationAndDTODetailComponent } from './entity-with-service-class-pagination-and-dto-detail.component';
 import { EntityWithServiceClassPaginationAndDTOPopupComponent } from './entity-with-service-class-pagination-and-dto-dialog.component';

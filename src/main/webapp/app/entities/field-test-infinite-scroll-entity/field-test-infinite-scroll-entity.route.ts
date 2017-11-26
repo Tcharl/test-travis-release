@@ -1,9 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 
 import { UserRouteAccessService } from '../../shared';
-import { JhiPaginationUtil } from 'ng-jhipster';
-
 import { FieldTestInfiniteScrollEntityComponent } from './field-test-infinite-scroll-entity.component';
 import { FieldTestInfiniteScrollEntityDetailComponent } from './field-test-infinite-scroll-entity-detail.component';
 import { FieldTestInfiniteScrollEntityPopupComponent } from './field-test-infinite-scroll-entity-dialog.component';

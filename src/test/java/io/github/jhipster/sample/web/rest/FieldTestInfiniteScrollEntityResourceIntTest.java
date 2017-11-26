@@ -789,6 +789,8 @@ public class FieldTestInfiniteScrollEntityResourceIntTest {
 
         // Update the fieldTestInfiniteScrollEntity
         FieldTestInfiniteScrollEntity updatedFieldTestInfiniteScrollEntity = fieldTestInfiniteScrollEntityRepository.findOne(fieldTestInfiniteScrollEntity.getId());
+        // Disconnect from session so that the updates on updatedFieldTestInfiniteScrollEntity are not directly saved in db
+        em.detach(updatedFieldTestInfiniteScrollEntity);
         updatedFieldTestInfiniteScrollEntity
             .stringHugo(UPDATED_STRING_HUGO)
             .stringRequiredHugo(UPDATED_STRING_REQUIRED_HUGO)

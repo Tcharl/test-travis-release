@@ -177,6 +177,8 @@ public class EntityWithPaginationAndDTOResourceIntTest {
 
         // Update the entityWithPaginationAndDTO
         EntityWithPaginationAndDTO updatedEntityWithPaginationAndDTO = entityWithPaginationAndDTORepository.findOne(entityWithPaginationAndDTO.getId());
+        // Disconnect from session so that the updates on updatedEntityWithPaginationAndDTO are not directly saved in db
+        em.detach(updatedEntityWithPaginationAndDTO);
         updatedEntityWithPaginationAndDTO
             .lea(UPDATED_LEA);
         EntityWithPaginationAndDTODTO entityWithPaginationAndDTODTO = entityWithPaginationAndDTOMapper.toDto(updatedEntityWithPaginationAndDTO);

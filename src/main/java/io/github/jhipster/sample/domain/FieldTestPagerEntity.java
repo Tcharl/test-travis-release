@@ -5,6 +5,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.Instant;
@@ -15,7 +16,6 @@ import java.util.Objects;
 import io.github.jhipster.sample.domain.enumeration.EnumFieldClass;
 
 import io.github.jhipster.sample.domain.enumeration.EnumRequiredFieldClass;
-
 
 /**
  * A FieldTestPagerEntity.
