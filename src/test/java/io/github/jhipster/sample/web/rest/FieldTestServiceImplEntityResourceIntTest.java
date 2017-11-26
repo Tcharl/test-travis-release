@@ -794,6 +794,8 @@ public class FieldTestServiceImplEntityResourceIntTest {
 
         // Update the fieldTestServiceImplEntity
         FieldTestServiceImplEntity updatedFieldTestServiceImplEntity = fieldTestServiceImplEntityRepository.findOne(fieldTestServiceImplEntity.getId());
+        // Disconnect from session so that the updates on updatedFieldTestServiceImplEntity are not directly saved in db
+        em.detach(updatedFieldTestServiceImplEntity);
         updatedFieldTestServiceImplEntity
             .stringMika(UPDATED_STRING_MIKA)
             .stringRequiredMika(UPDATED_STRING_REQUIRED_MIKA)

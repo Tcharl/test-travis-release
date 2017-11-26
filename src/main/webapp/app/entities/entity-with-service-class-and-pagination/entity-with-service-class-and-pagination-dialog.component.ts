@@ -4,7 +4,7 @@ import { Response } from '@angular/http';
 
 import { Observable } from 'rxjs/Rx';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
+import { JhiEventManager } from 'ng-jhipster';
 
 import { EntityWithServiceClassAndPagination } from './entity-with-service-class-and-pagination.model';
 import { EntityWithServiceClassAndPaginationPopupService } from './entity-with-service-class-and-pagination-popup.service';
@@ -21,7 +21,6 @@ export class EntityWithServiceClassAndPaginationDialogComponent implements OnIni
 
     constructor(
         public activeModal: NgbActiveModal,
-        private jhiAlertService: JhiAlertService,
         private entityWithServiceClassAndPaginationService: EntityWithServiceClassAndPaginationService,
         private eventManager: JhiEventManager
     ) {
@@ -59,10 +58,6 @@ export class EntityWithServiceClassAndPaginationDialogComponent implements OnIni
 
     private onSaveError() {
         this.isSaving = false;
-    }
-
-    private onError(error: any) {
-        this.jhiAlertService.error(error.message, null, null);
     }
 }
 

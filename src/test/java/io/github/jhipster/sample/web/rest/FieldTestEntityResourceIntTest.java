@@ -789,6 +789,8 @@ public class FieldTestEntityResourceIntTest {
 
         // Update the fieldTestEntity
         FieldTestEntity updatedFieldTestEntity = fieldTestEntityRepository.findOne(fieldTestEntity.getId());
+        // Disconnect from session so that the updates on updatedFieldTestEntity are not directly saved in db
+        em.detach(updatedFieldTestEntity);
         updatedFieldTestEntity
             .stringTom(UPDATED_STRING_TOM)
             .stringRequiredTom(UPDATED_STRING_REQUIRED_TOM)

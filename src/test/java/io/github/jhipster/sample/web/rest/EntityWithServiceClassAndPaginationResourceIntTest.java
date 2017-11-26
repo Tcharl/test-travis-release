@@ -175,6 +175,8 @@ public class EntityWithServiceClassAndPaginationResourceIntTest {
 
         // Update the entityWithServiceClassAndPagination
         EntityWithServiceClassAndPagination updatedEntityWithServiceClassAndPagination = entityWithServiceClassAndPaginationRepository.findOne(entityWithServiceClassAndPagination.getId());
+        // Disconnect from session so that the updates on updatedEntityWithServiceClassAndPagination are not directly saved in db
+        em.detach(updatedEntityWithServiceClassAndPagination);
         updatedEntityWithServiceClassAndPagination
             .enzo(UPDATED_ENZO);
 
