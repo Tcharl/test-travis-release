@@ -1,4 +1,17 @@
 ######################
+# Travis generated key
+######################
+/travis/deploykeys.tar
+/.mvn/parent/target/
+/.mvn/parent/pom.xml.releaseBackup
+/.mvn/parent/release.properties
+/.mvn/plugins/target/
+/.mvn/plugins/pom.xml.releaseBackup
+/.mvn/reporting/target/
+/.mvn/reporting/pom.xml.releaseBackup
+/src/site/markdown/**
+/pom.xml.releaseBackup
+######################
 # Project Specific
 ######################
 /target/www/**

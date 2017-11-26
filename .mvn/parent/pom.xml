@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>io.github.jhipster.sample</groupId>
+    <groupId>net.osgiliath.jhipster.samples</groupId>
     <artifactId>jhipster-sample-application-parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.11-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>jhipster-sample-application parent pom</name>
     <description>Parent project embedding the server side Jhipster Sample Application stuff</description>
     <!-- It may not be the right addresses-->
-    <url>https://github.com/io.github.jhipster.sample/jhipster-sample-application</url>
+    <url>https://github.com/Tcharl/test-travis-release</url>
     <scm>
-        <connection>scm:git:git@github.com:io.github.jhipster.sample/jhipster-sample-application.git</connection>
-        <developerConnection>scm:git:git@github.com:io.github.jhipster.sample/jhipster-sample-application.git</developerConnection>
-        <url>https://github.com/io.github.jhipster.sample/jhipster-sample-application</url>
-        <tag>HEAD</tag>
+        <connection>scm:git:git@github.com:Tcharl/test-travis-release.git</connection>
+        <developerConnection>scm:git:git@github.com:Tcharl/test-travis-release.git</developerConnection>
+        <url>https://github.com/Tcharl/test-travis-release</url>
+        <tag>jhipster-sample-application-parent-0.0.8</tag>
     </scm>
 
 
     <distributionManagement>
         <snapshotRepository>
-            <id>ossrh</id>
+            <id>snapshots</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
             <id>releases</id>
             <name>Sonatype OSS Nexus Release Repository</name>
-            <url>https://oss.sonatype.org/</url>
+            <url>https://oss.sonatype.org</url>
         </repository>
         <!-- It may not be the right address-->
         <site>
             <id>github-pages</id>
             <name>Github GH Pages</name>
-            <url>scm:git:git@github.com:io.github.jhipster.sample/jhipster-sample-application.git</url>
+            <url>scm:git:git@github.com:Tcharl/test-travis-release.git</url>
         </site>
     </distributionManagement>
     <modules>
@@ -49,22 +49,21 @@
         <!-- plugins versions -->
         <doxia-module-markdown.version>1.7</doxia-module-markdown.version>
         <maven-enforcer-plugin.version>3.0.0-M1</maven-enforcer-plugin.version>
-        <maven-release-plugin.version>2.5.2</maven-release-plugin.version>
-        <maven-scm-publish-plugin.version>1.1</maven-scm-publish-plugin.version>
-        <maven-site-plugin.version>3.5</maven-site-plugin.version>
+        <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
+        <maven-site-plugin.version>3.6</maven-site-plugin.version>
         <maven-scm-manager-plexus.version>${org.apache.maven.scm.version}</maven-scm-manager-plexus.version>
         <maven-scm-provider-gitexe.version>${org.apache.maven.scm.version}</maven-scm-provider-gitexe.version>
         <wagon-scm.version>2.10</wagon-scm.version>
         <apache-rat-plugin.version>0.11</apache-rat-plugin.version>
-        <pgp-maven-plugin.version>1.1</pgp-maven-plugin.version>
+        <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
         <nexus-staging-maven-plugin.version>1.6.7</nexus-staging-maven-plugin.version>
-    <site.deploy.dir>/tmp/deploy</site.deploy.dir>
-
+        <maven-javadoc-plugin.version>3.0.0-M1</maven-javadoc-plugin.version>
+        <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
     <!-- generic versions -->
     <org.apache.maven.scm.version>1.9.1</org.apache.maven.scm.version>
 </properties>
 <build>
-    <defaultGoal>install</defaultGoal>
+    <defaultGoal>verify</defaultGoal>
     <extensions>
         <extension>
             <groupId>org.apache.maven.wagon</groupId>
@@ -112,6 +111,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven-javadoc-plugin.version}</version>
                 <configuration>
                     <minmemory>128m</minmemory>
                     <maxmemory>1024m</maxmemory>
@@ -131,20 +131,9 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <localCheckout>true</localCheckout>
-                    <pushChanges>true</pushChanges>
-                    <preparationGoals>clean install</preparationGoals>
-                    <goals>deploy</goals>
+                    <scmCommentPrefix>[ci skip][maven-release-plugin]</scmCommentPrefix>
                     <!-- The profile we want to use when doing the release -->
                     <autoVersionSubmodules>true</autoVersionSubmodules>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-scm-publish-plugin</artifactId>
-                <version>${maven-scm-publish-plugin.version}</version>
-                <configuration>
-                    <scmBranch>gh-pages</scmBranch>
                 </configuration>
             </plugin>
             <plugin>
@@ -152,7 +141,6 @@
                 <artifactId>maven-site-plugin</artifactId>
                 <version>${maven-site-plugin.version}</version>
                 <configuration>
-                    <skipDeploy>true</skipDeploy>
                     <inputEncoding>${encoding}</inputEncoding>
                     <outputEncoding>${encoding}</outputEncoding>
                 </configuration>
@@ -170,37 +158,32 @@
                         <artifactId>doxia-module-markdown</artifactId>
                         <version>${doxia-module-markdown.version}</version>
                     </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-gitexe</artifactId>
+                        <version>${maven-scm-provider-gitexe.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.wagon</groupId>
+                        <artifactId>wagon-scm</artifactId>
+                        <version>${wagon-scm.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-manager-plexus</artifactId>
+                        <version>${maven-scm-manager-plexus.version}</version>
+                    </dependency>
                 </dependencies>
             </plugin>
             <plugin>
-                <groupId>org.apache.rat</groupId>
-                <artifactId>apache-rat-plugin</artifactId>
-                <version>${apache-rat-plugin.version}</version>
-                <configuration>
-                    <excludeSubProjects>false</excludeSubProjects>
-                    <excludes combine.children="append">
-                        <exclude>**/README</exclude>
-                        <exclude>**/README.txt</exclude>
-                        <exclude>**/readme.md</exclude>
-                        <exclude>**/README.md</exclude>
-                        <exclude>**/resources/**/*.xsd</exclude>
-                        <exclude>**/test/resources/**/*</exclude>
-                        <exclude>**/.gitignore</exclude>
-                        <exclude>**/.git/**/*</exclude>
-                        <exclude>**/target/**/*</exclude>
-                        <exclude>**/eclipse-classes/**/*</exclude>
-                        <exclude>**/.*</exclude>
-                        <exclude>**/.settings/**/*</exclude>
-                        <exclude>**/*.iml</exclude>
-                        <exclude>**/.idea/**/*</exclude>
-                        <exclude>**/OSGI-INF/bundle.info</exclude>
-                    </excludes>
-                </configuration>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven-source-plugin.version}</version>
             </plugin>
             <plugin>
-                <groupId>org.kohsuke</groupId>
-                <artifactId>pgp-maven-plugin</artifactId>
-                <version>${pgp-maven-plugin.version}</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>${maven-gpg-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>sign-artifacts</id>
@@ -217,9 +200,8 @@
                 <version>${nexus-staging-maven-plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <serverId>ossrh</serverId>
+                    <serverId>releases</serverId>
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
             </plugin>
         </plugins>
@@ -255,8 +237,8 @@
                     </executions>
                 </plugin>
                 <plugin>
-                    <groupId>org.kohsuke</groupId>
-                    <artifactId>pgp-maven-plugin</artifactId>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-gpg-plugin</artifactId>
                 </plugin>
             </plugins>
         </build>
@@ -291,8 +273,7 @@
                             <configuration>
                                 <tasks>
                                     <mkdir dir="src/site/markdown" />
-                                    <copy file="readme.md" tofile="src/site/markdown/readme.md"
-                                          overwrite="true" />
+                                    <copy file="readme.md" tofile="src/site/markdown/readme.md" overwrite="true" />
                                 </tasks>
                             </configuration>
                             <goals>
@@ -305,4 +286,18 @@
         </build>
     </profile>
 </profiles>
+    <licenses>
+        <license>
+            <name>Apache2 License</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <id>Tcharl</id>
+            <name>Charlie Mordant</name>
+            <email>cmordant1@gmail.com</email>
+        </developer>
+    </developers>
 </project>

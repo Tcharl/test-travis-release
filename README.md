@@ -1,3 +1,7 @@
+https://travis-ci.org/Tcharl/test-travis-release.svg?branch=master
+
+Maven generated site: https://tcharl.github.io/test-travis-release/
+
 # jhipsterSampleApplication
 This application was generated using JHipster 4.11.0, you can find documentation and help at [http://www.jhipster.tech/documentation-archive/v4.11.0](http://www.jhipster.tech/documentation-archive/v4.11.0).
 
