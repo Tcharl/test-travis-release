@@ -15,8 +15,9 @@ cache:
 before_install:
 - "./travis/before-deploy.sh"
 install:
-- mvn -f .mvn/parent/pom.xml --batch-mode release:prepare -P release,maven-central --settings travis/settings.xml -DdryRun=true
-- mvn -f .mvn/parent/pom.xml --batch-mode release:clean -P release,maven-central --settings travis/settings.xml
+- mvn -f .mvn/parent/pom.xml --batch-mode release:prepare -P release --settings travis/settings.xml -DdryRun=true
+- mvn -f .mvn/parent/pom.xml --batch-mode release:clean -P release --settings travis/settings.xml
+- mvn site --settings travis/settings.xml
 branches:
   only:
   - master

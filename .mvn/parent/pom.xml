@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.osgiliath.jhipster.samples</groupId>
     <artifactId>jhipster-sample-application-parent</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.7-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>jhipster-sample-application parent pom</name>
     <description>Parent project embedding the server side Jhipster Sample Application stuff</description>
@@ -25,7 +25,7 @@
         <repository>
             <id>releases</id>
             <name>Sonatype OSS Nexus Release Repository</name>
-            <url>https://oss.sonatype.org/</url>
+            <url>https://oss.sonatype.org</url>
         </repository>
         <!-- It may not be the right address-->
         <site>
@@ -50,21 +50,20 @@
         <doxia-module-markdown.version>1.7</doxia-module-markdown.version>
         <maven-enforcer-plugin.version>3.0.0-M1</maven-enforcer-plugin.version>
         <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
-        <maven-scm-publish-plugin.version>1.1</maven-scm-publish-plugin.version>
-        <maven-site-plugin.version>3.5</maven-site-plugin.version>
+        <maven-site-plugin.version>3.6</maven-site-plugin.version>
         <maven-scm-manager-plexus.version>${org.apache.maven.scm.version}</maven-scm-manager-plexus.version>
         <maven-scm-provider-gitexe.version>${org.apache.maven.scm.version}</maven-scm-provider-gitexe.version>
         <wagon-scm.version>2.10</wagon-scm.version>
         <apache-rat-plugin.version>0.11</apache-rat-plugin.version>
         <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
         <nexus-staging-maven-plugin.version>1.6.7</nexus-staging-maven-plugin.version>
-    <site.deploy.dir>/tmp/deploy</site.deploy.dir>
-
+        <maven-javadoc-plugin.version>3.0.0-M1</maven-javadoc-plugin.version>
+        <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
     <!-- generic versions -->
     <org.apache.maven.scm.version>1.9.1</org.apache.maven.scm.version>
 </properties>
 <build>
-    <defaultGoal>install</defaultGoal>
+    <defaultGoal>verify</defaultGoal>
     <extensions>
         <extension>
             <groupId>org.apache.maven.wagon</groupId>
@@ -112,6 +111,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven-javadoc-plugin.version}</version>
                 <configuration>
                     <minmemory>128m</minmemory>
                     <maxmemory>1024m</maxmemory>
@@ -131,10 +131,6 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <localCheckout>true</localCheckout>
-                    <pushChanges>true</pushChanges>
-                    <preparationGoals>clean install</preparationGoals>
-                    <goals>deploy</goals>
                     <scmCommentPrefix>[ci skip][maven-release-plugin]</scmCommentPrefix>
                     <!-- The profile we want to use when doing the release -->
                     <autoVersionSubmodules>true</autoVersionSubmodules>
@@ -142,18 +138,9 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-scm-publish-plugin</artifactId>
-                <version>${maven-scm-publish-plugin.version}</version>
-                <configuration>
-                    <scmBranch>gh-pages</scmBranch>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
                 <version>${maven-site-plugin.version}</version>
                 <configuration>
-                    <skipDeploy>true</skipDeploy>
                     <inputEncoding>${encoding}</inputEncoding>
                     <outputEncoding>${encoding}</outputEncoding>
                 </configuration>
@@ -171,7 +158,27 @@
                         <artifactId>doxia-module-markdown</artifactId>
                         <version>${doxia-module-markdown.version}</version>
                     </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-gitexe</artifactId>
+                        <version>${maven-scm-provider-gitexe.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.wagon</groupId>
+                        <artifactId>wagon-scm</artifactId>
+                        <version>${wagon-scm.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-manager-plexus</artifactId>
+                        <version>${maven-scm-manager-plexus.version}</version>
+                    </dependency>
                 </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven-source-plugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -237,7 +244,7 @@
         </build>
     </profile>
     <profile>
-        <id>maven-central</id>
+        <id>nexus-pro</id>
         <build>
             <plugins>
                 <plugin>

@@ -1,14 +1,16 @@
 <settings>
     <servers>
         <server>
-            <id>github</id>
+            <id>github</id><!-- it should be useless, as ssh deploy key is configured-->
             <username>${env.GITHUB_NAME}</username>
             <password>${env.GITHUB_PASSPHRASE}</password>
         </server>
         <server>
             <id>github-pages</id>
-            <username>${env.GITHUB_NAME}</username>
-            <password>${env.GITHUB_PASSPHRASE}</password>
+            <configuration>
+                <scmVersionType>branch</scmVersionType>
+                <scmVersion>gh-pages</scmVersion>
+            </configuration>
         </server>
         <server><!-- sonatype staging -->
             <id>releases</id>

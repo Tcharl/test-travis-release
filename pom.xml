@@ -5,12 +5,12 @@
     <parent>
         <groupId>net.osgiliath.jhipster.samples</groupId>
         <artifactId>jhipster-sample-application-plugins</artifactId>
-        <version>0.0.3-SNAPSHOT</version>
+        <version>0.0.7-SNAPSHOT</version>
         <relativePath>.mvn/plugins/pom.xml</relativePath>
     </parent>
 
     <artifactId>jhipster-sample-application</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.7-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Jhipster Sample Application</name>
 
