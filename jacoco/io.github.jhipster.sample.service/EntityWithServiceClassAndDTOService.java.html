@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EntityWithServiceClassAndDTOService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.service</a> &gt; <span class="el_source">EntityWithServiceClassAndDTOService.java</span></div><h1>EntityWithServiceClassAndDTOService.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.service;
+
+import io.github.jhipster.sample.domain.EntityWithServiceClassAndDTO;
+import io.github.jhipster.sample.repository.EntityWithServiceClassAndDTORepository;
+import io.github.jhipster.sample.service.dto.EntityWithServiceClassAndDTODTO;
+import io.github.jhipster.sample.service.mapper.EntityWithServiceClassAndDTOMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+/**
+ * Service Implementation for managing EntityWithServiceClassAndDTO.
+ */
+@Service
+@Transactional
+public class EntityWithServiceClassAndDTOService {
+
+<span class="fc" id="L23">    private final Logger log = LoggerFactory.getLogger(EntityWithServiceClassAndDTOService.class);</span>
+
+    private final EntityWithServiceClassAndDTORepository entityWithServiceClassAndDTORepository;
+
+    private final EntityWithServiceClassAndDTOMapper entityWithServiceClassAndDTOMapper;
+
+<span class="fc" id="L29">    public EntityWithServiceClassAndDTOService(EntityWithServiceClassAndDTORepository entityWithServiceClassAndDTORepository, EntityWithServiceClassAndDTOMapper entityWithServiceClassAndDTOMapper) {</span>
+<span class="fc" id="L30">        this.entityWithServiceClassAndDTORepository = entityWithServiceClassAndDTORepository;</span>
+<span class="fc" id="L31">        this.entityWithServiceClassAndDTOMapper = entityWithServiceClassAndDTOMapper;</span>
+<span class="fc" id="L32">    }</span>
+
+    /**
+     * Save a entityWithServiceClassAndDTO.
+     *
+     * @param entityWithServiceClassAndDTODTO the entity to save
+     * @return the persisted entity
+     */
+    public EntityWithServiceClassAndDTODTO save(EntityWithServiceClassAndDTODTO entityWithServiceClassAndDTODTO) {
+<span class="fc" id="L41">        log.debug(&quot;Request to save EntityWithServiceClassAndDTO : {}&quot;, entityWithServiceClassAndDTODTO);</span>
+<span class="fc" id="L42">        EntityWithServiceClassAndDTO entityWithServiceClassAndDTO = entityWithServiceClassAndDTOMapper.toEntity(entityWithServiceClassAndDTODTO);</span>
+<span class="fc" id="L43">        entityWithServiceClassAndDTO = entityWithServiceClassAndDTORepository.save(entityWithServiceClassAndDTO);</span>
+<span class="fc" id="L44">        return entityWithServiceClassAndDTOMapper.toDto(entityWithServiceClassAndDTO);</span>
+    }
+
+    /**
+     * Get all the entityWithServiceClassAndDTOS.
+     *
+     * @return the list of entities
+     */
+    @Transactional(readOnly = true)
+    public List&lt;EntityWithServiceClassAndDTODTO&gt; findAll() {
+<span class="fc" id="L54">        log.debug(&quot;Request to get all EntityWithServiceClassAndDTOS&quot;);</span>
+<span class="fc" id="L55">        return entityWithServiceClassAndDTORepository.findAll().stream()</span>
+<span class="fc" id="L56">            .map(entityWithServiceClassAndDTOMapper::toDto)</span>
+<span class="fc" id="L57">            .collect(Collectors.toCollection(LinkedList::new));</span>
+    }
+
+    /**
+     * Get one entityWithServiceClassAndDTO by id.
+     *
+     * @param id the id of the entity
+     * @return the entity
+     */
+    @Transactional(readOnly = true)
+    public EntityWithServiceClassAndDTODTO findOne(Long id) {
+<span class="fc" id="L68">        log.debug(&quot;Request to get EntityWithServiceClassAndDTO : {}&quot;, id);</span>
+<span class="fc" id="L69">        EntityWithServiceClassAndDTO entityWithServiceClassAndDTO = entityWithServiceClassAndDTORepository.findOne(id);</span>
+<span class="fc" id="L70">        return entityWithServiceClassAndDTOMapper.toDto(entityWithServiceClassAndDTO);</span>
+    }
+
+    /**
+     * Delete the entityWithServiceClassAndDTO by id.
+     *
+     * @param id the id of the entity
+     */
+    public void delete(Long id) {
+<span class="fc" id="L79">        log.debug(&quot;Request to delete EntityWithServiceClassAndDTO : {}&quot;, id);</span>
+<span class="fc" id="L80">        entityWithServiceClassAndDTORepository.delete(id);</span>
+<span class="fc" id="L81">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

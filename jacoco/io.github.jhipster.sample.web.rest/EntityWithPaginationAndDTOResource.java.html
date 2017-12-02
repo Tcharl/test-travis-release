@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EntityWithPaginationAndDTOResource.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.web.rest</a> &gt; <span class="el_source">EntityWithPaginationAndDTOResource.java</span></div><h1>EntityWithPaginationAndDTOResource.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.web.rest;
+
+import com.codahale.metrics.annotation.Timed;
+import io.github.jhipster.sample.domain.EntityWithPaginationAndDTO;
+
+import io.github.jhipster.sample.repository.EntityWithPaginationAndDTORepository;
+import io.github.jhipster.sample.web.rest.errors.BadRequestAlertException;
+import io.github.jhipster.sample.web.rest.util.HeaderUtil;
+import io.github.jhipster.sample.web.rest.util.PaginationUtil;
+import io.github.jhipster.sample.service.dto.EntityWithPaginationAndDTODTO;
+import io.github.jhipster.sample.service.mapper.EntityWithPaginationAndDTOMapper;
+import io.github.jhipster.web.util.ResponseUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.net.URI;
+import java.net.URISyntaxException;
+
+import java.util.List;
+import java.util.Optional;
+
+/**
+ * REST controller for managing EntityWithPaginationAndDTO.
+ */
+@RestController
+@RequestMapping(&quot;/api&quot;)
+public class EntityWithPaginationAndDTOResource {
+
+<span class="fc" id="L35">    private final Logger log = LoggerFactory.getLogger(EntityWithPaginationAndDTOResource.class);</span>
+
+    private static final String ENTITY_NAME = &quot;entityWithPaginationAndDTO&quot;;
+
+    private final EntityWithPaginationAndDTORepository entityWithPaginationAndDTORepository;
+
+    private final EntityWithPaginationAndDTOMapper entityWithPaginationAndDTOMapper;
+
+<span class="fc" id="L43">    public EntityWithPaginationAndDTOResource(EntityWithPaginationAndDTORepository entityWithPaginationAndDTORepository, EntityWithPaginationAndDTOMapper entityWithPaginationAndDTOMapper) {</span>
+<span class="fc" id="L44">        this.entityWithPaginationAndDTORepository = entityWithPaginationAndDTORepository;</span>
+<span class="fc" id="L45">        this.entityWithPaginationAndDTOMapper = entityWithPaginationAndDTOMapper;</span>
+<span class="fc" id="L46">    }</span>
+
+    /**
+     * POST  /entity-with-pagination-and-dtos : Create a new entityWithPaginationAndDTO.
+     *
+     * @param entityWithPaginationAndDTODTO the entityWithPaginationAndDTODTO to create
+     * @return the ResponseEntity with status 201 (Created) and with body the new entityWithPaginationAndDTODTO, or with status 400 (Bad Request) if the entityWithPaginationAndDTO has already an ID
+     * @throws URISyntaxException if the Location URI syntax is incorrect
+     */
+    @PostMapping(&quot;/entity-with-pagination-and-dtos&quot;)
+    @Timed
+    public ResponseEntity&lt;EntityWithPaginationAndDTODTO&gt; createEntityWithPaginationAndDTO(@RequestBody EntityWithPaginationAndDTODTO entityWithPaginationAndDTODTO) throws URISyntaxException {
+<span class="fc" id="L58">        log.debug(&quot;REST request to save EntityWithPaginationAndDTO : {}&quot;, entityWithPaginationAndDTODTO);</span>
+<span class="fc bfc" id="L59" title="All 2 branches covered.">        if (entityWithPaginationAndDTODTO.getId() != null) {</span>
+<span class="fc" id="L60">            throw new BadRequestAlertException(&quot;A new entityWithPaginationAndDTO cannot already have an ID&quot;, ENTITY_NAME, &quot;idexists&quot;);</span>
+        }
+<span class="fc" id="L62">        EntityWithPaginationAndDTO entityWithPaginationAndDTO = entityWithPaginationAndDTOMapper.toEntity(entityWithPaginationAndDTODTO);</span>
+<span class="fc" id="L63">        entityWithPaginationAndDTO = entityWithPaginationAndDTORepository.save(entityWithPaginationAndDTO);</span>
+<span class="fc" id="L64">        EntityWithPaginationAndDTODTO result = entityWithPaginationAndDTOMapper.toDto(entityWithPaginationAndDTO);</span>
+<span class="fc" id="L65">        return ResponseEntity.created(new URI(&quot;/api/entity-with-pagination-and-dtos/&quot; + result.getId()))</span>
+<span class="fc" id="L66">            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))</span>
+<span class="fc" id="L67">            .body(result);</span>
+    }
+
+    /**
+     * PUT  /entity-with-pagination-and-dtos : Updates an existing entityWithPaginationAndDTO.
+     *
+     * @param entityWithPaginationAndDTODTO the entityWithPaginationAndDTODTO to update
+     * @return the ResponseEntity with status 200 (OK) and with body the updated entityWithPaginationAndDTODTO,
+     * or with status 400 (Bad Request) if the entityWithPaginationAndDTODTO is not valid,
+     * or with status 500 (Internal Server Error) if the entityWithPaginationAndDTODTO couldn't be updated
+     * @throws URISyntaxException if the Location URI syntax is incorrect
+     */
+    @PutMapping(&quot;/entity-with-pagination-and-dtos&quot;)
+    @Timed
+    public ResponseEntity&lt;EntityWithPaginationAndDTODTO&gt; updateEntityWithPaginationAndDTO(@RequestBody EntityWithPaginationAndDTODTO entityWithPaginationAndDTODTO) throws URISyntaxException {
+<span class="fc" id="L82">        log.debug(&quot;REST request to update EntityWithPaginationAndDTO : {}&quot;, entityWithPaginationAndDTODTO);</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">        if (entityWithPaginationAndDTODTO.getId() == null) {</span>
+<span class="fc" id="L84">            return createEntityWithPaginationAndDTO(entityWithPaginationAndDTODTO);</span>
+        }
+<span class="fc" id="L86">        EntityWithPaginationAndDTO entityWithPaginationAndDTO = entityWithPaginationAndDTOMapper.toEntity(entityWithPaginationAndDTODTO);</span>
+<span class="fc" id="L87">        entityWithPaginationAndDTO = entityWithPaginationAndDTORepository.save(entityWithPaginationAndDTO);</span>
+<span class="fc" id="L88">        EntityWithPaginationAndDTODTO result = entityWithPaginationAndDTOMapper.toDto(entityWithPaginationAndDTO);</span>
+<span class="fc" id="L89">        return ResponseEntity.ok()</span>
+<span class="fc" id="L90">            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, entityWithPaginationAndDTODTO.getId().toString()))</span>
+<span class="fc" id="L91">            .body(result);</span>
+    }
+
+    /**
+     * GET  /entity-with-pagination-and-dtos : get all the entityWithPaginationAndDTOS.
+     *
+     * @param pageable the pagination information
+     * @return the ResponseEntity with status 200 (OK) and the list of entityWithPaginationAndDTOS in body
+     */
+    @GetMapping(&quot;/entity-with-pagination-and-dtos&quot;)
+    @Timed
+    public ResponseEntity&lt;List&lt;EntityWithPaginationAndDTODTO&gt;&gt; getAllEntityWithPaginationAndDTOS(Pageable pageable) {
+<span class="fc" id="L103">        log.debug(&quot;REST request to get a page of EntityWithPaginationAndDTOS&quot;);</span>
+<span class="fc" id="L104">        Page&lt;EntityWithPaginationAndDTO&gt; page = entityWithPaginationAndDTORepository.findAll(pageable);</span>
+<span class="fc" id="L105">        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, &quot;/api/entity-with-pagination-and-dtos&quot;);</span>
+<span class="fc" id="L106">        return new ResponseEntity&lt;&gt;(entityWithPaginationAndDTOMapper.toDto(page.getContent()), headers, HttpStatus.OK);</span>
+    }
+
+    /**
+     * GET  /entity-with-pagination-and-dtos/:id : get the &quot;id&quot; entityWithPaginationAndDTO.
+     *
+     * @param id the id of the entityWithPaginationAndDTODTO to retrieve
+     * @return the ResponseEntity with status 200 (OK) and with body the entityWithPaginationAndDTODTO, or with status 404 (Not Found)
+     */
+    @GetMapping(&quot;/entity-with-pagination-and-dtos/{id}&quot;)
+    @Timed
+    public ResponseEntity&lt;EntityWithPaginationAndDTODTO&gt; getEntityWithPaginationAndDTO(@PathVariable Long id) {
+<span class="fc" id="L118">        log.debug(&quot;REST request to get EntityWithPaginationAndDTO : {}&quot;, id);</span>
+<span class="fc" id="L119">        EntityWithPaginationAndDTO entityWithPaginationAndDTO = entityWithPaginationAndDTORepository.findOne(id);</span>
+<span class="fc" id="L120">        EntityWithPaginationAndDTODTO entityWithPaginationAndDTODTO = entityWithPaginationAndDTOMapper.toDto(entityWithPaginationAndDTO);</span>
+<span class="fc" id="L121">        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(entityWithPaginationAndDTODTO));</span>
+    }
+
+    /**
+     * DELETE  /entity-with-pagination-and-dtos/:id : delete the &quot;id&quot; entityWithPaginationAndDTO.
+     *
+     * @param id the id of the entityWithPaginationAndDTODTO to delete
+     * @return the ResponseEntity with status 200 (OK)
+     */
+    @DeleteMapping(&quot;/entity-with-pagination-and-dtos/{id}&quot;)
+    @Timed
+    public ResponseEntity&lt;Void&gt; deleteEntityWithPaginationAndDTO(@PathVariable Long id) {
+<span class="fc" id="L133">        log.debug(&quot;REST request to delete EntityWithPaginationAndDTO : {}&quot;, id);</span>
+<span class="fc" id="L134">        entityWithPaginationAndDTORepository.delete(id);</span>
+<span class="fc" id="L135">        return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

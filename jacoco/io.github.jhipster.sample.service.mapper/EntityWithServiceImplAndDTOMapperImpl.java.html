@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EntityWithServiceImplAndDTOMapperImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.service.mapper</a> &gt; <span class="el_source">EntityWithServiceImplAndDTOMapperImpl.java</span></div><h1>EntityWithServiceImplAndDTOMapperImpl.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.service.mapper;
+
+import io.github.jhipster.sample.domain.EntityWithServiceImplAndDTO;
+
+import io.github.jhipster.sample.service.dto.EntityWithServiceImplAndDTODTO;
+
+import java.util.ArrayList;
+
+import java.util.List;
+
+import javax.annotation.Generated;
+
+import org.springframework.stereotype.Component;
+
+@Generated(
+
+    value = &quot;org.mapstruct.ap.MappingProcessor&quot;,
+
+    date = &quot;2017-12-02T18:50:30+0000&quot;,
+
+    comments = &quot;version: 1.1.0.Final, compiler: javac, environment: Java 1.8.0_144 (Oracle Corporation)&quot;
+
+)
+
+@Component
+
+<span class="fc" id="L27">public class EntityWithServiceImplAndDTOMapperImpl implements EntityWithServiceImplAndDTOMapper {</span>
+
+    @Override
+
+    public EntityWithServiceImplAndDTO toEntity(EntityWithServiceImplAndDTODTO dto) {
+
+<span class="pc bpc" id="L33" title="1 of 2 branches missed.">        if ( dto == null ) {</span>
+
+<span class="nc" id="L35">            return null;</span>
+        }
+
+<span class="fc" id="L38">        EntityWithServiceImplAndDTO entityWithServiceImplAndDTO = new EntityWithServiceImplAndDTO();</span>
+
+<span class="fc" id="L40">        entityWithServiceImplAndDTO.setId( dto.getId() );</span>
+
+<span class="fc" id="L42">        entityWithServiceImplAndDTO.setLouis( dto.getLouis() );</span>
+
+<span class="fc" id="L44">        return entityWithServiceImplAndDTO;</span>
+    }
+
+    @Override
+
+    public EntityWithServiceImplAndDTODTO toDto(EntityWithServiceImplAndDTO entity) {
+
+<span class="fc bfc" id="L51" title="All 2 branches covered.">        if ( entity == null ) {</span>
+
+<span class="fc" id="L53">            return null;</span>
+        }
+
+<span class="fc" id="L56">        EntityWithServiceImplAndDTODTO entityWithServiceImplAndDTODTO = new EntityWithServiceImplAndDTODTO();</span>
+
+<span class="fc" id="L58">        entityWithServiceImplAndDTODTO.setId( entity.getId() );</span>
+
+<span class="fc" id="L60">        entityWithServiceImplAndDTODTO.setLouis( entity.getLouis() );</span>
+
+<span class="fc" id="L62">        return entityWithServiceImplAndDTODTO;</span>
+    }
+
+    @Override
+
+    public List&lt;EntityWithServiceImplAndDTO&gt; toEntity(List&lt;EntityWithServiceImplAndDTODTO&gt; dtoList) {
+
+<span class="nc bnc" id="L69" title="All 2 branches missed.">        if ( dtoList == null ) {</span>
+
+<span class="nc" id="L71">            return null;</span>
+        }
+
+<span class="nc" id="L74">        List&lt;EntityWithServiceImplAndDTO&gt; list = new ArrayList&lt;EntityWithServiceImplAndDTO&gt;();</span>
+
+<span class="nc bnc" id="L76" title="All 2 branches missed.">        for ( EntityWithServiceImplAndDTODTO entityWithServiceImplAndDTODTO : dtoList ) {</span>
+
+<span class="nc" id="L78">            list.add( toEntity( entityWithServiceImplAndDTODTO ) );</span>
+<span class="nc" id="L79">        }</span>
+
+<span class="nc" id="L81">        return list;</span>
+    }
+
+    @Override
+
+    public List&lt;EntityWithServiceImplAndDTODTO&gt; toDto(List&lt;EntityWithServiceImplAndDTO&gt; entityList) {
+
+<span class="nc bnc" id="L88" title="All 2 branches missed.">        if ( entityList == null ) {</span>
+
+<span class="nc" id="L90">            return null;</span>
+        }
+
+<span class="nc" id="L93">        List&lt;EntityWithServiceImplAndDTODTO&gt; list = new ArrayList&lt;EntityWithServiceImplAndDTODTO&gt;();</span>
+
+<span class="nc bnc" id="L95" title="All 2 branches missed.">        for ( EntityWithServiceImplAndDTO entityWithServiceImplAndDTO : entityList ) {</span>
+
+<span class="nc" id="L97">            list.add( toDto( entityWithServiceImplAndDTO ) );</span>
+<span class="nc" id="L98">        }</span>
+
+<span class="nc" id="L100">        return list;</span>
+    }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

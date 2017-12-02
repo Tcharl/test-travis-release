@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BankAccountQueryService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.service</a> &gt; <span class="el_source">BankAccountQueryService.java</span></div><h1>BankAccountQueryService.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.service;
+
+import java.time.LocalDate;
+import java.math.BigDecimal;
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specifications;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import io.github.jhipster.service.QueryService;
+
+import io.github.jhipster.sample.domain.BankAccount;
+import io.github.jhipster.sample.domain.*; // for static metamodels
+import io.github.jhipster.sample.repository.BankAccountRepository;
+import io.github.jhipster.sample.service.dto.BankAccountCriteria;
+
+import io.github.jhipster.sample.service.dto.BankAccountDTO;
+import io.github.jhipster.sample.service.mapper.BankAccountMapper;
+import io.github.jhipster.sample.domain.enumeration.BankAccountType;
+
+/**
+ * Service for executing complex queries for BankAccount entities in the database.
+ * The main input is a {@link BankAccountCriteria} which get's converted to {@link Specifications},
+ * in a way that all the filters must apply.
+ * It returns a {@link List} of {@link BankAccountDTO} or a {@link Page} of {@link BankAccountDTO} which fulfills the criteria.
+ */
+@Service
+@Transactional(readOnly = true)
+public class BankAccountQueryService extends QueryService&lt;BankAccount&gt; {
+
+<span class="fc" id="L36">    private final Logger log = LoggerFactory.getLogger(BankAccountQueryService.class);</span>
+
+
+    private final BankAccountRepository bankAccountRepository;
+
+    private final BankAccountMapper bankAccountMapper;
+
+<span class="fc" id="L43">    public BankAccountQueryService(BankAccountRepository bankAccountRepository, BankAccountMapper bankAccountMapper) {</span>
+<span class="fc" id="L44">        this.bankAccountRepository = bankAccountRepository;</span>
+<span class="fc" id="L45">        this.bankAccountMapper = bankAccountMapper;</span>
+<span class="fc" id="L46">    }</span>
+
+    /**
+     * Return a {@link List} of {@link BankAccountDTO} which matches the criteria from the database
+     * @param criteria The object which holds all the filters, which the entities should match.
+     * @return the matching entities.
+     */
+    @Transactional(readOnly = true)
+    public List&lt;BankAccountDTO&gt; findByCriteria(BankAccountCriteria criteria) {
+<span class="fc" id="L55">        log.debug(&quot;find by criteria : {}&quot;, criteria);</span>
+<span class="fc" id="L56">        final Specifications&lt;BankAccount&gt; specification = createSpecification(criteria);</span>
+<span class="fc" id="L57">        return bankAccountMapper.toDto(bankAccountRepository.findAll(specification));</span>
+    }
+
+    /**
+     * Return a {@link Page} of {@link BankAccountDTO} which matches the criteria from the database
+     * @param criteria The object which holds all the filters, which the entities should match.
+     * @param page The page, which should be returned.
+     * @return the matching entities.
+     */
+    @Transactional(readOnly = true)
+    public Page&lt;BankAccountDTO&gt; findByCriteria(BankAccountCriteria criteria, Pageable page) {
+<span class="nc" id="L68">        log.debug(&quot;find by criteria : {}, page: {}&quot;, criteria, page);</span>
+<span class="nc" id="L69">        final Specifications&lt;BankAccount&gt; specification = createSpecification(criteria);</span>
+<span class="nc" id="L70">        final Page&lt;BankAccount&gt; result = bankAccountRepository.findAll(specification, page);</span>
+<span class="nc" id="L71">        return result.map(bankAccountMapper::toDto);</span>
+    }
+
+    /**
+     * Function to convert BankAccountCriteria to a {@link Specifications}
+     */
+    private Specifications&lt;BankAccount&gt; createSpecification(BankAccountCriteria criteria) {
+<span class="fc" id="L78">        Specifications&lt;BankAccount&gt; specification = Specifications.where(null);</span>
+<span class="pc bpc" id="L79" title="1 of 2 branches missed.">        if (criteria != null) {</span>
+<span class="pc bpc" id="L80" title="1 of 2 branches missed.">            if (criteria.getId() != null) {</span>
+<span class="nc" id="L81">                specification = specification.and(buildSpecification(criteria.getId(), BankAccount_.id));</span>
+            }
+<span class="fc bfc" id="L83" title="All 2 branches covered.">            if (criteria.getName() != null) {</span>
+<span class="fc" id="L84">                specification = specification.and(buildStringSpecification(criteria.getName(), BankAccount_.name));</span>
+            }
+<span class="fc bfc" id="L86" title="All 2 branches covered.">            if (criteria.getBankNumber() != null) {</span>
+<span class="fc" id="L87">                specification = specification.and(buildRangeSpecification(criteria.getBankNumber(), BankAccount_.bankNumber));</span>
+            }
+<span class="fc bfc" id="L89" title="All 2 branches covered.">            if (criteria.getAgencyNumber() != null) {</span>
+<span class="fc" id="L90">                specification = specification.and(buildRangeSpecification(criteria.getAgencyNumber(), BankAccount_.agencyNumber));</span>
+            }
+<span class="fc bfc" id="L92" title="All 2 branches covered.">            if (criteria.getLastOperationDuration() != null) {</span>
+<span class="fc" id="L93">                specification = specification.and(buildRangeSpecification(criteria.getLastOperationDuration(), BankAccount_.lastOperationDuration));</span>
+            }
+<span class="fc bfc" id="L95" title="All 2 branches covered.">            if (criteria.getMeanOperationDuration() != null) {</span>
+<span class="fc" id="L96">                specification = specification.and(buildRangeSpecification(criteria.getMeanOperationDuration(), BankAccount_.meanOperationDuration));</span>
+            }
+<span class="fc bfc" id="L98" title="All 2 branches covered.">            if (criteria.getBalance() != null) {</span>
+<span class="fc" id="L99">                specification = specification.and(buildRangeSpecification(criteria.getBalance(), BankAccount_.balance));</span>
+            }
+<span class="fc bfc" id="L101" title="All 2 branches covered.">            if (criteria.getOpeningDay() != null) {</span>
+<span class="fc" id="L102">                specification = specification.and(buildRangeSpecification(criteria.getOpeningDay(), BankAccount_.openingDay));</span>
+            }
+<span class="fc bfc" id="L104" title="All 2 branches covered.">            if (criteria.getLastOperationDate() != null) {</span>
+<span class="fc" id="L105">                specification = specification.and(buildRangeSpecification(criteria.getLastOperationDate(), BankAccount_.lastOperationDate));</span>
+            }
+<span class="fc bfc" id="L107" title="All 2 branches covered.">            if (criteria.getActive() != null) {</span>
+<span class="fc" id="L108">                specification = specification.and(buildSpecification(criteria.getActive(), BankAccount_.active));</span>
+            }
+<span class="fc bfc" id="L110" title="All 2 branches covered.">            if (criteria.getAccountType() != null) {</span>
+<span class="fc" id="L111">                specification = specification.and(buildSpecification(criteria.getAccountType(), BankAccount_.accountType));</span>
+            }
+<span class="fc bfc" id="L113" title="All 2 branches covered.">            if (criteria.getUserId() != null) {</span>
+<span class="fc" id="L114">                specification = specification.and(buildReferringEntitySpecification(criteria.getUserId(), BankAccount_.user, User_.id));</span>
+            }
+<span class="fc bfc" id="L116" title="All 2 branches covered.">            if (criteria.getOperationId() != null) {</span>
+<span class="fc" id="L117">                specification = specification.and(buildReferringEntitySpecification(criteria.getOperationId(), BankAccount_.operations, Operation_.id));</span>
+            }
+        }
+<span class="fc" id="L120">        return specification;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

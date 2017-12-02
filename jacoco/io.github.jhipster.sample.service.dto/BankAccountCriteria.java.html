@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BankAccountCriteria.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.service.dto</a> &gt; <span class="el_source">BankAccountCriteria.java</span></div><h1>BankAccountCriteria.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.service.dto;
+
+import java.io.Serializable;
+import io.github.jhipster.sample.domain.enumeration.BankAccountType;
+import io.github.jhipster.service.filter.BooleanFilter;
+import io.github.jhipster.service.filter.DoubleFilter;
+import io.github.jhipster.service.filter.Filter;
+import io.github.jhipster.service.filter.FloatFilter;
+import io.github.jhipster.service.filter.IntegerFilter;
+import io.github.jhipster.service.filter.LongFilter;
+import io.github.jhipster.service.filter.StringFilter;
+import io.github.jhipster.service.filter.BigDecimalFilter;
+import io.github.jhipster.service.filter.InstantFilter;
+import io.github.jhipster.service.filter.LocalDateFilter;
+
+
+
+/**
+ * Criteria class for the BankAccount entity. This class is used in BankAccountResource to
+ * receive all the possible filtering options from the Http GET request parameters.
+ * For example the following could be a valid requests:
+ * &lt;code&gt; /bank-accounts?id.greaterThan=5&amp;amp;attr1.contains=something&amp;amp;attr2.specified=false&lt;/code&gt;
+ * As Spring is unable to properly convert the types, unless specific {@link Filter} class are used, we need to use
+ * fix type specific filters.
+ */
+public class BankAccountCriteria implements Serializable {
+    /**
+     * Class for filtering BankAccountType
+     */
+<span class="fc" id="L30">    public static class BankAccountTypeFilter extends Filter&lt;BankAccountType&gt; {</span>
+    }
+
+    private static final long serialVersionUID = 1L;
+
+
+    private LongFilter id;
+
+    private StringFilter name;
+
+    private IntegerFilter bankNumber;
+
+    private LongFilter agencyNumber;
+
+    private FloatFilter lastOperationDuration;
+
+    private DoubleFilter meanOperationDuration;
+
+    private BigDecimalFilter balance;
+
+    private LocalDateFilter openingDay;
+
+    private InstantFilter lastOperationDate;
+
+    private BooleanFilter active;
+
+    private BankAccountTypeFilter accountType;
+
+    private LongFilter userId;
+
+    private LongFilter operationId;
+
+<span class="fc" id="L62">    public BankAccountCriteria() {</span>
+<span class="fc" id="L63">    }</span>
+
+    public LongFilter getId() {
+<span class="fc" id="L66">        return id;</span>
+    }
+
+    public void setId(LongFilter id) {
+<span class="nc" id="L70">        this.id = id;</span>
+<span class="nc" id="L71">    }</span>
+
+    public StringFilter getName() {
+<span class="fc" id="L74">        return name;</span>
+    }
+
+    public void setName(StringFilter name) {
+<span class="fc" id="L78">        this.name = name;</span>
+<span class="fc" id="L79">    }</span>
+
+    public IntegerFilter getBankNumber() {
+<span class="fc" id="L82">        return bankNumber;</span>
+    }
+
+    public void setBankNumber(IntegerFilter bankNumber) {
+<span class="fc" id="L86">        this.bankNumber = bankNumber;</span>
+<span class="fc" id="L87">    }</span>
+
+    public LongFilter getAgencyNumber() {
+<span class="fc" id="L90">        return agencyNumber;</span>
+    }
+
+    public void setAgencyNumber(LongFilter agencyNumber) {
+<span class="fc" id="L94">        this.agencyNumber = agencyNumber;</span>
+<span class="fc" id="L95">    }</span>
+
+    public FloatFilter getLastOperationDuration() {
+<span class="fc" id="L98">        return lastOperationDuration;</span>
+    }
+
+    public void setLastOperationDuration(FloatFilter lastOperationDuration) {
+<span class="fc" id="L102">        this.lastOperationDuration = lastOperationDuration;</span>
+<span class="fc" id="L103">    }</span>
+
+    public DoubleFilter getMeanOperationDuration() {
+<span class="fc" id="L106">        return meanOperationDuration;</span>
+    }
+
+    public void setMeanOperationDuration(DoubleFilter meanOperationDuration) {
+<span class="fc" id="L110">        this.meanOperationDuration = meanOperationDuration;</span>
+<span class="fc" id="L111">    }</span>
+
+    public BigDecimalFilter getBalance() {
+<span class="fc" id="L114">        return balance;</span>
+    }
+
+    public void setBalance(BigDecimalFilter balance) {
+<span class="fc" id="L118">        this.balance = balance;</span>
+<span class="fc" id="L119">    }</span>
+
+    public LocalDateFilter getOpeningDay() {
+<span class="fc" id="L122">        return openingDay;</span>
+    }
+
+    public void setOpeningDay(LocalDateFilter openingDay) {
+<span class="fc" id="L126">        this.openingDay = openingDay;</span>
+<span class="fc" id="L127">    }</span>
+
+    public InstantFilter getLastOperationDate() {
+<span class="fc" id="L130">        return lastOperationDate;</span>
+    }
+
+    public void setLastOperationDate(InstantFilter lastOperationDate) {
+<span class="fc" id="L134">        this.lastOperationDate = lastOperationDate;</span>
+<span class="fc" id="L135">    }</span>
+
+    public BooleanFilter getActive() {
+<span class="fc" id="L138">        return active;</span>
+    }
+
+    public void setActive(BooleanFilter active) {
+<span class="fc" id="L142">        this.active = active;</span>
+<span class="fc" id="L143">    }</span>
+
+    public BankAccountTypeFilter getAccountType() {
+<span class="fc" id="L146">        return accountType;</span>
+    }
+
+    public void setAccountType(BankAccountTypeFilter accountType) {
+<span class="fc" id="L150">        this.accountType = accountType;</span>
+<span class="fc" id="L151">    }</span>
+
+    public LongFilter getUserId() {
+<span class="fc" id="L154">        return userId;</span>
+    }
+
+    public void setUserId(LongFilter userId) {
+<span class="fc" id="L158">        this.userId = userId;</span>
+<span class="fc" id="L159">    }</span>
+
+    public LongFilter getOperationId() {
+<span class="fc" id="L162">        return operationId;</span>
+    }
+
+    public void setOperationId(LongFilter operationId) {
+<span class="fc" id="L166">        this.operationId = operationId;</span>
+<span class="fc" id="L167">    }</span>
+
+    @Override
+    public String toString() {
+<span class="nc bnc" id="L171" title="All 26 branches missed.">        return &quot;BankAccountCriteria{&quot; +</span>
+                (id != null ? &quot;id=&quot; + id + &quot;, &quot; : &quot;&quot;) +
+                (name != null ? &quot;name=&quot; + name + &quot;, &quot; : &quot;&quot;) +
+                (bankNumber != null ? &quot;bankNumber=&quot; + bankNumber + &quot;, &quot; : &quot;&quot;) +
+                (agencyNumber != null ? &quot;agencyNumber=&quot; + agencyNumber + &quot;, &quot; : &quot;&quot;) +
+                (lastOperationDuration != null ? &quot;lastOperationDuration=&quot; + lastOperationDuration + &quot;, &quot; : &quot;&quot;) +
+                (meanOperationDuration != null ? &quot;meanOperationDuration=&quot; + meanOperationDuration + &quot;, &quot; : &quot;&quot;) +
+                (balance != null ? &quot;balance=&quot; + balance + &quot;, &quot; : &quot;&quot;) +
+                (openingDay != null ? &quot;openingDay=&quot; + openingDay + &quot;, &quot; : &quot;&quot;) +
+                (lastOperationDate != null ? &quot;lastOperationDate=&quot; + lastOperationDate + &quot;, &quot; : &quot;&quot;) +
+                (active != null ? &quot;active=&quot; + active + &quot;, &quot; : &quot;&quot;) +
+                (accountType != null ? &quot;accountType=&quot; + accountType + &quot;, &quot; : &quot;&quot;) +
+                (userId != null ? &quot;userId=&quot; + userId + &quot;, &quot; : &quot;&quot;) +
+                (operationId != null ? &quot;operationId=&quot; + operationId + &quot;, &quot; : &quot;&quot;) +
+            &quot;}&quot;;
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

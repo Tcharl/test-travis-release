@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FieldTestEntityResource.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.web.rest</a> &gt; <span class="el_source">FieldTestEntityResource.java</span></div><h1>FieldTestEntityResource.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.web.rest;
+
+import com.codahale.metrics.annotation.Timed;
+import io.github.jhipster.sample.domain.FieldTestEntity;
+
+import io.github.jhipster.sample.repository.FieldTestEntityRepository;
+import io.github.jhipster.sample.web.rest.errors.BadRequestAlertException;
+import io.github.jhipster.sample.web.rest.util.HeaderUtil;
+import io.github.jhipster.web.util.ResponseUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.net.URI;
+import java.net.URISyntaxException;
+
+import java.util.List;
+import java.util.Optional;
+
+/**
+ * REST controller for managing FieldTestEntity.
+ */
+@RestController
+@RequestMapping(&quot;/api&quot;)
+public class FieldTestEntityResource {
+
+<span class="fc" id="L29">    private final Logger log = LoggerFactory.getLogger(FieldTestEntityResource.class);</span>
+
+    private static final String ENTITY_NAME = &quot;fieldTestEntity&quot;;
+
+    private final FieldTestEntityRepository fieldTestEntityRepository;
+
+<span class="fc" id="L35">    public FieldTestEntityResource(FieldTestEntityRepository fieldTestEntityRepository) {</span>
+<span class="fc" id="L36">        this.fieldTestEntityRepository = fieldTestEntityRepository;</span>
+<span class="fc" id="L37">    }</span>
+
+    /**
+     * POST  /field-test-entities : Create a new fieldTestEntity.
+     *
+     * @param fieldTestEntity the fieldTestEntity to create
+     * @return the ResponseEntity with status 201 (Created) and with body the new fieldTestEntity, or with status 400 (Bad Request) if the fieldTestEntity has already an ID
+     * @throws URISyntaxException if the Location URI syntax is incorrect
+     */
+    @PostMapping(&quot;/field-test-entities&quot;)
+    @Timed
+    public ResponseEntity&lt;FieldTestEntity&gt; createFieldTestEntity(@Valid @RequestBody FieldTestEntity fieldTestEntity) throws URISyntaxException {
+<span class="fc" id="L49">        log.debug(&quot;REST request to save FieldTestEntity : {}&quot;, fieldTestEntity);</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">        if (fieldTestEntity.getId() != null) {</span>
+<span class="fc" id="L51">            throw new BadRequestAlertException(&quot;A new fieldTestEntity cannot already have an ID&quot;, ENTITY_NAME, &quot;idexists&quot;);</span>
+        }
+<span class="fc" id="L53">        FieldTestEntity result = fieldTestEntityRepository.save(fieldTestEntity);</span>
+<span class="fc" id="L54">        return ResponseEntity.created(new URI(&quot;/api/field-test-entities/&quot; + result.getId()))</span>
+<span class="fc" id="L55">            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))</span>
+<span class="fc" id="L56">            .body(result);</span>
+    }
+
+    /**
+     * PUT  /field-test-entities : Updates an existing fieldTestEntity.
+     *
+     * @param fieldTestEntity the fieldTestEntity to update
+     * @return the ResponseEntity with status 200 (OK) and with body the updated fieldTestEntity,
+     * or with status 400 (Bad Request) if the fieldTestEntity is not valid,
+     * or with status 500 (Internal Server Error) if the fieldTestEntity couldn't be updated
+     * @throws URISyntaxException if the Location URI syntax is incorrect
+     */
+    @PutMapping(&quot;/field-test-entities&quot;)
+    @Timed
+    public ResponseEntity&lt;FieldTestEntity&gt; updateFieldTestEntity(@Valid @RequestBody FieldTestEntity fieldTestEntity) throws URISyntaxException {
+<span class="fc" id="L71">        log.debug(&quot;REST request to update FieldTestEntity : {}&quot;, fieldTestEntity);</span>
+<span class="fc bfc" id="L72" title="All 2 branches covered.">        if (fieldTestEntity.getId() == null) {</span>
+<span class="fc" id="L73">            return createFieldTestEntity(fieldTestEntity);</span>
+        }
+<span class="fc" id="L75">        FieldTestEntity result = fieldTestEntityRepository.save(fieldTestEntity);</span>
+<span class="fc" id="L76">        return ResponseEntity.ok()</span>
+<span class="fc" id="L77">            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, fieldTestEntity.getId().toString()))</span>
+<span class="fc" id="L78">            .body(result);</span>
+    }
+
+    /**
+     * GET  /field-test-entities : get all the fieldTestEntities.
+     *
+     * @return the ResponseEntity with status 200 (OK) and the list of fieldTestEntities in body
+     */
+    @GetMapping(&quot;/field-test-entities&quot;)
+    @Timed
+    public List&lt;FieldTestEntity&gt; getAllFieldTestEntities() {
+<span class="fc" id="L89">        log.debug(&quot;REST request to get all FieldTestEntities&quot;);</span>
+<span class="fc" id="L90">        return fieldTestEntityRepository.findAll();</span>
+        }
+
+    /**
+     * GET  /field-test-entities/:id : get the &quot;id&quot; fieldTestEntity.
+     *
+     * @param id the id of the fieldTestEntity to retrieve
+     * @return the ResponseEntity with status 200 (OK) and with body the fieldTestEntity, or with status 404 (Not Found)
+     */
+    @GetMapping(&quot;/field-test-entities/{id}&quot;)
+    @Timed
+    public ResponseEntity&lt;FieldTestEntity&gt; getFieldTestEntity(@PathVariable Long id) {
+<span class="fc" id="L102">        log.debug(&quot;REST request to get FieldTestEntity : {}&quot;, id);</span>
+<span class="fc" id="L103">        FieldTestEntity fieldTestEntity = fieldTestEntityRepository.findOne(id);</span>
+<span class="fc" id="L104">        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(fieldTestEntity));</span>
+    }
+
+    /**
+     * DELETE  /field-test-entities/:id : delete the &quot;id&quot; fieldTestEntity.
+     *
+     * @param id the id of the fieldTestEntity to delete
+     * @return the ResponseEntity with status 200 (OK)
+     */
+    @DeleteMapping(&quot;/field-test-entities/{id}&quot;)
+    @Timed
+    public ResponseEntity&lt;Void&gt; deleteFieldTestEntity(@PathVariable Long id) {
+<span class="fc" id="L116">        log.debug(&quot;REST request to delete FieldTestEntity : {}&quot;, id);</span>
+<span class="fc" id="L117">        fieldTestEntityRepository.delete(id);</span>
+<span class="fc" id="L118">        return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

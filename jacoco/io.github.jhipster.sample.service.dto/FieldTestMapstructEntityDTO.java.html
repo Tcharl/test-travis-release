@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FieldTestMapstructEntityDTO.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.service.dto</a> &gt; <span class="el_source">FieldTestMapstructEntityDTO.java</span></div><h1>FieldTestMapstructEntityDTO.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.service.dto;
+
+
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZonedDateTime;
+import javax.validation.constraints.*;
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.Objects;
+import javax.persistence.Lob;
+import io.github.jhipster.sample.domain.enumeration.EnumFieldClass;
+import io.github.jhipster.sample.domain.enumeration.EnumRequiredFieldClass;
+
+/**
+ * A DTO for the FieldTestMapstructEntity entity.
+ */
+<span class="fc" id="L18">public class FieldTestMapstructEntityDTO implements Serializable {</span>
+
+    private Long id;
+
+    private String stringEva;
+
+    @NotNull
+    private String stringRequiredEva;
+
+    @Size(min = 0)
+    private String stringMinlengthEva;
+
+    @Size(max = 20)
+    private String stringMaxlengthEva;
+
+    @Pattern(regexp = &quot;^[a-zA-Z0-9]*$&quot;)
+    private String stringPatternEva;
+
+    private Integer integerEva;
+
+    @NotNull
+    private Integer integerRequiredEva;
+
+    @Min(value = 0)
+    private Integer integerMinEva;
+
+    @Max(value = 100)
+    private Integer integerMaxEva;
+
+    private Long longEva;
+
+    @NotNull
+    private Long longRequiredEva;
+
+    @Min(value = 0L)
+    private Long longMinEva;
+
+    @Max(value = 100L)
+    private Long longMaxEva;
+
+    private Float floatEva;
+
+    @NotNull
+    private Float floatRequiredEva;
+
+    @DecimalMin(value = &quot;0&quot;)
+    private Float floatMinEva;
+
+    @DecimalMax(value = &quot;100&quot;)
+    private Float floatMaxEva;
+
+    @NotNull
+    private Double doubleRequiredEva;
+
+    @DecimalMin(value = &quot;0&quot;)
+    private Double doubleMinEva;
+
+    @DecimalMax(value = &quot;100&quot;)
+    private Double doubleMaxEva;
+
+    @NotNull
+    private BigDecimal bigDecimalRequiredEva;
+
+    @DecimalMin(value = &quot;0&quot;)
+    private BigDecimal bigDecimalMinEva;
+
+    @DecimalMax(value = &quot;100&quot;)
+    private BigDecimal bigDecimalMaxEva;
+
+    private LocalDate localDateEva;
+
+    @NotNull
+    private LocalDate localDateRequiredEva;
+
+    private Instant instantEva;
+
+    @NotNull
+    private Instant instanteRequiredEva;
+
+    private ZonedDateTime zonedDateTimeEva;
+
+    @NotNull
+    private ZonedDateTime zonedDateTimeRequiredEva;
+
+    private Boolean booleanEva;
+
+    @NotNull
+    private Boolean booleanRequiredEva;
+
+    private EnumFieldClass enumEva;
+
+    @NotNull
+    private EnumRequiredFieldClass enumRequiredEva;
+
+    @Lob
+    private byte[] byteImageEva;
+    private String byteImageEvaContentType;
+
+    @NotNull
+    @Lob
+    private byte[] byteImageRequiredEva;
+    private String byteImageRequiredEvaContentType;
+
+    @Size(min = 0)
+    @Lob
+    private byte[] byteImageMinbytesEva;
+    private String byteImageMinbytesEvaContentType;
+
+    @Size(max = 10000)
+    @Lob
+    private byte[] byteImageMaxbytesEva;
+    private String byteImageMaxbytesEvaContentType;
+
+    @Lob
+    private byte[] byteAnyEva;
+    private String byteAnyEvaContentType;
+
+    @NotNull
+    @Lob
+    private byte[] byteAnyRequiredEva;
+    private String byteAnyRequiredEvaContentType;
+
+    @Size(min = 0)
+    @Lob
+    private byte[] byteAnyMinbytesEva;
+    private String byteAnyMinbytesEvaContentType;
+
+    @Size(max = 10000)
+    @Lob
+    private byte[] byteAnyMaxbytesEva;
+    private String byteAnyMaxbytesEvaContentType;
+
+    @Lob
+    private String byteTextEva;
+
+    @NotNull
+    @Lob
+    private String byteTextRequiredEva;
+
+    @Size(min = 0)
+    @Lob
+    private String byteTextMinbytesEva;
+
+    @Size(max = 10000)
+    @Lob
+    private String byteTextMaxbytesEva;
+
+    public Long getId() {
+<span class="fc" id="L166">        return id;</span>
+    }
+
+    public void setId(Long id) {
+<span class="fc" id="L170">        this.id = id;</span>
+<span class="fc" id="L171">    }</span>
+
+    public String getStringEva() {
+<span class="fc" id="L174">        return stringEva;</span>
+    }
+
+    public void setStringEva(String stringEva) {
+<span class="fc" id="L178">        this.stringEva = stringEva;</span>
+<span class="fc" id="L179">    }</span>
+
+    public String getStringRequiredEva() {
+<span class="fc" id="L182">        return stringRequiredEva;</span>
+    }
+
+    public void setStringRequiredEva(String stringRequiredEva) {
+<span class="fc" id="L186">        this.stringRequiredEva = stringRequiredEva;</span>
+<span class="fc" id="L187">    }</span>
+
+    public String getStringMinlengthEva() {
+<span class="fc" id="L190">        return stringMinlengthEva;</span>
+    }
+
+    public void setStringMinlengthEva(String stringMinlengthEva) {
+<span class="fc" id="L194">        this.stringMinlengthEva = stringMinlengthEva;</span>
+<span class="fc" id="L195">    }</span>
+
+    public String getStringMaxlengthEva() {
+<span class="fc" id="L198">        return stringMaxlengthEva;</span>
+    }
+
+    public void setStringMaxlengthEva(String stringMaxlengthEva) {
+<span class="fc" id="L202">        this.stringMaxlengthEva = stringMaxlengthEva;</span>
+<span class="fc" id="L203">    }</span>
+
+    public String getStringPatternEva() {
+<span class="fc" id="L206">        return stringPatternEva;</span>
+    }
+
+    public void setStringPatternEva(String stringPatternEva) {
+<span class="fc" id="L210">        this.stringPatternEva = stringPatternEva;</span>
+<span class="fc" id="L211">    }</span>
+
+    public Integer getIntegerEva() {
+<span class="fc" id="L214">        return integerEva;</span>
+    }
+
+    public void setIntegerEva(Integer integerEva) {
+<span class="fc" id="L218">        this.integerEva = integerEva;</span>
+<span class="fc" id="L219">    }</span>
+
+    public Integer getIntegerRequiredEva() {
+<span class="fc" id="L222">        return integerRequiredEva;</span>
+    }
+
+    public void setIntegerRequiredEva(Integer integerRequiredEva) {
+<span class="fc" id="L226">        this.integerRequiredEva = integerRequiredEva;</span>
+<span class="fc" id="L227">    }</span>
+
+    public Integer getIntegerMinEva() {
+<span class="fc" id="L230">        return integerMinEva;</span>
+    }
+
+    public void setIntegerMinEva(Integer integerMinEva) {
+<span class="fc" id="L234">        this.integerMinEva = integerMinEva;</span>
+<span class="fc" id="L235">    }</span>
+
+    public Integer getIntegerMaxEva() {
+<span class="fc" id="L238">        return integerMaxEva;</span>
+    }
+
+    public void setIntegerMaxEva(Integer integerMaxEva) {
+<span class="fc" id="L242">        this.integerMaxEva = integerMaxEva;</span>
+<span class="fc" id="L243">    }</span>
+
+    public Long getLongEva() {
+<span class="fc" id="L246">        return longEva;</span>
+    }
+
+    public void setLongEva(Long longEva) {
+<span class="fc" id="L250">        this.longEva = longEva;</span>
+<span class="fc" id="L251">    }</span>
+
+    public Long getLongRequiredEva() {
+<span class="fc" id="L254">        return longRequiredEva;</span>
+    }
+
+    public void setLongRequiredEva(Long longRequiredEva) {
+<span class="fc" id="L258">        this.longRequiredEva = longRequiredEva;</span>
+<span class="fc" id="L259">    }</span>
+
+    public Long getLongMinEva() {
+<span class="fc" id="L262">        return longMinEva;</span>
+    }
+
+    public void setLongMinEva(Long longMinEva) {
+<span class="fc" id="L266">        this.longMinEva = longMinEva;</span>
+<span class="fc" id="L267">    }</span>
+
+    public Long getLongMaxEva() {
+<span class="fc" id="L270">        return longMaxEva;</span>
+    }
+
+    public void setLongMaxEva(Long longMaxEva) {
+<span class="fc" id="L274">        this.longMaxEva = longMaxEva;</span>
+<span class="fc" id="L275">    }</span>
+
+    public Float getFloatEva() {
+<span class="fc" id="L278">        return floatEva;</span>
+    }
+
+    public void setFloatEva(Float floatEva) {
+<span class="fc" id="L282">        this.floatEva = floatEva;</span>
+<span class="fc" id="L283">    }</span>
+
+    public Float getFloatRequiredEva() {
+<span class="fc" id="L286">        return floatRequiredEva;</span>
+    }
+
+    public void setFloatRequiredEva(Float floatRequiredEva) {
+<span class="fc" id="L290">        this.floatRequiredEva = floatRequiredEva;</span>
+<span class="fc" id="L291">    }</span>
+
+    public Float getFloatMinEva() {
+<span class="fc" id="L294">        return floatMinEva;</span>
+    }
+
+    public void setFloatMinEva(Float floatMinEva) {
+<span class="fc" id="L298">        this.floatMinEva = floatMinEva;</span>
+<span class="fc" id="L299">    }</span>
+
+    public Float getFloatMaxEva() {
+<span class="fc" id="L302">        return floatMaxEva;</span>
+    }
+
+    public void setFloatMaxEva(Float floatMaxEva) {
+<span class="fc" id="L306">        this.floatMaxEva = floatMaxEva;</span>
+<span class="fc" id="L307">    }</span>
+
+    public Double getDoubleRequiredEva() {
+<span class="fc" id="L310">        return doubleRequiredEva;</span>
+    }
+
+    public void setDoubleRequiredEva(Double doubleRequiredEva) {
+<span class="fc" id="L314">        this.doubleRequiredEva = doubleRequiredEva;</span>
+<span class="fc" id="L315">    }</span>
+
+    public Double getDoubleMinEva() {
+<span class="fc" id="L318">        return doubleMinEva;</span>
+    }
+
+    public void setDoubleMinEva(Double doubleMinEva) {
+<span class="fc" id="L322">        this.doubleMinEva = doubleMinEva;</span>
+<span class="fc" id="L323">    }</span>
+
+    public Double getDoubleMaxEva() {
+<span class="fc" id="L326">        return doubleMaxEva;</span>
+    }
+
+    public void setDoubleMaxEva(Double doubleMaxEva) {
+<span class="fc" id="L330">        this.doubleMaxEva = doubleMaxEva;</span>
+<span class="fc" id="L331">    }</span>
+
+    public BigDecimal getBigDecimalRequiredEva() {
+<span class="fc" id="L334">        return bigDecimalRequiredEva;</span>
+    }
+
+    public void setBigDecimalRequiredEva(BigDecimal bigDecimalRequiredEva) {
+<span class="fc" id="L338">        this.bigDecimalRequiredEva = bigDecimalRequiredEva;</span>
+<span class="fc" id="L339">    }</span>
+
+    public BigDecimal getBigDecimalMinEva() {
+<span class="fc" id="L342">        return bigDecimalMinEva;</span>
+    }
+
+    public void setBigDecimalMinEva(BigDecimal bigDecimalMinEva) {
+<span class="fc" id="L346">        this.bigDecimalMinEva = bigDecimalMinEva;</span>
+<span class="fc" id="L347">    }</span>
+
+    public BigDecimal getBigDecimalMaxEva() {
+<span class="fc" id="L350">        return bigDecimalMaxEva;</span>
+    }
+
+    public void setBigDecimalMaxEva(BigDecimal bigDecimalMaxEva) {
+<span class="fc" id="L354">        this.bigDecimalMaxEva = bigDecimalMaxEva;</span>
+<span class="fc" id="L355">    }</span>
+
+    public LocalDate getLocalDateEva() {
+<span class="fc" id="L358">        return localDateEva;</span>
+    }
+
+    public void setLocalDateEva(LocalDate localDateEva) {
+<span class="fc" id="L362">        this.localDateEva = localDateEva;</span>
+<span class="fc" id="L363">    }</span>
+
+    public LocalDate getLocalDateRequiredEva() {
+<span class="fc" id="L366">        return localDateRequiredEva;</span>
+    }
+
+    public void setLocalDateRequiredEva(LocalDate localDateRequiredEva) {
+<span class="fc" id="L370">        this.localDateRequiredEva = localDateRequiredEva;</span>
+<span class="fc" id="L371">    }</span>
+
+    public Instant getInstantEva() {
+<span class="fc" id="L374">        return instantEva;</span>
+    }
+
+    public void setInstantEva(Instant instantEva) {
+<span class="fc" id="L378">        this.instantEva = instantEva;</span>
+<span class="fc" id="L379">    }</span>
+
+    public Instant getInstanteRequiredEva() {
+<span class="fc" id="L382">        return instanteRequiredEva;</span>
+    }
+
+    public void setInstanteRequiredEva(Instant instanteRequiredEva) {
+<span class="fc" id="L386">        this.instanteRequiredEva = instanteRequiredEva;</span>
+<span class="fc" id="L387">    }</span>
+
+    public ZonedDateTime getZonedDateTimeEva() {
+<span class="fc" id="L390">        return zonedDateTimeEva;</span>
+    }
+
+    public void setZonedDateTimeEva(ZonedDateTime zonedDateTimeEva) {
+<span class="fc" id="L394">        this.zonedDateTimeEva = zonedDateTimeEva;</span>
+<span class="fc" id="L395">    }</span>
+
+    public ZonedDateTime getZonedDateTimeRequiredEva() {
+<span class="fc" id="L398">        return zonedDateTimeRequiredEva;</span>
+    }
+
+    public void setZonedDateTimeRequiredEva(ZonedDateTime zonedDateTimeRequiredEva) {
+<span class="fc" id="L402">        this.zonedDateTimeRequiredEva = zonedDateTimeRequiredEva;</span>
+<span class="fc" id="L403">    }</span>
+
+    public Boolean isBooleanEva() {
+<span class="fc" id="L406">        return booleanEva;</span>
+    }
+
+    public void setBooleanEva(Boolean booleanEva) {
+<span class="fc" id="L410">        this.booleanEva = booleanEva;</span>
+<span class="fc" id="L411">    }</span>
+
+    public Boolean isBooleanRequiredEva() {
+<span class="fc" id="L414">        return booleanRequiredEva;</span>
+    }
+
+    public void setBooleanRequiredEva(Boolean booleanRequiredEva) {
+<span class="fc" id="L418">        this.booleanRequiredEva = booleanRequiredEva;</span>
+<span class="fc" id="L419">    }</span>
+
+    public EnumFieldClass getEnumEva() {
+<span class="fc" id="L422">        return enumEva;</span>
+    }
+
+    public void setEnumEva(EnumFieldClass enumEva) {
+<span class="fc" id="L426">        this.enumEva = enumEva;</span>
+<span class="fc" id="L427">    }</span>
+
+    public EnumRequiredFieldClass getEnumRequiredEva() {
+<span class="fc" id="L430">        return enumRequiredEva;</span>
+    }
+
+    public void setEnumRequiredEva(EnumRequiredFieldClass enumRequiredEva) {
+<span class="fc" id="L434">        this.enumRequiredEva = enumRequiredEva;</span>
+<span class="fc" id="L435">    }</span>
+
+    public byte[] getByteImageEva() {
+<span class="fc" id="L438">        return byteImageEva;</span>
+    }
+
+    public void setByteImageEva(byte[] byteImageEva) {
+<span class="fc" id="L442">        this.byteImageEva = byteImageEva;</span>
+<span class="fc" id="L443">    }</span>
+
+    public String getByteImageEvaContentType() {
+<span class="fc" id="L446">        return byteImageEvaContentType;</span>
+    }
+
+    public void setByteImageEvaContentType(String byteImageEvaContentType) {
+<span class="fc" id="L450">        this.byteImageEvaContentType = byteImageEvaContentType;</span>
+<span class="fc" id="L451">    }</span>
+
+    public byte[] getByteImageRequiredEva() {
+<span class="fc" id="L454">        return byteImageRequiredEva;</span>
+    }
+
+    public void setByteImageRequiredEva(byte[] byteImageRequiredEva) {
+<span class="fc" id="L458">        this.byteImageRequiredEva = byteImageRequiredEva;</span>
+<span class="fc" id="L459">    }</span>
+
+    public String getByteImageRequiredEvaContentType() {
+<span class="fc" id="L462">        return byteImageRequiredEvaContentType;</span>
+    }
+
+    public void setByteImageRequiredEvaContentType(String byteImageRequiredEvaContentType) {
+<span class="fc" id="L466">        this.byteImageRequiredEvaContentType = byteImageRequiredEvaContentType;</span>
+<span class="fc" id="L467">    }</span>
+
+    public byte[] getByteImageMinbytesEva() {
+<span class="fc" id="L470">        return byteImageMinbytesEva;</span>
+    }
+
+    public void setByteImageMinbytesEva(byte[] byteImageMinbytesEva) {
+<span class="fc" id="L474">        this.byteImageMinbytesEva = byteImageMinbytesEva;</span>
+<span class="fc" id="L475">    }</span>
+
+    public String getByteImageMinbytesEvaContentType() {
+<span class="fc" id="L478">        return byteImageMinbytesEvaContentType;</span>
+    }
+
+    public void setByteImageMinbytesEvaContentType(String byteImageMinbytesEvaContentType) {
+<span class="fc" id="L482">        this.byteImageMinbytesEvaContentType = byteImageMinbytesEvaContentType;</span>
+<span class="fc" id="L483">    }</span>
+
+    public byte[] getByteImageMaxbytesEva() {
+<span class="fc" id="L486">        return byteImageMaxbytesEva;</span>
+    }
+
+    public void setByteImageMaxbytesEva(byte[] byteImageMaxbytesEva) {
+<span class="fc" id="L490">        this.byteImageMaxbytesEva = byteImageMaxbytesEva;</span>
+<span class="fc" id="L491">    }</span>
+
+    public String getByteImageMaxbytesEvaContentType() {
+<span class="fc" id="L494">        return byteImageMaxbytesEvaContentType;</span>
+    }
+
+    public void setByteImageMaxbytesEvaContentType(String byteImageMaxbytesEvaContentType) {
+<span class="fc" id="L498">        this.byteImageMaxbytesEvaContentType = byteImageMaxbytesEvaContentType;</span>
+<span class="fc" id="L499">    }</span>
+
+    public byte[] getByteAnyEva() {
+<span class="fc" id="L502">        return byteAnyEva;</span>
+    }
+
+    public void setByteAnyEva(byte[] byteAnyEva) {
+<span class="fc" id="L506">        this.byteAnyEva = byteAnyEva;</span>
+<span class="fc" id="L507">    }</span>
+
+    public String getByteAnyEvaContentType() {
+<span class="fc" id="L510">        return byteAnyEvaContentType;</span>
+    }
+
+    public void setByteAnyEvaContentType(String byteAnyEvaContentType) {
+<span class="fc" id="L514">        this.byteAnyEvaContentType = byteAnyEvaContentType;</span>
+<span class="fc" id="L515">    }</span>
+
+    public byte[] getByteAnyRequiredEva() {
+<span class="fc" id="L518">        return byteAnyRequiredEva;</span>
+    }
+
+    public void setByteAnyRequiredEva(byte[] byteAnyRequiredEva) {
+<span class="fc" id="L522">        this.byteAnyRequiredEva = byteAnyRequiredEva;</span>
+<span class="fc" id="L523">    }</span>
+
+    public String getByteAnyRequiredEvaContentType() {
+<span class="fc" id="L526">        return byteAnyRequiredEvaContentType;</span>
+    }
+
+    public void setByteAnyRequiredEvaContentType(String byteAnyRequiredEvaContentType) {
+<span class="fc" id="L530">        this.byteAnyRequiredEvaContentType = byteAnyRequiredEvaContentType;</span>
+<span class="fc" id="L531">    }</span>
+
+    public byte[] getByteAnyMinbytesEva() {
+<span class="fc" id="L534">        return byteAnyMinbytesEva;</span>
+    }
+
+    public void setByteAnyMinbytesEva(byte[] byteAnyMinbytesEva) {
+<span class="fc" id="L538">        this.byteAnyMinbytesEva = byteAnyMinbytesEva;</span>
+<span class="fc" id="L539">    }</span>
+
+    public String getByteAnyMinbytesEvaContentType() {
+<span class="fc" id="L542">        return byteAnyMinbytesEvaContentType;</span>
+    }
+
+    public void setByteAnyMinbytesEvaContentType(String byteAnyMinbytesEvaContentType) {
+<span class="fc" id="L546">        this.byteAnyMinbytesEvaContentType = byteAnyMinbytesEvaContentType;</span>
+<span class="fc" id="L547">    }</span>
+
+    public byte[] getByteAnyMaxbytesEva() {
+<span class="fc" id="L550">        return byteAnyMaxbytesEva;</span>
+    }
+
+    public void setByteAnyMaxbytesEva(byte[] byteAnyMaxbytesEva) {
+<span class="fc" id="L554">        this.byteAnyMaxbytesEva = byteAnyMaxbytesEva;</span>
+<span class="fc" id="L555">    }</span>
+
+    public String getByteAnyMaxbytesEvaContentType() {
+<span class="fc" id="L558">        return byteAnyMaxbytesEvaContentType;</span>
+    }
+
+    public void setByteAnyMaxbytesEvaContentType(String byteAnyMaxbytesEvaContentType) {
+<span class="fc" id="L562">        this.byteAnyMaxbytesEvaContentType = byteAnyMaxbytesEvaContentType;</span>
+<span class="fc" id="L563">    }</span>
+
+    public String getByteTextEva() {
+<span class="fc" id="L566">        return byteTextEva;</span>
+    }
+
+    public void setByteTextEva(String byteTextEva) {
+<span class="fc" id="L570">        this.byteTextEva = byteTextEva;</span>
+<span class="fc" id="L571">    }</span>
+
+    public String getByteTextRequiredEva() {
+<span class="fc" id="L574">        return byteTextRequiredEva;</span>
+    }
+
+    public void setByteTextRequiredEva(String byteTextRequiredEva) {
+<span class="fc" id="L578">        this.byteTextRequiredEva = byteTextRequiredEva;</span>
+<span class="fc" id="L579">    }</span>
+
+    public String getByteTextMinbytesEva() {
+<span class="fc" id="L582">        return byteTextMinbytesEva;</span>
+    }
+
+    public void setByteTextMinbytesEva(String byteTextMinbytesEva) {
+<span class="fc" id="L586">        this.byteTextMinbytesEva = byteTextMinbytesEva;</span>
+<span class="fc" id="L587">    }</span>
+
+    public String getByteTextMaxbytesEva() {
+<span class="fc" id="L590">        return byteTextMaxbytesEva;</span>
+    }
+
+    public void setByteTextMaxbytesEva(String byteTextMaxbytesEva) {
+<span class="fc" id="L594">        this.byteTextMaxbytesEva = byteTextMaxbytesEva;</span>
+<span class="fc" id="L595">    }</span>
+
+    @Override
+    public boolean equals(Object o) {
+<span class="fc bfc" id="L599" title="All 2 branches covered.">        if (this == o) {</span>
+<span class="fc" id="L600">            return true;</span>
+        }
+<span class="fc bfc" id="L602" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L603">            return false;</span>
+        }
+
+<span class="fc" id="L606">        FieldTestMapstructEntityDTO fieldTestMapstructEntityDTO = (FieldTestMapstructEntityDTO) o;</span>
+<span class="fc bfc" id="L607" title="All 4 branches covered.">        if(fieldTestMapstructEntityDTO.getId() == null || getId() == null) {</span>
+<span class="fc" id="L608">            return false;</span>
+        }
+<span class="fc" id="L610">        return Objects.equals(getId(), fieldTestMapstructEntityDTO.getId());</span>
+    }
+
+    @Override
+    public int hashCode() {
+<span class="fc" id="L615">        return Objects.hashCode(getId());</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="fc" id="L620">        return &quot;FieldTestMapstructEntityDTO{&quot; +</span>
+<span class="fc" id="L621">            &quot;id=&quot; + getId() +</span>
+<span class="fc" id="L622">            &quot;, stringEva='&quot; + getStringEva() + &quot;'&quot; +</span>
+<span class="fc" id="L623">            &quot;, stringRequiredEva='&quot; + getStringRequiredEva() + &quot;'&quot; +</span>
+<span class="fc" id="L624">            &quot;, stringMinlengthEva='&quot; + getStringMinlengthEva() + &quot;'&quot; +</span>
+<span class="fc" id="L625">            &quot;, stringMaxlengthEva='&quot; + getStringMaxlengthEva() + &quot;'&quot; +</span>
+<span class="fc" id="L626">            &quot;, stringPatternEva='&quot; + getStringPatternEva() + &quot;'&quot; +</span>
+<span class="fc" id="L627">            &quot;, integerEva=&quot; + getIntegerEva() +</span>
+<span class="fc" id="L628">            &quot;, integerRequiredEva=&quot; + getIntegerRequiredEva() +</span>
+<span class="fc" id="L629">            &quot;, integerMinEva=&quot; + getIntegerMinEva() +</span>
+<span class="fc" id="L630">            &quot;, integerMaxEva=&quot; + getIntegerMaxEva() +</span>
+<span class="fc" id="L631">            &quot;, longEva=&quot; + getLongEva() +</span>
+<span class="fc" id="L632">            &quot;, longRequiredEva=&quot; + getLongRequiredEva() +</span>
+<span class="fc" id="L633">            &quot;, longMinEva=&quot; + getLongMinEva() +</span>
+<span class="fc" id="L634">            &quot;, longMaxEva=&quot; + getLongMaxEva() +</span>
+<span class="fc" id="L635">            &quot;, floatEva=&quot; + getFloatEva() +</span>
+<span class="fc" id="L636">            &quot;, floatRequiredEva=&quot; + getFloatRequiredEva() +</span>
+<span class="fc" id="L637">            &quot;, floatMinEva=&quot; + getFloatMinEva() +</span>
+<span class="fc" id="L638">            &quot;, floatMaxEva=&quot; + getFloatMaxEva() +</span>
+<span class="fc" id="L639">            &quot;, doubleRequiredEva=&quot; + getDoubleRequiredEva() +</span>
+<span class="fc" id="L640">            &quot;, doubleMinEva=&quot; + getDoubleMinEva() +</span>
+<span class="fc" id="L641">            &quot;, doubleMaxEva=&quot; + getDoubleMaxEva() +</span>
+<span class="fc" id="L642">            &quot;, bigDecimalRequiredEva=&quot; + getBigDecimalRequiredEva() +</span>
+<span class="fc" id="L643">            &quot;, bigDecimalMinEva=&quot; + getBigDecimalMinEva() +</span>
+<span class="fc" id="L644">            &quot;, bigDecimalMaxEva=&quot; + getBigDecimalMaxEva() +</span>
+<span class="fc" id="L645">            &quot;, localDateEva='&quot; + getLocalDateEva() + &quot;'&quot; +</span>
+<span class="fc" id="L646">            &quot;, localDateRequiredEva='&quot; + getLocalDateRequiredEva() + &quot;'&quot; +</span>
+<span class="fc" id="L647">            &quot;, instantEva='&quot; + getInstantEva() + &quot;'&quot; +</span>
+<span class="fc" id="L648">            &quot;, instanteRequiredEva='&quot; + getInstanteRequiredEva() + &quot;'&quot; +</span>
+<span class="fc" id="L649">            &quot;, zonedDateTimeEva='&quot; + getZonedDateTimeEva() + &quot;'&quot; +</span>
+<span class="fc" id="L650">            &quot;, zonedDateTimeRequiredEva='&quot; + getZonedDateTimeRequiredEva() + &quot;'&quot; +</span>
+<span class="fc" id="L651">            &quot;, booleanEva='&quot; + isBooleanEva() + &quot;'&quot; +</span>
+<span class="fc" id="L652">            &quot;, booleanRequiredEva='&quot; + isBooleanRequiredEva() + &quot;'&quot; +</span>
+<span class="fc" id="L653">            &quot;, enumEva='&quot; + getEnumEva() + &quot;'&quot; +</span>
+<span class="fc" id="L654">            &quot;, enumRequiredEva='&quot; + getEnumRequiredEva() + &quot;'&quot; +</span>
+<span class="fc" id="L655">            &quot;, byteImageEva='&quot; + getByteImageEva() + &quot;'&quot; +</span>
+<span class="fc" id="L656">            &quot;, byteImageRequiredEva='&quot; + getByteImageRequiredEva() + &quot;'&quot; +</span>
+<span class="fc" id="L657">            &quot;, byteImageMinbytesEva='&quot; + getByteImageMinbytesEva() + &quot;'&quot; +</span>
+<span class="fc" id="L658">            &quot;, byteImageMaxbytesEva='&quot; + getByteImageMaxbytesEva() + &quot;'&quot; +</span>
+<span class="fc" id="L659">            &quot;, byteAnyEva='&quot; + getByteAnyEva() + &quot;'&quot; +</span>
+<span class="fc" id="L660">            &quot;, byteAnyRequiredEva='&quot; + getByteAnyRequiredEva() + &quot;'&quot; +</span>
+<span class="fc" id="L661">            &quot;, byteAnyMinbytesEva='&quot; + getByteAnyMinbytesEva() + &quot;'&quot; +</span>
+<span class="fc" id="L662">            &quot;, byteAnyMaxbytesEva='&quot; + getByteAnyMaxbytesEva() + &quot;'&quot; +</span>
+<span class="fc" id="L663">            &quot;, byteTextEva='&quot; + getByteTextEva() + &quot;'&quot; +</span>
+<span class="fc" id="L664">            &quot;, byteTextRequiredEva='&quot; + getByteTextRequiredEva() + &quot;'&quot; +</span>
+<span class="fc" id="L665">            &quot;, byteTextMinbytesEva='&quot; + getByteTextMinbytesEva() + &quot;'&quot; +</span>
+<span class="fc" id="L666">            &quot;, byteTextMaxbytesEva='&quot; + getByteTextMaxbytesEva() + &quot;'&quot; +</span>
+            &quot;}&quot;;
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

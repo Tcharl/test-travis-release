@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FieldTestServiceImplEntityResource.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.web.rest</a> &gt; <span class="el_source">FieldTestServiceImplEntityResource.java</span></div><h1>FieldTestServiceImplEntityResource.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.web.rest;
+
+import com.codahale.metrics.annotation.Timed;
+import io.github.jhipster.sample.domain.FieldTestServiceImplEntity;
+import io.github.jhipster.sample.service.FieldTestServiceImplEntityService;
+import io.github.jhipster.sample.web.rest.errors.BadRequestAlertException;
+import io.github.jhipster.sample.web.rest.util.HeaderUtil;
+import io.github.jhipster.web.util.ResponseUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.net.URI;
+import java.net.URISyntaxException;
+
+import java.util.List;
+import java.util.Optional;
+
+/**
+ * REST controller for managing FieldTestServiceImplEntity.
+ */
+@RestController
+@RequestMapping(&quot;/api&quot;)
+public class FieldTestServiceImplEntityResource {
+
+<span class="fc" id="L28">    private final Logger log = LoggerFactory.getLogger(FieldTestServiceImplEntityResource.class);</span>
+
+    private static final String ENTITY_NAME = &quot;fieldTestServiceImplEntity&quot;;
+
+    private final FieldTestServiceImplEntityService fieldTestServiceImplEntityService;
+
+<span class="fc" id="L34">    public FieldTestServiceImplEntityResource(FieldTestServiceImplEntityService fieldTestServiceImplEntityService) {</span>
+<span class="fc" id="L35">        this.fieldTestServiceImplEntityService = fieldTestServiceImplEntityService;</span>
+<span class="fc" id="L36">    }</span>
+
+    /**
+     * POST  /field-test-service-impl-entities : Create a new fieldTestServiceImplEntity.
+     *
+     * @param fieldTestServiceImplEntity the fieldTestServiceImplEntity to create
+     * @return the ResponseEntity with status 201 (Created) and with body the new fieldTestServiceImplEntity, or with status 400 (Bad Request) if the fieldTestServiceImplEntity has already an ID
+     * @throws URISyntaxException if the Location URI syntax is incorrect
+     */
+    @PostMapping(&quot;/field-test-service-impl-entities&quot;)
+    @Timed
+    public ResponseEntity&lt;FieldTestServiceImplEntity&gt; createFieldTestServiceImplEntity(@Valid @RequestBody FieldTestServiceImplEntity fieldTestServiceImplEntity) throws URISyntaxException {
+<span class="fc" id="L48">        log.debug(&quot;REST request to save FieldTestServiceImplEntity : {}&quot;, fieldTestServiceImplEntity);</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">        if (fieldTestServiceImplEntity.getId() != null) {</span>
+<span class="fc" id="L50">            throw new BadRequestAlertException(&quot;A new fieldTestServiceImplEntity cannot already have an ID&quot;, ENTITY_NAME, &quot;idexists&quot;);</span>
+        }
+<span class="fc" id="L52">        FieldTestServiceImplEntity result = fieldTestServiceImplEntityService.save(fieldTestServiceImplEntity);</span>
+<span class="fc" id="L53">        return ResponseEntity.created(new URI(&quot;/api/field-test-service-impl-entities/&quot; + result.getId()))</span>
+<span class="fc" id="L54">            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))</span>
+<span class="fc" id="L55">            .body(result);</span>
+    }
+
+    /**
+     * PUT  /field-test-service-impl-entities : Updates an existing fieldTestServiceImplEntity.
+     *
+     * @param fieldTestServiceImplEntity the fieldTestServiceImplEntity to update
+     * @return the ResponseEntity with status 200 (OK) and with body the updated fieldTestServiceImplEntity,
+     * or with status 400 (Bad Request) if the fieldTestServiceImplEntity is not valid,
+     * or with status 500 (Internal Server Error) if the fieldTestServiceImplEntity couldn't be updated
+     * @throws URISyntaxException if the Location URI syntax is incorrect
+     */
+    @PutMapping(&quot;/field-test-service-impl-entities&quot;)
+    @Timed
+    public ResponseEntity&lt;FieldTestServiceImplEntity&gt; updateFieldTestServiceImplEntity(@Valid @RequestBody FieldTestServiceImplEntity fieldTestServiceImplEntity) throws URISyntaxException {
+<span class="fc" id="L70">        log.debug(&quot;REST request to update FieldTestServiceImplEntity : {}&quot;, fieldTestServiceImplEntity);</span>
+<span class="fc bfc" id="L71" title="All 2 branches covered.">        if (fieldTestServiceImplEntity.getId() == null) {</span>
+<span class="fc" id="L72">            return createFieldTestServiceImplEntity(fieldTestServiceImplEntity);</span>
+        }
+<span class="fc" id="L74">        FieldTestServiceImplEntity result = fieldTestServiceImplEntityService.save(fieldTestServiceImplEntity);</span>
+<span class="fc" id="L75">        return ResponseEntity.ok()</span>
+<span class="fc" id="L76">            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, fieldTestServiceImplEntity.getId().toString()))</span>
+<span class="fc" id="L77">            .body(result);</span>
+    }
+
+    /**
+     * GET  /field-test-service-impl-entities : get all the fieldTestServiceImplEntities.
+     *
+     * @return the ResponseEntity with status 200 (OK) and the list of fieldTestServiceImplEntities in body
+     */
+    @GetMapping(&quot;/field-test-service-impl-entities&quot;)
+    @Timed
+    public List&lt;FieldTestServiceImplEntity&gt; getAllFieldTestServiceImplEntities() {
+<span class="fc" id="L88">        log.debug(&quot;REST request to get all FieldTestServiceImplEntities&quot;);</span>
+<span class="fc" id="L89">        return fieldTestServiceImplEntityService.findAll();</span>
+        }
+
+    /**
+     * GET  /field-test-service-impl-entities/:id : get the &quot;id&quot; fieldTestServiceImplEntity.
+     *
+     * @param id the id of the fieldTestServiceImplEntity to retrieve
+     * @return the ResponseEntity with status 200 (OK) and with body the fieldTestServiceImplEntity, or with status 404 (Not Found)
+     */
+    @GetMapping(&quot;/field-test-service-impl-entities/{id}&quot;)
+    @Timed
+    public ResponseEntity&lt;FieldTestServiceImplEntity&gt; getFieldTestServiceImplEntity(@PathVariable Long id) {
+<span class="fc" id="L101">        log.debug(&quot;REST request to get FieldTestServiceImplEntity : {}&quot;, id);</span>
+<span class="fc" id="L102">        FieldTestServiceImplEntity fieldTestServiceImplEntity = fieldTestServiceImplEntityService.findOne(id);</span>
+<span class="fc" id="L103">        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(fieldTestServiceImplEntity));</span>
+    }
+
+    /**
+     * DELETE  /field-test-service-impl-entities/:id : delete the &quot;id&quot; fieldTestServiceImplEntity.
+     *
+     * @param id the id of the fieldTestServiceImplEntity to delete
+     * @return the ResponseEntity with status 200 (OK)
+     */
+    @DeleteMapping(&quot;/field-test-service-impl-entities/{id}&quot;)
+    @Timed
+    public ResponseEntity&lt;Void&gt; deleteFieldTestServiceImplEntity(@PathVariable Long id) {
+<span class="fc" id="L115">        log.debug(&quot;REST request to delete FieldTestServiceImplEntity : {}&quot;, id);</span>
+<span class="fc" id="L116">        fieldTestServiceImplEntityService.delete(id);</span>
+<span class="fc" id="L117">        return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

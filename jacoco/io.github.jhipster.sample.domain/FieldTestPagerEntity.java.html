@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FieldTestPagerEntity.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.domain</a> &gt; <span class="el_source">FieldTestPagerEntity.java</span></div><h1>FieldTestPagerEntity.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.domain;
+
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+import javax.persistence.*;
+import javax.validation.constraints.*;
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZonedDateTime;
+import java.util.Objects;
+
+import io.github.jhipster.sample.domain.enumeration.EnumFieldClass;
+
+import io.github.jhipster.sample.domain.enumeration.EnumRequiredFieldClass;
+
+
+/**
+ * A FieldTestPagerEntity.
+ */
+@Entity
+@Table(name = &quot;field_test_pager_entity&quot;)
+@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+<span class="fc" id="L26">public class FieldTestPagerEntity implements Serializable {</span>
+
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = &quot;string_jade&quot;)
+    private String stringJade;
+
+    @NotNull
+    @Column(name = &quot;string_required_jade&quot;, nullable = false)
+    private String stringRequiredJade;
+
+    @Size(min = 0)
+    @Column(name = &quot;string_minlength_jade&quot;)
+    private String stringMinlengthJade;
+
+    @Size(max = 20)
+    @Column(name = &quot;string_maxlength_jade&quot;, length = 20)
+    private String stringMaxlengthJade;
+
+    @Pattern(regexp = &quot;^[a-zA-Z0-9]*$&quot;)
+    @Column(name = &quot;string_pattern_jade&quot;)
+    private String stringPatternJade;
+
+    @Column(name = &quot;integer_jade&quot;)
+    private Integer integerJade;
+
+    @NotNull
+    @Column(name = &quot;integer_required_jade&quot;, nullable = false)
+    private Integer integerRequiredJade;
+
+    @Min(value = 0)
+    @Column(name = &quot;integer_min_jade&quot;)
+    private Integer integerMinJade;
+
+    @Max(value = 100)
+    @Column(name = &quot;integer_max_jade&quot;)
+    private Integer integerMaxJade;
+
+    @Column(name = &quot;long_jade&quot;)
+    private Long longJade;
+
+    @NotNull
+    @Column(name = &quot;long_required_jade&quot;, nullable = false)
+    private Long longRequiredJade;
+
+    @Min(value = 0L)
+    @Column(name = &quot;long_min_jade&quot;)
+    private Long longMinJade;
+
+    @Max(value = 100L)
+    @Column(name = &quot;long_max_jade&quot;)
+    private Long longMaxJade;
+
+    @Column(name = &quot;float_jade&quot;)
+    private Float floatJade;
+
+    @NotNull
+    @Column(name = &quot;float_required_jade&quot;, nullable = false)
+    private Float floatRequiredJade;
+
+    @DecimalMin(value = &quot;0&quot;)
+    @Column(name = &quot;float_min_jade&quot;)
+    private Float floatMinJade;
+
+    @DecimalMax(value = &quot;100&quot;)
+    @Column(name = &quot;float_max_jade&quot;)
+    private Float floatMaxJade;
+
+    @NotNull
+    @Column(name = &quot;double_required_jade&quot;, nullable = false)
+    private Double doubleRequiredJade;
+
+    @DecimalMin(value = &quot;0&quot;)
+    @Column(name = &quot;double_min_jade&quot;)
+    private Double doubleMinJade;
+
+    @DecimalMax(value = &quot;100&quot;)
+    @Column(name = &quot;double_max_jade&quot;)
+    private Double doubleMaxJade;
+
+    @NotNull
+    @Column(name = &quot;big_decimal_required_jade&quot;, precision=10, scale=2, nullable = false)
+    private BigDecimal bigDecimalRequiredJade;
+
+    @DecimalMin(value = &quot;0&quot;)
+    @Column(name = &quot;big_decimal_min_jade&quot;, precision=10, scale=2)
+    private BigDecimal bigDecimalMinJade;
+
+    @DecimalMax(value = &quot;100&quot;)
+    @Column(name = &quot;big_decimal_max_jade&quot;, precision=10, scale=2)
+    private BigDecimal bigDecimalMaxJade;
+
+    @Column(name = &quot;local_date_jade&quot;)
+    private LocalDate localDateJade;
+
+    @NotNull
+    @Column(name = &quot;local_date_required_jade&quot;, nullable = false)
+    private LocalDate localDateRequiredJade;
+
+    @Column(name = &quot;instant_jade&quot;)
+    private Instant instantJade;
+
+    @NotNull
+    @Column(name = &quot;instante_required_jade&quot;, nullable = false)
+    private Instant instanteRequiredJade;
+
+    @Column(name = &quot;zoned_date_time_jade&quot;)
+    private ZonedDateTime zonedDateTimeJade;
+
+    @NotNull
+    @Column(name = &quot;zoned_date_time_required_jade&quot;, nullable = false)
+    private ZonedDateTime zonedDateTimeRequiredJade;
+
+    @Column(name = &quot;boolean_jade&quot;)
+    private Boolean booleanJade;
+
+    @NotNull
+    @Column(name = &quot;boolean_required_jade&quot;, nullable = false)
+    private Boolean booleanRequiredJade;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = &quot;enum_jade&quot;)
+    private EnumFieldClass enumJade;
+
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    @Column(name = &quot;enum_required_jade&quot;, nullable = false)
+    private EnumRequiredFieldClass enumRequiredJade;
+
+    @Lob
+    @Column(name = &quot;byte_image_jade&quot;)
+    private byte[] byteImageJade;
+
+    @Column(name = &quot;byte_image_jade_content_type&quot;)
+    private String byteImageJadeContentType;
+
+    @NotNull
+    @Lob
+    @Column(name = &quot;byte_image_required_jade&quot;, nullable = false)
+    private byte[] byteImageRequiredJade;
+
+    @Column(name = &quot;byte_image_required_jade_content_type&quot;, nullable = false)
+    private String byteImageRequiredJadeContentType;
+
+    @Size(min = 0)
+    @Lob
+    @Column(name = &quot;byte_image_minbytes_jade&quot;)
+    private byte[] byteImageMinbytesJade;
+
+    @Column(name = &quot;byte_image_minbytes_jade_content_type&quot;)
+    private String byteImageMinbytesJadeContentType;
+
+    @Size(max = 10000)
+    @Lob
+    @Column(name = &quot;byte_image_maxbytes_jade&quot;)
+    private byte[] byteImageMaxbytesJade;
+
+    @Column(name = &quot;byte_image_maxbytes_jade_content_type&quot;)
+    private String byteImageMaxbytesJadeContentType;
+
+    @Lob
+    @Column(name = &quot;byte_any_jade&quot;)
+    private byte[] byteAnyJade;
+
+    @Column(name = &quot;byte_any_jade_content_type&quot;)
+    private String byteAnyJadeContentType;
+
+    @NotNull
+    @Lob
+    @Column(name = &quot;byte_any_required_jade&quot;, nullable = false)
+    private byte[] byteAnyRequiredJade;
+
+    @Column(name = &quot;byte_any_required_jade_content_type&quot;, nullable = false)
+    private String byteAnyRequiredJadeContentType;
+
+    @Size(min = 0)
+    @Lob
+    @Column(name = &quot;byte_any_minbytes_jade&quot;)
+    private byte[] byteAnyMinbytesJade;
+
+    @Column(name = &quot;byte_any_minbytes_jade_content_type&quot;)
+    private String byteAnyMinbytesJadeContentType;
+
+    @Size(max = 10000)
+    @Lob
+    @Column(name = &quot;byte_any_maxbytes_jade&quot;)
+    private byte[] byteAnyMaxbytesJade;
+
+    @Column(name = &quot;byte_any_maxbytes_jade_content_type&quot;)
+    private String byteAnyMaxbytesJadeContentType;
+
+    @Lob
+    @Column(name = &quot;byte_text_jade&quot;)
+    private String byteTextJade;
+
+    @NotNull
+    @Lob
+    @Column(name = &quot;byte_text_required_jade&quot;, nullable = false)
+    private String byteTextRequiredJade;
+
+    @Size(min = 0)
+    @Lob
+    @Column(name = &quot;byte_text_minbytes_jade&quot;)
+    private String byteTextMinbytesJade;
+
+    @Size(max = 10000)
+    @Lob
+    @Column(name = &quot;byte_text_maxbytes_jade&quot;)
+    private String byteTextMaxbytesJade;
+
+    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+    public Long getId() {
+<span class="fc" id="L242">        return id;</span>
+    }
+
+    public void setId(Long id) {
+<span class="fc" id="L246">        this.id = id;</span>
+<span class="fc" id="L247">    }</span>
+
+    public String getStringJade() {
+<span class="fc" id="L250">        return stringJade;</span>
+    }
+
+    public FieldTestPagerEntity stringJade(String stringJade) {
+<span class="fc" id="L254">        this.stringJade = stringJade;</span>
+<span class="fc" id="L255">        return this;</span>
+    }
+
+    public void setStringJade(String stringJade) {
+<span class="fc" id="L259">        this.stringJade = stringJade;</span>
+<span class="fc" id="L260">    }</span>
+
+    public String getStringRequiredJade() {
+<span class="fc" id="L263">        return stringRequiredJade;</span>
+    }
+
+    public FieldTestPagerEntity stringRequiredJade(String stringRequiredJade) {
+<span class="fc" id="L267">        this.stringRequiredJade = stringRequiredJade;</span>
+<span class="fc" id="L268">        return this;</span>
+    }
+
+    public void setStringRequiredJade(String stringRequiredJade) {
+<span class="fc" id="L272">        this.stringRequiredJade = stringRequiredJade;</span>
+<span class="fc" id="L273">    }</span>
+
+    public String getStringMinlengthJade() {
+<span class="fc" id="L276">        return stringMinlengthJade;</span>
+    }
+
+    public FieldTestPagerEntity stringMinlengthJade(String stringMinlengthJade) {
+<span class="fc" id="L280">        this.stringMinlengthJade = stringMinlengthJade;</span>
+<span class="fc" id="L281">        return this;</span>
+    }
+
+    public void setStringMinlengthJade(String stringMinlengthJade) {
+<span class="fc" id="L285">        this.stringMinlengthJade = stringMinlengthJade;</span>
+<span class="fc" id="L286">    }</span>
+
+    public String getStringMaxlengthJade() {
+<span class="fc" id="L289">        return stringMaxlengthJade;</span>
+    }
+
+    public FieldTestPagerEntity stringMaxlengthJade(String stringMaxlengthJade) {
+<span class="fc" id="L293">        this.stringMaxlengthJade = stringMaxlengthJade;</span>
+<span class="fc" id="L294">        return this;</span>
+    }
+
+    public void setStringMaxlengthJade(String stringMaxlengthJade) {
+<span class="fc" id="L298">        this.stringMaxlengthJade = stringMaxlengthJade;</span>
+<span class="fc" id="L299">    }</span>
+
+    public String getStringPatternJade() {
+<span class="fc" id="L302">        return stringPatternJade;</span>
+    }
+
+    public FieldTestPagerEntity stringPatternJade(String stringPatternJade) {
+<span class="fc" id="L306">        this.stringPatternJade = stringPatternJade;</span>
+<span class="fc" id="L307">        return this;</span>
+    }
+
+    public void setStringPatternJade(String stringPatternJade) {
+<span class="fc" id="L311">        this.stringPatternJade = stringPatternJade;</span>
+<span class="fc" id="L312">    }</span>
+
+    public Integer getIntegerJade() {
+<span class="fc" id="L315">        return integerJade;</span>
+    }
+
+    public FieldTestPagerEntity integerJade(Integer integerJade) {
+<span class="fc" id="L319">        this.integerJade = integerJade;</span>
+<span class="fc" id="L320">        return this;</span>
+    }
+
+    public void setIntegerJade(Integer integerJade) {
+<span class="fc" id="L324">        this.integerJade = integerJade;</span>
+<span class="fc" id="L325">    }</span>
+
+    public Integer getIntegerRequiredJade() {
+<span class="fc" id="L328">        return integerRequiredJade;</span>
+    }
+
+    public FieldTestPagerEntity integerRequiredJade(Integer integerRequiredJade) {
+<span class="fc" id="L332">        this.integerRequiredJade = integerRequiredJade;</span>
+<span class="fc" id="L333">        return this;</span>
+    }
+
+    public void setIntegerRequiredJade(Integer integerRequiredJade) {
+<span class="fc" id="L337">        this.integerRequiredJade = integerRequiredJade;</span>
+<span class="fc" id="L338">    }</span>
+
+    public Integer getIntegerMinJade() {
+<span class="fc" id="L341">        return integerMinJade;</span>
+    }
+
+    public FieldTestPagerEntity integerMinJade(Integer integerMinJade) {
+<span class="fc" id="L345">        this.integerMinJade = integerMinJade;</span>
+<span class="fc" id="L346">        return this;</span>
+    }
+
+    public void setIntegerMinJade(Integer integerMinJade) {
+<span class="fc" id="L350">        this.integerMinJade = integerMinJade;</span>
+<span class="fc" id="L351">    }</span>
+
+    public Integer getIntegerMaxJade() {
+<span class="fc" id="L354">        return integerMaxJade;</span>
+    }
+
+    public FieldTestPagerEntity integerMaxJade(Integer integerMaxJade) {
+<span class="fc" id="L358">        this.integerMaxJade = integerMaxJade;</span>
+<span class="fc" id="L359">        return this;</span>
+    }
+
+    public void setIntegerMaxJade(Integer integerMaxJade) {
+<span class="fc" id="L363">        this.integerMaxJade = integerMaxJade;</span>
+<span class="fc" id="L364">    }</span>
+
+    public Long getLongJade() {
+<span class="fc" id="L367">        return longJade;</span>
+    }
+
+    public FieldTestPagerEntity longJade(Long longJade) {
+<span class="fc" id="L371">        this.longJade = longJade;</span>
+<span class="fc" id="L372">        return this;</span>
+    }
+
+    public void setLongJade(Long longJade) {
+<span class="fc" id="L376">        this.longJade = longJade;</span>
+<span class="fc" id="L377">    }</span>
+
+    public Long getLongRequiredJade() {
+<span class="fc" id="L380">        return longRequiredJade;</span>
+    }
+
+    public FieldTestPagerEntity longRequiredJade(Long longRequiredJade) {
+<span class="fc" id="L384">        this.longRequiredJade = longRequiredJade;</span>
+<span class="fc" id="L385">        return this;</span>
+    }
+
+    public void setLongRequiredJade(Long longRequiredJade) {
+<span class="fc" id="L389">        this.longRequiredJade = longRequiredJade;</span>
+<span class="fc" id="L390">    }</span>
+
+    public Long getLongMinJade() {
+<span class="fc" id="L393">        return longMinJade;</span>
+    }
+
+    public FieldTestPagerEntity longMinJade(Long longMinJade) {
+<span class="fc" id="L397">        this.longMinJade = longMinJade;</span>
+<span class="fc" id="L398">        return this;</span>
+    }
+
+    public void setLongMinJade(Long longMinJade) {
+<span class="fc" id="L402">        this.longMinJade = longMinJade;</span>
+<span class="fc" id="L403">    }</span>
+
+    public Long getLongMaxJade() {
+<span class="fc" id="L406">        return longMaxJade;</span>
+    }
+
+    public FieldTestPagerEntity longMaxJade(Long longMaxJade) {
+<span class="fc" id="L410">        this.longMaxJade = longMaxJade;</span>
+<span class="fc" id="L411">        return this;</span>
+    }
+
+    public void setLongMaxJade(Long longMaxJade) {
+<span class="fc" id="L415">        this.longMaxJade = longMaxJade;</span>
+<span class="fc" id="L416">    }</span>
+
+    public Float getFloatJade() {
+<span class="fc" id="L419">        return floatJade;</span>
+    }
+
+    public FieldTestPagerEntity floatJade(Float floatJade) {
+<span class="fc" id="L423">        this.floatJade = floatJade;</span>
+<span class="fc" id="L424">        return this;</span>
+    }
+
+    public void setFloatJade(Float floatJade) {
+<span class="fc" id="L428">        this.floatJade = floatJade;</span>
+<span class="fc" id="L429">    }</span>
+
+    public Float getFloatRequiredJade() {
+<span class="fc" id="L432">        return floatRequiredJade;</span>
+    }
+
+    public FieldTestPagerEntity floatRequiredJade(Float floatRequiredJade) {
+<span class="fc" id="L436">        this.floatRequiredJade = floatRequiredJade;</span>
+<span class="fc" id="L437">        return this;</span>
+    }
+
+    public void setFloatRequiredJade(Float floatRequiredJade) {
+<span class="fc" id="L441">        this.floatRequiredJade = floatRequiredJade;</span>
+<span class="fc" id="L442">    }</span>
+
+    public Float getFloatMinJade() {
+<span class="fc" id="L445">        return floatMinJade;</span>
+    }
+
+    public FieldTestPagerEntity floatMinJade(Float floatMinJade) {
+<span class="fc" id="L449">        this.floatMinJade = floatMinJade;</span>
+<span class="fc" id="L450">        return this;</span>
+    }
+
+    public void setFloatMinJade(Float floatMinJade) {
+<span class="fc" id="L454">        this.floatMinJade = floatMinJade;</span>
+<span class="fc" id="L455">    }</span>
+
+    public Float getFloatMaxJade() {
+<span class="fc" id="L458">        return floatMaxJade;</span>
+    }
+
+    public FieldTestPagerEntity floatMaxJade(Float floatMaxJade) {
+<span class="fc" id="L462">        this.floatMaxJade = floatMaxJade;</span>
+<span class="fc" id="L463">        return this;</span>
+    }
+
+    public void setFloatMaxJade(Float floatMaxJade) {
+<span class="fc" id="L467">        this.floatMaxJade = floatMaxJade;</span>
+<span class="fc" id="L468">    }</span>
+
+    public Double getDoubleRequiredJade() {
+<span class="fc" id="L471">        return doubleRequiredJade;</span>
+    }
+
+    public FieldTestPagerEntity doubleRequiredJade(Double doubleRequiredJade) {
+<span class="fc" id="L475">        this.doubleRequiredJade = doubleRequiredJade;</span>
+<span class="fc" id="L476">        return this;</span>
+    }
+
+    public void setDoubleRequiredJade(Double doubleRequiredJade) {
+<span class="fc" id="L480">        this.doubleRequiredJade = doubleRequiredJade;</span>
+<span class="fc" id="L481">    }</span>
+
+    public Double getDoubleMinJade() {
+<span class="fc" id="L484">        return doubleMinJade;</span>
+    }
+
+    public FieldTestPagerEntity doubleMinJade(Double doubleMinJade) {
+<span class="fc" id="L488">        this.doubleMinJade = doubleMinJade;</span>
+<span class="fc" id="L489">        return this;</span>
+    }
+
+    public void setDoubleMinJade(Double doubleMinJade) {
+<span class="fc" id="L493">        this.doubleMinJade = doubleMinJade;</span>
+<span class="fc" id="L494">    }</span>
+
+    public Double getDoubleMaxJade() {
+<span class="fc" id="L497">        return doubleMaxJade;</span>
+    }
+
+    public FieldTestPagerEntity doubleMaxJade(Double doubleMaxJade) {
+<span class="fc" id="L501">        this.doubleMaxJade = doubleMaxJade;</span>
+<span class="fc" id="L502">        return this;</span>
+    }
+
+    public void setDoubleMaxJade(Double doubleMaxJade) {
+<span class="fc" id="L506">        this.doubleMaxJade = doubleMaxJade;</span>
+<span class="fc" id="L507">    }</span>
+
+    public BigDecimal getBigDecimalRequiredJade() {
+<span class="fc" id="L510">        return bigDecimalRequiredJade;</span>
+    }
+
+    public FieldTestPagerEntity bigDecimalRequiredJade(BigDecimal bigDecimalRequiredJade) {
+<span class="fc" id="L514">        this.bigDecimalRequiredJade = bigDecimalRequiredJade;</span>
+<span class="fc" id="L515">        return this;</span>
+    }
+
+    public void setBigDecimalRequiredJade(BigDecimal bigDecimalRequiredJade) {
+<span class="fc" id="L519">        this.bigDecimalRequiredJade = bigDecimalRequiredJade;</span>
+<span class="fc" id="L520">    }</span>
+
+    public BigDecimal getBigDecimalMinJade() {
+<span class="fc" id="L523">        return bigDecimalMinJade;</span>
+    }
+
+    public FieldTestPagerEntity bigDecimalMinJade(BigDecimal bigDecimalMinJade) {
+<span class="fc" id="L527">        this.bigDecimalMinJade = bigDecimalMinJade;</span>
+<span class="fc" id="L528">        return this;</span>
+    }
+
+    public void setBigDecimalMinJade(BigDecimal bigDecimalMinJade) {
+<span class="fc" id="L532">        this.bigDecimalMinJade = bigDecimalMinJade;</span>
+<span class="fc" id="L533">    }</span>
+
+    public BigDecimal getBigDecimalMaxJade() {
+<span class="fc" id="L536">        return bigDecimalMaxJade;</span>
+    }
+
+    public FieldTestPagerEntity bigDecimalMaxJade(BigDecimal bigDecimalMaxJade) {
+<span class="fc" id="L540">        this.bigDecimalMaxJade = bigDecimalMaxJade;</span>
+<span class="fc" id="L541">        return this;</span>
+    }
+
+    public void setBigDecimalMaxJade(BigDecimal bigDecimalMaxJade) {
+<span class="fc" id="L545">        this.bigDecimalMaxJade = bigDecimalMaxJade;</span>
+<span class="fc" id="L546">    }</span>
+
+    public LocalDate getLocalDateJade() {
+<span class="fc" id="L549">        return localDateJade;</span>
+    }
+
+    public FieldTestPagerEntity localDateJade(LocalDate localDateJade) {
+<span class="fc" id="L553">        this.localDateJade = localDateJade;</span>
+<span class="fc" id="L554">        return this;</span>
+    }
+
+    public void setLocalDateJade(LocalDate localDateJade) {
+<span class="fc" id="L558">        this.localDateJade = localDateJade;</span>
+<span class="fc" id="L559">    }</span>
+
+    public LocalDate getLocalDateRequiredJade() {
+<span class="fc" id="L562">        return localDateRequiredJade;</span>
+    }
+
+    public FieldTestPagerEntity localDateRequiredJade(LocalDate localDateRequiredJade) {
+<span class="fc" id="L566">        this.localDateRequiredJade = localDateRequiredJade;</span>
+<span class="fc" id="L567">        return this;</span>
+    }
+
+    public void setLocalDateRequiredJade(LocalDate localDateRequiredJade) {
+<span class="fc" id="L571">        this.localDateRequiredJade = localDateRequiredJade;</span>
+<span class="fc" id="L572">    }</span>
+
+    public Instant getInstantJade() {
+<span class="fc" id="L575">        return instantJade;</span>
+    }
+
+    public FieldTestPagerEntity instantJade(Instant instantJade) {
+<span class="fc" id="L579">        this.instantJade = instantJade;</span>
+<span class="fc" id="L580">        return this;</span>
+    }
+
+    public void setInstantJade(Instant instantJade) {
+<span class="fc" id="L584">        this.instantJade = instantJade;</span>
+<span class="fc" id="L585">    }</span>
+
+    public Instant getInstanteRequiredJade() {
+<span class="fc" id="L588">        return instanteRequiredJade;</span>
+    }
+
+    public FieldTestPagerEntity instanteRequiredJade(Instant instanteRequiredJade) {
+<span class="fc" id="L592">        this.instanteRequiredJade = instanteRequiredJade;</span>
+<span class="fc" id="L593">        return this;</span>
+    }
+
+    public void setInstanteRequiredJade(Instant instanteRequiredJade) {
+<span class="fc" id="L597">        this.instanteRequiredJade = instanteRequiredJade;</span>
+<span class="fc" id="L598">    }</span>
+
+    public ZonedDateTime getZonedDateTimeJade() {
+<span class="fc" id="L601">        return zonedDateTimeJade;</span>
+    }
+
+    public FieldTestPagerEntity zonedDateTimeJade(ZonedDateTime zonedDateTimeJade) {
+<span class="fc" id="L605">        this.zonedDateTimeJade = zonedDateTimeJade;</span>
+<span class="fc" id="L606">        return this;</span>
+    }
+
+    public void setZonedDateTimeJade(ZonedDateTime zonedDateTimeJade) {
+<span class="fc" id="L610">        this.zonedDateTimeJade = zonedDateTimeJade;</span>
+<span class="fc" id="L611">    }</span>
+
+    public ZonedDateTime getZonedDateTimeRequiredJade() {
+<span class="fc" id="L614">        return zonedDateTimeRequiredJade;</span>
+    }
+
+    public FieldTestPagerEntity zonedDateTimeRequiredJade(ZonedDateTime zonedDateTimeRequiredJade) {
+<span class="fc" id="L618">        this.zonedDateTimeRequiredJade = zonedDateTimeRequiredJade;</span>
+<span class="fc" id="L619">        return this;</span>
+    }
+
+    public void setZonedDateTimeRequiredJade(ZonedDateTime zonedDateTimeRequiredJade) {
+<span class="fc" id="L623">        this.zonedDateTimeRequiredJade = zonedDateTimeRequiredJade;</span>
+<span class="fc" id="L624">    }</span>
+
+    public Boolean isBooleanJade() {
+<span class="fc" id="L627">        return booleanJade;</span>
+    }
+
+    public FieldTestPagerEntity booleanJade(Boolean booleanJade) {
+<span class="fc" id="L631">        this.booleanJade = booleanJade;</span>
+<span class="fc" id="L632">        return this;</span>
+    }
+
+    public void setBooleanJade(Boolean booleanJade) {
+<span class="fc" id="L636">        this.booleanJade = booleanJade;</span>
+<span class="fc" id="L637">    }</span>
+
+    public Boolean isBooleanRequiredJade() {
+<span class="fc" id="L640">        return booleanRequiredJade;</span>
+    }
+
+    public FieldTestPagerEntity booleanRequiredJade(Boolean booleanRequiredJade) {
+<span class="fc" id="L644">        this.booleanRequiredJade = booleanRequiredJade;</span>
+<span class="fc" id="L645">        return this;</span>
+    }
+
+    public void setBooleanRequiredJade(Boolean booleanRequiredJade) {
+<span class="fc" id="L649">        this.booleanRequiredJade = booleanRequiredJade;</span>
+<span class="fc" id="L650">    }</span>
+
+    public EnumFieldClass getEnumJade() {
+<span class="fc" id="L653">        return enumJade;</span>
+    }
+
+    public FieldTestPagerEntity enumJade(EnumFieldClass enumJade) {
+<span class="fc" id="L657">        this.enumJade = enumJade;</span>
+<span class="fc" id="L658">        return this;</span>
+    }
+
+    public void setEnumJade(EnumFieldClass enumJade) {
+<span class="fc" id="L662">        this.enumJade = enumJade;</span>
+<span class="fc" id="L663">    }</span>
+
+    public EnumRequiredFieldClass getEnumRequiredJade() {
+<span class="fc" id="L666">        return enumRequiredJade;</span>
+    }
+
+    public FieldTestPagerEntity enumRequiredJade(EnumRequiredFieldClass enumRequiredJade) {
+<span class="fc" id="L670">        this.enumRequiredJade = enumRequiredJade;</span>
+<span class="fc" id="L671">        return this;</span>
+    }
+
+    public void setEnumRequiredJade(EnumRequiredFieldClass enumRequiredJade) {
+<span class="fc" id="L675">        this.enumRequiredJade = enumRequiredJade;</span>
+<span class="fc" id="L676">    }</span>
+
+    public byte[] getByteImageJade() {
+<span class="fc" id="L679">        return byteImageJade;</span>
+    }
+
+    public FieldTestPagerEntity byteImageJade(byte[] byteImageJade) {
+<span class="fc" id="L683">        this.byteImageJade = byteImageJade;</span>
+<span class="fc" id="L684">        return this;</span>
+    }
+
+    public void setByteImageJade(byte[] byteImageJade) {
+<span class="fc" id="L688">        this.byteImageJade = byteImageJade;</span>
+<span class="fc" id="L689">    }</span>
+
+    public String getByteImageJadeContentType() {
+<span class="fc" id="L692">        return byteImageJadeContentType;</span>
+    }
+
+    public FieldTestPagerEntity byteImageJadeContentType(String byteImageJadeContentType) {
+<span class="fc" id="L696">        this.byteImageJadeContentType = byteImageJadeContentType;</span>
+<span class="fc" id="L697">        return this;</span>
+    }
+
+    public void setByteImageJadeContentType(String byteImageJadeContentType) {
+<span class="fc" id="L701">        this.byteImageJadeContentType = byteImageJadeContentType;</span>
+<span class="fc" id="L702">    }</span>
+
+    public byte[] getByteImageRequiredJade() {
+<span class="fc" id="L705">        return byteImageRequiredJade;</span>
+    }
+
+    public FieldTestPagerEntity byteImageRequiredJade(byte[] byteImageRequiredJade) {
+<span class="fc" id="L709">        this.byteImageRequiredJade = byteImageRequiredJade;</span>
+<span class="fc" id="L710">        return this;</span>
+    }
+
+    public void setByteImageRequiredJade(byte[] byteImageRequiredJade) {
+<span class="fc" id="L714">        this.byteImageRequiredJade = byteImageRequiredJade;</span>
+<span class="fc" id="L715">    }</span>
+
+    public String getByteImageRequiredJadeContentType() {
+<span class="fc" id="L718">        return byteImageRequiredJadeContentType;</span>
+    }
+
+    public FieldTestPagerEntity byteImageRequiredJadeContentType(String byteImageRequiredJadeContentType) {
+<span class="fc" id="L722">        this.byteImageRequiredJadeContentType = byteImageRequiredJadeContentType;</span>
+<span class="fc" id="L723">        return this;</span>
+    }
+
+    public void setByteImageRequiredJadeContentType(String byteImageRequiredJadeContentType) {
+<span class="fc" id="L727">        this.byteImageRequiredJadeContentType = byteImageRequiredJadeContentType;</span>
+<span class="fc" id="L728">    }</span>
+
+    public byte[] getByteImageMinbytesJade() {
+<span class="fc" id="L731">        return byteImageMinbytesJade;</span>
+    }
+
+    public FieldTestPagerEntity byteImageMinbytesJade(byte[] byteImageMinbytesJade) {
+<span class="fc" id="L735">        this.byteImageMinbytesJade = byteImageMinbytesJade;</span>
+<span class="fc" id="L736">        return this;</span>
+    }
+
+    public void setByteImageMinbytesJade(byte[] byteImageMinbytesJade) {
+<span class="fc" id="L740">        this.byteImageMinbytesJade = byteImageMinbytesJade;</span>
+<span class="fc" id="L741">    }</span>
+
+    public String getByteImageMinbytesJadeContentType() {
+<span class="fc" id="L744">        return byteImageMinbytesJadeContentType;</span>
+    }
+
+    public FieldTestPagerEntity byteImageMinbytesJadeContentType(String byteImageMinbytesJadeContentType) {
+<span class="fc" id="L748">        this.byteImageMinbytesJadeContentType = byteImageMinbytesJadeContentType;</span>
+<span class="fc" id="L749">        return this;</span>
+    }
+
+    public void setByteImageMinbytesJadeContentType(String byteImageMinbytesJadeContentType) {
+<span class="fc" id="L753">        this.byteImageMinbytesJadeContentType = byteImageMinbytesJadeContentType;</span>
+<span class="fc" id="L754">    }</span>
+
+    public byte[] getByteImageMaxbytesJade() {
+<span class="fc" id="L757">        return byteImageMaxbytesJade;</span>
+    }
+
+    public FieldTestPagerEntity byteImageMaxbytesJade(byte[] byteImageMaxbytesJade) {
+<span class="fc" id="L761">        this.byteImageMaxbytesJade = byteImageMaxbytesJade;</span>
+<span class="fc" id="L762">        return this;</span>
+    }
+
+    public void setByteImageMaxbytesJade(byte[] byteImageMaxbytesJade) {
+<span class="fc" id="L766">        this.byteImageMaxbytesJade = byteImageMaxbytesJade;</span>
+<span class="fc" id="L767">    }</span>
+
+    public String getByteImageMaxbytesJadeContentType() {
+<span class="fc" id="L770">        return byteImageMaxbytesJadeContentType;</span>
+    }
+
+    public FieldTestPagerEntity byteImageMaxbytesJadeContentType(String byteImageMaxbytesJadeContentType) {
+<span class="fc" id="L774">        this.byteImageMaxbytesJadeContentType = byteImageMaxbytesJadeContentType;</span>
+<span class="fc" id="L775">        return this;</span>
+    }
+
+    public void setByteImageMaxbytesJadeContentType(String byteImageMaxbytesJadeContentType) {
+<span class="fc" id="L779">        this.byteImageMaxbytesJadeContentType = byteImageMaxbytesJadeContentType;</span>
+<span class="fc" id="L780">    }</span>
+
+    public byte[] getByteAnyJade() {
+<span class="fc" id="L783">        return byteAnyJade;</span>
+    }
+
+    public FieldTestPagerEntity byteAnyJade(byte[] byteAnyJade) {
+<span class="fc" id="L787">        this.byteAnyJade = byteAnyJade;</span>
+<span class="fc" id="L788">        return this;</span>
+    }
+
+    public void setByteAnyJade(byte[] byteAnyJade) {
+<span class="fc" id="L792">        this.byteAnyJade = byteAnyJade;</span>
+<span class="fc" id="L793">    }</span>
+
+    public String getByteAnyJadeContentType() {
+<span class="fc" id="L796">        return byteAnyJadeContentType;</span>
+    }
+
+    public FieldTestPagerEntity byteAnyJadeContentType(String byteAnyJadeContentType) {
+<span class="fc" id="L800">        this.byteAnyJadeContentType = byteAnyJadeContentType;</span>
+<span class="fc" id="L801">        return this;</span>
+    }
+
+    public void setByteAnyJadeContentType(String byteAnyJadeContentType) {
+<span class="fc" id="L805">        this.byteAnyJadeContentType = byteAnyJadeContentType;</span>
+<span class="fc" id="L806">    }</span>
+
+    public byte[] getByteAnyRequiredJade() {
+<span class="fc" id="L809">        return byteAnyRequiredJade;</span>
+    }
+
+    public FieldTestPagerEntity byteAnyRequiredJade(byte[] byteAnyRequiredJade) {
+<span class="fc" id="L813">        this.byteAnyRequiredJade = byteAnyRequiredJade;</span>
+<span class="fc" id="L814">        return this;</span>
+    }
+
+    public void setByteAnyRequiredJade(byte[] byteAnyRequiredJade) {
+<span class="fc" id="L818">        this.byteAnyRequiredJade = byteAnyRequiredJade;</span>
+<span class="fc" id="L819">    }</span>
+
+    public String getByteAnyRequiredJadeContentType() {
+<span class="fc" id="L822">        return byteAnyRequiredJadeContentType;</span>
+    }
+
+    public FieldTestPagerEntity byteAnyRequiredJadeContentType(String byteAnyRequiredJadeContentType) {
+<span class="fc" id="L826">        this.byteAnyRequiredJadeContentType = byteAnyRequiredJadeContentType;</span>
+<span class="fc" id="L827">        return this;</span>
+    }
+
+    public void setByteAnyRequiredJadeContentType(String byteAnyRequiredJadeContentType) {
+<span class="fc" id="L831">        this.byteAnyRequiredJadeContentType = byteAnyRequiredJadeContentType;</span>
+<span class="fc" id="L832">    }</span>
+
+    public byte[] getByteAnyMinbytesJade() {
+<span class="fc" id="L835">        return byteAnyMinbytesJade;</span>
+    }
+
+    public FieldTestPagerEntity byteAnyMinbytesJade(byte[] byteAnyMinbytesJade) {
+<span class="fc" id="L839">        this.byteAnyMinbytesJade = byteAnyMinbytesJade;</span>
+<span class="fc" id="L840">        return this;</span>
+    }
+
+    public void setByteAnyMinbytesJade(byte[] byteAnyMinbytesJade) {
+<span class="fc" id="L844">        this.byteAnyMinbytesJade = byteAnyMinbytesJade;</span>
+<span class="fc" id="L845">    }</span>
+
+    public String getByteAnyMinbytesJadeContentType() {
+<span class="fc" id="L848">        return byteAnyMinbytesJadeContentType;</span>
+    }
+
+    public FieldTestPagerEntity byteAnyMinbytesJadeContentType(String byteAnyMinbytesJadeContentType) {
+<span class="fc" id="L852">        this.byteAnyMinbytesJadeContentType = byteAnyMinbytesJadeContentType;</span>
+<span class="fc" id="L853">        return this;</span>
+    }
+
+    public void setByteAnyMinbytesJadeContentType(String byteAnyMinbytesJadeContentType) {
+<span class="fc" id="L857">        this.byteAnyMinbytesJadeContentType = byteAnyMinbytesJadeContentType;</span>
+<span class="fc" id="L858">    }</span>
+
+    public byte[] getByteAnyMaxbytesJade() {
+<span class="fc" id="L861">        return byteAnyMaxbytesJade;</span>
+    }
+
+    public FieldTestPagerEntity byteAnyMaxbytesJade(byte[] byteAnyMaxbytesJade) {
+<span class="fc" id="L865">        this.byteAnyMaxbytesJade = byteAnyMaxbytesJade;</span>
+<span class="fc" id="L866">        return this;</span>
+    }
+
+    public void setByteAnyMaxbytesJade(byte[] byteAnyMaxbytesJade) {
+<span class="fc" id="L870">        this.byteAnyMaxbytesJade = byteAnyMaxbytesJade;</span>
+<span class="fc" id="L871">    }</span>
+
+    public String getByteAnyMaxbytesJadeContentType() {
+<span class="fc" id="L874">        return byteAnyMaxbytesJadeContentType;</span>
+    }
+
+    public FieldTestPagerEntity byteAnyMaxbytesJadeContentType(String byteAnyMaxbytesJadeContentType) {
+<span class="fc" id="L878">        this.byteAnyMaxbytesJadeContentType = byteAnyMaxbytesJadeContentType;</span>
+<span class="fc" id="L879">        return this;</span>
+    }
+
+    public void setByteAnyMaxbytesJadeContentType(String byteAnyMaxbytesJadeContentType) {
+<span class="fc" id="L883">        this.byteAnyMaxbytesJadeContentType = byteAnyMaxbytesJadeContentType;</span>
+<span class="fc" id="L884">    }</span>
+
+    public String getByteTextJade() {
+<span class="fc" id="L887">        return byteTextJade;</span>
+    }
+
+    public FieldTestPagerEntity byteTextJade(String byteTextJade) {
+<span class="fc" id="L891">        this.byteTextJade = byteTextJade;</span>
+<span class="fc" id="L892">        return this;</span>
+    }
+
+    public void setByteTextJade(String byteTextJade) {
+<span class="fc" id="L896">        this.byteTextJade = byteTextJade;</span>
+<span class="fc" id="L897">    }</span>
+
+    public String getByteTextRequiredJade() {
+<span class="fc" id="L900">        return byteTextRequiredJade;</span>
+    }
+
+    public FieldTestPagerEntity byteTextRequiredJade(String byteTextRequiredJade) {
+<span class="fc" id="L904">        this.byteTextRequiredJade = byteTextRequiredJade;</span>
+<span class="fc" id="L905">        return this;</span>
+    }
+
+    public void setByteTextRequiredJade(String byteTextRequiredJade) {
+<span class="fc" id="L909">        this.byteTextRequiredJade = byteTextRequiredJade;</span>
+<span class="fc" id="L910">    }</span>
+
+    public String getByteTextMinbytesJade() {
+<span class="fc" id="L913">        return byteTextMinbytesJade;</span>
+    }
+
+    public FieldTestPagerEntity byteTextMinbytesJade(String byteTextMinbytesJade) {
+<span class="fc" id="L917">        this.byteTextMinbytesJade = byteTextMinbytesJade;</span>
+<span class="fc" id="L918">        return this;</span>
+    }
+
+    public void setByteTextMinbytesJade(String byteTextMinbytesJade) {
+<span class="fc" id="L922">        this.byteTextMinbytesJade = byteTextMinbytesJade;</span>
+<span class="fc" id="L923">    }</span>
+
+    public String getByteTextMaxbytesJade() {
+<span class="fc" id="L926">        return byteTextMaxbytesJade;</span>
+    }
+
+    public FieldTestPagerEntity byteTextMaxbytesJade(String byteTextMaxbytesJade) {
+<span class="fc" id="L930">        this.byteTextMaxbytesJade = byteTextMaxbytesJade;</span>
+<span class="fc" id="L931">        return this;</span>
+    }
+
+    public void setByteTextMaxbytesJade(String byteTextMaxbytesJade) {
+<span class="fc" id="L935">        this.byteTextMaxbytesJade = byteTextMaxbytesJade;</span>
+<span class="fc" id="L936">    }</span>
+    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
+
+    @Override
+    public boolean equals(Object o) {
+<span class="fc bfc" id="L941" title="All 2 branches covered.">        if (this == o) {</span>
+<span class="fc" id="L942">            return true;</span>
+        }
+<span class="fc bfc" id="L944" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L945">            return false;</span>
+        }
+<span class="fc" id="L947">        FieldTestPagerEntity fieldTestPagerEntity = (FieldTestPagerEntity) o;</span>
+<span class="fc bfc" id="L948" title="All 4 branches covered.">        if (fieldTestPagerEntity.getId() == null || getId() == null) {</span>
+<span class="fc" id="L949">            return false;</span>
+        }
+<span class="fc" id="L951">        return Objects.equals(getId(), fieldTestPagerEntity.getId());</span>
+    }
+
+    @Override
+    public int hashCode() {
+<span class="fc" id="L956">        return Objects.hashCode(getId());</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="fc" id="L961">        return &quot;FieldTestPagerEntity{&quot; +</span>
+<span class="fc" id="L962">            &quot;id=&quot; + getId() +</span>
+<span class="fc" id="L963">            &quot;, stringJade='&quot; + getStringJade() + &quot;'&quot; +</span>
+<span class="fc" id="L964">            &quot;, stringRequiredJade='&quot; + getStringRequiredJade() + &quot;'&quot; +</span>
+<span class="fc" id="L965">            &quot;, stringMinlengthJade='&quot; + getStringMinlengthJade() + &quot;'&quot; +</span>
+<span class="fc" id="L966">            &quot;, stringMaxlengthJade='&quot; + getStringMaxlengthJade() + &quot;'&quot; +</span>
+<span class="fc" id="L967">            &quot;, stringPatternJade='&quot; + getStringPatternJade() + &quot;'&quot; +</span>
+<span class="fc" id="L968">            &quot;, integerJade=&quot; + getIntegerJade() +</span>
+<span class="fc" id="L969">            &quot;, integerRequiredJade=&quot; + getIntegerRequiredJade() +</span>
+<span class="fc" id="L970">            &quot;, integerMinJade=&quot; + getIntegerMinJade() +</span>
+<span class="fc" id="L971">            &quot;, integerMaxJade=&quot; + getIntegerMaxJade() +</span>
+<span class="fc" id="L972">            &quot;, longJade=&quot; + getLongJade() +</span>
+<span class="fc" id="L973">            &quot;, longRequiredJade=&quot; + getLongRequiredJade() +</span>
+<span class="fc" id="L974">            &quot;, longMinJade=&quot; + getLongMinJade() +</span>
+<span class="fc" id="L975">            &quot;, longMaxJade=&quot; + getLongMaxJade() +</span>
+<span class="fc" id="L976">            &quot;, floatJade=&quot; + getFloatJade() +</span>
+<span class="fc" id="L977">            &quot;, floatRequiredJade=&quot; + getFloatRequiredJade() +</span>
+<span class="fc" id="L978">            &quot;, floatMinJade=&quot; + getFloatMinJade() +</span>
+<span class="fc" id="L979">            &quot;, floatMaxJade=&quot; + getFloatMaxJade() +</span>
+<span class="fc" id="L980">            &quot;, doubleRequiredJade=&quot; + getDoubleRequiredJade() +</span>
+<span class="fc" id="L981">            &quot;, doubleMinJade=&quot; + getDoubleMinJade() +</span>
+<span class="fc" id="L982">            &quot;, doubleMaxJade=&quot; + getDoubleMaxJade() +</span>
+<span class="fc" id="L983">            &quot;, bigDecimalRequiredJade=&quot; + getBigDecimalRequiredJade() +</span>
+<span class="fc" id="L984">            &quot;, bigDecimalMinJade=&quot; + getBigDecimalMinJade() +</span>
+<span class="fc" id="L985">            &quot;, bigDecimalMaxJade=&quot; + getBigDecimalMaxJade() +</span>
+<span class="fc" id="L986">            &quot;, localDateJade='&quot; + getLocalDateJade() + &quot;'&quot; +</span>
+<span class="fc" id="L987">            &quot;, localDateRequiredJade='&quot; + getLocalDateRequiredJade() + &quot;'&quot; +</span>
+<span class="fc" id="L988">            &quot;, instantJade='&quot; + getInstantJade() + &quot;'&quot; +</span>
+<span class="fc" id="L989">            &quot;, instanteRequiredJade='&quot; + getInstanteRequiredJade() + &quot;'&quot; +</span>
+<span class="fc" id="L990">            &quot;, zonedDateTimeJade='&quot; + getZonedDateTimeJade() + &quot;'&quot; +</span>
+<span class="fc" id="L991">            &quot;, zonedDateTimeRequiredJade='&quot; + getZonedDateTimeRequiredJade() + &quot;'&quot; +</span>
+<span class="fc" id="L992">            &quot;, booleanJade='&quot; + isBooleanJade() + &quot;'&quot; +</span>
+<span class="fc" id="L993">            &quot;, booleanRequiredJade='&quot; + isBooleanRequiredJade() + &quot;'&quot; +</span>
+<span class="fc" id="L994">            &quot;, enumJade='&quot; + getEnumJade() + &quot;'&quot; +</span>
+<span class="fc" id="L995">            &quot;, enumRequiredJade='&quot; + getEnumRequiredJade() + &quot;'&quot; +</span>
+<span class="fc" id="L996">            &quot;, byteImageJade='&quot; + getByteImageJade() + &quot;'&quot; +</span>
+<span class="fc" id="L997">            &quot;, byteImageJadeContentType='&quot; + getByteImageJadeContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L998">            &quot;, byteImageRequiredJade='&quot; + getByteImageRequiredJade() + &quot;'&quot; +</span>
+<span class="fc" id="L999">            &quot;, byteImageRequiredJadeContentType='&quot; + getByteImageRequiredJadeContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1000">            &quot;, byteImageMinbytesJade='&quot; + getByteImageMinbytesJade() + &quot;'&quot; +</span>
+<span class="fc" id="L1001">            &quot;, byteImageMinbytesJadeContentType='&quot; + getByteImageMinbytesJadeContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1002">            &quot;, byteImageMaxbytesJade='&quot; + getByteImageMaxbytesJade() + &quot;'&quot; +</span>
+<span class="fc" id="L1003">            &quot;, byteImageMaxbytesJadeContentType='&quot; + getByteImageMaxbytesJadeContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1004">            &quot;, byteAnyJade='&quot; + getByteAnyJade() + &quot;'&quot; +</span>
+<span class="fc" id="L1005">            &quot;, byteAnyJadeContentType='&quot; + getByteAnyJadeContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1006">            &quot;, byteAnyRequiredJade='&quot; + getByteAnyRequiredJade() + &quot;'&quot; +</span>
+<span class="fc" id="L1007">            &quot;, byteAnyRequiredJadeContentType='&quot; + getByteAnyRequiredJadeContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1008">            &quot;, byteAnyMinbytesJade='&quot; + getByteAnyMinbytesJade() + &quot;'&quot; +</span>
+<span class="fc" id="L1009">            &quot;, byteAnyMinbytesJadeContentType='&quot; + getByteAnyMinbytesJadeContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1010">            &quot;, byteAnyMaxbytesJade='&quot; + getByteAnyMaxbytesJade() + &quot;'&quot; +</span>
+<span class="fc" id="L1011">            &quot;, byteAnyMaxbytesJadeContentType='&quot; + getByteAnyMaxbytesJadeContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1012">            &quot;, byteTextJade='&quot; + getByteTextJade() + &quot;'&quot; +</span>
+<span class="fc" id="L1013">            &quot;, byteTextRequiredJade='&quot; + getByteTextRequiredJade() + &quot;'&quot; +</span>
+<span class="fc" id="L1014">            &quot;, byteTextMinbytesJade='&quot; + getByteTextMinbytesJade() + &quot;'&quot; +</span>
+<span class="fc" id="L1015">            &quot;, byteTextMaxbytesJade='&quot; + getByteTextMaxbytesJade() + &quot;'&quot; +</span>
+            &quot;}&quot;;
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

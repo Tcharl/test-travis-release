@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EntityWithServiceImplResource.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.web.rest</a> &gt; <span class="el_source">EntityWithServiceImplResource.java</span></div><h1>EntityWithServiceImplResource.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.web.rest;
+
+import com.codahale.metrics.annotation.Timed;
+import io.github.jhipster.sample.domain.EntityWithServiceImpl;
+import io.github.jhipster.sample.service.EntityWithServiceImplService;
+import io.github.jhipster.sample.web.rest.errors.BadRequestAlertException;
+import io.github.jhipster.sample.web.rest.util.HeaderUtil;
+import io.github.jhipster.web.util.ResponseUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.net.URI;
+import java.net.URISyntaxException;
+
+import java.util.List;
+import java.util.Optional;
+
+/**
+ * REST controller for managing EntityWithServiceImpl.
+ */
+@RestController
+@RequestMapping(&quot;/api&quot;)
+public class EntityWithServiceImplResource {
+
+<span class="fc" id="L27">    private final Logger log = LoggerFactory.getLogger(EntityWithServiceImplResource.class);</span>
+
+    private static final String ENTITY_NAME = &quot;entityWithServiceImpl&quot;;
+
+    private final EntityWithServiceImplService entityWithServiceImplService;
+
+<span class="fc" id="L33">    public EntityWithServiceImplResource(EntityWithServiceImplService entityWithServiceImplService) {</span>
+<span class="fc" id="L34">        this.entityWithServiceImplService = entityWithServiceImplService;</span>
+<span class="fc" id="L35">    }</span>
+
+    /**
+     * POST  /entity-with-service-impls : Create a new entityWithServiceImpl.
+     *
+     * @param entityWithServiceImpl the entityWithServiceImpl to create
+     * @return the ResponseEntity with status 201 (Created) and with body the new entityWithServiceImpl, or with status 400 (Bad Request) if the entityWithServiceImpl has already an ID
+     * @throws URISyntaxException if the Location URI syntax is incorrect
+     */
+    @PostMapping(&quot;/entity-with-service-impls&quot;)
+    @Timed
+    public ResponseEntity&lt;EntityWithServiceImpl&gt; createEntityWithServiceImpl(@RequestBody EntityWithServiceImpl entityWithServiceImpl) throws URISyntaxException {
+<span class="fc" id="L47">        log.debug(&quot;REST request to save EntityWithServiceImpl : {}&quot;, entityWithServiceImpl);</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">        if (entityWithServiceImpl.getId() != null) {</span>
+<span class="fc" id="L49">            throw new BadRequestAlertException(&quot;A new entityWithServiceImpl cannot already have an ID&quot;, ENTITY_NAME, &quot;idexists&quot;);</span>
+        }
+<span class="fc" id="L51">        EntityWithServiceImpl result = entityWithServiceImplService.save(entityWithServiceImpl);</span>
+<span class="fc" id="L52">        return ResponseEntity.created(new URI(&quot;/api/entity-with-service-impls/&quot; + result.getId()))</span>
+<span class="fc" id="L53">            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))</span>
+<span class="fc" id="L54">            .body(result);</span>
+    }
+
+    /**
+     * PUT  /entity-with-service-impls : Updates an existing entityWithServiceImpl.
+     *
+     * @param entityWithServiceImpl the entityWithServiceImpl to update
+     * @return the ResponseEntity with status 200 (OK) and with body the updated entityWithServiceImpl,
+     * or with status 400 (Bad Request) if the entityWithServiceImpl is not valid,
+     * or with status 500 (Internal Server Error) if the entityWithServiceImpl couldn't be updated
+     * @throws URISyntaxException if the Location URI syntax is incorrect
+     */
+    @PutMapping(&quot;/entity-with-service-impls&quot;)
+    @Timed
+    public ResponseEntity&lt;EntityWithServiceImpl&gt; updateEntityWithServiceImpl(@RequestBody EntityWithServiceImpl entityWithServiceImpl) throws URISyntaxException {
+<span class="fc" id="L69">        log.debug(&quot;REST request to update EntityWithServiceImpl : {}&quot;, entityWithServiceImpl);</span>
+<span class="fc bfc" id="L70" title="All 2 branches covered.">        if (entityWithServiceImpl.getId() == null) {</span>
+<span class="fc" id="L71">            return createEntityWithServiceImpl(entityWithServiceImpl);</span>
+        }
+<span class="fc" id="L73">        EntityWithServiceImpl result = entityWithServiceImplService.save(entityWithServiceImpl);</span>
+<span class="fc" id="L74">        return ResponseEntity.ok()</span>
+<span class="fc" id="L75">            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, entityWithServiceImpl.getId().toString()))</span>
+<span class="fc" id="L76">            .body(result);</span>
+    }
+
+    /**
+     * GET  /entity-with-service-impls : get all the entityWithServiceImpls.
+     *
+     * @return the ResponseEntity with status 200 (OK) and the list of entityWithServiceImpls in body
+     */
+    @GetMapping(&quot;/entity-with-service-impls&quot;)
+    @Timed
+    public List&lt;EntityWithServiceImpl&gt; getAllEntityWithServiceImpls() {
+<span class="fc" id="L87">        log.debug(&quot;REST request to get all EntityWithServiceImpls&quot;);</span>
+<span class="fc" id="L88">        return entityWithServiceImplService.findAll();</span>
+        }
+
+    /**
+     * GET  /entity-with-service-impls/:id : get the &quot;id&quot; entityWithServiceImpl.
+     *
+     * @param id the id of the entityWithServiceImpl to retrieve
+     * @return the ResponseEntity with status 200 (OK) and with body the entityWithServiceImpl, or with status 404 (Not Found)
+     */
+    @GetMapping(&quot;/entity-with-service-impls/{id}&quot;)
+    @Timed
+    public ResponseEntity&lt;EntityWithServiceImpl&gt; getEntityWithServiceImpl(@PathVariable Long id) {
+<span class="fc" id="L100">        log.debug(&quot;REST request to get EntityWithServiceImpl : {}&quot;, id);</span>
+<span class="fc" id="L101">        EntityWithServiceImpl entityWithServiceImpl = entityWithServiceImplService.findOne(id);</span>
+<span class="fc" id="L102">        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(entityWithServiceImpl));</span>
+    }
+
+    /**
+     * DELETE  /entity-with-service-impls/:id : delete the &quot;id&quot; entityWithServiceImpl.
+     *
+     * @param id the id of the entityWithServiceImpl to delete
+     * @return the ResponseEntity with status 200 (OK)
+     */
+    @DeleteMapping(&quot;/entity-with-service-impls/{id}&quot;)
+    @Timed
+    public ResponseEntity&lt;Void&gt; deleteEntityWithServiceImpl(@PathVariable Long id) {
+<span class="fc" id="L114">        log.debug(&quot;REST request to delete EntityWithServiceImpl : {}&quot;, id);</span>
+<span class="fc" id="L115">        entityWithServiceImplService.delete(id);</span>
+<span class="fc" id="L116">        return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EntityWithServiceClassPaginationAndDTOService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.service</a> &gt; <span class="el_source">EntityWithServiceClassPaginationAndDTOService.java</span></div><h1>EntityWithServiceClassPaginationAndDTOService.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.service;
+
+import io.github.jhipster.sample.domain.EntityWithServiceClassPaginationAndDTO;
+import io.github.jhipster.sample.repository.EntityWithServiceClassPaginationAndDTORepository;
+import io.github.jhipster.sample.service.dto.EntityWithServiceClassPaginationAndDTODTO;
+import io.github.jhipster.sample.service.mapper.EntityWithServiceClassPaginationAndDTOMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+
+/**
+ * Service Implementation for managing EntityWithServiceClassPaginationAndDTO.
+ */
+@Service
+@Transactional
+public class EntityWithServiceClassPaginationAndDTOService {
+
+<span class="fc" id="L22">    private final Logger log = LoggerFactory.getLogger(EntityWithServiceClassPaginationAndDTOService.class);</span>
+
+    private final EntityWithServiceClassPaginationAndDTORepository entityWithServiceClassPaginationAndDTORepository;
+
+    private final EntityWithServiceClassPaginationAndDTOMapper entityWithServiceClassPaginationAndDTOMapper;
+
+<span class="fc" id="L28">    public EntityWithServiceClassPaginationAndDTOService(EntityWithServiceClassPaginationAndDTORepository entityWithServiceClassPaginationAndDTORepository, EntityWithServiceClassPaginationAndDTOMapper entityWithServiceClassPaginationAndDTOMapper) {</span>
+<span class="fc" id="L29">        this.entityWithServiceClassPaginationAndDTORepository = entityWithServiceClassPaginationAndDTORepository;</span>
+<span class="fc" id="L30">        this.entityWithServiceClassPaginationAndDTOMapper = entityWithServiceClassPaginationAndDTOMapper;</span>
+<span class="fc" id="L31">    }</span>
+
+    /**
+     * Save a entityWithServiceClassPaginationAndDTO.
+     *
+     * @param entityWithServiceClassPaginationAndDTODTO the entity to save
+     * @return the persisted entity
+     */
+    public EntityWithServiceClassPaginationAndDTODTO save(EntityWithServiceClassPaginationAndDTODTO entityWithServiceClassPaginationAndDTODTO) {
+<span class="fc" id="L40">        log.debug(&quot;Request to save EntityWithServiceClassPaginationAndDTO : {}&quot;, entityWithServiceClassPaginationAndDTODTO);</span>
+<span class="fc" id="L41">        EntityWithServiceClassPaginationAndDTO entityWithServiceClassPaginationAndDTO = entityWithServiceClassPaginationAndDTOMapper.toEntity(entityWithServiceClassPaginationAndDTODTO);</span>
+<span class="fc" id="L42">        entityWithServiceClassPaginationAndDTO = entityWithServiceClassPaginationAndDTORepository.save(entityWithServiceClassPaginationAndDTO);</span>
+<span class="fc" id="L43">        return entityWithServiceClassPaginationAndDTOMapper.toDto(entityWithServiceClassPaginationAndDTO);</span>
+    }
+
+    /**
+     * Get all the entityWithServiceClassPaginationAndDTOS.
+     *
+     * @param pageable the pagination information
+     * @return the list of entities
+     */
+    @Transactional(readOnly = true)
+    public Page&lt;EntityWithServiceClassPaginationAndDTODTO&gt; findAll(Pageable pageable) {
+<span class="fc" id="L54">        log.debug(&quot;Request to get all EntityWithServiceClassPaginationAndDTOS&quot;);</span>
+<span class="fc" id="L55">        return entityWithServiceClassPaginationAndDTORepository.findAll(pageable)</span>
+<span class="fc" id="L56">            .map(entityWithServiceClassPaginationAndDTOMapper::toDto);</span>
+    }
+
+    /**
+     * Get one entityWithServiceClassPaginationAndDTO by id.
+     *
+     * @param id the id of the entity
+     * @return the entity
+     */
+    @Transactional(readOnly = true)
+    public EntityWithServiceClassPaginationAndDTODTO findOne(Long id) {
+<span class="fc" id="L67">        log.debug(&quot;Request to get EntityWithServiceClassPaginationAndDTO : {}&quot;, id);</span>
+<span class="fc" id="L68">        EntityWithServiceClassPaginationAndDTO entityWithServiceClassPaginationAndDTO = entityWithServiceClassPaginationAndDTORepository.findOne(id);</span>
+<span class="fc" id="L69">        return entityWithServiceClassPaginationAndDTOMapper.toDto(entityWithServiceClassPaginationAndDTO);</span>
+    }
+
+    /**
+     * Delete the entityWithServiceClassPaginationAndDTO by id.
+     *
+     * @param id the id of the entity
+     */
+    public void delete(Long id) {
+<span class="fc" id="L78">        log.debug(&quot;Request to delete EntityWithServiceClassPaginationAndDTO : {}&quot;, id);</span>
+<span class="fc" id="L79">        entityWithServiceClassPaginationAndDTORepository.delete(id);</span>
+<span class="fc" id="L80">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EntityWithServiceImplAndPaginationServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.service.impl</a> &gt; <span class="el_source">EntityWithServiceImplAndPaginationServiceImpl.java</span></div><h1>EntityWithServiceImplAndPaginationServiceImpl.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.service.impl;
+
+import io.github.jhipster.sample.service.EntityWithServiceImplAndPaginationService;
+import io.github.jhipster.sample.domain.EntityWithServiceImplAndPagination;
+import io.github.jhipster.sample.repository.EntityWithServiceImplAndPaginationRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+
+/**
+ * Service Implementation for managing EntityWithServiceImplAndPagination.
+ */
+@Service
+@Transactional
+public class EntityWithServiceImplAndPaginationServiceImpl implements EntityWithServiceImplAndPaginationService{
+
+<span class="fc" id="L21">    private final Logger log = LoggerFactory.getLogger(EntityWithServiceImplAndPaginationServiceImpl.class);</span>
+
+    private final EntityWithServiceImplAndPaginationRepository entityWithServiceImplAndPaginationRepository;
+
+<span class="fc" id="L25">    public EntityWithServiceImplAndPaginationServiceImpl(EntityWithServiceImplAndPaginationRepository entityWithServiceImplAndPaginationRepository) {</span>
+<span class="fc" id="L26">        this.entityWithServiceImplAndPaginationRepository = entityWithServiceImplAndPaginationRepository;</span>
+<span class="fc" id="L27">    }</span>
+
+    /**
+     * Save a entityWithServiceImplAndPagination.
+     *
+     * @param entityWithServiceImplAndPagination the entity to save
+     * @return the persisted entity
+     */
+    @Override
+    public EntityWithServiceImplAndPagination save(EntityWithServiceImplAndPagination entityWithServiceImplAndPagination) {
+<span class="fc" id="L37">        log.debug(&quot;Request to save EntityWithServiceImplAndPagination : {}&quot;, entityWithServiceImplAndPagination);</span>
+<span class="fc" id="L38">        return entityWithServiceImplAndPaginationRepository.save(entityWithServiceImplAndPagination);</span>
+    }
+
+    /**
+     * Get all the entityWithServiceImplAndPaginations.
+     *
+     * @param pageable the pagination information
+     * @return the list of entities
+     */
+    @Override
+    @Transactional(readOnly = true)
+    public Page&lt;EntityWithServiceImplAndPagination&gt; findAll(Pageable pageable) {
+<span class="fc" id="L50">        log.debug(&quot;Request to get all EntityWithServiceImplAndPaginations&quot;);</span>
+<span class="fc" id="L51">        return entityWithServiceImplAndPaginationRepository.findAll(pageable);</span>
+    }
+
+    /**
+     * Get one entityWithServiceImplAndPagination by id.
+     *
+     * @param id the id of the entity
+     * @return the entity
+     */
+    @Override
+    @Transactional(readOnly = true)
+    public EntityWithServiceImplAndPagination findOne(Long id) {
+<span class="fc" id="L63">        log.debug(&quot;Request to get EntityWithServiceImplAndPagination : {}&quot;, id);</span>
+<span class="fc" id="L64">        return entityWithServiceImplAndPaginationRepository.findOne(id);</span>
+    }
+
+    /**
+     * Delete the entityWithServiceImplAndPagination by id.
+     *
+     * @param id the id of the entity
+     */
+    @Override
+    public void delete(Long id) {
+<span class="fc" id="L74">        log.debug(&quot;Request to delete EntityWithServiceImplAndPagination : {}&quot;, id);</span>
+<span class="fc" id="L75">        entityWithServiceImplAndPaginationRepository.delete(id);</span>
+<span class="fc" id="L76">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

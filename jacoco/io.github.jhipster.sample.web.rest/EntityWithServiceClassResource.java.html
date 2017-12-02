@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EntityWithServiceClassResource.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.web.rest</a> &gt; <span class="el_source">EntityWithServiceClassResource.java</span></div><h1>EntityWithServiceClassResource.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.web.rest;
+
+import com.codahale.metrics.annotation.Timed;
+import io.github.jhipster.sample.domain.EntityWithServiceClass;
+import io.github.jhipster.sample.service.EntityWithServiceClassService;
+import io.github.jhipster.sample.web.rest.errors.BadRequestAlertException;
+import io.github.jhipster.sample.web.rest.util.HeaderUtil;
+import io.github.jhipster.web.util.ResponseUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.net.URI;
+import java.net.URISyntaxException;
+
+import java.util.List;
+import java.util.Optional;
+
+/**
+ * REST controller for managing EntityWithServiceClass.
+ */
+@RestController
+@RequestMapping(&quot;/api&quot;)
+public class EntityWithServiceClassResource {
+
+<span class="fc" id="L27">    private final Logger log = LoggerFactory.getLogger(EntityWithServiceClassResource.class);</span>
+
+    private static final String ENTITY_NAME = &quot;entityWithServiceClass&quot;;
+
+    private final EntityWithServiceClassService entityWithServiceClassService;
+
+<span class="fc" id="L33">    public EntityWithServiceClassResource(EntityWithServiceClassService entityWithServiceClassService) {</span>
+<span class="fc" id="L34">        this.entityWithServiceClassService = entityWithServiceClassService;</span>
+<span class="fc" id="L35">    }</span>
+
+    /**
+     * POST  /entity-with-service-classes : Create a new entityWithServiceClass.
+     *
+     * @param entityWithServiceClass the entityWithServiceClass to create
+     * @return the ResponseEntity with status 201 (Created) and with body the new entityWithServiceClass, or with status 400 (Bad Request) if the entityWithServiceClass has already an ID
+     * @throws URISyntaxException if the Location URI syntax is incorrect
+     */
+    @PostMapping(&quot;/entity-with-service-classes&quot;)
+    @Timed
+    public ResponseEntity&lt;EntityWithServiceClass&gt; createEntityWithServiceClass(@RequestBody EntityWithServiceClass entityWithServiceClass) throws URISyntaxException {
+<span class="fc" id="L47">        log.debug(&quot;REST request to save EntityWithServiceClass : {}&quot;, entityWithServiceClass);</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">        if (entityWithServiceClass.getId() != null) {</span>
+<span class="fc" id="L49">            throw new BadRequestAlertException(&quot;A new entityWithServiceClass cannot already have an ID&quot;, ENTITY_NAME, &quot;idexists&quot;);</span>
+        }
+<span class="fc" id="L51">        EntityWithServiceClass result = entityWithServiceClassService.save(entityWithServiceClass);</span>
+<span class="fc" id="L52">        return ResponseEntity.created(new URI(&quot;/api/entity-with-service-classes/&quot; + result.getId()))</span>
+<span class="fc" id="L53">            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))</span>
+<span class="fc" id="L54">            .body(result);</span>
+    }
+
+    /**
+     * PUT  /entity-with-service-classes : Updates an existing entityWithServiceClass.
+     *
+     * @param entityWithServiceClass the entityWithServiceClass to update
+     * @return the ResponseEntity with status 200 (OK) and with body the updated entityWithServiceClass,
+     * or with status 400 (Bad Request) if the entityWithServiceClass is not valid,
+     * or with status 500 (Internal Server Error) if the entityWithServiceClass couldn't be updated
+     * @throws URISyntaxException if the Location URI syntax is incorrect
+     */
+    @PutMapping(&quot;/entity-with-service-classes&quot;)
+    @Timed
+    public ResponseEntity&lt;EntityWithServiceClass&gt; updateEntityWithServiceClass(@RequestBody EntityWithServiceClass entityWithServiceClass) throws URISyntaxException {
+<span class="fc" id="L69">        log.debug(&quot;REST request to update EntityWithServiceClass : {}&quot;, entityWithServiceClass);</span>
+<span class="fc bfc" id="L70" title="All 2 branches covered.">        if (entityWithServiceClass.getId() == null) {</span>
+<span class="fc" id="L71">            return createEntityWithServiceClass(entityWithServiceClass);</span>
+        }
+<span class="fc" id="L73">        EntityWithServiceClass result = entityWithServiceClassService.save(entityWithServiceClass);</span>
+<span class="fc" id="L74">        return ResponseEntity.ok()</span>
+<span class="fc" id="L75">            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, entityWithServiceClass.getId().toString()))</span>
+<span class="fc" id="L76">            .body(result);</span>
+    }
+
+    /**
+     * GET  /entity-with-service-classes : get all the entityWithServiceClasses.
+     *
+     * @return the ResponseEntity with status 200 (OK) and the list of entityWithServiceClasses in body
+     */
+    @GetMapping(&quot;/entity-with-service-classes&quot;)
+    @Timed
+    public List&lt;EntityWithServiceClass&gt; getAllEntityWithServiceClasses() {
+<span class="fc" id="L87">        log.debug(&quot;REST request to get all EntityWithServiceClasses&quot;);</span>
+<span class="fc" id="L88">        return entityWithServiceClassService.findAll();</span>
+        }
+
+    /**
+     * GET  /entity-with-service-classes/:id : get the &quot;id&quot; entityWithServiceClass.
+     *
+     * @param id the id of the entityWithServiceClass to retrieve
+     * @return the ResponseEntity with status 200 (OK) and with body the entityWithServiceClass, or with status 404 (Not Found)
+     */
+    @GetMapping(&quot;/entity-with-service-classes/{id}&quot;)
+    @Timed
+    public ResponseEntity&lt;EntityWithServiceClass&gt; getEntityWithServiceClass(@PathVariable Long id) {
+<span class="fc" id="L100">        log.debug(&quot;REST request to get EntityWithServiceClass : {}&quot;, id);</span>
+<span class="fc" id="L101">        EntityWithServiceClass entityWithServiceClass = entityWithServiceClassService.findOne(id);</span>
+<span class="fc" id="L102">        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(entityWithServiceClass));</span>
+    }
+
+    /**
+     * DELETE  /entity-with-service-classes/:id : delete the &quot;id&quot; entityWithServiceClass.
+     *
+     * @param id the id of the entityWithServiceClass to delete
+     * @return the ResponseEntity with status 200 (OK)
+     */
+    @DeleteMapping(&quot;/entity-with-service-classes/{id}&quot;)
+    @Timed
+    public ResponseEntity&lt;Void&gt; deleteEntityWithServiceClass(@PathVariable Long id) {
+<span class="fc" id="L114">        log.debug(&quot;REST request to delete EntityWithServiceClass : {}&quot;, id);</span>
+<span class="fc" id="L115">        entityWithServiceClassService.delete(id);</span>
+<span class="fc" id="L116">        return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

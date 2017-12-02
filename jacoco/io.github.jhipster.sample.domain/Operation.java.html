@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Operation.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.domain</a> &gt; <span class="el_source">Operation.java</span></div><h1>Operation.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.domain;
+
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+import javax.persistence.*;
+import javax.validation.constraints.*;
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.time.Instant;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Objects;
+
+
+/**
+ * A Operation.
+ */
+@Entity
+@Table(name = &quot;operation&quot;)
+@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+<span class="fc" id="L22">public class Operation implements Serializable {</span>
+
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @NotNull
+    @Column(name = &quot;jhi_date&quot;, nullable = false)
+    private Instant date;
+
+    @Column(name = &quot;description&quot;)
+    private String description;
+
+    @NotNull
+    @Column(name = &quot;amount&quot;, precision=10, scale=2, nullable = false)
+    private BigDecimal amount;
+
+    @ManyToOne
+    private BankAccount bankAccount;
+
+<span class="fc" id="L44">    @ManyToMany</span>
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    @JoinTable(name = &quot;operation_label&quot;,
+               joinColumns = @JoinColumn(name=&quot;operations_id&quot;, referencedColumnName=&quot;id&quot;),
+               inverseJoinColumns = @JoinColumn(name=&quot;labels_id&quot;, referencedColumnName=&quot;id&quot;))
+    private Set&lt;Label&gt; labels = new HashSet&lt;&gt;();
+
+    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+    public Long getId() {
+<span class="fc" id="L53">        return id;</span>
+    }
+
+    public void setId(Long id) {
+<span class="fc" id="L57">        this.id = id;</span>
+<span class="fc" id="L58">    }</span>
+
+    public Instant getDate() {
+<span class="fc" id="L61">        return date;</span>
+    }
+
+    public Operation date(Instant date) {
+<span class="fc" id="L65">        this.date = date;</span>
+<span class="fc" id="L66">        return this;</span>
+    }
+
+    public void setDate(Instant date) {
+<span class="fc" id="L70">        this.date = date;</span>
+<span class="fc" id="L71">    }</span>
+
+    public String getDescription() {
+<span class="fc" id="L74">        return description;</span>
+    }
+
+    public Operation description(String description) {
+<span class="fc" id="L78">        this.description = description;</span>
+<span class="fc" id="L79">        return this;</span>
+    }
+
+    public void setDescription(String description) {
+<span class="fc" id="L83">        this.description = description;</span>
+<span class="fc" id="L84">    }</span>
+
+    public BigDecimal getAmount() {
+<span class="fc" id="L87">        return amount;</span>
+    }
+
+    public Operation amount(BigDecimal amount) {
+<span class="fc" id="L91">        this.amount = amount;</span>
+<span class="fc" id="L92">        return this;</span>
+    }
+
+    public void setAmount(BigDecimal amount) {
+<span class="fc" id="L96">        this.amount = amount;</span>
+<span class="fc" id="L97">    }</span>
+
+    public BankAccount getBankAccount() {
+<span class="fc" id="L100">        return bankAccount;</span>
+    }
+
+    public Operation bankAccount(BankAccount bankAccount) {
+<span class="nc" id="L104">        this.bankAccount = bankAccount;</span>
+<span class="nc" id="L105">        return this;</span>
+    }
+
+    public void setBankAccount(BankAccount bankAccount) {
+<span class="fc" id="L109">        this.bankAccount = bankAccount;</span>
+<span class="fc" id="L110">    }</span>
+
+    public Set&lt;Label&gt; getLabels() {
+<span class="fc" id="L113">        return labels;</span>
+    }
+
+    public Operation labels(Set&lt;Label&gt; labels) {
+<span class="nc" id="L117">        this.labels = labels;</span>
+<span class="nc" id="L118">        return this;</span>
+    }
+
+    public Operation addLabel(Label label) {
+<span class="nc" id="L122">        this.labels.add(label);</span>
+<span class="nc" id="L123">        label.getOperations().add(this);</span>
+<span class="nc" id="L124">        return this;</span>
+    }
+
+    public Operation removeLabel(Label label) {
+<span class="nc" id="L128">        this.labels.remove(label);</span>
+<span class="nc" id="L129">        label.getOperations().remove(this);</span>
+<span class="nc" id="L130">        return this;</span>
+    }
+
+    public void setLabels(Set&lt;Label&gt; labels) {
+<span class="fc" id="L134">        this.labels = labels;</span>
+<span class="fc" id="L135">    }</span>
+    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
+
+    @Override
+    public boolean equals(Object o) {
+<span class="fc bfc" id="L140" title="All 2 branches covered.">        if (this == o) {</span>
+<span class="fc" id="L141">            return true;</span>
+        }
+<span class="fc bfc" id="L143" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L144">            return false;</span>
+        }
+<span class="fc" id="L146">        Operation operation = (Operation) o;</span>
+<span class="fc bfc" id="L147" title="All 4 branches covered.">        if (operation.getId() == null || getId() == null) {</span>
+<span class="fc" id="L148">            return false;</span>
+        }
+<span class="fc" id="L150">        return Objects.equals(getId(), operation.getId());</span>
+    }
+
+    @Override
+    public int hashCode() {
+<span class="fc" id="L155">        return Objects.hashCode(getId());</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="fc" id="L160">        return &quot;Operation{&quot; +</span>
+<span class="fc" id="L161">            &quot;id=&quot; + getId() +</span>
+<span class="fc" id="L162">            &quot;, date='&quot; + getDate() + &quot;'&quot; +</span>
+<span class="fc" id="L163">            &quot;, description='&quot; + getDescription() + &quot;'&quot; +</span>
+<span class="fc" id="L164">            &quot;, amount=&quot; + getAmount() +</span>
+            &quot;}&quot;;
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>
