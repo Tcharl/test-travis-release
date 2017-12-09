@@ -181,6 +181,8 @@ public class EntityWithServiceImplAndDTOResourceIntTest {
 
         // Update the entityWithServiceImplAndDTO
         EntityWithServiceImplAndDTO updatedEntityWithServiceImplAndDTO = entityWithServiceImplAndDTORepository.findOne(entityWithServiceImplAndDTO.getId());
+        // Disconnect from session so that the updates on updatedEntityWithServiceImplAndDTO are not directly saved in db
+        em.detach(updatedEntityWithServiceImplAndDTO);
         updatedEntityWithServiceImplAndDTO
             .louis(UPDATED_LOUIS);
         EntityWithServiceImplAndDTODTO entityWithServiceImplAndDTODTO = entityWithServiceImplAndDTOMapper.toDto(updatedEntityWithServiceImplAndDTO);

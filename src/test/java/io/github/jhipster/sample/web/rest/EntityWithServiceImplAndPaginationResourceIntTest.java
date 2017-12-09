@@ -175,6 +175,8 @@ public class EntityWithServiceImplAndPaginationResourceIntTest {
 
         // Update the entityWithServiceImplAndPagination
         EntityWithServiceImplAndPagination updatedEntityWithServiceImplAndPagination = entityWithServiceImplAndPaginationRepository.findOne(entityWithServiceImplAndPagination.getId());
+        // Disconnect from session so that the updates on updatedEntityWithServiceImplAndPagination are not directly saved in db
+        em.detach(updatedEntityWithServiceImplAndPagination);
         updatedEntityWithServiceImplAndPagination
             .hugo(UPDATED_HUGO);
 

@@ -4,7 +4,7 @@ import { Response } from '@angular/http';
 
 import { Observable } from 'rxjs/Rx';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
+import { JhiEventManager } from 'ng-jhipster';
 
 import { EntityWithServiceImplAndDTO } from './entity-with-service-impl-and-dto.model';
 import { EntityWithServiceImplAndDTOPopupService } from './entity-with-service-impl-and-dto-popup.service';
@@ -21,7 +21,6 @@ export class EntityWithServiceImplAndDTODialogComponent implements OnInit {
 
     constructor(
         public activeModal: NgbActiveModal,
-        private jhiAlertService: JhiAlertService,
         private entityWithServiceImplAndDTOService: EntityWithServiceImplAndDTOService,
         private eventManager: JhiEventManager
     ) {
@@ -59,10 +58,6 @@ export class EntityWithServiceImplAndDTODialogComponent implements OnInit {
 
     private onSaveError() {
         this.isSaving = false;
-    }
-
-    private onError(error: any) {
-        this.jhiAlertService.error(error.message, null, null);
     }
 }
 

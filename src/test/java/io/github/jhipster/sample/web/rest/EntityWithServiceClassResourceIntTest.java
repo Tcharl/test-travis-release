@@ -175,6 +175,8 @@ public class EntityWithServiceClassResourceIntTest {
 
         // Update the entityWithServiceClass
         EntityWithServiceClass updatedEntityWithServiceClass = entityWithServiceClassRepository.findOne(entityWithServiceClass.getId());
+        // Disconnect from session so that the updates on updatedEntityWithServiceClass are not directly saved in db
+        em.detach(updatedEntityWithServiceClass);
         updatedEntityWithServiceClass
             .zoe(UPDATED_ZOE);
 

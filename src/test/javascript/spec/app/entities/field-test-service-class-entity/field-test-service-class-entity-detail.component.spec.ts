@@ -1,11 +1,8 @@
 /* tslint:disable max-line-length */
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
-import { DatePipe } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
-import { JhiDateUtils, JhiDataUtils, JhiEventManager } from 'ng-jhipster';
+
 import { JhipsterSampleApplicationTestModule } from '../../../test.module';
-import { MockActivatedRoute } from '../../../helpers/mock-route.service';
 import { FieldTestServiceClassEntityDetailComponent } from '../../../../../../main/webapp/app/entities/field-test-service-class-entity/field-test-service-class-entity-detail.component';
 import { FieldTestServiceClassEntityService } from '../../../../../../main/webapp/app/entities/field-test-service-class-entity/field-test-service-class-entity.service';
 import { FieldTestServiceClassEntity } from '../../../../../../main/webapp/app/entities/field-test-service-class-entity/field-test-service-class-entity.model';
@@ -22,17 +19,10 @@ describe('Component Tests', () => {
                 imports: [JhipsterSampleApplicationTestModule],
                 declarations: [FieldTestServiceClassEntityDetailComponent],
                 providers: [
-                    JhiDateUtils,
-                    JhiDataUtils,
-                    DatePipe,
-                    {
-                        provide: ActivatedRoute,
-                        useValue: new MockActivatedRoute({id: 123})
-                    },
-                    FieldTestServiceClassEntityService,
-                    JhiEventManager
+                    FieldTestServiceClassEntityService
                 ]
-            }).overrideTemplate(FieldTestServiceClassEntityDetailComponent, '')
+            })
+            .overrideTemplate(FieldTestServiceClassEntityDetailComponent, '')
             .compileComponents();
         }));
 
@@ -44,16 +34,16 @@ describe('Component Tests', () => {
 
         describe('OnInit', () => {
             it('Should call load all on init', () => {
-            // GIVEN
+                // GIVEN
 
-            spyOn(service, 'find').and.returnValue(Observable.of(new FieldTestServiceClassEntity(10)));
+                spyOn(service, 'find').and.returnValue(Observable.of(new FieldTestServiceClassEntity(123)));
 
-            // WHEN
-            comp.ngOnInit();
+                // WHEN
+                comp.ngOnInit();
 
-            // THEN
-            expect(service.find).toHaveBeenCalledWith(123);
-            expect(comp.fieldTestServiceClassEntity).toEqual(jasmine.objectContaining({id: 10}));
+                // THEN
+                expect(service.find).toHaveBeenCalledWith(123);
+                expect(comp.fieldTestServiceClassEntity).toEqual(jasmine.objectContaining({id: 123}));
             });
         });
     });

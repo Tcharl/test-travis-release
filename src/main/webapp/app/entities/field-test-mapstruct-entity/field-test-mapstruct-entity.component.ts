@@ -1,11 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
-import { JhiEventManager, JhiParseLinks, JhiAlertService, JhiDataUtils } from 'ng-jhipster';
+import { JhiEventManager, JhiAlertService, JhiDataUtils } from 'ng-jhipster';
 
 import { FieldTestMapstructEntity } from './field-test-mapstruct-entity.model';
 import { FieldTestMapstructEntityService } from './field-test-mapstruct-entity.service';
-import { ITEMS_PER_PAGE, Principal, ResponseWrapper } from '../../shared';
+import { Principal, ResponseWrapper } from '../../shared';
 
 @Component({
     selector: 'jhi-field-test-mapstruct-entity',

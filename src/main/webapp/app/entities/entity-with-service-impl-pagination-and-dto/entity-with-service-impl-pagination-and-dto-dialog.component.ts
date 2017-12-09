@@ -4,7 +4,7 @@ import { Response } from '@angular/http';
 
 import { Observable } from 'rxjs/Rx';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
+import { JhiEventManager } from 'ng-jhipster';
 
 import { EntityWithServiceImplPaginationAndDTO } from './entity-with-service-impl-pagination-and-dto.model';
 import { EntityWithServiceImplPaginationAndDTOPopupService } from './entity-with-service-impl-pagination-and-dto-popup.service';
@@ -21,7 +21,6 @@ export class EntityWithServiceImplPaginationAndDTODialogComponent implements OnI
 
     constructor(
         public activeModal: NgbActiveModal,
-        private jhiAlertService: JhiAlertService,
         private entityWithServiceImplPaginationAndDTOService: EntityWithServiceImplPaginationAndDTOService,
         private eventManager: JhiEventManager
     ) {
@@ -59,10 +58,6 @@ export class EntityWithServiceImplPaginationAndDTODialogComponent implements OnI
 
     private onSaveError() {
         this.isSaving = false;
-    }
-
-    private onError(error: any) {
-        this.jhiAlertService.error(error.message, null, null);
     }
 }
 

@@ -16,9 +16,9 @@ before_install:
   - "./travis/before-deploy.sh"
   - chmod +x mvnw
 install:
-  - ./mvnw -f .mvn/parent/pom.xml --batch-mode release:prepare -P release -DdryRun=true
-  - ./mvnw -f .mvn/parent/pom.xml --batch-mode release:clean -P release
-  - ./mvnw site
+  - ./mvnw -f .mvn/parent/pom.xml --batch-mode release:prepare -DdryRun=true
+  - ./mvnw -f .mvn/parent/pom.xml --batch-mode release:clean
+#  - ./mvnw site
 deploy:
   provider: script
   script: travis/deploy.sh

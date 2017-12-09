@@ -1,20 +1,6 @@
 ######################
-# Travis generated key
-######################
-/travis/deploykeys.tar
-/.mvn/parent/target/
-/.mvn/parent/pom.xml.releaseBackup
-/.mvn/parent/release.properties
-/.mvn/plugins/target/
-/.mvn/plugins/pom.xml.releaseBackup
-/.mvn/reporting/target/
-/.mvn/reporting/pom.xml.releaseBackup
-/src/site/markdown/**
-/pom.xml.releaseBackup
-######################
 # Project Specific
 ######################
-/target/www/**
 /src/test/javascript/coverage/
 /src/test/javascript/PhantomJS*/
 
@@ -83,8 +69,16 @@ classes/
 # Maven
 ######################
 /log/
-/target/
-
+/target/**/*
+/.mvn/parent/target/**/*
+/.mvn/plugins/target/**/*
+/.mvn/reporting/target/**/*
+/src/site/markdown/* #remove this one and ant runner declaration within parent pom if you want to have advanced maven site
+/.mvn/parent/pom.xml.releaseBackup
+/.mvn/plugins/pom.xml.releaseBackup
+/.mvn/reporting/pom.xml.releaseBackup
+/pom.xml.releaseBackup
+/.mvn/parent/release.properties
 ######################
 # Gradle
 ######################

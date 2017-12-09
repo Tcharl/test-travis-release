@@ -181,6 +181,8 @@ public class EntityWithServiceClassPaginationAndDTOResourceIntTest {
 
         // Update the entityWithServiceClassPaginationAndDTO
         EntityWithServiceClassPaginationAndDTO updatedEntityWithServiceClassPaginationAndDTO = entityWithServiceClassPaginationAndDTORepository.findOne(entityWithServiceClassPaginationAndDTO.getId());
+        // Disconnect from session so that the updates on updatedEntityWithServiceClassPaginationAndDTO are not directly saved in db
+        em.detach(updatedEntityWithServiceClassPaginationAndDTO);
         updatedEntityWithServiceClassPaginationAndDTO
             .lena(UPDATED_LENA);
         EntityWithServiceClassPaginationAndDTODTO entityWithServiceClassPaginationAndDTODTO = entityWithServiceClassPaginationAndDTOMapper.toDto(updatedEntityWithServiceClassPaginationAndDTO);

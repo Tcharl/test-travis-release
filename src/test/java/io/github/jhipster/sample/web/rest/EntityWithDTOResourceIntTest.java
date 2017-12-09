@@ -177,6 +177,8 @@ public class EntityWithDTOResourceIntTest {
 
         // Update the entityWithDTO
         EntityWithDTO updatedEntityWithDTO = entityWithDTORepository.findOne(entityWithDTO.getId());
+        // Disconnect from session so that the updates on updatedEntityWithDTO are not directly saved in db
+        em.detach(updatedEntityWithDTO);
         updatedEntityWithDTO
             .emma(UPDATED_EMMA);
         EntityWithDTODTO entityWithDTODTO = entityWithDTOMapper.toDto(updatedEntityWithDTO);

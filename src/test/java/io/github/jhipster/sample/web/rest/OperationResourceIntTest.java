@@ -223,6 +223,8 @@ public class OperationResourceIntTest {
 
         // Update the operation
         Operation updatedOperation = operationRepository.findOne(operation.getId());
+        // Disconnect from session so that the updates on updatedOperation are not directly saved in db
+        em.detach(updatedOperation);
         updatedOperation
             .date(UPDATED_DATE)
             .description(UPDATED_DESCRIPTION)
