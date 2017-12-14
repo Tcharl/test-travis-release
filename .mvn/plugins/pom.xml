@@ -3,7 +3,7 @@
     <parent>
         <groupId>net.osgiliath.jhipster.sample</groupId>
         <artifactId>jhipster-sample-application-reporting</artifactId>
-        <version>0.0.22-SNAPSHOT</version>
+        <version>0.0.22</version>
         <relativePath>../reporting/pom.xml</relativePath>
     </parent>
     <artifactId>jhipster-sample-application-plugins</artifactId>
