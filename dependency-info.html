@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>jhipster-sample-application parent pom &#x2013; Dependency Information</title>
+    <title>Pom reporting &#x2013; Dependency Information</title>
     <style type="text/css" media="all">
       @import url("./css/maven-base.css");
       @import url("./css/maven-theme.css");
@@ -16,7 +16,7 @@
   <body class="composite">
     <div id="banner">
                     <div id="bannerLeft">
-                jhipster-sample-application parent pom
+                Pom reporting
                 </div>
                     <div class="clear">
         <hr/>
@@ -28,7 +28,7 @@
         <span id="publishDate">Last Published: 2017-12-14</span>
                   &nbsp;| <span id="projectVersion">Version: 0.0.22</span>
                       </div>
-            <div class="xright">                    <a href="./" title="jhipster-sample-application parent pom">jhipster-sample-application parent pom</a>
+            <div class="xright">                    <a href="./" title="Pom reporting">Pom reporting</a>
             
       </div>
       <div class="clear">
@@ -38,20 +38,23 @@
     <div id="leftColumn">
       <div id="navcolumn">
            
-                                          <h5>Modules</h5>
+                                <h5>Parent Project</h5>
                   <ul>
                   <li class="none">
-                          <a href="../jhipster-sample-application-reporting/index.html" title="Pom reporting">Pom reporting</a>
+                          <a href="../test-travis-release.git/index.html" title="jhipster-sample-application parent pom">jhipster-sample-application parent pom</a>
+            </li>
+          </ul>
+                       <h5>Modules</h5>
+                  <ul>
+                  <li class="none">
+                          <a href="../jhipster-sample-application-plugins/index.html" title="jhipster-sample-application plugins">jhipster-sample-application plugins</a>
             </li>
           </ul>
                        <h5>Project Documentation</h5>
                   <ul>
-                                                                                                                                                                                                                                                                  <li class="expanded">
+                                                                                                                                                                                                                                                <li class="expanded">
                           <a href="project-info.html" title="Project Information">Project Information</a>
                     <ul>
-                      <li class="none">
-                          <a href="dependency-convergence.html" title="Dependency Convergence">Dependency Convergence</a>
-            </li>
                       <li class="none">
             <strong>Dependency Information</strong>
           </li>
@@ -62,7 +65,7 @@
                           <a href="index.html" title="About">About</a>
             </li>
                       <li class="none">
-                          <a href="license.html" title="Licenses">Licenses</a>
+                          <a href="license.html" title="Project License">Project License</a>
             </li>
                       <li class="none">
                           <a href="modules.html" title="Project Modules">Project Modules</a>
@@ -71,19 +74,22 @@
                           <a href="plugin-management.html" title="Plugin Management">Plugin Management</a>
             </li>
                       <li class="none">
-                          <a href="plugins.html" title="Plugins">Plugins</a>
+                          <a href="plugins.html" title="Project Plugins">Project Plugins</a>
             </li>
                       <li class="none">
-                          <a href="team-list.html" title="Team">Team</a>
+                          <a href="team-list.html" title="Project Team">Project Team</a>
             </li>
                       <li class="none">
-                          <a href="source-repository.html" title="Source Code Management">Source Code Management</a>
+                          <a href="source-repository.html" title="Source Repository">Source Repository</a>
             </li>
                       <li class="none">
-                          <a href="project-summary.html" title="Summary">Summary</a>
+                          <a href="project-summary.html" title="Project Summary">Project Summary</a>
             </li>
               </ul>
         </li>
+                                                                                                                          <li class="collapsed">
+                          <a href="project-reports.html" title="Project Reports">Project Reports</a>
+                  </li>
           </ul>
                              <a href="http://maven.apache.org/" title="Built by Maven" class="poweredBy">
         <img class="poweredBy" alt="Built by Maven" src="./images/logos/maven-feather.png" />
@@ -100,38 +106,38 @@
 <div class="source">
 <pre>&lt;dependency&gt;
   &lt;groupId&gt;net.osgiliath.jhipster.sample&lt;/groupId&gt;
-  &lt;artifactId&gt;jhipster-sample-application-parent&lt;/artifactId&gt;
+  &lt;artifactId&gt;jhipster-sample-application-reporting&lt;/artifactId&gt;
   &lt;version&gt;0.0.22&lt;/version&gt;
   &lt;type&gt;pom&lt;/type&gt;
 &lt;/dependency&gt;</pre></div></div>
 <div class="section">
 <h3><a name="Apache_Buildr"></a>Apache Buildr</h3><a name="Apache_Buildr"></a>
 <div class="source">
-<pre>'net.osgiliath.jhipster.sample:jhipster-sample-application-parent:pom:0.0.22'</pre></div></div>
+<pre>'net.osgiliath.jhipster.sample:jhipster-sample-application-reporting:pom:0.0.22'</pre></div></div>
 <div class="section">
 <h3><a name="Apache_Ivy"></a>Apache Ivy</h3><a name="Apache_Ivy"></a>
 <div class="source">
-<pre>&lt;dependency org=&quot;net.osgiliath.jhipster.sample&quot; name=&quot;jhipster-sample-application-parent&quot; rev=&quot;0.0.22&quot;&gt;
-  &lt;artifact name=&quot;jhipster-sample-application-parent&quot; type=&quot;pom&quot; /&gt;
+<pre>&lt;dependency org=&quot;net.osgiliath.jhipster.sample&quot; name=&quot;jhipster-sample-application-reporting&quot; rev=&quot;0.0.22&quot;&gt;
+  &lt;artifact name=&quot;jhipster-sample-application-reporting&quot; type=&quot;pom&quot; /&gt;
 &lt;/dependency&gt;</pre></div></div>
 <div class="section">
 <h3><a name="Groovy_Grape"></a>Groovy Grape</h3><a name="Groovy_Grape"></a>
 <div class="source">
 <pre>@Grapes(
-@Grab(group='net.osgiliath.jhipster.sample', module='jhipster-sample-application-parent', version='0.0.22')
+@Grab(group='net.osgiliath.jhipster.sample', module='jhipster-sample-application-reporting', version='0.0.22')
 )</pre></div></div>
 <div class="section">
-<h3><a name="GradleGrails"></a>Gradle/Grails</h3><a name="GradleGrails"></a>
+<h3><a name="Grails"></a>Grails</h3><a name="Grails"></a>
 <div class="source">
-<pre>compile 'net.osgiliath.jhipster.sample:jhipster-sample-application-parent:0.0.22'</pre></div></div>
-<div class="section">
-<h3><a name="Scala_SBT"></a>Scala SBT</h3><a name="Scala_SBT"></a>
-<div class="source">
-<pre>libraryDependencies += &quot;net.osgiliath.jhipster.sample&quot; % &quot;jhipster-sample-application-parent&quot; % &quot;0.0.22&quot;</pre></div></div>
+<pre>compile 'net.osgiliath.jhipster.sample:jhipster-sample-application-reporting:0.0.22'</pre></div></div>
 <div class="section">
 <h3><a name="Leiningen"></a>Leiningen</h3><a name="Leiningen"></a>
 <div class="source">
-<pre>[net.osgiliath.jhipster.sample/jhipster-sample-application-parent &quot;0.0.22&quot;]</pre></div></div></div>
+<pre>[net.osgiliath.jhipster.sample/jhipster-sample-application-reporting &quot;0.0.22&quot;]</pre></div></div>
+<div class="section">
+<h3><a name="SBT"></a>SBT</h3><a name="SBT"></a>
+<div class="source">
+<pre>libraryDependencies += &quot;net.osgiliath.jhipster.sample&quot; % &quot;jhipster-sample-application-reporting&quot; % &quot;0.0.22&quot;</pre></div></div></div>
       </div>
     </div>
     <div class="clear">
