@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FieldTestServiceClassEntity.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.domain</a> &gt; <span class="el_source">FieldTestServiceClassEntity.java</span></div><h1>FieldTestServiceClassEntity.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.domain;
 
+/*-
+ * #%L
+ * Jhipster Sample Application
+ * %%
+ * Copyright (C) 2017 Osgiliath
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.Instant;
@@ -16,14 +37,13 @@ import io.github.jhipster.sample.domain.enumeration.EnumFieldClass;
 
 import io.github.jhipster.sample.domain.enumeration.EnumRequiredFieldClass;
 
-
 /**
  * A FieldTestServiceClassEntity.
  */
 @Entity
 @Table(name = &quot;field_test_service_class_entity&quot;)
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-<span class="fc" id="L26">public class FieldTestServiceClassEntity implements Serializable {</span>
+<span class="fc" id="L46">public class FieldTestServiceClassEntity implements Serializable {</span>
 
     private static final long serialVersionUID = 1L;
 
@@ -239,780 +259,780 @@ import io.github.jhipster.sample.domain.enumeration.EnumRequiredFieldClass;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
-<span class="fc" id="L242">        return id;</span>
+<span class="fc" id="L262">        return id;</span>
     }
 
     public void setId(Long id) {
-<span class="fc" id="L246">        this.id = id;</span>
-<span class="fc" id="L247">    }</span>
+<span class="fc" id="L266">        this.id = id;</span>
+<span class="fc" id="L267">    }</span>
 
     public String getStringBob() {
-<span class="fc" id="L250">        return stringBob;</span>
+<span class="fc" id="L270">        return stringBob;</span>
     }
 
     public FieldTestServiceClassEntity stringBob(String stringBob) {
-<span class="fc" id="L254">        this.stringBob = stringBob;</span>
-<span class="fc" id="L255">        return this;</span>
+<span class="fc" id="L274">        this.stringBob = stringBob;</span>
+<span class="fc" id="L275">        return this;</span>
     }
 
     public void setStringBob(String stringBob) {
-<span class="fc" id="L259">        this.stringBob = stringBob;</span>
-<span class="fc" id="L260">    }</span>
+<span class="fc" id="L279">        this.stringBob = stringBob;</span>
+<span class="fc" id="L280">    }</span>
 
     public String getStringRequiredBob() {
-<span class="fc" id="L263">        return stringRequiredBob;</span>
+<span class="fc" id="L283">        return stringRequiredBob;</span>
     }
 
     public FieldTestServiceClassEntity stringRequiredBob(String stringRequiredBob) {
-<span class="fc" id="L267">        this.stringRequiredBob = stringRequiredBob;</span>
-<span class="fc" id="L268">        return this;</span>
+<span class="fc" id="L287">        this.stringRequiredBob = stringRequiredBob;</span>
+<span class="fc" id="L288">        return this;</span>
     }
 
     public void setStringRequiredBob(String stringRequiredBob) {
-<span class="fc" id="L272">        this.stringRequiredBob = stringRequiredBob;</span>
-<span class="fc" id="L273">    }</span>
+<span class="fc" id="L292">        this.stringRequiredBob = stringRequiredBob;</span>
+<span class="fc" id="L293">    }</span>
 
     public String getStringMinlengthBob() {
-<span class="fc" id="L276">        return stringMinlengthBob;</span>
+<span class="fc" id="L296">        return stringMinlengthBob;</span>
     }
 
     public FieldTestServiceClassEntity stringMinlengthBob(String stringMinlengthBob) {
-<span class="fc" id="L280">        this.stringMinlengthBob = stringMinlengthBob;</span>
-<span class="fc" id="L281">        return this;</span>
+<span class="fc" id="L300">        this.stringMinlengthBob = stringMinlengthBob;</span>
+<span class="fc" id="L301">        return this;</span>
     }
 
     public void setStringMinlengthBob(String stringMinlengthBob) {
-<span class="fc" id="L285">        this.stringMinlengthBob = stringMinlengthBob;</span>
-<span class="fc" id="L286">    }</span>
+<span class="fc" id="L305">        this.stringMinlengthBob = stringMinlengthBob;</span>
+<span class="fc" id="L306">    }</span>
 
     public String getStringMaxlengthBob() {
-<span class="fc" id="L289">        return stringMaxlengthBob;</span>
+<span class="fc" id="L309">        return stringMaxlengthBob;</span>
     }
 
     public FieldTestServiceClassEntity stringMaxlengthBob(String stringMaxlengthBob) {
-<span class="fc" id="L293">        this.stringMaxlengthBob = stringMaxlengthBob;</span>
-<span class="fc" id="L294">        return this;</span>
+<span class="fc" id="L313">        this.stringMaxlengthBob = stringMaxlengthBob;</span>
+<span class="fc" id="L314">        return this;</span>
     }
 
     public void setStringMaxlengthBob(String stringMaxlengthBob) {
-<span class="fc" id="L298">        this.stringMaxlengthBob = stringMaxlengthBob;</span>
-<span class="fc" id="L299">    }</span>
+<span class="fc" id="L318">        this.stringMaxlengthBob = stringMaxlengthBob;</span>
+<span class="fc" id="L319">    }</span>
 
     public String getStringPatternBob() {
-<span class="fc" id="L302">        return stringPatternBob;</span>
+<span class="fc" id="L322">        return stringPatternBob;</span>
     }
 
     public FieldTestServiceClassEntity stringPatternBob(String stringPatternBob) {
-<span class="fc" id="L306">        this.stringPatternBob = stringPatternBob;</span>
-<span class="fc" id="L307">        return this;</span>
+<span class="fc" id="L326">        this.stringPatternBob = stringPatternBob;</span>
+<span class="fc" id="L327">        return this;</span>
     }
 
     public void setStringPatternBob(String stringPatternBob) {
-<span class="fc" id="L311">        this.stringPatternBob = stringPatternBob;</span>
-<span class="fc" id="L312">    }</span>
+<span class="fc" id="L331">        this.stringPatternBob = stringPatternBob;</span>
+<span class="fc" id="L332">    }</span>
 
     public Integer getIntegerBob() {
-<span class="fc" id="L315">        return integerBob;</span>
+<span class="fc" id="L335">        return integerBob;</span>
     }
 
     public FieldTestServiceClassEntity integerBob(Integer integerBob) {
-<span class="fc" id="L319">        this.integerBob = integerBob;</span>
-<span class="fc" id="L320">        return this;</span>
+<span class="fc" id="L339">        this.integerBob = integerBob;</span>
+<span class="fc" id="L340">        return this;</span>
     }
 
     public void setIntegerBob(Integer integerBob) {
-<span class="fc" id="L324">        this.integerBob = integerBob;</span>
-<span class="fc" id="L325">    }</span>
+<span class="fc" id="L344">        this.integerBob = integerBob;</span>
+<span class="fc" id="L345">    }</span>
 
     public Integer getIntegerRequiredBob() {
-<span class="fc" id="L328">        return integerRequiredBob;</span>
+<span class="fc" id="L348">        return integerRequiredBob;</span>
     }
 
     public FieldTestServiceClassEntity integerRequiredBob(Integer integerRequiredBob) {
-<span class="fc" id="L332">        this.integerRequiredBob = integerRequiredBob;</span>
-<span class="fc" id="L333">        return this;</span>
+<span class="fc" id="L352">        this.integerRequiredBob = integerRequiredBob;</span>
+<span class="fc" id="L353">        return this;</span>
     }
 
     public void setIntegerRequiredBob(Integer integerRequiredBob) {
-<span class="fc" id="L337">        this.integerRequiredBob = integerRequiredBob;</span>
-<span class="fc" id="L338">    }</span>
+<span class="fc" id="L357">        this.integerRequiredBob = integerRequiredBob;</span>
+<span class="fc" id="L358">    }</span>
 
     public Integer getIntegerMinBob() {
-<span class="fc" id="L341">        return integerMinBob;</span>
+<span class="fc" id="L361">        return integerMinBob;</span>
     }
 
     public FieldTestServiceClassEntity integerMinBob(Integer integerMinBob) {
-<span class="fc" id="L345">        this.integerMinBob = integerMinBob;</span>
-<span class="fc" id="L346">        return this;</span>
+<span class="fc" id="L365">        this.integerMinBob = integerMinBob;</span>
+<span class="fc" id="L366">        return this;</span>
     }
 
     public void setIntegerMinBob(Integer integerMinBob) {
-<span class="fc" id="L350">        this.integerMinBob = integerMinBob;</span>
-<span class="fc" id="L351">    }</span>
+<span class="fc" id="L370">        this.integerMinBob = integerMinBob;</span>
+<span class="fc" id="L371">    }</span>
 
     public Integer getIntegerMaxBob() {
-<span class="fc" id="L354">        return integerMaxBob;</span>
+<span class="fc" id="L374">        return integerMaxBob;</span>
     }
 
     public FieldTestServiceClassEntity integerMaxBob(Integer integerMaxBob) {
-<span class="fc" id="L358">        this.integerMaxBob = integerMaxBob;</span>
-<span class="fc" id="L359">        return this;</span>
+<span class="fc" id="L378">        this.integerMaxBob = integerMaxBob;</span>
+<span class="fc" id="L379">        return this;</span>
     }
 
     public void setIntegerMaxBob(Integer integerMaxBob) {
-<span class="fc" id="L363">        this.integerMaxBob = integerMaxBob;</span>
-<span class="fc" id="L364">    }</span>
+<span class="fc" id="L383">        this.integerMaxBob = integerMaxBob;</span>
+<span class="fc" id="L384">    }</span>
 
     public Long getLongBob() {
-<span class="fc" id="L367">        return longBob;</span>
+<span class="fc" id="L387">        return longBob;</span>
     }
 
     public FieldTestServiceClassEntity longBob(Long longBob) {
-<span class="fc" id="L371">        this.longBob = longBob;</span>
-<span class="fc" id="L372">        return this;</span>
+<span class="fc" id="L391">        this.longBob = longBob;</span>
+<span class="fc" id="L392">        return this;</span>
     }
 
     public void setLongBob(Long longBob) {
-<span class="fc" id="L376">        this.longBob = longBob;</span>
-<span class="fc" id="L377">    }</span>
+<span class="fc" id="L396">        this.longBob = longBob;</span>
+<span class="fc" id="L397">    }</span>
 
     public Long getLongRequiredBob() {
-<span class="fc" id="L380">        return longRequiredBob;</span>
+<span class="fc" id="L400">        return longRequiredBob;</span>
     }
 
     public FieldTestServiceClassEntity longRequiredBob(Long longRequiredBob) {
-<span class="fc" id="L384">        this.longRequiredBob = longRequiredBob;</span>
-<span class="fc" id="L385">        return this;</span>
+<span class="fc" id="L404">        this.longRequiredBob = longRequiredBob;</span>
+<span class="fc" id="L405">        return this;</span>
     }
 
     public void setLongRequiredBob(Long longRequiredBob) {
-<span class="fc" id="L389">        this.longRequiredBob = longRequiredBob;</span>
-<span class="fc" id="L390">    }</span>
+<span class="fc" id="L409">        this.longRequiredBob = longRequiredBob;</span>
+<span class="fc" id="L410">    }</span>
 
     public Long getLongMinBob() {
-<span class="fc" id="L393">        return longMinBob;</span>
+<span class="fc" id="L413">        return longMinBob;</span>
     }
 
     public FieldTestServiceClassEntity longMinBob(Long longMinBob) {
-<span class="fc" id="L397">        this.longMinBob = longMinBob;</span>
-<span class="fc" id="L398">        return this;</span>
+<span class="fc" id="L417">        this.longMinBob = longMinBob;</span>
+<span class="fc" id="L418">        return this;</span>
     }
 
     public void setLongMinBob(Long longMinBob) {
-<span class="fc" id="L402">        this.longMinBob = longMinBob;</span>
-<span class="fc" id="L403">    }</span>
+<span class="fc" id="L422">        this.longMinBob = longMinBob;</span>
+<span class="fc" id="L423">    }</span>
 
     public Long getLongMaxBob() {
-<span class="fc" id="L406">        return longMaxBob;</span>
+<span class="fc" id="L426">        return longMaxBob;</span>
     }
 
     public FieldTestServiceClassEntity longMaxBob(Long longMaxBob) {
-<span class="fc" id="L410">        this.longMaxBob = longMaxBob;</span>
-<span class="fc" id="L411">        return this;</span>
+<span class="fc" id="L430">        this.longMaxBob = longMaxBob;</span>
+<span class="fc" id="L431">        return this;</span>
     }
 
     public void setLongMaxBob(Long longMaxBob) {
-<span class="fc" id="L415">        this.longMaxBob = longMaxBob;</span>
-<span class="fc" id="L416">    }</span>
+<span class="fc" id="L435">        this.longMaxBob = longMaxBob;</span>
+<span class="fc" id="L436">    }</span>
 
     public Float getFloatBob() {
-<span class="fc" id="L419">        return floatBob;</span>
+<span class="fc" id="L439">        return floatBob;</span>
     }
 
     public FieldTestServiceClassEntity floatBob(Float floatBob) {
-<span class="fc" id="L423">        this.floatBob = floatBob;</span>
-<span class="fc" id="L424">        return this;</span>
+<span class="fc" id="L443">        this.floatBob = floatBob;</span>
+<span class="fc" id="L444">        return this;</span>
     }
 
     public void setFloatBob(Float floatBob) {
-<span class="fc" id="L428">        this.floatBob = floatBob;</span>
-<span class="fc" id="L429">    }</span>
+<span class="fc" id="L448">        this.floatBob = floatBob;</span>
+<span class="fc" id="L449">    }</span>
 
     public Float getFloatRequiredBob() {
-<span class="fc" id="L432">        return floatRequiredBob;</span>
+<span class="fc" id="L452">        return floatRequiredBob;</span>
     }
 
     public FieldTestServiceClassEntity floatRequiredBob(Float floatRequiredBob) {
-<span class="fc" id="L436">        this.floatRequiredBob = floatRequiredBob;</span>
-<span class="fc" id="L437">        return this;</span>
+<span class="fc" id="L456">        this.floatRequiredBob = floatRequiredBob;</span>
+<span class="fc" id="L457">        return this;</span>
     }
 
     public void setFloatRequiredBob(Float floatRequiredBob) {
-<span class="fc" id="L441">        this.floatRequiredBob = floatRequiredBob;</span>
-<span class="fc" id="L442">    }</span>
+<span class="fc" id="L461">        this.floatRequiredBob = floatRequiredBob;</span>
+<span class="fc" id="L462">    }</span>
 
     public Float getFloatMinBob() {
-<span class="fc" id="L445">        return floatMinBob;</span>
+<span class="fc" id="L465">        return floatMinBob;</span>
     }
 
     public FieldTestServiceClassEntity floatMinBob(Float floatMinBob) {
-<span class="fc" id="L449">        this.floatMinBob = floatMinBob;</span>
-<span class="fc" id="L450">        return this;</span>
+<span class="fc" id="L469">        this.floatMinBob = floatMinBob;</span>
+<span class="fc" id="L470">        return this;</span>
     }
 
     public void setFloatMinBob(Float floatMinBob) {
-<span class="fc" id="L454">        this.floatMinBob = floatMinBob;</span>
-<span class="fc" id="L455">    }</span>
+<span class="fc" id="L474">        this.floatMinBob = floatMinBob;</span>
+<span class="fc" id="L475">    }</span>
 
     public Float getFloatMaxBob() {
-<span class="fc" id="L458">        return floatMaxBob;</span>
+<span class="fc" id="L478">        return floatMaxBob;</span>
     }
 
     public FieldTestServiceClassEntity floatMaxBob(Float floatMaxBob) {
-<span class="fc" id="L462">        this.floatMaxBob = floatMaxBob;</span>
-<span class="fc" id="L463">        return this;</span>
+<span class="fc" id="L482">        this.floatMaxBob = floatMaxBob;</span>
+<span class="fc" id="L483">        return this;</span>
     }
 
     public void setFloatMaxBob(Float floatMaxBob) {
-<span class="fc" id="L467">        this.floatMaxBob = floatMaxBob;</span>
-<span class="fc" id="L468">    }</span>
+<span class="fc" id="L487">        this.floatMaxBob = floatMaxBob;</span>
+<span class="fc" id="L488">    }</span>
 
     public Double getDoubleRequiredBob() {
-<span class="fc" id="L471">        return doubleRequiredBob;</span>
+<span class="fc" id="L491">        return doubleRequiredBob;</span>
     }
 
     public FieldTestServiceClassEntity doubleRequiredBob(Double doubleRequiredBob) {
-<span class="fc" id="L475">        this.doubleRequiredBob = doubleRequiredBob;</span>
-<span class="fc" id="L476">        return this;</span>
+<span class="fc" id="L495">        this.doubleRequiredBob = doubleRequiredBob;</span>
+<span class="fc" id="L496">        return this;</span>
     }
 
     public void setDoubleRequiredBob(Double doubleRequiredBob) {
-<span class="fc" id="L480">        this.doubleRequiredBob = doubleRequiredBob;</span>
-<span class="fc" id="L481">    }</span>
+<span class="fc" id="L500">        this.doubleRequiredBob = doubleRequiredBob;</span>
+<span class="fc" id="L501">    }</span>
 
     public Double getDoubleMinBob() {
-<span class="fc" id="L484">        return doubleMinBob;</span>
+<span class="fc" id="L504">        return doubleMinBob;</span>
     }
 
     public FieldTestServiceClassEntity doubleMinBob(Double doubleMinBob) {
-<span class="fc" id="L488">        this.doubleMinBob = doubleMinBob;</span>
-<span class="fc" id="L489">        return this;</span>
+<span class="fc" id="L508">        this.doubleMinBob = doubleMinBob;</span>
+<span class="fc" id="L509">        return this;</span>
     }
 
     public void setDoubleMinBob(Double doubleMinBob) {
-<span class="fc" id="L493">        this.doubleMinBob = doubleMinBob;</span>
-<span class="fc" id="L494">    }</span>
+<span class="fc" id="L513">        this.doubleMinBob = doubleMinBob;</span>
+<span class="fc" id="L514">    }</span>
 
     public Double getDoubleMaxBob() {
-<span class="fc" id="L497">        return doubleMaxBob;</span>
+<span class="fc" id="L517">        return doubleMaxBob;</span>
     }
 
     public FieldTestServiceClassEntity doubleMaxBob(Double doubleMaxBob) {
-<span class="fc" id="L501">        this.doubleMaxBob = doubleMaxBob;</span>
-<span class="fc" id="L502">        return this;</span>
+<span class="fc" id="L521">        this.doubleMaxBob = doubleMaxBob;</span>
+<span class="fc" id="L522">        return this;</span>
     }
 
     public void setDoubleMaxBob(Double doubleMaxBob) {
-<span class="fc" id="L506">        this.doubleMaxBob = doubleMaxBob;</span>
-<span class="fc" id="L507">    }</span>
+<span class="fc" id="L526">        this.doubleMaxBob = doubleMaxBob;</span>
+<span class="fc" id="L527">    }</span>
 
     public BigDecimal getBigDecimalRequiredBob() {
-<span class="fc" id="L510">        return bigDecimalRequiredBob;</span>
+<span class="fc" id="L530">        return bigDecimalRequiredBob;</span>
     }
 
     public FieldTestServiceClassEntity bigDecimalRequiredBob(BigDecimal bigDecimalRequiredBob) {
-<span class="fc" id="L514">        this.bigDecimalRequiredBob = bigDecimalRequiredBob;</span>
-<span class="fc" id="L515">        return this;</span>
+<span class="fc" id="L534">        this.bigDecimalRequiredBob = bigDecimalRequiredBob;</span>
+<span class="fc" id="L535">        return this;</span>
     }
 
     public void setBigDecimalRequiredBob(BigDecimal bigDecimalRequiredBob) {
-<span class="fc" id="L519">        this.bigDecimalRequiredBob = bigDecimalRequiredBob;</span>
-<span class="fc" id="L520">    }</span>
+<span class="fc" id="L539">        this.bigDecimalRequiredBob = bigDecimalRequiredBob;</span>
+<span class="fc" id="L540">    }</span>
 
     public BigDecimal getBigDecimalMinBob() {
-<span class="fc" id="L523">        return bigDecimalMinBob;</span>
+<span class="fc" id="L543">        return bigDecimalMinBob;</span>
     }
 
     public FieldTestServiceClassEntity bigDecimalMinBob(BigDecimal bigDecimalMinBob) {
-<span class="fc" id="L527">        this.bigDecimalMinBob = bigDecimalMinBob;</span>
-<span class="fc" id="L528">        return this;</span>
+<span class="fc" id="L547">        this.bigDecimalMinBob = bigDecimalMinBob;</span>
+<span class="fc" id="L548">        return this;</span>
     }
 
     public void setBigDecimalMinBob(BigDecimal bigDecimalMinBob) {
-<span class="fc" id="L532">        this.bigDecimalMinBob = bigDecimalMinBob;</span>
-<span class="fc" id="L533">    }</span>
+<span class="fc" id="L552">        this.bigDecimalMinBob = bigDecimalMinBob;</span>
+<span class="fc" id="L553">    }</span>
 
     public BigDecimal getBigDecimalMaxBob() {
-<span class="fc" id="L536">        return bigDecimalMaxBob;</span>
+<span class="fc" id="L556">        return bigDecimalMaxBob;</span>
     }
 
     public FieldTestServiceClassEntity bigDecimalMaxBob(BigDecimal bigDecimalMaxBob) {
-<span class="fc" id="L540">        this.bigDecimalMaxBob = bigDecimalMaxBob;</span>
-<span class="fc" id="L541">        return this;</span>
+<span class="fc" id="L560">        this.bigDecimalMaxBob = bigDecimalMaxBob;</span>
+<span class="fc" id="L561">        return this;</span>
     }
 
     public void setBigDecimalMaxBob(BigDecimal bigDecimalMaxBob) {
-<span class="fc" id="L545">        this.bigDecimalMaxBob = bigDecimalMaxBob;</span>
-<span class="fc" id="L546">    }</span>
+<span class="fc" id="L565">        this.bigDecimalMaxBob = bigDecimalMaxBob;</span>
+<span class="fc" id="L566">    }</span>
 
     public LocalDate getLocalDateBob() {
-<span class="fc" id="L549">        return localDateBob;</span>
+<span class="fc" id="L569">        return localDateBob;</span>
     }
 
     public FieldTestServiceClassEntity localDateBob(LocalDate localDateBob) {
-<span class="fc" id="L553">        this.localDateBob = localDateBob;</span>
-<span class="fc" id="L554">        return this;</span>
+<span class="fc" id="L573">        this.localDateBob = localDateBob;</span>
+<span class="fc" id="L574">        return this;</span>
     }
 
     public void setLocalDateBob(LocalDate localDateBob) {
-<span class="fc" id="L558">        this.localDateBob = localDateBob;</span>
-<span class="fc" id="L559">    }</span>
+<span class="fc" id="L578">        this.localDateBob = localDateBob;</span>
+<span class="fc" id="L579">    }</span>
 
     public LocalDate getLocalDateRequiredBob() {
-<span class="fc" id="L562">        return localDateRequiredBob;</span>
+<span class="fc" id="L582">        return localDateRequiredBob;</span>
     }
 
     public FieldTestServiceClassEntity localDateRequiredBob(LocalDate localDateRequiredBob) {
-<span class="fc" id="L566">        this.localDateRequiredBob = localDateRequiredBob;</span>
-<span class="fc" id="L567">        return this;</span>
+<span class="fc" id="L586">        this.localDateRequiredBob = localDateRequiredBob;</span>
+<span class="fc" id="L587">        return this;</span>
     }
 
     public void setLocalDateRequiredBob(LocalDate localDateRequiredBob) {
-<span class="fc" id="L571">        this.localDateRequiredBob = localDateRequiredBob;</span>
-<span class="fc" id="L572">    }</span>
+<span class="fc" id="L591">        this.localDateRequiredBob = localDateRequiredBob;</span>
+<span class="fc" id="L592">    }</span>
 
     public Instant getInstantBob() {
-<span class="fc" id="L575">        return instantBob;</span>
+<span class="fc" id="L595">        return instantBob;</span>
     }
 
     public FieldTestServiceClassEntity instantBob(Instant instantBob) {
-<span class="fc" id="L579">        this.instantBob = instantBob;</span>
-<span class="fc" id="L580">        return this;</span>
+<span class="fc" id="L599">        this.instantBob = instantBob;</span>
+<span class="fc" id="L600">        return this;</span>
     }
 
     public void setInstantBob(Instant instantBob) {
-<span class="fc" id="L584">        this.instantBob = instantBob;</span>
-<span class="fc" id="L585">    }</span>
+<span class="fc" id="L604">        this.instantBob = instantBob;</span>
+<span class="fc" id="L605">    }</span>
 
     public Instant getInstanteRequiredBob() {
-<span class="fc" id="L588">        return instanteRequiredBob;</span>
+<span class="fc" id="L608">        return instanteRequiredBob;</span>
     }
 
     public FieldTestServiceClassEntity instanteRequiredBob(Instant instanteRequiredBob) {
-<span class="fc" id="L592">        this.instanteRequiredBob = instanteRequiredBob;</span>
-<span class="fc" id="L593">        return this;</span>
+<span class="fc" id="L612">        this.instanteRequiredBob = instanteRequiredBob;</span>
+<span class="fc" id="L613">        return this;</span>
     }
 
     public void setInstanteRequiredBob(Instant instanteRequiredBob) {
-<span class="fc" id="L597">        this.instanteRequiredBob = instanteRequiredBob;</span>
-<span class="fc" id="L598">    }</span>
+<span class="fc" id="L617">        this.instanteRequiredBob = instanteRequiredBob;</span>
+<span class="fc" id="L618">    }</span>
 
     public ZonedDateTime getZonedDateTimeBob() {
-<span class="fc" id="L601">        return zonedDateTimeBob;</span>
+<span class="fc" id="L621">        return zonedDateTimeBob;</span>
     }
 
     public FieldTestServiceClassEntity zonedDateTimeBob(ZonedDateTime zonedDateTimeBob) {
-<span class="fc" id="L605">        this.zonedDateTimeBob = zonedDateTimeBob;</span>
-<span class="fc" id="L606">        return this;</span>
+<span class="fc" id="L625">        this.zonedDateTimeBob = zonedDateTimeBob;</span>
+<span class="fc" id="L626">        return this;</span>
     }
 
     public void setZonedDateTimeBob(ZonedDateTime zonedDateTimeBob) {
-<span class="fc" id="L610">        this.zonedDateTimeBob = zonedDateTimeBob;</span>
-<span class="fc" id="L611">    }</span>
+<span class="fc" id="L630">        this.zonedDateTimeBob = zonedDateTimeBob;</span>
+<span class="fc" id="L631">    }</span>
 
     public ZonedDateTime getZonedDateTimeRequiredBob() {
-<span class="fc" id="L614">        return zonedDateTimeRequiredBob;</span>
+<span class="fc" id="L634">        return zonedDateTimeRequiredBob;</span>
     }
 
     public FieldTestServiceClassEntity zonedDateTimeRequiredBob(ZonedDateTime zonedDateTimeRequiredBob) {
-<span class="fc" id="L618">        this.zonedDateTimeRequiredBob = zonedDateTimeRequiredBob;</span>
-<span class="fc" id="L619">        return this;</span>
+<span class="fc" id="L638">        this.zonedDateTimeRequiredBob = zonedDateTimeRequiredBob;</span>
+<span class="fc" id="L639">        return this;</span>
     }
 
     public void setZonedDateTimeRequiredBob(ZonedDateTime zonedDateTimeRequiredBob) {
-<span class="fc" id="L623">        this.zonedDateTimeRequiredBob = zonedDateTimeRequiredBob;</span>
-<span class="fc" id="L624">    }</span>
+<span class="fc" id="L643">        this.zonedDateTimeRequiredBob = zonedDateTimeRequiredBob;</span>
+<span class="fc" id="L644">    }</span>
 
     public Boolean isBooleanBob() {
-<span class="fc" id="L627">        return booleanBob;</span>
+<span class="fc" id="L647">        return booleanBob;</span>
     }
 
     public FieldTestServiceClassEntity booleanBob(Boolean booleanBob) {
-<span class="fc" id="L631">        this.booleanBob = booleanBob;</span>
-<span class="fc" id="L632">        return this;</span>
+<span class="fc" id="L651">        this.booleanBob = booleanBob;</span>
+<span class="fc" id="L652">        return this;</span>
     }
 
     public void setBooleanBob(Boolean booleanBob) {
-<span class="fc" id="L636">        this.booleanBob = booleanBob;</span>
-<span class="fc" id="L637">    }</span>
+<span class="fc" id="L656">        this.booleanBob = booleanBob;</span>
+<span class="fc" id="L657">    }</span>
 
     public Boolean isBooleanRequiredBob() {
-<span class="fc" id="L640">        return booleanRequiredBob;</span>
+<span class="fc" id="L660">        return booleanRequiredBob;</span>
     }
 
     public FieldTestServiceClassEntity booleanRequiredBob(Boolean booleanRequiredBob) {
-<span class="fc" id="L644">        this.booleanRequiredBob = booleanRequiredBob;</span>
-<span class="fc" id="L645">        return this;</span>
+<span class="fc" id="L664">        this.booleanRequiredBob = booleanRequiredBob;</span>
+<span class="fc" id="L665">        return this;</span>
     }
 
     public void setBooleanRequiredBob(Boolean booleanRequiredBob) {
-<span class="fc" id="L649">        this.booleanRequiredBob = booleanRequiredBob;</span>
-<span class="fc" id="L650">    }</span>
+<span class="fc" id="L669">        this.booleanRequiredBob = booleanRequiredBob;</span>
+<span class="fc" id="L670">    }</span>
 
     public EnumFieldClass getEnumBob() {
-<span class="fc" id="L653">        return enumBob;</span>
+<span class="fc" id="L673">        return enumBob;</span>
     }
 
     public FieldTestServiceClassEntity enumBob(EnumFieldClass enumBob) {
-<span class="fc" id="L657">        this.enumBob = enumBob;</span>
-<span class="fc" id="L658">        return this;</span>
+<span class="fc" id="L677">        this.enumBob = enumBob;</span>
+<span class="fc" id="L678">        return this;</span>
     }
 
     public void setEnumBob(EnumFieldClass enumBob) {
-<span class="fc" id="L662">        this.enumBob = enumBob;</span>
-<span class="fc" id="L663">    }</span>
+<span class="fc" id="L682">        this.enumBob = enumBob;</span>
+<span class="fc" id="L683">    }</span>
 
     public EnumRequiredFieldClass getEnumRequiredBob() {
-<span class="fc" id="L666">        return enumRequiredBob;</span>
+<span class="fc" id="L686">        return enumRequiredBob;</span>
     }
 
     public FieldTestServiceClassEntity enumRequiredBob(EnumRequiredFieldClass enumRequiredBob) {
-<span class="fc" id="L670">        this.enumRequiredBob = enumRequiredBob;</span>
-<span class="fc" id="L671">        return this;</span>
+<span class="fc" id="L690">        this.enumRequiredBob = enumRequiredBob;</span>
+<span class="fc" id="L691">        return this;</span>
     }
 
     public void setEnumRequiredBob(EnumRequiredFieldClass enumRequiredBob) {
-<span class="fc" id="L675">        this.enumRequiredBob = enumRequiredBob;</span>
-<span class="fc" id="L676">    }</span>
+<span class="fc" id="L695">        this.enumRequiredBob = enumRequiredBob;</span>
+<span class="fc" id="L696">    }</span>
 
     public byte[] getByteImageBob() {
-<span class="fc" id="L679">        return byteImageBob;</span>
+<span class="fc" id="L699">        return byteImageBob;</span>
     }
 
     public FieldTestServiceClassEntity byteImageBob(byte[] byteImageBob) {
-<span class="fc" id="L683">        this.byteImageBob = byteImageBob;</span>
-<span class="fc" id="L684">        return this;</span>
+<span class="fc" id="L703">        this.byteImageBob = byteImageBob;</span>
+<span class="fc" id="L704">        return this;</span>
     }
 
     public void setByteImageBob(byte[] byteImageBob) {
-<span class="fc" id="L688">        this.byteImageBob = byteImageBob;</span>
-<span class="fc" id="L689">    }</span>
+<span class="fc" id="L708">        this.byteImageBob = byteImageBob;</span>
+<span class="fc" id="L709">    }</span>
 
     public String getByteImageBobContentType() {
-<span class="fc" id="L692">        return byteImageBobContentType;</span>
+<span class="fc" id="L712">        return byteImageBobContentType;</span>
     }
 
     public FieldTestServiceClassEntity byteImageBobContentType(String byteImageBobContentType) {
-<span class="fc" id="L696">        this.byteImageBobContentType = byteImageBobContentType;</span>
-<span class="fc" id="L697">        return this;</span>
+<span class="fc" id="L716">        this.byteImageBobContentType = byteImageBobContentType;</span>
+<span class="fc" id="L717">        return this;</span>
     }
 
     public void setByteImageBobContentType(String byteImageBobContentType) {
-<span class="fc" id="L701">        this.byteImageBobContentType = byteImageBobContentType;</span>
-<span class="fc" id="L702">    }</span>
+<span class="fc" id="L721">        this.byteImageBobContentType = byteImageBobContentType;</span>
+<span class="fc" id="L722">    }</span>
 
     public byte[] getByteImageRequiredBob() {
-<span class="fc" id="L705">        return byteImageRequiredBob;</span>
+<span class="fc" id="L725">        return byteImageRequiredBob;</span>
     }
 
     public FieldTestServiceClassEntity byteImageRequiredBob(byte[] byteImageRequiredBob) {
-<span class="fc" id="L709">        this.byteImageRequiredBob = byteImageRequiredBob;</span>
-<span class="fc" id="L710">        return this;</span>
+<span class="fc" id="L729">        this.byteImageRequiredBob = byteImageRequiredBob;</span>
+<span class="fc" id="L730">        return this;</span>
     }
 
     public void setByteImageRequiredBob(byte[] byteImageRequiredBob) {
-<span class="fc" id="L714">        this.byteImageRequiredBob = byteImageRequiredBob;</span>
-<span class="fc" id="L715">    }</span>
+<span class="fc" id="L734">        this.byteImageRequiredBob = byteImageRequiredBob;</span>
+<span class="fc" id="L735">    }</span>
 
     public String getByteImageRequiredBobContentType() {
-<span class="fc" id="L718">        return byteImageRequiredBobContentType;</span>
+<span class="fc" id="L738">        return byteImageRequiredBobContentType;</span>
     }
 
     public FieldTestServiceClassEntity byteImageRequiredBobContentType(String byteImageRequiredBobContentType) {
-<span class="fc" id="L722">        this.byteImageRequiredBobContentType = byteImageRequiredBobContentType;</span>
-<span class="fc" id="L723">        return this;</span>
+<span class="fc" id="L742">        this.byteImageRequiredBobContentType = byteImageRequiredBobContentType;</span>
+<span class="fc" id="L743">        return this;</span>
     }
 
     public void setByteImageRequiredBobContentType(String byteImageRequiredBobContentType) {
-<span class="fc" id="L727">        this.byteImageRequiredBobContentType = byteImageRequiredBobContentType;</span>
-<span class="fc" id="L728">    }</span>
+<span class="fc" id="L747">        this.byteImageRequiredBobContentType = byteImageRequiredBobContentType;</span>
+<span class="fc" id="L748">    }</span>
 
     public byte[] getByteImageMinbytesBob() {
-<span class="fc" id="L731">        return byteImageMinbytesBob;</span>
+<span class="fc" id="L751">        return byteImageMinbytesBob;</span>
     }
 
     public FieldTestServiceClassEntity byteImageMinbytesBob(byte[] byteImageMinbytesBob) {
-<span class="fc" id="L735">        this.byteImageMinbytesBob = byteImageMinbytesBob;</span>
-<span class="fc" id="L736">        return this;</span>
+<span class="fc" id="L755">        this.byteImageMinbytesBob = byteImageMinbytesBob;</span>
+<span class="fc" id="L756">        return this;</span>
     }
 
     public void setByteImageMinbytesBob(byte[] byteImageMinbytesBob) {
-<span class="fc" id="L740">        this.byteImageMinbytesBob = byteImageMinbytesBob;</span>
-<span class="fc" id="L741">    }</span>
+<span class="fc" id="L760">        this.byteImageMinbytesBob = byteImageMinbytesBob;</span>
+<span class="fc" id="L761">    }</span>
 
     public String getByteImageMinbytesBobContentType() {
-<span class="fc" id="L744">        return byteImageMinbytesBobContentType;</span>
+<span class="fc" id="L764">        return byteImageMinbytesBobContentType;</span>
     }
 
     public FieldTestServiceClassEntity byteImageMinbytesBobContentType(String byteImageMinbytesBobContentType) {
-<span class="fc" id="L748">        this.byteImageMinbytesBobContentType = byteImageMinbytesBobContentType;</span>
-<span class="fc" id="L749">        return this;</span>
+<span class="fc" id="L768">        this.byteImageMinbytesBobContentType = byteImageMinbytesBobContentType;</span>
+<span class="fc" id="L769">        return this;</span>
     }
 
     public void setByteImageMinbytesBobContentType(String byteImageMinbytesBobContentType) {
-<span class="fc" id="L753">        this.byteImageMinbytesBobContentType = byteImageMinbytesBobContentType;</span>
-<span class="fc" id="L754">    }</span>
+<span class="fc" id="L773">        this.byteImageMinbytesBobContentType = byteImageMinbytesBobContentType;</span>
+<span class="fc" id="L774">    }</span>
 
     public byte[] getByteImageMaxbytesBob() {
-<span class="fc" id="L757">        return byteImageMaxbytesBob;</span>
+<span class="fc" id="L777">        return byteImageMaxbytesBob;</span>
     }
 
     public FieldTestServiceClassEntity byteImageMaxbytesBob(byte[] byteImageMaxbytesBob) {
-<span class="fc" id="L761">        this.byteImageMaxbytesBob = byteImageMaxbytesBob;</span>
-<span class="fc" id="L762">        return this;</span>
+<span class="fc" id="L781">        this.byteImageMaxbytesBob = byteImageMaxbytesBob;</span>
+<span class="fc" id="L782">        return this;</span>
     }
 
     public void setByteImageMaxbytesBob(byte[] byteImageMaxbytesBob) {
-<span class="fc" id="L766">        this.byteImageMaxbytesBob = byteImageMaxbytesBob;</span>
-<span class="fc" id="L767">    }</span>
+<span class="fc" id="L786">        this.byteImageMaxbytesBob = byteImageMaxbytesBob;</span>
+<span class="fc" id="L787">    }</span>
 
     public String getByteImageMaxbytesBobContentType() {
-<span class="fc" id="L770">        return byteImageMaxbytesBobContentType;</span>
+<span class="fc" id="L790">        return byteImageMaxbytesBobContentType;</span>
     }
 
     public FieldTestServiceClassEntity byteImageMaxbytesBobContentType(String byteImageMaxbytesBobContentType) {
-<span class="fc" id="L774">        this.byteImageMaxbytesBobContentType = byteImageMaxbytesBobContentType;</span>
-<span class="fc" id="L775">        return this;</span>
+<span class="fc" id="L794">        this.byteImageMaxbytesBobContentType = byteImageMaxbytesBobContentType;</span>
+<span class="fc" id="L795">        return this;</span>
     }
 
     public void setByteImageMaxbytesBobContentType(String byteImageMaxbytesBobContentType) {
-<span class="fc" id="L779">        this.byteImageMaxbytesBobContentType = byteImageMaxbytesBobContentType;</span>
-<span class="fc" id="L780">    }</span>
+<span class="fc" id="L799">        this.byteImageMaxbytesBobContentType = byteImageMaxbytesBobContentType;</span>
+<span class="fc" id="L800">    }</span>
 
     public byte[] getByteAnyBob() {
-<span class="fc" id="L783">        return byteAnyBob;</span>
+<span class="fc" id="L803">        return byteAnyBob;</span>
     }
 
     public FieldTestServiceClassEntity byteAnyBob(byte[] byteAnyBob) {
-<span class="fc" id="L787">        this.byteAnyBob = byteAnyBob;</span>
-<span class="fc" id="L788">        return this;</span>
+<span class="fc" id="L807">        this.byteAnyBob = byteAnyBob;</span>
+<span class="fc" id="L808">        return this;</span>
     }
 
     public void setByteAnyBob(byte[] byteAnyBob) {
-<span class="fc" id="L792">        this.byteAnyBob = byteAnyBob;</span>
-<span class="fc" id="L793">    }</span>
+<span class="fc" id="L812">        this.byteAnyBob = byteAnyBob;</span>
+<span class="fc" id="L813">    }</span>
 
     public String getByteAnyBobContentType() {
-<span class="fc" id="L796">        return byteAnyBobContentType;</span>
+<span class="fc" id="L816">        return byteAnyBobContentType;</span>
     }
 
     public FieldTestServiceClassEntity byteAnyBobContentType(String byteAnyBobContentType) {
-<span class="fc" id="L800">        this.byteAnyBobContentType = byteAnyBobContentType;</span>
-<span class="fc" id="L801">        return this;</span>
+<span class="fc" id="L820">        this.byteAnyBobContentType = byteAnyBobContentType;</span>
+<span class="fc" id="L821">        return this;</span>
     }
 
     public void setByteAnyBobContentType(String byteAnyBobContentType) {
-<span class="fc" id="L805">        this.byteAnyBobContentType = byteAnyBobContentType;</span>
-<span class="fc" id="L806">    }</span>
+<span class="fc" id="L825">        this.byteAnyBobContentType = byteAnyBobContentType;</span>
+<span class="fc" id="L826">    }</span>
 
     public byte[] getByteAnyRequiredBob() {
-<span class="fc" id="L809">        return byteAnyRequiredBob;</span>
+<span class="fc" id="L829">        return byteAnyRequiredBob;</span>
     }
 
     public FieldTestServiceClassEntity byteAnyRequiredBob(byte[] byteAnyRequiredBob) {
-<span class="fc" id="L813">        this.byteAnyRequiredBob = byteAnyRequiredBob;</span>
-<span class="fc" id="L814">        return this;</span>
+<span class="fc" id="L833">        this.byteAnyRequiredBob = byteAnyRequiredBob;</span>
+<span class="fc" id="L834">        return this;</span>
     }
 
     public void setByteAnyRequiredBob(byte[] byteAnyRequiredBob) {
-<span class="fc" id="L818">        this.byteAnyRequiredBob = byteAnyRequiredBob;</span>
-<span class="fc" id="L819">    }</span>
+<span class="fc" id="L838">        this.byteAnyRequiredBob = byteAnyRequiredBob;</span>
+<span class="fc" id="L839">    }</span>
 
     public String getByteAnyRequiredBobContentType() {
-<span class="fc" id="L822">        return byteAnyRequiredBobContentType;</span>
+<span class="fc" id="L842">        return byteAnyRequiredBobContentType;</span>
     }
 
     public FieldTestServiceClassEntity byteAnyRequiredBobContentType(String byteAnyRequiredBobContentType) {
-<span class="fc" id="L826">        this.byteAnyRequiredBobContentType = byteAnyRequiredBobContentType;</span>
-<span class="fc" id="L827">        return this;</span>
+<span class="fc" id="L846">        this.byteAnyRequiredBobContentType = byteAnyRequiredBobContentType;</span>
+<span class="fc" id="L847">        return this;</span>
     }
 
     public void setByteAnyRequiredBobContentType(String byteAnyRequiredBobContentType) {
-<span class="fc" id="L831">        this.byteAnyRequiredBobContentType = byteAnyRequiredBobContentType;</span>
-<span class="fc" id="L832">    }</span>
+<span class="fc" id="L851">        this.byteAnyRequiredBobContentType = byteAnyRequiredBobContentType;</span>
+<span class="fc" id="L852">    }</span>
 
     public byte[] getByteAnyMinbytesBob() {
-<span class="fc" id="L835">        return byteAnyMinbytesBob;</span>
+<span class="fc" id="L855">        return byteAnyMinbytesBob;</span>
     }
 
     public FieldTestServiceClassEntity byteAnyMinbytesBob(byte[] byteAnyMinbytesBob) {
-<span class="fc" id="L839">        this.byteAnyMinbytesBob = byteAnyMinbytesBob;</span>
-<span class="fc" id="L840">        return this;</span>
+<span class="fc" id="L859">        this.byteAnyMinbytesBob = byteAnyMinbytesBob;</span>
+<span class="fc" id="L860">        return this;</span>
     }
 
     public void setByteAnyMinbytesBob(byte[] byteAnyMinbytesBob) {
-<span class="fc" id="L844">        this.byteAnyMinbytesBob = byteAnyMinbytesBob;</span>
-<span class="fc" id="L845">    }</span>
+<span class="fc" id="L864">        this.byteAnyMinbytesBob = byteAnyMinbytesBob;</span>
+<span class="fc" id="L865">    }</span>
 
     public String getByteAnyMinbytesBobContentType() {
-<span class="fc" id="L848">        return byteAnyMinbytesBobContentType;</span>
+<span class="fc" id="L868">        return byteAnyMinbytesBobContentType;</span>
     }
 
     public FieldTestServiceClassEntity byteAnyMinbytesBobContentType(String byteAnyMinbytesBobContentType) {
-<span class="fc" id="L852">        this.byteAnyMinbytesBobContentType = byteAnyMinbytesBobContentType;</span>
-<span class="fc" id="L853">        return this;</span>
+<span class="fc" id="L872">        this.byteAnyMinbytesBobContentType = byteAnyMinbytesBobContentType;</span>
+<span class="fc" id="L873">        return this;</span>
     }
 
     public void setByteAnyMinbytesBobContentType(String byteAnyMinbytesBobContentType) {
-<span class="fc" id="L857">        this.byteAnyMinbytesBobContentType = byteAnyMinbytesBobContentType;</span>
-<span class="fc" id="L858">    }</span>
+<span class="fc" id="L877">        this.byteAnyMinbytesBobContentType = byteAnyMinbytesBobContentType;</span>
+<span class="fc" id="L878">    }</span>
 
     public byte[] getByteAnyMaxbytesBob() {
-<span class="fc" id="L861">        return byteAnyMaxbytesBob;</span>
+<span class="fc" id="L881">        return byteAnyMaxbytesBob;</span>
     }
 
     public FieldTestServiceClassEntity byteAnyMaxbytesBob(byte[] byteAnyMaxbytesBob) {
-<span class="fc" id="L865">        this.byteAnyMaxbytesBob = byteAnyMaxbytesBob;</span>
-<span class="fc" id="L866">        return this;</span>
+<span class="fc" id="L885">        this.byteAnyMaxbytesBob = byteAnyMaxbytesBob;</span>
+<span class="fc" id="L886">        return this;</span>
     }
 
     public void setByteAnyMaxbytesBob(byte[] byteAnyMaxbytesBob) {
-<span class="fc" id="L870">        this.byteAnyMaxbytesBob = byteAnyMaxbytesBob;</span>
-<span class="fc" id="L871">    }</span>
+<span class="fc" id="L890">        this.byteAnyMaxbytesBob = byteAnyMaxbytesBob;</span>
+<span class="fc" id="L891">    }</span>
 
     public String getByteAnyMaxbytesBobContentType() {
-<span class="fc" id="L874">        return byteAnyMaxbytesBobContentType;</span>
+<span class="fc" id="L894">        return byteAnyMaxbytesBobContentType;</span>
     }
 
     public FieldTestServiceClassEntity byteAnyMaxbytesBobContentType(String byteAnyMaxbytesBobContentType) {
-<span class="fc" id="L878">        this.byteAnyMaxbytesBobContentType = byteAnyMaxbytesBobContentType;</span>
-<span class="fc" id="L879">        return this;</span>
+<span class="fc" id="L898">        this.byteAnyMaxbytesBobContentType = byteAnyMaxbytesBobContentType;</span>
+<span class="fc" id="L899">        return this;</span>
     }
 
     public void setByteAnyMaxbytesBobContentType(String byteAnyMaxbytesBobContentType) {
-<span class="fc" id="L883">        this.byteAnyMaxbytesBobContentType = byteAnyMaxbytesBobContentType;</span>
-<span class="fc" id="L884">    }</span>
+<span class="fc" id="L903">        this.byteAnyMaxbytesBobContentType = byteAnyMaxbytesBobContentType;</span>
+<span class="fc" id="L904">    }</span>
 
     public String getByteTextBob() {
-<span class="fc" id="L887">        return byteTextBob;</span>
+<span class="fc" id="L907">        return byteTextBob;</span>
     }
 
     public FieldTestServiceClassEntity byteTextBob(String byteTextBob) {
-<span class="fc" id="L891">        this.byteTextBob = byteTextBob;</span>
-<span class="fc" id="L892">        return this;</span>
+<span class="fc" id="L911">        this.byteTextBob = byteTextBob;</span>
+<span class="fc" id="L912">        return this;</span>
     }
 
     public void setByteTextBob(String byteTextBob) {
-<span class="fc" id="L896">        this.byteTextBob = byteTextBob;</span>
-<span class="fc" id="L897">    }</span>
+<span class="fc" id="L916">        this.byteTextBob = byteTextBob;</span>
+<span class="fc" id="L917">    }</span>
 
     public String getByteTextRequiredBob() {
-<span class="fc" id="L900">        return byteTextRequiredBob;</span>
+<span class="fc" id="L920">        return byteTextRequiredBob;</span>
     }
 
     public FieldTestServiceClassEntity byteTextRequiredBob(String byteTextRequiredBob) {
-<span class="fc" id="L904">        this.byteTextRequiredBob = byteTextRequiredBob;</span>
-<span class="fc" id="L905">        return this;</span>
+<span class="fc" id="L924">        this.byteTextRequiredBob = byteTextRequiredBob;</span>
+<span class="fc" id="L925">        return this;</span>
     }
 
     public void setByteTextRequiredBob(String byteTextRequiredBob) {
-<span class="fc" id="L909">        this.byteTextRequiredBob = byteTextRequiredBob;</span>
-<span class="fc" id="L910">    }</span>
+<span class="fc" id="L929">        this.byteTextRequiredBob = byteTextRequiredBob;</span>
+<span class="fc" id="L930">    }</span>
 
     public String getByteTextMinbytesBob() {
-<span class="fc" id="L913">        return byteTextMinbytesBob;</span>
+<span class="fc" id="L933">        return byteTextMinbytesBob;</span>
     }
 
     public FieldTestServiceClassEntity byteTextMinbytesBob(String byteTextMinbytesBob) {
-<span class="fc" id="L917">        this.byteTextMinbytesBob = byteTextMinbytesBob;</span>
-<span class="fc" id="L918">        return this;</span>
+<span class="fc" id="L937">        this.byteTextMinbytesBob = byteTextMinbytesBob;</span>
+<span class="fc" id="L938">        return this;</span>
     }
 
     public void setByteTextMinbytesBob(String byteTextMinbytesBob) {
-<span class="fc" id="L922">        this.byteTextMinbytesBob = byteTextMinbytesBob;</span>
-<span class="fc" id="L923">    }</span>
+<span class="fc" id="L942">        this.byteTextMinbytesBob = byteTextMinbytesBob;</span>
+<span class="fc" id="L943">    }</span>
 
     public String getByteTextMaxbytesBob() {
-<span class="fc" id="L926">        return byteTextMaxbytesBob;</span>
+<span class="fc" id="L946">        return byteTextMaxbytesBob;</span>
     }
 
     public FieldTestServiceClassEntity byteTextMaxbytesBob(String byteTextMaxbytesBob) {
-<span class="fc" id="L930">        this.byteTextMaxbytesBob = byteTextMaxbytesBob;</span>
-<span class="fc" id="L931">        return this;</span>
+<span class="fc" id="L950">        this.byteTextMaxbytesBob = byteTextMaxbytesBob;</span>
+<span class="fc" id="L951">        return this;</span>
     }
 
     public void setByteTextMaxbytesBob(String byteTextMaxbytesBob) {
-<span class="fc" id="L935">        this.byteTextMaxbytesBob = byteTextMaxbytesBob;</span>
-<span class="fc" id="L936">    }</span>
+<span class="fc" id="L955">        this.byteTextMaxbytesBob = byteTextMaxbytesBob;</span>
+<span class="fc" id="L956">    }</span>
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
     public boolean equals(Object o) {
-<span class="fc bfc" id="L941" title="All 2 branches covered.">        if (this == o) {</span>
-<span class="fc" id="L942">            return true;</span>
+<span class="fc bfc" id="L961" title="All 2 branches covered.">        if (this == o) {</span>
+<span class="fc" id="L962">            return true;</span>
         }
-<span class="fc bfc" id="L944" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
-<span class="fc" id="L945">            return false;</span>
+<span class="fc bfc" id="L964" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L965">            return false;</span>
         }
-<span class="fc" id="L947">        FieldTestServiceClassEntity fieldTestServiceClassEntity = (FieldTestServiceClassEntity) o;</span>
-<span class="fc bfc" id="L948" title="All 4 branches covered.">        if (fieldTestServiceClassEntity.getId() == null || getId() == null) {</span>
-<span class="fc" id="L949">            return false;</span>
+<span class="fc" id="L967">        FieldTestServiceClassEntity fieldTestServiceClassEntity = (FieldTestServiceClassEntity) o;</span>
+<span class="fc bfc" id="L968" title="All 4 branches covered.">        if (fieldTestServiceClassEntity.getId() == null || getId() == null) {</span>
+<span class="fc" id="L969">            return false;</span>
         }
-<span class="fc" id="L951">        return Objects.equals(getId(), fieldTestServiceClassEntity.getId());</span>
+<span class="fc" id="L971">        return Objects.equals(getId(), fieldTestServiceClassEntity.getId());</span>
     }
 
     @Override
     public int hashCode() {
-<span class="fc" id="L956">        return Objects.hashCode(getId());</span>
+<span class="fc" id="L976">        return Objects.hashCode(getId());</span>
     }
 
     @Override
     public String toString() {
-<span class="fc" id="L961">        return &quot;FieldTestServiceClassEntity{&quot; +</span>
-<span class="fc" id="L962">            &quot;id=&quot; + getId() +</span>
-<span class="fc" id="L963">            &quot;, stringBob='&quot; + getStringBob() + &quot;'&quot; +</span>
-<span class="fc" id="L964">            &quot;, stringRequiredBob='&quot; + getStringRequiredBob() + &quot;'&quot; +</span>
-<span class="fc" id="L965">            &quot;, stringMinlengthBob='&quot; + getStringMinlengthBob() + &quot;'&quot; +</span>
-<span class="fc" id="L966">            &quot;, stringMaxlengthBob='&quot; + getStringMaxlengthBob() + &quot;'&quot; +</span>
-<span class="fc" id="L967">            &quot;, stringPatternBob='&quot; + getStringPatternBob() + &quot;'&quot; +</span>
-<span class="fc" id="L968">            &quot;, integerBob=&quot; + getIntegerBob() +</span>
-<span class="fc" id="L969">            &quot;, integerRequiredBob=&quot; + getIntegerRequiredBob() +</span>
-<span class="fc" id="L970">            &quot;, integerMinBob=&quot; + getIntegerMinBob() +</span>
-<span class="fc" id="L971">            &quot;, integerMaxBob=&quot; + getIntegerMaxBob() +</span>
-<span class="fc" id="L972">            &quot;, longBob=&quot; + getLongBob() +</span>
-<span class="fc" id="L973">            &quot;, longRequiredBob=&quot; + getLongRequiredBob() +</span>
-<span class="fc" id="L974">            &quot;, longMinBob=&quot; + getLongMinBob() +</span>
-<span class="fc" id="L975">            &quot;, longMaxBob=&quot; + getLongMaxBob() +</span>
-<span class="fc" id="L976">            &quot;, floatBob=&quot; + getFloatBob() +</span>
-<span class="fc" id="L977">            &quot;, floatRequiredBob=&quot; + getFloatRequiredBob() +</span>
-<span class="fc" id="L978">            &quot;, floatMinBob=&quot; + getFloatMinBob() +</span>
-<span class="fc" id="L979">            &quot;, floatMaxBob=&quot; + getFloatMaxBob() +</span>
-<span class="fc" id="L980">            &quot;, doubleRequiredBob=&quot; + getDoubleRequiredBob() +</span>
-<span class="fc" id="L981">            &quot;, doubleMinBob=&quot; + getDoubleMinBob() +</span>
-<span class="fc" id="L982">            &quot;, doubleMaxBob=&quot; + getDoubleMaxBob() +</span>
-<span class="fc" id="L983">            &quot;, bigDecimalRequiredBob=&quot; + getBigDecimalRequiredBob() +</span>
-<span class="fc" id="L984">            &quot;, bigDecimalMinBob=&quot; + getBigDecimalMinBob() +</span>
-<span class="fc" id="L985">            &quot;, bigDecimalMaxBob=&quot; + getBigDecimalMaxBob() +</span>
-<span class="fc" id="L986">            &quot;, localDateBob='&quot; + getLocalDateBob() + &quot;'&quot; +</span>
-<span class="fc" id="L987">            &quot;, localDateRequiredBob='&quot; + getLocalDateRequiredBob() + &quot;'&quot; +</span>
-<span class="fc" id="L988">            &quot;, instantBob='&quot; + getInstantBob() + &quot;'&quot; +</span>
-<span class="fc" id="L989">            &quot;, instanteRequiredBob='&quot; + getInstanteRequiredBob() + &quot;'&quot; +</span>
-<span class="fc" id="L990">            &quot;, zonedDateTimeBob='&quot; + getZonedDateTimeBob() + &quot;'&quot; +</span>
-<span class="fc" id="L991">            &quot;, zonedDateTimeRequiredBob='&quot; + getZonedDateTimeRequiredBob() + &quot;'&quot; +</span>
-<span class="fc" id="L992">            &quot;, booleanBob='&quot; + isBooleanBob() + &quot;'&quot; +</span>
-<span class="fc" id="L993">            &quot;, booleanRequiredBob='&quot; + isBooleanRequiredBob() + &quot;'&quot; +</span>
-<span class="fc" id="L994">            &quot;, enumBob='&quot; + getEnumBob() + &quot;'&quot; +</span>
-<span class="fc" id="L995">            &quot;, enumRequiredBob='&quot; + getEnumRequiredBob() + &quot;'&quot; +</span>
-<span class="fc" id="L996">            &quot;, byteImageBob='&quot; + getByteImageBob() + &quot;'&quot; +</span>
-<span class="fc" id="L997">            &quot;, byteImageBobContentType='&quot; + getByteImageBobContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L998">            &quot;, byteImageRequiredBob='&quot; + getByteImageRequiredBob() + &quot;'&quot; +</span>
-<span class="fc" id="L999">            &quot;, byteImageRequiredBobContentType='&quot; + getByteImageRequiredBobContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1000">            &quot;, byteImageMinbytesBob='&quot; + getByteImageMinbytesBob() + &quot;'&quot; +</span>
-<span class="fc" id="L1001">            &quot;, byteImageMinbytesBobContentType='&quot; + getByteImageMinbytesBobContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1002">            &quot;, byteImageMaxbytesBob='&quot; + getByteImageMaxbytesBob() + &quot;'&quot; +</span>
-<span class="fc" id="L1003">            &quot;, byteImageMaxbytesBobContentType='&quot; + getByteImageMaxbytesBobContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1004">            &quot;, byteAnyBob='&quot; + getByteAnyBob() + &quot;'&quot; +</span>
-<span class="fc" id="L1005">            &quot;, byteAnyBobContentType='&quot; + getByteAnyBobContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1006">            &quot;, byteAnyRequiredBob='&quot; + getByteAnyRequiredBob() + &quot;'&quot; +</span>
-<span class="fc" id="L1007">            &quot;, byteAnyRequiredBobContentType='&quot; + getByteAnyRequiredBobContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1008">            &quot;, byteAnyMinbytesBob='&quot; + getByteAnyMinbytesBob() + &quot;'&quot; +</span>
-<span class="fc" id="L1009">            &quot;, byteAnyMinbytesBobContentType='&quot; + getByteAnyMinbytesBobContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1010">            &quot;, byteAnyMaxbytesBob='&quot; + getByteAnyMaxbytesBob() + &quot;'&quot; +</span>
-<span class="fc" id="L1011">            &quot;, byteAnyMaxbytesBobContentType='&quot; + getByteAnyMaxbytesBobContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1012">            &quot;, byteTextBob='&quot; + getByteTextBob() + &quot;'&quot; +</span>
-<span class="fc" id="L1013">            &quot;, byteTextRequiredBob='&quot; + getByteTextRequiredBob() + &quot;'&quot; +</span>
-<span class="fc" id="L1014">            &quot;, byteTextMinbytesBob='&quot; + getByteTextMinbytesBob() + &quot;'&quot; +</span>
-<span class="fc" id="L1015">            &quot;, byteTextMaxbytesBob='&quot; + getByteTextMaxbytesBob() + &quot;'&quot; +</span>
+<span class="fc" id="L981">        return &quot;FieldTestServiceClassEntity{&quot; +</span>
+<span class="fc" id="L982">            &quot;id=&quot; + getId() +</span>
+<span class="fc" id="L983">            &quot;, stringBob='&quot; + getStringBob() + &quot;'&quot; +</span>
+<span class="fc" id="L984">            &quot;, stringRequiredBob='&quot; + getStringRequiredBob() + &quot;'&quot; +</span>
+<span class="fc" id="L985">            &quot;, stringMinlengthBob='&quot; + getStringMinlengthBob() + &quot;'&quot; +</span>
+<span class="fc" id="L986">            &quot;, stringMaxlengthBob='&quot; + getStringMaxlengthBob() + &quot;'&quot; +</span>
+<span class="fc" id="L987">            &quot;, stringPatternBob='&quot; + getStringPatternBob() + &quot;'&quot; +</span>
+<span class="fc" id="L988">            &quot;, integerBob=&quot; + getIntegerBob() +</span>
+<span class="fc" id="L989">            &quot;, integerRequiredBob=&quot; + getIntegerRequiredBob() +</span>
+<span class="fc" id="L990">            &quot;, integerMinBob=&quot; + getIntegerMinBob() +</span>
+<span class="fc" id="L991">            &quot;, integerMaxBob=&quot; + getIntegerMaxBob() +</span>
+<span class="fc" id="L992">            &quot;, longBob=&quot; + getLongBob() +</span>
+<span class="fc" id="L993">            &quot;, longRequiredBob=&quot; + getLongRequiredBob() +</span>
+<span class="fc" id="L994">            &quot;, longMinBob=&quot; + getLongMinBob() +</span>
+<span class="fc" id="L995">            &quot;, longMaxBob=&quot; + getLongMaxBob() +</span>
+<span class="fc" id="L996">            &quot;, floatBob=&quot; + getFloatBob() +</span>
+<span class="fc" id="L997">            &quot;, floatRequiredBob=&quot; + getFloatRequiredBob() +</span>
+<span class="fc" id="L998">            &quot;, floatMinBob=&quot; + getFloatMinBob() +</span>
+<span class="fc" id="L999">            &quot;, floatMaxBob=&quot; + getFloatMaxBob() +</span>
+<span class="fc" id="L1000">            &quot;, doubleRequiredBob=&quot; + getDoubleRequiredBob() +</span>
+<span class="fc" id="L1001">            &quot;, doubleMinBob=&quot; + getDoubleMinBob() +</span>
+<span class="fc" id="L1002">            &quot;, doubleMaxBob=&quot; + getDoubleMaxBob() +</span>
+<span class="fc" id="L1003">            &quot;, bigDecimalRequiredBob=&quot; + getBigDecimalRequiredBob() +</span>
+<span class="fc" id="L1004">            &quot;, bigDecimalMinBob=&quot; + getBigDecimalMinBob() +</span>
+<span class="fc" id="L1005">            &quot;, bigDecimalMaxBob=&quot; + getBigDecimalMaxBob() +</span>
+<span class="fc" id="L1006">            &quot;, localDateBob='&quot; + getLocalDateBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1007">            &quot;, localDateRequiredBob='&quot; + getLocalDateRequiredBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1008">            &quot;, instantBob='&quot; + getInstantBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1009">            &quot;, instanteRequiredBob='&quot; + getInstanteRequiredBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1010">            &quot;, zonedDateTimeBob='&quot; + getZonedDateTimeBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1011">            &quot;, zonedDateTimeRequiredBob='&quot; + getZonedDateTimeRequiredBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1012">            &quot;, booleanBob='&quot; + isBooleanBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1013">            &quot;, booleanRequiredBob='&quot; + isBooleanRequiredBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1014">            &quot;, enumBob='&quot; + getEnumBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1015">            &quot;, enumRequiredBob='&quot; + getEnumRequiredBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1016">            &quot;, byteImageBob='&quot; + getByteImageBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1017">            &quot;, byteImageBobContentType='&quot; + getByteImageBobContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1018">            &quot;, byteImageRequiredBob='&quot; + getByteImageRequiredBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1019">            &quot;, byteImageRequiredBobContentType='&quot; + getByteImageRequiredBobContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1020">            &quot;, byteImageMinbytesBob='&quot; + getByteImageMinbytesBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1021">            &quot;, byteImageMinbytesBobContentType='&quot; + getByteImageMinbytesBobContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1022">            &quot;, byteImageMaxbytesBob='&quot; + getByteImageMaxbytesBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1023">            &quot;, byteImageMaxbytesBobContentType='&quot; + getByteImageMaxbytesBobContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1024">            &quot;, byteAnyBob='&quot; + getByteAnyBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1025">            &quot;, byteAnyBobContentType='&quot; + getByteAnyBobContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1026">            &quot;, byteAnyRequiredBob='&quot; + getByteAnyRequiredBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1027">            &quot;, byteAnyRequiredBobContentType='&quot; + getByteAnyRequiredBobContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1028">            &quot;, byteAnyMinbytesBob='&quot; + getByteAnyMinbytesBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1029">            &quot;, byteAnyMinbytesBobContentType='&quot; + getByteAnyMinbytesBobContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1030">            &quot;, byteAnyMaxbytesBob='&quot; + getByteAnyMaxbytesBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1031">            &quot;, byteAnyMaxbytesBobContentType='&quot; + getByteAnyMaxbytesBobContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1032">            &quot;, byteTextBob='&quot; + getByteTextBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1033">            &quot;, byteTextRequiredBob='&quot; + getByteTextRequiredBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1034">            &quot;, byteTextMinbytesBob='&quot; + getByteTextMinbytesBob() + &quot;'&quot; +</span>
+<span class="fc" id="L1035">            &quot;, byteTextMaxbytesBob='&quot; + getByteTextMaxbytesBob() + &quot;'&quot; +</span>
             &quot;}&quot;;
     }
 }

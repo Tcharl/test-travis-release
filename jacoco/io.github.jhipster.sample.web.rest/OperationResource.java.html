@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>OperationResource.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.web.rest</a> &gt; <span class="el_source">OperationResource.java</span></div><h1>OperationResource.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.web.rest;
 
+/*-
+ * #%L
+ * Jhipster Sample Application
+ * %%
+ * Copyright (C) 2017 Osgiliath
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
 import com.codahale.metrics.annotation.Timed;
 import io.github.jhipster.sample.domain.Operation;
 
@@ -31,15 +51,15 @@ import java.util.Optional;
 @RequestMapping(&quot;/api&quot;)
 public class OperationResource {
 
-<span class="fc" id="L34">    private final Logger log = LoggerFactory.getLogger(OperationResource.class);</span>
+<span class="fc" id="L54">    private final Logger log = LoggerFactory.getLogger(OperationResource.class);</span>
 
     private static final String ENTITY_NAME = &quot;operation&quot;;
 
     private final OperationRepository operationRepository;
 
-<span class="fc" id="L40">    public OperationResource(OperationRepository operationRepository) {</span>
-<span class="fc" id="L41">        this.operationRepository = operationRepository;</span>
-<span class="fc" id="L42">    }</span>
+<span class="fc" id="L60">    public OperationResource(OperationRepository operationRepository) {</span>
+<span class="fc" id="L61">        this.operationRepository = operationRepository;</span>
+<span class="fc" id="L62">    }</span>
 
     /**
      * POST  /operations : Create a new operation.
@@ -51,14 +71,14 @@ public class OperationResource {
     @PostMapping(&quot;/operations&quot;)
     @Timed
     public ResponseEntity&lt;Operation&gt; createOperation(@Valid @RequestBody Operation operation) throws URISyntaxException {
-<span class="fc" id="L54">        log.debug(&quot;REST request to save Operation : {}&quot;, operation);</span>
-<span class="fc bfc" id="L55" title="All 2 branches covered.">        if (operation.getId() != null) {</span>
-<span class="fc" id="L56">            throw new BadRequestAlertException(&quot;A new operation cannot already have an ID&quot;, ENTITY_NAME, &quot;idexists&quot;);</span>
+<span class="fc" id="L74">        log.debug(&quot;REST request to save Operation : {}&quot;, operation);</span>
+<span class="fc bfc" id="L75" title="All 2 branches covered.">        if (operation.getId() != null) {</span>
+<span class="fc" id="L76">            throw new BadRequestAlertException(&quot;A new operation cannot already have an ID&quot;, ENTITY_NAME, &quot;idexists&quot;);</span>
         }
-<span class="fc" id="L58">        Operation result = operationRepository.save(operation);</span>
-<span class="fc" id="L59">        return ResponseEntity.created(new URI(&quot;/api/operations/&quot; + result.getId()))</span>
-<span class="fc" id="L60">            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))</span>
-<span class="fc" id="L61">            .body(result);</span>
+<span class="fc" id="L78">        Operation result = operationRepository.save(operation);</span>
+<span class="fc" id="L79">        return ResponseEntity.created(new URI(&quot;/api/operations/&quot; + result.getId()))</span>
+<span class="fc" id="L80">            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))</span>
+<span class="fc" id="L81">            .body(result);</span>
     }
 
     /**
@@ -73,14 +93,14 @@ public class OperationResource {
     @PutMapping(&quot;/operations&quot;)
     @Timed
     public ResponseEntity&lt;Operation&gt; updateOperation(@Valid @RequestBody Operation operation) throws URISyntaxException {
-<span class="fc" id="L76">        log.debug(&quot;REST request to update Operation : {}&quot;, operation);</span>
-<span class="fc bfc" id="L77" title="All 2 branches covered.">        if (operation.getId() == null) {</span>
-<span class="fc" id="L78">            return createOperation(operation);</span>
+<span class="fc" id="L96">        log.debug(&quot;REST request to update Operation : {}&quot;, operation);</span>
+<span class="fc bfc" id="L97" title="All 2 branches covered.">        if (operation.getId() == null) {</span>
+<span class="fc" id="L98">            return createOperation(operation);</span>
         }
-<span class="fc" id="L80">        Operation result = operationRepository.save(operation);</span>
-<span class="fc" id="L81">        return ResponseEntity.ok()</span>
-<span class="fc" id="L82">            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, operation.getId().toString()))</span>
-<span class="fc" id="L83">            .body(result);</span>
+<span class="fc" id="L100">        Operation result = operationRepository.save(operation);</span>
+<span class="fc" id="L101">        return ResponseEntity.ok()</span>
+<span class="fc" id="L102">            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, operation.getId().toString()))</span>
+<span class="fc" id="L103">            .body(result);</span>
     }
 
     /**
@@ -92,10 +112,10 @@ public class OperationResource {
     @GetMapping(&quot;/operations&quot;)
     @Timed
     public ResponseEntity&lt;List&lt;Operation&gt;&gt; getAllOperations(Pageable pageable) {
-<span class="fc" id="L95">        log.debug(&quot;REST request to get a page of Operations&quot;);</span>
-<span class="fc" id="L96">        Page&lt;Operation&gt; page = operationRepository.findAll(pageable);</span>
-<span class="fc" id="L97">        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, &quot;/api/operations&quot;);</span>
-<span class="fc" id="L98">        return new ResponseEntity&lt;&gt;(page.getContent(), headers, HttpStatus.OK);</span>
+<span class="fc" id="L115">        log.debug(&quot;REST request to get a page of Operations&quot;);</span>
+<span class="fc" id="L116">        Page&lt;Operation&gt; page = operationRepository.findAll(pageable);</span>
+<span class="fc" id="L117">        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, &quot;/api/operations&quot;);</span>
+<span class="fc" id="L118">        return new ResponseEntity&lt;&gt;(page.getContent(), headers, HttpStatus.OK);</span>
     }
 
     /**
@@ -107,9 +127,9 @@ public class OperationResource {
     @GetMapping(&quot;/operations/{id}&quot;)
     @Timed
     public ResponseEntity&lt;Operation&gt; getOperation(@PathVariable Long id) {
-<span class="fc" id="L110">        log.debug(&quot;REST request to get Operation : {}&quot;, id);</span>
-<span class="fc" id="L111">        Operation operation = operationRepository.findOneWithEagerRelationships(id);</span>
-<span class="fc" id="L112">        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(operation));</span>
+<span class="fc" id="L130">        log.debug(&quot;REST request to get Operation : {}&quot;, id);</span>
+<span class="fc" id="L131">        Operation operation = operationRepository.findOneWithEagerRelationships(id);</span>
+<span class="fc" id="L132">        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(operation));</span>
     }
 
     /**
@@ -121,9 +141,9 @@ public class OperationResource {
     @DeleteMapping(&quot;/operations/{id}&quot;)
     @Timed
     public ResponseEntity&lt;Void&gt; deleteOperation(@PathVariable Long id) {
-<span class="fc" id="L124">        log.debug(&quot;REST request to delete Operation : {}&quot;, id);</span>
-<span class="fc" id="L125">        operationRepository.delete(id);</span>
-<span class="fc" id="L126">        return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();</span>
+<span class="fc" id="L144">        log.debug(&quot;REST request to delete Operation : {}&quot;, id);</span>
+<span class="fc" id="L145">        operationRepository.delete(id);</span>
+<span class="fc" id="L146">        return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

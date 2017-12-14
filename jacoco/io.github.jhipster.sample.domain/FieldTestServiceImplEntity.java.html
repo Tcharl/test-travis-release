@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FieldTestServiceImplEntity.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.domain</a> &gt; <span class="el_source">FieldTestServiceImplEntity.java</span></div><h1>FieldTestServiceImplEntity.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.domain;
 
+/*-
+ * #%L
+ * Jhipster Sample Application
+ * %%
+ * Copyright (C) 2017 Osgiliath
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.Instant;
@@ -16,14 +37,13 @@ import io.github.jhipster.sample.domain.enumeration.EnumFieldClass;
 
 import io.github.jhipster.sample.domain.enumeration.EnumRequiredFieldClass;
 
-
 /**
  * A FieldTestServiceImplEntity.
  */
 @Entity
 @Table(name = &quot;field_test_service_impl_entity&quot;)
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-<span class="fc" id="L26">public class FieldTestServiceImplEntity implements Serializable {</span>
+<span class="fc" id="L46">public class FieldTestServiceImplEntity implements Serializable {</span>
 
     private static final long serialVersionUID = 1L;
 
@@ -239,780 +259,780 @@ import io.github.jhipster.sample.domain.enumeration.EnumRequiredFieldClass;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
-<span class="fc" id="L242">        return id;</span>
+<span class="fc" id="L262">        return id;</span>
     }
 
     public void setId(Long id) {
-<span class="fc" id="L246">        this.id = id;</span>
-<span class="fc" id="L247">    }</span>
+<span class="fc" id="L266">        this.id = id;</span>
+<span class="fc" id="L267">    }</span>
 
     public String getStringMika() {
-<span class="fc" id="L250">        return stringMika;</span>
+<span class="fc" id="L270">        return stringMika;</span>
     }
 
     public FieldTestServiceImplEntity stringMika(String stringMika) {
-<span class="fc" id="L254">        this.stringMika = stringMika;</span>
-<span class="fc" id="L255">        return this;</span>
+<span class="fc" id="L274">        this.stringMika = stringMika;</span>
+<span class="fc" id="L275">        return this;</span>
     }
 
     public void setStringMika(String stringMika) {
-<span class="fc" id="L259">        this.stringMika = stringMika;</span>
-<span class="fc" id="L260">    }</span>
+<span class="fc" id="L279">        this.stringMika = stringMika;</span>
+<span class="fc" id="L280">    }</span>
 
     public String getStringRequiredMika() {
-<span class="fc" id="L263">        return stringRequiredMika;</span>
+<span class="fc" id="L283">        return stringRequiredMika;</span>
     }
 
     public FieldTestServiceImplEntity stringRequiredMika(String stringRequiredMika) {
-<span class="fc" id="L267">        this.stringRequiredMika = stringRequiredMika;</span>
-<span class="fc" id="L268">        return this;</span>
+<span class="fc" id="L287">        this.stringRequiredMika = stringRequiredMika;</span>
+<span class="fc" id="L288">        return this;</span>
     }
 
     public void setStringRequiredMika(String stringRequiredMika) {
-<span class="fc" id="L272">        this.stringRequiredMika = stringRequiredMika;</span>
-<span class="fc" id="L273">    }</span>
+<span class="fc" id="L292">        this.stringRequiredMika = stringRequiredMika;</span>
+<span class="fc" id="L293">    }</span>
 
     public String getStringMinlengthMika() {
-<span class="fc" id="L276">        return stringMinlengthMika;</span>
+<span class="fc" id="L296">        return stringMinlengthMika;</span>
     }
 
     public FieldTestServiceImplEntity stringMinlengthMika(String stringMinlengthMika) {
-<span class="fc" id="L280">        this.stringMinlengthMika = stringMinlengthMika;</span>
-<span class="fc" id="L281">        return this;</span>
+<span class="fc" id="L300">        this.stringMinlengthMika = stringMinlengthMika;</span>
+<span class="fc" id="L301">        return this;</span>
     }
 
     public void setStringMinlengthMika(String stringMinlengthMika) {
-<span class="fc" id="L285">        this.stringMinlengthMika = stringMinlengthMika;</span>
-<span class="fc" id="L286">    }</span>
+<span class="fc" id="L305">        this.stringMinlengthMika = stringMinlengthMika;</span>
+<span class="fc" id="L306">    }</span>
 
     public String getStringMaxlengthMika() {
-<span class="fc" id="L289">        return stringMaxlengthMika;</span>
+<span class="fc" id="L309">        return stringMaxlengthMika;</span>
     }
 
     public FieldTestServiceImplEntity stringMaxlengthMika(String stringMaxlengthMika) {
-<span class="fc" id="L293">        this.stringMaxlengthMika = stringMaxlengthMika;</span>
-<span class="fc" id="L294">        return this;</span>
+<span class="fc" id="L313">        this.stringMaxlengthMika = stringMaxlengthMika;</span>
+<span class="fc" id="L314">        return this;</span>
     }
 
     public void setStringMaxlengthMika(String stringMaxlengthMika) {
-<span class="fc" id="L298">        this.stringMaxlengthMika = stringMaxlengthMika;</span>
-<span class="fc" id="L299">    }</span>
+<span class="fc" id="L318">        this.stringMaxlengthMika = stringMaxlengthMika;</span>
+<span class="fc" id="L319">    }</span>
 
     public String getStringPatternMika() {
-<span class="fc" id="L302">        return stringPatternMika;</span>
+<span class="fc" id="L322">        return stringPatternMika;</span>
     }
 
     public FieldTestServiceImplEntity stringPatternMika(String stringPatternMika) {
-<span class="fc" id="L306">        this.stringPatternMika = stringPatternMika;</span>
-<span class="fc" id="L307">        return this;</span>
+<span class="fc" id="L326">        this.stringPatternMika = stringPatternMika;</span>
+<span class="fc" id="L327">        return this;</span>
     }
 
     public void setStringPatternMika(String stringPatternMika) {
-<span class="fc" id="L311">        this.stringPatternMika = stringPatternMika;</span>
-<span class="fc" id="L312">    }</span>
+<span class="fc" id="L331">        this.stringPatternMika = stringPatternMika;</span>
+<span class="fc" id="L332">    }</span>
 
     public Integer getIntegerMika() {
-<span class="fc" id="L315">        return integerMika;</span>
+<span class="fc" id="L335">        return integerMika;</span>
     }
 
     public FieldTestServiceImplEntity integerMika(Integer integerMika) {
-<span class="fc" id="L319">        this.integerMika = integerMika;</span>
-<span class="fc" id="L320">        return this;</span>
+<span class="fc" id="L339">        this.integerMika = integerMika;</span>
+<span class="fc" id="L340">        return this;</span>
     }
 
     public void setIntegerMika(Integer integerMika) {
-<span class="fc" id="L324">        this.integerMika = integerMika;</span>
-<span class="fc" id="L325">    }</span>
+<span class="fc" id="L344">        this.integerMika = integerMika;</span>
+<span class="fc" id="L345">    }</span>
 
     public Integer getIntegerRequiredMika() {
-<span class="fc" id="L328">        return integerRequiredMika;</span>
+<span class="fc" id="L348">        return integerRequiredMika;</span>
     }
 
     public FieldTestServiceImplEntity integerRequiredMika(Integer integerRequiredMika) {
-<span class="fc" id="L332">        this.integerRequiredMika = integerRequiredMika;</span>
-<span class="fc" id="L333">        return this;</span>
+<span class="fc" id="L352">        this.integerRequiredMika = integerRequiredMika;</span>
+<span class="fc" id="L353">        return this;</span>
     }
 
     public void setIntegerRequiredMika(Integer integerRequiredMika) {
-<span class="fc" id="L337">        this.integerRequiredMika = integerRequiredMika;</span>
-<span class="fc" id="L338">    }</span>
+<span class="fc" id="L357">        this.integerRequiredMika = integerRequiredMika;</span>
+<span class="fc" id="L358">    }</span>
 
     public Integer getIntegerMinMika() {
-<span class="fc" id="L341">        return integerMinMika;</span>
+<span class="fc" id="L361">        return integerMinMika;</span>
     }
 
     public FieldTestServiceImplEntity integerMinMika(Integer integerMinMika) {
-<span class="fc" id="L345">        this.integerMinMika = integerMinMika;</span>
-<span class="fc" id="L346">        return this;</span>
+<span class="fc" id="L365">        this.integerMinMika = integerMinMika;</span>
+<span class="fc" id="L366">        return this;</span>
     }
 
     public void setIntegerMinMika(Integer integerMinMika) {
-<span class="fc" id="L350">        this.integerMinMika = integerMinMika;</span>
-<span class="fc" id="L351">    }</span>
+<span class="fc" id="L370">        this.integerMinMika = integerMinMika;</span>
+<span class="fc" id="L371">    }</span>
 
     public Integer getIntegerMaxMika() {
-<span class="fc" id="L354">        return integerMaxMika;</span>
+<span class="fc" id="L374">        return integerMaxMika;</span>
     }
 
     public FieldTestServiceImplEntity integerMaxMika(Integer integerMaxMika) {
-<span class="fc" id="L358">        this.integerMaxMika = integerMaxMika;</span>
-<span class="fc" id="L359">        return this;</span>
+<span class="fc" id="L378">        this.integerMaxMika = integerMaxMika;</span>
+<span class="fc" id="L379">        return this;</span>
     }
 
     public void setIntegerMaxMika(Integer integerMaxMika) {
-<span class="fc" id="L363">        this.integerMaxMika = integerMaxMika;</span>
-<span class="fc" id="L364">    }</span>
+<span class="fc" id="L383">        this.integerMaxMika = integerMaxMika;</span>
+<span class="fc" id="L384">    }</span>
 
     public Long getLongMika() {
-<span class="fc" id="L367">        return longMika;</span>
+<span class="fc" id="L387">        return longMika;</span>
     }
 
     public FieldTestServiceImplEntity longMika(Long longMika) {
-<span class="fc" id="L371">        this.longMika = longMika;</span>
-<span class="fc" id="L372">        return this;</span>
+<span class="fc" id="L391">        this.longMika = longMika;</span>
+<span class="fc" id="L392">        return this;</span>
     }
 
     public void setLongMika(Long longMika) {
-<span class="fc" id="L376">        this.longMika = longMika;</span>
-<span class="fc" id="L377">    }</span>
+<span class="fc" id="L396">        this.longMika = longMika;</span>
+<span class="fc" id="L397">    }</span>
 
     public Long getLongRequiredMika() {
-<span class="fc" id="L380">        return longRequiredMika;</span>
+<span class="fc" id="L400">        return longRequiredMika;</span>
     }
 
     public FieldTestServiceImplEntity longRequiredMika(Long longRequiredMika) {
-<span class="fc" id="L384">        this.longRequiredMika = longRequiredMika;</span>
-<span class="fc" id="L385">        return this;</span>
+<span class="fc" id="L404">        this.longRequiredMika = longRequiredMika;</span>
+<span class="fc" id="L405">        return this;</span>
     }
 
     public void setLongRequiredMika(Long longRequiredMika) {
-<span class="fc" id="L389">        this.longRequiredMika = longRequiredMika;</span>
-<span class="fc" id="L390">    }</span>
+<span class="fc" id="L409">        this.longRequiredMika = longRequiredMika;</span>
+<span class="fc" id="L410">    }</span>
 
     public Long getLongMinMika() {
-<span class="fc" id="L393">        return longMinMika;</span>
+<span class="fc" id="L413">        return longMinMika;</span>
     }
 
     public FieldTestServiceImplEntity longMinMika(Long longMinMika) {
-<span class="fc" id="L397">        this.longMinMika = longMinMika;</span>
-<span class="fc" id="L398">        return this;</span>
+<span class="fc" id="L417">        this.longMinMika = longMinMika;</span>
+<span class="fc" id="L418">        return this;</span>
     }
 
     public void setLongMinMika(Long longMinMika) {
-<span class="fc" id="L402">        this.longMinMika = longMinMika;</span>
-<span class="fc" id="L403">    }</span>
+<span class="fc" id="L422">        this.longMinMika = longMinMika;</span>
+<span class="fc" id="L423">    }</span>
 
     public Long getLongMaxMika() {
-<span class="fc" id="L406">        return longMaxMika;</span>
+<span class="fc" id="L426">        return longMaxMika;</span>
     }
 
     public FieldTestServiceImplEntity longMaxMika(Long longMaxMika) {
-<span class="fc" id="L410">        this.longMaxMika = longMaxMika;</span>
-<span class="fc" id="L411">        return this;</span>
+<span class="fc" id="L430">        this.longMaxMika = longMaxMika;</span>
+<span class="fc" id="L431">        return this;</span>
     }
 
     public void setLongMaxMika(Long longMaxMika) {
-<span class="fc" id="L415">        this.longMaxMika = longMaxMika;</span>
-<span class="fc" id="L416">    }</span>
+<span class="fc" id="L435">        this.longMaxMika = longMaxMika;</span>
+<span class="fc" id="L436">    }</span>
 
     public Float getFloatMika() {
-<span class="fc" id="L419">        return floatMika;</span>
+<span class="fc" id="L439">        return floatMika;</span>
     }
 
     public FieldTestServiceImplEntity floatMika(Float floatMika) {
-<span class="fc" id="L423">        this.floatMika = floatMika;</span>
-<span class="fc" id="L424">        return this;</span>
+<span class="fc" id="L443">        this.floatMika = floatMika;</span>
+<span class="fc" id="L444">        return this;</span>
     }
 
     public void setFloatMika(Float floatMika) {
-<span class="fc" id="L428">        this.floatMika = floatMika;</span>
-<span class="fc" id="L429">    }</span>
+<span class="fc" id="L448">        this.floatMika = floatMika;</span>
+<span class="fc" id="L449">    }</span>
 
     public Float getFloatRequiredMika() {
-<span class="fc" id="L432">        return floatRequiredMika;</span>
+<span class="fc" id="L452">        return floatRequiredMika;</span>
     }
 
     public FieldTestServiceImplEntity floatRequiredMika(Float floatRequiredMika) {
-<span class="fc" id="L436">        this.floatRequiredMika = floatRequiredMika;</span>
-<span class="fc" id="L437">        return this;</span>
+<span class="fc" id="L456">        this.floatRequiredMika = floatRequiredMika;</span>
+<span class="fc" id="L457">        return this;</span>
     }
 
     public void setFloatRequiredMika(Float floatRequiredMika) {
-<span class="fc" id="L441">        this.floatRequiredMika = floatRequiredMika;</span>
-<span class="fc" id="L442">    }</span>
+<span class="fc" id="L461">        this.floatRequiredMika = floatRequiredMika;</span>
+<span class="fc" id="L462">    }</span>
 
     public Float getFloatMinMika() {
-<span class="fc" id="L445">        return floatMinMika;</span>
+<span class="fc" id="L465">        return floatMinMika;</span>
     }
 
     public FieldTestServiceImplEntity floatMinMika(Float floatMinMika) {
-<span class="fc" id="L449">        this.floatMinMika = floatMinMika;</span>
-<span class="fc" id="L450">        return this;</span>
+<span class="fc" id="L469">        this.floatMinMika = floatMinMika;</span>
+<span class="fc" id="L470">        return this;</span>
     }
 
     public void setFloatMinMika(Float floatMinMika) {
-<span class="fc" id="L454">        this.floatMinMika = floatMinMika;</span>
-<span class="fc" id="L455">    }</span>
+<span class="fc" id="L474">        this.floatMinMika = floatMinMika;</span>
+<span class="fc" id="L475">    }</span>
 
     public Float getFloatMaxMika() {
-<span class="fc" id="L458">        return floatMaxMika;</span>
+<span class="fc" id="L478">        return floatMaxMika;</span>
     }
 
     public FieldTestServiceImplEntity floatMaxMika(Float floatMaxMika) {
-<span class="fc" id="L462">        this.floatMaxMika = floatMaxMika;</span>
-<span class="fc" id="L463">        return this;</span>
+<span class="fc" id="L482">        this.floatMaxMika = floatMaxMika;</span>
+<span class="fc" id="L483">        return this;</span>
     }
 
     public void setFloatMaxMika(Float floatMaxMika) {
-<span class="fc" id="L467">        this.floatMaxMika = floatMaxMika;</span>
-<span class="fc" id="L468">    }</span>
+<span class="fc" id="L487">        this.floatMaxMika = floatMaxMika;</span>
+<span class="fc" id="L488">    }</span>
 
     public Double getDoubleRequiredMika() {
-<span class="fc" id="L471">        return doubleRequiredMika;</span>
+<span class="fc" id="L491">        return doubleRequiredMika;</span>
     }
 
     public FieldTestServiceImplEntity doubleRequiredMika(Double doubleRequiredMika) {
-<span class="fc" id="L475">        this.doubleRequiredMika = doubleRequiredMika;</span>
-<span class="fc" id="L476">        return this;</span>
+<span class="fc" id="L495">        this.doubleRequiredMika = doubleRequiredMika;</span>
+<span class="fc" id="L496">        return this;</span>
     }
 
     public void setDoubleRequiredMika(Double doubleRequiredMika) {
-<span class="fc" id="L480">        this.doubleRequiredMika = doubleRequiredMika;</span>
-<span class="fc" id="L481">    }</span>
+<span class="fc" id="L500">        this.doubleRequiredMika = doubleRequiredMika;</span>
+<span class="fc" id="L501">    }</span>
 
     public Double getDoubleMinMika() {
-<span class="fc" id="L484">        return doubleMinMika;</span>
+<span class="fc" id="L504">        return doubleMinMika;</span>
     }
 
     public FieldTestServiceImplEntity doubleMinMika(Double doubleMinMika) {
-<span class="fc" id="L488">        this.doubleMinMika = doubleMinMika;</span>
-<span class="fc" id="L489">        return this;</span>
+<span class="fc" id="L508">        this.doubleMinMika = doubleMinMika;</span>
+<span class="fc" id="L509">        return this;</span>
     }
 
     public void setDoubleMinMika(Double doubleMinMika) {
-<span class="fc" id="L493">        this.doubleMinMika = doubleMinMika;</span>
-<span class="fc" id="L494">    }</span>
+<span class="fc" id="L513">        this.doubleMinMika = doubleMinMika;</span>
+<span class="fc" id="L514">    }</span>
 
     public Double getDoubleMaxMika() {
-<span class="fc" id="L497">        return doubleMaxMika;</span>
+<span class="fc" id="L517">        return doubleMaxMika;</span>
     }
 
     public FieldTestServiceImplEntity doubleMaxMika(Double doubleMaxMika) {
-<span class="fc" id="L501">        this.doubleMaxMika = doubleMaxMika;</span>
-<span class="fc" id="L502">        return this;</span>
+<span class="fc" id="L521">        this.doubleMaxMika = doubleMaxMika;</span>
+<span class="fc" id="L522">        return this;</span>
     }
 
     public void setDoubleMaxMika(Double doubleMaxMika) {
-<span class="fc" id="L506">        this.doubleMaxMika = doubleMaxMika;</span>
-<span class="fc" id="L507">    }</span>
+<span class="fc" id="L526">        this.doubleMaxMika = doubleMaxMika;</span>
+<span class="fc" id="L527">    }</span>
 
     public BigDecimal getBigDecimalRequiredMika() {
-<span class="fc" id="L510">        return bigDecimalRequiredMika;</span>
+<span class="fc" id="L530">        return bigDecimalRequiredMika;</span>
     }
 
     public FieldTestServiceImplEntity bigDecimalRequiredMika(BigDecimal bigDecimalRequiredMika) {
-<span class="fc" id="L514">        this.bigDecimalRequiredMika = bigDecimalRequiredMika;</span>
-<span class="fc" id="L515">        return this;</span>
+<span class="fc" id="L534">        this.bigDecimalRequiredMika = bigDecimalRequiredMika;</span>
+<span class="fc" id="L535">        return this;</span>
     }
 
     public void setBigDecimalRequiredMika(BigDecimal bigDecimalRequiredMika) {
-<span class="fc" id="L519">        this.bigDecimalRequiredMika = bigDecimalRequiredMika;</span>
-<span class="fc" id="L520">    }</span>
+<span class="fc" id="L539">        this.bigDecimalRequiredMika = bigDecimalRequiredMika;</span>
+<span class="fc" id="L540">    }</span>
 
     public BigDecimal getBigDecimalMinMika() {
-<span class="fc" id="L523">        return bigDecimalMinMika;</span>
+<span class="fc" id="L543">        return bigDecimalMinMika;</span>
     }
 
     public FieldTestServiceImplEntity bigDecimalMinMika(BigDecimal bigDecimalMinMika) {
-<span class="fc" id="L527">        this.bigDecimalMinMika = bigDecimalMinMika;</span>
-<span class="fc" id="L528">        return this;</span>
+<span class="fc" id="L547">        this.bigDecimalMinMika = bigDecimalMinMika;</span>
+<span class="fc" id="L548">        return this;</span>
     }
 
     public void setBigDecimalMinMika(BigDecimal bigDecimalMinMika) {
-<span class="fc" id="L532">        this.bigDecimalMinMika = bigDecimalMinMika;</span>
-<span class="fc" id="L533">    }</span>
+<span class="fc" id="L552">        this.bigDecimalMinMika = bigDecimalMinMika;</span>
+<span class="fc" id="L553">    }</span>
 
     public BigDecimal getBigDecimalMaxMika() {
-<span class="fc" id="L536">        return bigDecimalMaxMika;</span>
+<span class="fc" id="L556">        return bigDecimalMaxMika;</span>
     }
 
     public FieldTestServiceImplEntity bigDecimalMaxMika(BigDecimal bigDecimalMaxMika) {
-<span class="fc" id="L540">        this.bigDecimalMaxMika = bigDecimalMaxMika;</span>
-<span class="fc" id="L541">        return this;</span>
+<span class="fc" id="L560">        this.bigDecimalMaxMika = bigDecimalMaxMika;</span>
+<span class="fc" id="L561">        return this;</span>
     }
 
     public void setBigDecimalMaxMika(BigDecimal bigDecimalMaxMika) {
-<span class="fc" id="L545">        this.bigDecimalMaxMika = bigDecimalMaxMika;</span>
-<span class="fc" id="L546">    }</span>
+<span class="fc" id="L565">        this.bigDecimalMaxMika = bigDecimalMaxMika;</span>
+<span class="fc" id="L566">    }</span>
 
     public LocalDate getLocalDateMika() {
-<span class="fc" id="L549">        return localDateMika;</span>
+<span class="fc" id="L569">        return localDateMika;</span>
     }
 
     public FieldTestServiceImplEntity localDateMika(LocalDate localDateMika) {
-<span class="fc" id="L553">        this.localDateMika = localDateMika;</span>
-<span class="fc" id="L554">        return this;</span>
+<span class="fc" id="L573">        this.localDateMika = localDateMika;</span>
+<span class="fc" id="L574">        return this;</span>
     }
 
     public void setLocalDateMika(LocalDate localDateMika) {
-<span class="fc" id="L558">        this.localDateMika = localDateMika;</span>
-<span class="fc" id="L559">    }</span>
+<span class="fc" id="L578">        this.localDateMika = localDateMika;</span>
+<span class="fc" id="L579">    }</span>
 
     public LocalDate getLocalDateRequiredMika() {
-<span class="fc" id="L562">        return localDateRequiredMika;</span>
+<span class="fc" id="L582">        return localDateRequiredMika;</span>
     }
 
     public FieldTestServiceImplEntity localDateRequiredMika(LocalDate localDateRequiredMika) {
-<span class="fc" id="L566">        this.localDateRequiredMika = localDateRequiredMika;</span>
-<span class="fc" id="L567">        return this;</span>
+<span class="fc" id="L586">        this.localDateRequiredMika = localDateRequiredMika;</span>
+<span class="fc" id="L587">        return this;</span>
     }
 
     public void setLocalDateRequiredMika(LocalDate localDateRequiredMika) {
-<span class="fc" id="L571">        this.localDateRequiredMika = localDateRequiredMika;</span>
-<span class="fc" id="L572">    }</span>
+<span class="fc" id="L591">        this.localDateRequiredMika = localDateRequiredMika;</span>
+<span class="fc" id="L592">    }</span>
 
     public Instant getInstantMika() {
-<span class="fc" id="L575">        return instantMika;</span>
+<span class="fc" id="L595">        return instantMika;</span>
     }
 
     public FieldTestServiceImplEntity instantMika(Instant instantMika) {
-<span class="fc" id="L579">        this.instantMika = instantMika;</span>
-<span class="fc" id="L580">        return this;</span>
+<span class="fc" id="L599">        this.instantMika = instantMika;</span>
+<span class="fc" id="L600">        return this;</span>
     }
 
     public void setInstantMika(Instant instantMika) {
-<span class="fc" id="L584">        this.instantMika = instantMika;</span>
-<span class="fc" id="L585">    }</span>
+<span class="fc" id="L604">        this.instantMika = instantMika;</span>
+<span class="fc" id="L605">    }</span>
 
     public Instant getInstanteRequiredMika() {
-<span class="fc" id="L588">        return instanteRequiredMika;</span>
+<span class="fc" id="L608">        return instanteRequiredMika;</span>
     }
 
     public FieldTestServiceImplEntity instanteRequiredMika(Instant instanteRequiredMika) {
-<span class="fc" id="L592">        this.instanteRequiredMika = instanteRequiredMika;</span>
-<span class="fc" id="L593">        return this;</span>
+<span class="fc" id="L612">        this.instanteRequiredMika = instanteRequiredMika;</span>
+<span class="fc" id="L613">        return this;</span>
     }
 
     public void setInstanteRequiredMika(Instant instanteRequiredMika) {
-<span class="fc" id="L597">        this.instanteRequiredMika = instanteRequiredMika;</span>
-<span class="fc" id="L598">    }</span>
+<span class="fc" id="L617">        this.instanteRequiredMika = instanteRequiredMika;</span>
+<span class="fc" id="L618">    }</span>
 
     public ZonedDateTime getZonedDateTimeMika() {
-<span class="fc" id="L601">        return zonedDateTimeMika;</span>
+<span class="fc" id="L621">        return zonedDateTimeMika;</span>
     }
 
     public FieldTestServiceImplEntity zonedDateTimeMika(ZonedDateTime zonedDateTimeMika) {
-<span class="fc" id="L605">        this.zonedDateTimeMika = zonedDateTimeMika;</span>
-<span class="fc" id="L606">        return this;</span>
+<span class="fc" id="L625">        this.zonedDateTimeMika = zonedDateTimeMika;</span>
+<span class="fc" id="L626">        return this;</span>
     }
 
     public void setZonedDateTimeMika(ZonedDateTime zonedDateTimeMika) {
-<span class="fc" id="L610">        this.zonedDateTimeMika = zonedDateTimeMika;</span>
-<span class="fc" id="L611">    }</span>
+<span class="fc" id="L630">        this.zonedDateTimeMika = zonedDateTimeMika;</span>
+<span class="fc" id="L631">    }</span>
 
     public ZonedDateTime getZonedDateTimeRequiredMika() {
-<span class="fc" id="L614">        return zonedDateTimeRequiredMika;</span>
+<span class="fc" id="L634">        return zonedDateTimeRequiredMika;</span>
     }
 
     public FieldTestServiceImplEntity zonedDateTimeRequiredMika(ZonedDateTime zonedDateTimeRequiredMika) {
-<span class="fc" id="L618">        this.zonedDateTimeRequiredMika = zonedDateTimeRequiredMika;</span>
-<span class="fc" id="L619">        return this;</span>
+<span class="fc" id="L638">        this.zonedDateTimeRequiredMika = zonedDateTimeRequiredMika;</span>
+<span class="fc" id="L639">        return this;</span>
     }
 
     public void setZonedDateTimeRequiredMika(ZonedDateTime zonedDateTimeRequiredMika) {
-<span class="fc" id="L623">        this.zonedDateTimeRequiredMika = zonedDateTimeRequiredMika;</span>
-<span class="fc" id="L624">    }</span>
+<span class="fc" id="L643">        this.zonedDateTimeRequiredMika = zonedDateTimeRequiredMika;</span>
+<span class="fc" id="L644">    }</span>
 
     public Boolean isBooleanMika() {
-<span class="fc" id="L627">        return booleanMika;</span>
+<span class="fc" id="L647">        return booleanMika;</span>
     }
 
     public FieldTestServiceImplEntity booleanMika(Boolean booleanMika) {
-<span class="fc" id="L631">        this.booleanMika = booleanMika;</span>
-<span class="fc" id="L632">        return this;</span>
+<span class="fc" id="L651">        this.booleanMika = booleanMika;</span>
+<span class="fc" id="L652">        return this;</span>
     }
 
     public void setBooleanMika(Boolean booleanMika) {
-<span class="fc" id="L636">        this.booleanMika = booleanMika;</span>
-<span class="fc" id="L637">    }</span>
+<span class="fc" id="L656">        this.booleanMika = booleanMika;</span>
+<span class="fc" id="L657">    }</span>
 
     public Boolean isBooleanRequiredMika() {
-<span class="fc" id="L640">        return booleanRequiredMika;</span>
+<span class="fc" id="L660">        return booleanRequiredMika;</span>
     }
 
     public FieldTestServiceImplEntity booleanRequiredMika(Boolean booleanRequiredMika) {
-<span class="fc" id="L644">        this.booleanRequiredMika = booleanRequiredMika;</span>
-<span class="fc" id="L645">        return this;</span>
+<span class="fc" id="L664">        this.booleanRequiredMika = booleanRequiredMika;</span>
+<span class="fc" id="L665">        return this;</span>
     }
 
     public void setBooleanRequiredMika(Boolean booleanRequiredMika) {
-<span class="fc" id="L649">        this.booleanRequiredMika = booleanRequiredMika;</span>
-<span class="fc" id="L650">    }</span>
+<span class="fc" id="L669">        this.booleanRequiredMika = booleanRequiredMika;</span>
+<span class="fc" id="L670">    }</span>
 
     public EnumFieldClass getEnumMika() {
-<span class="fc" id="L653">        return enumMika;</span>
+<span class="fc" id="L673">        return enumMika;</span>
     }
 
     public FieldTestServiceImplEntity enumMika(EnumFieldClass enumMika) {
-<span class="fc" id="L657">        this.enumMika = enumMika;</span>
-<span class="fc" id="L658">        return this;</span>
+<span class="fc" id="L677">        this.enumMika = enumMika;</span>
+<span class="fc" id="L678">        return this;</span>
     }
 
     public void setEnumMika(EnumFieldClass enumMika) {
-<span class="fc" id="L662">        this.enumMika = enumMika;</span>
-<span class="fc" id="L663">    }</span>
+<span class="fc" id="L682">        this.enumMika = enumMika;</span>
+<span class="fc" id="L683">    }</span>
 
     public EnumRequiredFieldClass getEnumRequiredMika() {
-<span class="fc" id="L666">        return enumRequiredMika;</span>
+<span class="fc" id="L686">        return enumRequiredMika;</span>
     }
 
     public FieldTestServiceImplEntity enumRequiredMika(EnumRequiredFieldClass enumRequiredMika) {
-<span class="fc" id="L670">        this.enumRequiredMika = enumRequiredMika;</span>
-<span class="fc" id="L671">        return this;</span>
+<span class="fc" id="L690">        this.enumRequiredMika = enumRequiredMika;</span>
+<span class="fc" id="L691">        return this;</span>
     }
 
     public void setEnumRequiredMika(EnumRequiredFieldClass enumRequiredMika) {
-<span class="fc" id="L675">        this.enumRequiredMika = enumRequiredMika;</span>
-<span class="fc" id="L676">    }</span>
+<span class="fc" id="L695">        this.enumRequiredMika = enumRequiredMika;</span>
+<span class="fc" id="L696">    }</span>
 
     public byte[] getByteImageMika() {
-<span class="fc" id="L679">        return byteImageMika;</span>
+<span class="fc" id="L699">        return byteImageMika;</span>
     }
 
     public FieldTestServiceImplEntity byteImageMika(byte[] byteImageMika) {
-<span class="fc" id="L683">        this.byteImageMika = byteImageMika;</span>
-<span class="fc" id="L684">        return this;</span>
+<span class="fc" id="L703">        this.byteImageMika = byteImageMika;</span>
+<span class="fc" id="L704">        return this;</span>
     }
 
     public void setByteImageMika(byte[] byteImageMika) {
-<span class="fc" id="L688">        this.byteImageMika = byteImageMika;</span>
-<span class="fc" id="L689">    }</span>
+<span class="fc" id="L708">        this.byteImageMika = byteImageMika;</span>
+<span class="fc" id="L709">    }</span>
 
     public String getByteImageMikaContentType() {
-<span class="fc" id="L692">        return byteImageMikaContentType;</span>
+<span class="fc" id="L712">        return byteImageMikaContentType;</span>
     }
 
     public FieldTestServiceImplEntity byteImageMikaContentType(String byteImageMikaContentType) {
-<span class="fc" id="L696">        this.byteImageMikaContentType = byteImageMikaContentType;</span>
-<span class="fc" id="L697">        return this;</span>
+<span class="fc" id="L716">        this.byteImageMikaContentType = byteImageMikaContentType;</span>
+<span class="fc" id="L717">        return this;</span>
     }
 
     public void setByteImageMikaContentType(String byteImageMikaContentType) {
-<span class="fc" id="L701">        this.byteImageMikaContentType = byteImageMikaContentType;</span>
-<span class="fc" id="L702">    }</span>
+<span class="fc" id="L721">        this.byteImageMikaContentType = byteImageMikaContentType;</span>
+<span class="fc" id="L722">    }</span>
 
     public byte[] getByteImageRequiredMika() {
-<span class="fc" id="L705">        return byteImageRequiredMika;</span>
+<span class="fc" id="L725">        return byteImageRequiredMika;</span>
     }
 
     public FieldTestServiceImplEntity byteImageRequiredMika(byte[] byteImageRequiredMika) {
-<span class="fc" id="L709">        this.byteImageRequiredMika = byteImageRequiredMika;</span>
-<span class="fc" id="L710">        return this;</span>
+<span class="fc" id="L729">        this.byteImageRequiredMika = byteImageRequiredMika;</span>
+<span class="fc" id="L730">        return this;</span>
     }
 
     public void setByteImageRequiredMika(byte[] byteImageRequiredMika) {
-<span class="fc" id="L714">        this.byteImageRequiredMika = byteImageRequiredMika;</span>
-<span class="fc" id="L715">    }</span>
+<span class="fc" id="L734">        this.byteImageRequiredMika = byteImageRequiredMika;</span>
+<span class="fc" id="L735">    }</span>
 
     public String getByteImageRequiredMikaContentType() {
-<span class="fc" id="L718">        return byteImageRequiredMikaContentType;</span>
+<span class="fc" id="L738">        return byteImageRequiredMikaContentType;</span>
     }
 
     public FieldTestServiceImplEntity byteImageRequiredMikaContentType(String byteImageRequiredMikaContentType) {
-<span class="fc" id="L722">        this.byteImageRequiredMikaContentType = byteImageRequiredMikaContentType;</span>
-<span class="fc" id="L723">        return this;</span>
+<span class="fc" id="L742">        this.byteImageRequiredMikaContentType = byteImageRequiredMikaContentType;</span>
+<span class="fc" id="L743">        return this;</span>
     }
 
     public void setByteImageRequiredMikaContentType(String byteImageRequiredMikaContentType) {
-<span class="fc" id="L727">        this.byteImageRequiredMikaContentType = byteImageRequiredMikaContentType;</span>
-<span class="fc" id="L728">    }</span>
+<span class="fc" id="L747">        this.byteImageRequiredMikaContentType = byteImageRequiredMikaContentType;</span>
+<span class="fc" id="L748">    }</span>
 
     public byte[] getByteImageMinbytesMika() {
-<span class="fc" id="L731">        return byteImageMinbytesMika;</span>
+<span class="fc" id="L751">        return byteImageMinbytesMika;</span>
     }
 
     public FieldTestServiceImplEntity byteImageMinbytesMika(byte[] byteImageMinbytesMika) {
-<span class="fc" id="L735">        this.byteImageMinbytesMika = byteImageMinbytesMika;</span>
-<span class="fc" id="L736">        return this;</span>
+<span class="fc" id="L755">        this.byteImageMinbytesMika = byteImageMinbytesMika;</span>
+<span class="fc" id="L756">        return this;</span>
     }
 
     public void setByteImageMinbytesMika(byte[] byteImageMinbytesMika) {
-<span class="fc" id="L740">        this.byteImageMinbytesMika = byteImageMinbytesMika;</span>
-<span class="fc" id="L741">    }</span>
+<span class="fc" id="L760">        this.byteImageMinbytesMika = byteImageMinbytesMika;</span>
+<span class="fc" id="L761">    }</span>
 
     public String getByteImageMinbytesMikaContentType() {
-<span class="fc" id="L744">        return byteImageMinbytesMikaContentType;</span>
+<span class="fc" id="L764">        return byteImageMinbytesMikaContentType;</span>
     }
 
     public FieldTestServiceImplEntity byteImageMinbytesMikaContentType(String byteImageMinbytesMikaContentType) {
-<span class="fc" id="L748">        this.byteImageMinbytesMikaContentType = byteImageMinbytesMikaContentType;</span>
-<span class="fc" id="L749">        return this;</span>
+<span class="fc" id="L768">        this.byteImageMinbytesMikaContentType = byteImageMinbytesMikaContentType;</span>
+<span class="fc" id="L769">        return this;</span>
     }
 
     public void setByteImageMinbytesMikaContentType(String byteImageMinbytesMikaContentType) {
-<span class="fc" id="L753">        this.byteImageMinbytesMikaContentType = byteImageMinbytesMikaContentType;</span>
-<span class="fc" id="L754">    }</span>
+<span class="fc" id="L773">        this.byteImageMinbytesMikaContentType = byteImageMinbytesMikaContentType;</span>
+<span class="fc" id="L774">    }</span>
 
     public byte[] getByteImageMaxbytesMika() {
-<span class="fc" id="L757">        return byteImageMaxbytesMika;</span>
+<span class="fc" id="L777">        return byteImageMaxbytesMika;</span>
     }
 
     public FieldTestServiceImplEntity byteImageMaxbytesMika(byte[] byteImageMaxbytesMika) {
-<span class="fc" id="L761">        this.byteImageMaxbytesMika = byteImageMaxbytesMika;</span>
-<span class="fc" id="L762">        return this;</span>
+<span class="fc" id="L781">        this.byteImageMaxbytesMika = byteImageMaxbytesMika;</span>
+<span class="fc" id="L782">        return this;</span>
     }
 
     public void setByteImageMaxbytesMika(byte[] byteImageMaxbytesMika) {
-<span class="fc" id="L766">        this.byteImageMaxbytesMika = byteImageMaxbytesMika;</span>
-<span class="fc" id="L767">    }</span>
+<span class="fc" id="L786">        this.byteImageMaxbytesMika = byteImageMaxbytesMika;</span>
+<span class="fc" id="L787">    }</span>
 
     public String getByteImageMaxbytesMikaContentType() {
-<span class="fc" id="L770">        return byteImageMaxbytesMikaContentType;</span>
+<span class="fc" id="L790">        return byteImageMaxbytesMikaContentType;</span>
     }
 
     public FieldTestServiceImplEntity byteImageMaxbytesMikaContentType(String byteImageMaxbytesMikaContentType) {
-<span class="fc" id="L774">        this.byteImageMaxbytesMikaContentType = byteImageMaxbytesMikaContentType;</span>
-<span class="fc" id="L775">        return this;</span>
+<span class="fc" id="L794">        this.byteImageMaxbytesMikaContentType = byteImageMaxbytesMikaContentType;</span>
+<span class="fc" id="L795">        return this;</span>
     }
 
     public void setByteImageMaxbytesMikaContentType(String byteImageMaxbytesMikaContentType) {
-<span class="fc" id="L779">        this.byteImageMaxbytesMikaContentType = byteImageMaxbytesMikaContentType;</span>
-<span class="fc" id="L780">    }</span>
+<span class="fc" id="L799">        this.byteImageMaxbytesMikaContentType = byteImageMaxbytesMikaContentType;</span>
+<span class="fc" id="L800">    }</span>
 
     public byte[] getByteAnyMika() {
-<span class="fc" id="L783">        return byteAnyMika;</span>
+<span class="fc" id="L803">        return byteAnyMika;</span>
     }
 
     public FieldTestServiceImplEntity byteAnyMika(byte[] byteAnyMika) {
-<span class="fc" id="L787">        this.byteAnyMika = byteAnyMika;</span>
-<span class="fc" id="L788">        return this;</span>
+<span class="fc" id="L807">        this.byteAnyMika = byteAnyMika;</span>
+<span class="fc" id="L808">        return this;</span>
     }
 
     public void setByteAnyMika(byte[] byteAnyMika) {
-<span class="fc" id="L792">        this.byteAnyMika = byteAnyMika;</span>
-<span class="fc" id="L793">    }</span>
+<span class="fc" id="L812">        this.byteAnyMika = byteAnyMika;</span>
+<span class="fc" id="L813">    }</span>
 
     public String getByteAnyMikaContentType() {
-<span class="fc" id="L796">        return byteAnyMikaContentType;</span>
+<span class="fc" id="L816">        return byteAnyMikaContentType;</span>
     }
 
     public FieldTestServiceImplEntity byteAnyMikaContentType(String byteAnyMikaContentType) {
-<span class="fc" id="L800">        this.byteAnyMikaContentType = byteAnyMikaContentType;</span>
-<span class="fc" id="L801">        return this;</span>
+<span class="fc" id="L820">        this.byteAnyMikaContentType = byteAnyMikaContentType;</span>
+<span class="fc" id="L821">        return this;</span>
     }
 
     public void setByteAnyMikaContentType(String byteAnyMikaContentType) {
-<span class="fc" id="L805">        this.byteAnyMikaContentType = byteAnyMikaContentType;</span>
-<span class="fc" id="L806">    }</span>
+<span class="fc" id="L825">        this.byteAnyMikaContentType = byteAnyMikaContentType;</span>
+<span class="fc" id="L826">    }</span>
 
     public byte[] getByteAnyRequiredMika() {
-<span class="fc" id="L809">        return byteAnyRequiredMika;</span>
+<span class="fc" id="L829">        return byteAnyRequiredMika;</span>
     }
 
     public FieldTestServiceImplEntity byteAnyRequiredMika(byte[] byteAnyRequiredMika) {
-<span class="fc" id="L813">        this.byteAnyRequiredMika = byteAnyRequiredMika;</span>
-<span class="fc" id="L814">        return this;</span>
+<span class="fc" id="L833">        this.byteAnyRequiredMika = byteAnyRequiredMika;</span>
+<span class="fc" id="L834">        return this;</span>
     }
 
     public void setByteAnyRequiredMika(byte[] byteAnyRequiredMika) {
-<span class="fc" id="L818">        this.byteAnyRequiredMika = byteAnyRequiredMika;</span>
-<span class="fc" id="L819">    }</span>
+<span class="fc" id="L838">        this.byteAnyRequiredMika = byteAnyRequiredMika;</span>
+<span class="fc" id="L839">    }</span>
 
     public String getByteAnyRequiredMikaContentType() {
-<span class="fc" id="L822">        return byteAnyRequiredMikaContentType;</span>
+<span class="fc" id="L842">        return byteAnyRequiredMikaContentType;</span>
     }
 
     public FieldTestServiceImplEntity byteAnyRequiredMikaContentType(String byteAnyRequiredMikaContentType) {
-<span class="fc" id="L826">        this.byteAnyRequiredMikaContentType = byteAnyRequiredMikaContentType;</span>
-<span class="fc" id="L827">        return this;</span>
+<span class="fc" id="L846">        this.byteAnyRequiredMikaContentType = byteAnyRequiredMikaContentType;</span>
+<span class="fc" id="L847">        return this;</span>
     }
 
     public void setByteAnyRequiredMikaContentType(String byteAnyRequiredMikaContentType) {
-<span class="fc" id="L831">        this.byteAnyRequiredMikaContentType = byteAnyRequiredMikaContentType;</span>
-<span class="fc" id="L832">    }</span>
+<span class="fc" id="L851">        this.byteAnyRequiredMikaContentType = byteAnyRequiredMikaContentType;</span>
+<span class="fc" id="L852">    }</span>
 
     public byte[] getByteAnyMinbytesMika() {
-<span class="fc" id="L835">        return byteAnyMinbytesMika;</span>
+<span class="fc" id="L855">        return byteAnyMinbytesMika;</span>
     }
 
     public FieldTestServiceImplEntity byteAnyMinbytesMika(byte[] byteAnyMinbytesMika) {
-<span class="fc" id="L839">        this.byteAnyMinbytesMika = byteAnyMinbytesMika;</span>
-<span class="fc" id="L840">        return this;</span>
+<span class="fc" id="L859">        this.byteAnyMinbytesMika = byteAnyMinbytesMika;</span>
+<span class="fc" id="L860">        return this;</span>
     }
 
     public void setByteAnyMinbytesMika(byte[] byteAnyMinbytesMika) {
-<span class="fc" id="L844">        this.byteAnyMinbytesMika = byteAnyMinbytesMika;</span>
-<span class="fc" id="L845">    }</span>
+<span class="fc" id="L864">        this.byteAnyMinbytesMika = byteAnyMinbytesMika;</span>
+<span class="fc" id="L865">    }</span>
 
     public String getByteAnyMinbytesMikaContentType() {
-<span class="fc" id="L848">        return byteAnyMinbytesMikaContentType;</span>
+<span class="fc" id="L868">        return byteAnyMinbytesMikaContentType;</span>
     }
 
     public FieldTestServiceImplEntity byteAnyMinbytesMikaContentType(String byteAnyMinbytesMikaContentType) {
-<span class="fc" id="L852">        this.byteAnyMinbytesMikaContentType = byteAnyMinbytesMikaContentType;</span>
-<span class="fc" id="L853">        return this;</span>
+<span class="fc" id="L872">        this.byteAnyMinbytesMikaContentType = byteAnyMinbytesMikaContentType;</span>
+<span class="fc" id="L873">        return this;</span>
     }
 
     public void setByteAnyMinbytesMikaContentType(String byteAnyMinbytesMikaContentType) {
-<span class="fc" id="L857">        this.byteAnyMinbytesMikaContentType = byteAnyMinbytesMikaContentType;</span>
-<span class="fc" id="L858">    }</span>
+<span class="fc" id="L877">        this.byteAnyMinbytesMikaContentType = byteAnyMinbytesMikaContentType;</span>
+<span class="fc" id="L878">    }</span>
 
     public byte[] getByteAnyMaxbytesMika() {
-<span class="fc" id="L861">        return byteAnyMaxbytesMika;</span>
+<span class="fc" id="L881">        return byteAnyMaxbytesMika;</span>
     }
 
     public FieldTestServiceImplEntity byteAnyMaxbytesMika(byte[] byteAnyMaxbytesMika) {
-<span class="fc" id="L865">        this.byteAnyMaxbytesMika = byteAnyMaxbytesMika;</span>
-<span class="fc" id="L866">        return this;</span>
+<span class="fc" id="L885">        this.byteAnyMaxbytesMika = byteAnyMaxbytesMika;</span>
+<span class="fc" id="L886">        return this;</span>
     }
 
     public void setByteAnyMaxbytesMika(byte[] byteAnyMaxbytesMika) {
-<span class="fc" id="L870">        this.byteAnyMaxbytesMika = byteAnyMaxbytesMika;</span>
-<span class="fc" id="L871">    }</span>
+<span class="fc" id="L890">        this.byteAnyMaxbytesMika = byteAnyMaxbytesMika;</span>
+<span class="fc" id="L891">    }</span>
 
     public String getByteAnyMaxbytesMikaContentType() {
-<span class="fc" id="L874">        return byteAnyMaxbytesMikaContentType;</span>
+<span class="fc" id="L894">        return byteAnyMaxbytesMikaContentType;</span>
     }
 
     public FieldTestServiceImplEntity byteAnyMaxbytesMikaContentType(String byteAnyMaxbytesMikaContentType) {
-<span class="fc" id="L878">        this.byteAnyMaxbytesMikaContentType = byteAnyMaxbytesMikaContentType;</span>
-<span class="fc" id="L879">        return this;</span>
+<span class="fc" id="L898">        this.byteAnyMaxbytesMikaContentType = byteAnyMaxbytesMikaContentType;</span>
+<span class="fc" id="L899">        return this;</span>
     }
 
     public void setByteAnyMaxbytesMikaContentType(String byteAnyMaxbytesMikaContentType) {
-<span class="fc" id="L883">        this.byteAnyMaxbytesMikaContentType = byteAnyMaxbytesMikaContentType;</span>
-<span class="fc" id="L884">    }</span>
+<span class="fc" id="L903">        this.byteAnyMaxbytesMikaContentType = byteAnyMaxbytesMikaContentType;</span>
+<span class="fc" id="L904">    }</span>
 
     public String getByteTextMika() {
-<span class="fc" id="L887">        return byteTextMika;</span>
+<span class="fc" id="L907">        return byteTextMika;</span>
     }
 
     public FieldTestServiceImplEntity byteTextMika(String byteTextMika) {
-<span class="fc" id="L891">        this.byteTextMika = byteTextMika;</span>
-<span class="fc" id="L892">        return this;</span>
+<span class="fc" id="L911">        this.byteTextMika = byteTextMika;</span>
+<span class="fc" id="L912">        return this;</span>
     }
 
     public void setByteTextMika(String byteTextMika) {
-<span class="fc" id="L896">        this.byteTextMika = byteTextMika;</span>
-<span class="fc" id="L897">    }</span>
+<span class="fc" id="L916">        this.byteTextMika = byteTextMika;</span>
+<span class="fc" id="L917">    }</span>
 
     public String getByteTextRequiredMika() {
-<span class="fc" id="L900">        return byteTextRequiredMika;</span>
+<span class="fc" id="L920">        return byteTextRequiredMika;</span>
     }
 
     public FieldTestServiceImplEntity byteTextRequiredMika(String byteTextRequiredMika) {
-<span class="fc" id="L904">        this.byteTextRequiredMika = byteTextRequiredMika;</span>
-<span class="fc" id="L905">        return this;</span>
+<span class="fc" id="L924">        this.byteTextRequiredMika = byteTextRequiredMika;</span>
+<span class="fc" id="L925">        return this;</span>
     }
 
     public void setByteTextRequiredMika(String byteTextRequiredMika) {
-<span class="fc" id="L909">        this.byteTextRequiredMika = byteTextRequiredMika;</span>
-<span class="fc" id="L910">    }</span>
+<span class="fc" id="L929">        this.byteTextRequiredMika = byteTextRequiredMika;</span>
+<span class="fc" id="L930">    }</span>
 
     public String getByteTextMinbytesMika() {
-<span class="fc" id="L913">        return byteTextMinbytesMika;</span>
+<span class="fc" id="L933">        return byteTextMinbytesMika;</span>
     }
 
     public FieldTestServiceImplEntity byteTextMinbytesMika(String byteTextMinbytesMika) {
-<span class="fc" id="L917">        this.byteTextMinbytesMika = byteTextMinbytesMika;</span>
-<span class="fc" id="L918">        return this;</span>
+<span class="fc" id="L937">        this.byteTextMinbytesMika = byteTextMinbytesMika;</span>
+<span class="fc" id="L938">        return this;</span>
     }
 
     public void setByteTextMinbytesMika(String byteTextMinbytesMika) {
-<span class="fc" id="L922">        this.byteTextMinbytesMika = byteTextMinbytesMika;</span>
-<span class="fc" id="L923">    }</span>
+<span class="fc" id="L942">        this.byteTextMinbytesMika = byteTextMinbytesMika;</span>
+<span class="fc" id="L943">    }</span>
 
     public String getByteTextMaxbytesMika() {
-<span class="fc" id="L926">        return byteTextMaxbytesMika;</span>
+<span class="fc" id="L946">        return byteTextMaxbytesMika;</span>
     }
 
     public FieldTestServiceImplEntity byteTextMaxbytesMika(String byteTextMaxbytesMika) {
-<span class="fc" id="L930">        this.byteTextMaxbytesMika = byteTextMaxbytesMika;</span>
-<span class="fc" id="L931">        return this;</span>
+<span class="fc" id="L950">        this.byteTextMaxbytesMika = byteTextMaxbytesMika;</span>
+<span class="fc" id="L951">        return this;</span>
     }
 
     public void setByteTextMaxbytesMika(String byteTextMaxbytesMika) {
-<span class="fc" id="L935">        this.byteTextMaxbytesMika = byteTextMaxbytesMika;</span>
-<span class="fc" id="L936">    }</span>
+<span class="fc" id="L955">        this.byteTextMaxbytesMika = byteTextMaxbytesMika;</span>
+<span class="fc" id="L956">    }</span>
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
     public boolean equals(Object o) {
-<span class="fc bfc" id="L941" title="All 2 branches covered.">        if (this == o) {</span>
-<span class="fc" id="L942">            return true;</span>
+<span class="fc bfc" id="L961" title="All 2 branches covered.">        if (this == o) {</span>
+<span class="fc" id="L962">            return true;</span>
         }
-<span class="fc bfc" id="L944" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
-<span class="fc" id="L945">            return false;</span>
+<span class="fc bfc" id="L964" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L965">            return false;</span>
         }
-<span class="fc" id="L947">        FieldTestServiceImplEntity fieldTestServiceImplEntity = (FieldTestServiceImplEntity) o;</span>
-<span class="fc bfc" id="L948" title="All 4 branches covered.">        if (fieldTestServiceImplEntity.getId() == null || getId() == null) {</span>
-<span class="fc" id="L949">            return false;</span>
+<span class="fc" id="L967">        FieldTestServiceImplEntity fieldTestServiceImplEntity = (FieldTestServiceImplEntity) o;</span>
+<span class="fc bfc" id="L968" title="All 4 branches covered.">        if (fieldTestServiceImplEntity.getId() == null || getId() == null) {</span>
+<span class="fc" id="L969">            return false;</span>
         }
-<span class="fc" id="L951">        return Objects.equals(getId(), fieldTestServiceImplEntity.getId());</span>
+<span class="fc" id="L971">        return Objects.equals(getId(), fieldTestServiceImplEntity.getId());</span>
     }
 
     @Override
     public int hashCode() {
-<span class="fc" id="L956">        return Objects.hashCode(getId());</span>
+<span class="fc" id="L976">        return Objects.hashCode(getId());</span>
     }
 
     @Override
     public String toString() {
-<span class="fc" id="L961">        return &quot;FieldTestServiceImplEntity{&quot; +</span>
-<span class="fc" id="L962">            &quot;id=&quot; + getId() +</span>
-<span class="fc" id="L963">            &quot;, stringMika='&quot; + getStringMika() + &quot;'&quot; +</span>
-<span class="fc" id="L964">            &quot;, stringRequiredMika='&quot; + getStringRequiredMika() + &quot;'&quot; +</span>
-<span class="fc" id="L965">            &quot;, stringMinlengthMika='&quot; + getStringMinlengthMika() + &quot;'&quot; +</span>
-<span class="fc" id="L966">            &quot;, stringMaxlengthMika='&quot; + getStringMaxlengthMika() + &quot;'&quot; +</span>
-<span class="fc" id="L967">            &quot;, stringPatternMika='&quot; + getStringPatternMika() + &quot;'&quot; +</span>
-<span class="fc" id="L968">            &quot;, integerMika=&quot; + getIntegerMika() +</span>
-<span class="fc" id="L969">            &quot;, integerRequiredMika=&quot; + getIntegerRequiredMika() +</span>
-<span class="fc" id="L970">            &quot;, integerMinMika=&quot; + getIntegerMinMika() +</span>
-<span class="fc" id="L971">            &quot;, integerMaxMika=&quot; + getIntegerMaxMika() +</span>
-<span class="fc" id="L972">            &quot;, longMika=&quot; + getLongMika() +</span>
-<span class="fc" id="L973">            &quot;, longRequiredMika=&quot; + getLongRequiredMika() +</span>
-<span class="fc" id="L974">            &quot;, longMinMika=&quot; + getLongMinMika() +</span>
-<span class="fc" id="L975">            &quot;, longMaxMika=&quot; + getLongMaxMika() +</span>
-<span class="fc" id="L976">            &quot;, floatMika=&quot; + getFloatMika() +</span>
-<span class="fc" id="L977">            &quot;, floatRequiredMika=&quot; + getFloatRequiredMika() +</span>
-<span class="fc" id="L978">            &quot;, floatMinMika=&quot; + getFloatMinMika() +</span>
-<span class="fc" id="L979">            &quot;, floatMaxMika=&quot; + getFloatMaxMika() +</span>
-<span class="fc" id="L980">            &quot;, doubleRequiredMika=&quot; + getDoubleRequiredMika() +</span>
-<span class="fc" id="L981">            &quot;, doubleMinMika=&quot; + getDoubleMinMika() +</span>
-<span class="fc" id="L982">            &quot;, doubleMaxMika=&quot; + getDoubleMaxMika() +</span>
-<span class="fc" id="L983">            &quot;, bigDecimalRequiredMika=&quot; + getBigDecimalRequiredMika() +</span>
-<span class="fc" id="L984">            &quot;, bigDecimalMinMika=&quot; + getBigDecimalMinMika() +</span>
-<span class="fc" id="L985">            &quot;, bigDecimalMaxMika=&quot; + getBigDecimalMaxMika() +</span>
-<span class="fc" id="L986">            &quot;, localDateMika='&quot; + getLocalDateMika() + &quot;'&quot; +</span>
-<span class="fc" id="L987">            &quot;, localDateRequiredMika='&quot; + getLocalDateRequiredMika() + &quot;'&quot; +</span>
-<span class="fc" id="L988">            &quot;, instantMika='&quot; + getInstantMika() + &quot;'&quot; +</span>
-<span class="fc" id="L989">            &quot;, instanteRequiredMika='&quot; + getInstanteRequiredMika() + &quot;'&quot; +</span>
-<span class="fc" id="L990">            &quot;, zonedDateTimeMika='&quot; + getZonedDateTimeMika() + &quot;'&quot; +</span>
-<span class="fc" id="L991">            &quot;, zonedDateTimeRequiredMika='&quot; + getZonedDateTimeRequiredMika() + &quot;'&quot; +</span>
-<span class="fc" id="L992">            &quot;, booleanMika='&quot; + isBooleanMika() + &quot;'&quot; +</span>
-<span class="fc" id="L993">            &quot;, booleanRequiredMika='&quot; + isBooleanRequiredMika() + &quot;'&quot; +</span>
-<span class="fc" id="L994">            &quot;, enumMika='&quot; + getEnumMika() + &quot;'&quot; +</span>
-<span class="fc" id="L995">            &quot;, enumRequiredMika='&quot; + getEnumRequiredMika() + &quot;'&quot; +</span>
-<span class="fc" id="L996">            &quot;, byteImageMika='&quot; + getByteImageMika() + &quot;'&quot; +</span>
-<span class="fc" id="L997">            &quot;, byteImageMikaContentType='&quot; + getByteImageMikaContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L998">            &quot;, byteImageRequiredMika='&quot; + getByteImageRequiredMika() + &quot;'&quot; +</span>
-<span class="fc" id="L999">            &quot;, byteImageRequiredMikaContentType='&quot; + getByteImageRequiredMikaContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1000">            &quot;, byteImageMinbytesMika='&quot; + getByteImageMinbytesMika() + &quot;'&quot; +</span>
-<span class="fc" id="L1001">            &quot;, byteImageMinbytesMikaContentType='&quot; + getByteImageMinbytesMikaContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1002">            &quot;, byteImageMaxbytesMika='&quot; + getByteImageMaxbytesMika() + &quot;'&quot; +</span>
-<span class="fc" id="L1003">            &quot;, byteImageMaxbytesMikaContentType='&quot; + getByteImageMaxbytesMikaContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1004">            &quot;, byteAnyMika='&quot; + getByteAnyMika() + &quot;'&quot; +</span>
-<span class="fc" id="L1005">            &quot;, byteAnyMikaContentType='&quot; + getByteAnyMikaContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1006">            &quot;, byteAnyRequiredMika='&quot; + getByteAnyRequiredMika() + &quot;'&quot; +</span>
-<span class="fc" id="L1007">            &quot;, byteAnyRequiredMikaContentType='&quot; + getByteAnyRequiredMikaContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1008">            &quot;, byteAnyMinbytesMika='&quot; + getByteAnyMinbytesMika() + &quot;'&quot; +</span>
-<span class="fc" id="L1009">            &quot;, byteAnyMinbytesMikaContentType='&quot; + getByteAnyMinbytesMikaContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1010">            &quot;, byteAnyMaxbytesMika='&quot; + getByteAnyMaxbytesMika() + &quot;'&quot; +</span>
-<span class="fc" id="L1011">            &quot;, byteAnyMaxbytesMikaContentType='&quot; + getByteAnyMaxbytesMikaContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1012">            &quot;, byteTextMika='&quot; + getByteTextMika() + &quot;'&quot; +</span>
-<span class="fc" id="L1013">            &quot;, byteTextRequiredMika='&quot; + getByteTextRequiredMika() + &quot;'&quot; +</span>
-<span class="fc" id="L1014">            &quot;, byteTextMinbytesMika='&quot; + getByteTextMinbytesMika() + &quot;'&quot; +</span>
-<span class="fc" id="L1015">            &quot;, byteTextMaxbytesMika='&quot; + getByteTextMaxbytesMika() + &quot;'&quot; +</span>
+<span class="fc" id="L981">        return &quot;FieldTestServiceImplEntity{&quot; +</span>
+<span class="fc" id="L982">            &quot;id=&quot; + getId() +</span>
+<span class="fc" id="L983">            &quot;, stringMika='&quot; + getStringMika() + &quot;'&quot; +</span>
+<span class="fc" id="L984">            &quot;, stringRequiredMika='&quot; + getStringRequiredMika() + &quot;'&quot; +</span>
+<span class="fc" id="L985">            &quot;, stringMinlengthMika='&quot; + getStringMinlengthMika() + &quot;'&quot; +</span>
+<span class="fc" id="L986">            &quot;, stringMaxlengthMika='&quot; + getStringMaxlengthMika() + &quot;'&quot; +</span>
+<span class="fc" id="L987">            &quot;, stringPatternMika='&quot; + getStringPatternMika() + &quot;'&quot; +</span>
+<span class="fc" id="L988">            &quot;, integerMika=&quot; + getIntegerMika() +</span>
+<span class="fc" id="L989">            &quot;, integerRequiredMika=&quot; + getIntegerRequiredMika() +</span>
+<span class="fc" id="L990">            &quot;, integerMinMika=&quot; + getIntegerMinMika() +</span>
+<span class="fc" id="L991">            &quot;, integerMaxMika=&quot; + getIntegerMaxMika() +</span>
+<span class="fc" id="L992">            &quot;, longMika=&quot; + getLongMika() +</span>
+<span class="fc" id="L993">            &quot;, longRequiredMika=&quot; + getLongRequiredMika() +</span>
+<span class="fc" id="L994">            &quot;, longMinMika=&quot; + getLongMinMika() +</span>
+<span class="fc" id="L995">            &quot;, longMaxMika=&quot; + getLongMaxMika() +</span>
+<span class="fc" id="L996">            &quot;, floatMika=&quot; + getFloatMika() +</span>
+<span class="fc" id="L997">            &quot;, floatRequiredMika=&quot; + getFloatRequiredMika() +</span>
+<span class="fc" id="L998">            &quot;, floatMinMika=&quot; + getFloatMinMika() +</span>
+<span class="fc" id="L999">            &quot;, floatMaxMika=&quot; + getFloatMaxMika() +</span>
+<span class="fc" id="L1000">            &quot;, doubleRequiredMika=&quot; + getDoubleRequiredMika() +</span>
+<span class="fc" id="L1001">            &quot;, doubleMinMika=&quot; + getDoubleMinMika() +</span>
+<span class="fc" id="L1002">            &quot;, doubleMaxMika=&quot; + getDoubleMaxMika() +</span>
+<span class="fc" id="L1003">            &quot;, bigDecimalRequiredMika=&quot; + getBigDecimalRequiredMika() +</span>
+<span class="fc" id="L1004">            &quot;, bigDecimalMinMika=&quot; + getBigDecimalMinMika() +</span>
+<span class="fc" id="L1005">            &quot;, bigDecimalMaxMika=&quot; + getBigDecimalMaxMika() +</span>
+<span class="fc" id="L1006">            &quot;, localDateMika='&quot; + getLocalDateMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1007">            &quot;, localDateRequiredMika='&quot; + getLocalDateRequiredMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1008">            &quot;, instantMika='&quot; + getInstantMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1009">            &quot;, instanteRequiredMika='&quot; + getInstanteRequiredMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1010">            &quot;, zonedDateTimeMika='&quot; + getZonedDateTimeMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1011">            &quot;, zonedDateTimeRequiredMika='&quot; + getZonedDateTimeRequiredMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1012">            &quot;, booleanMika='&quot; + isBooleanMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1013">            &quot;, booleanRequiredMika='&quot; + isBooleanRequiredMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1014">            &quot;, enumMika='&quot; + getEnumMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1015">            &quot;, enumRequiredMika='&quot; + getEnumRequiredMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1016">            &quot;, byteImageMika='&quot; + getByteImageMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1017">            &quot;, byteImageMikaContentType='&quot; + getByteImageMikaContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1018">            &quot;, byteImageRequiredMika='&quot; + getByteImageRequiredMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1019">            &quot;, byteImageRequiredMikaContentType='&quot; + getByteImageRequiredMikaContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1020">            &quot;, byteImageMinbytesMika='&quot; + getByteImageMinbytesMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1021">            &quot;, byteImageMinbytesMikaContentType='&quot; + getByteImageMinbytesMikaContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1022">            &quot;, byteImageMaxbytesMika='&quot; + getByteImageMaxbytesMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1023">            &quot;, byteImageMaxbytesMikaContentType='&quot; + getByteImageMaxbytesMikaContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1024">            &quot;, byteAnyMika='&quot; + getByteAnyMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1025">            &quot;, byteAnyMikaContentType='&quot; + getByteAnyMikaContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1026">            &quot;, byteAnyRequiredMika='&quot; + getByteAnyRequiredMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1027">            &quot;, byteAnyRequiredMikaContentType='&quot; + getByteAnyRequiredMikaContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1028">            &quot;, byteAnyMinbytesMika='&quot; + getByteAnyMinbytesMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1029">            &quot;, byteAnyMinbytesMikaContentType='&quot; + getByteAnyMinbytesMikaContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1030">            &quot;, byteAnyMaxbytesMika='&quot; + getByteAnyMaxbytesMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1031">            &quot;, byteAnyMaxbytesMikaContentType='&quot; + getByteAnyMaxbytesMikaContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1032">            &quot;, byteTextMika='&quot; + getByteTextMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1033">            &quot;, byteTextRequiredMika='&quot; + getByteTextRequiredMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1034">            &quot;, byteTextMinbytesMika='&quot; + getByteTextMinbytesMika() + &quot;'&quot; +</span>
+<span class="fc" id="L1035">            &quot;, byteTextMaxbytesMika='&quot; + getByteTextMaxbytesMika() + &quot;'&quot; +</span>
             &quot;}&quot;;
     }
 }

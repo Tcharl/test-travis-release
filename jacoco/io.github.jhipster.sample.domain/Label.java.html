@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Label.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.domain</a> &gt; <span class="el_source">Label.java</span></div><h1>Label.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.domain;
 
+/*-
+ * #%L
+ * Jhipster Sample Application
+ * %%
+ * Copyright (C) 2017 Osgiliath
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.Objects;
-
 
 /**
  * A Label.
@@ -18,7 +38,7 @@ import java.util.Objects;
 @Entity
 @Table(name = &quot;label&quot;)
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-<span class="fc" id="L21">public class Label implements Serializable {</span>
+<span class="fc" id="L41">public class Label implements Serializable {</span>
 
     private static final long serialVersionUID = 1L;
 
@@ -31,84 +51,84 @@ import java.util.Objects;
     @Column(name = &quot;label_name&quot;, nullable = false)
     private String labelName;
 
-<span class="fc" id="L34">    @ManyToMany(mappedBy = &quot;labels&quot;)</span>
+<span class="fc" id="L54">    @ManyToMany(mappedBy = &quot;labels&quot;)</span>
     @JsonIgnore
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set&lt;Operation&gt; operations = new HashSet&lt;&gt;();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
-<span class="fc" id="L41">        return id;</span>
+<span class="fc" id="L61">        return id;</span>
     }
 
     public void setId(Long id) {
-<span class="fc" id="L45">        this.id = id;</span>
-<span class="fc" id="L46">    }</span>
+<span class="fc" id="L65">        this.id = id;</span>
+<span class="fc" id="L66">    }</span>
 
     public String getLabelName() {
-<span class="fc" id="L49">        return labelName;</span>
+<span class="fc" id="L69">        return labelName;</span>
     }
 
     public Label labelName(String labelName) {
-<span class="fc" id="L53">        this.labelName = labelName;</span>
-<span class="fc" id="L54">        return this;</span>
+<span class="fc" id="L73">        this.labelName = labelName;</span>
+<span class="fc" id="L74">        return this;</span>
     }
 
     public void setLabelName(String labelName) {
-<span class="fc" id="L58">        this.labelName = labelName;</span>
-<span class="fc" id="L59">    }</span>
+<span class="fc" id="L78">        this.labelName = labelName;</span>
+<span class="fc" id="L79">    }</span>
 
     public Set&lt;Operation&gt; getOperations() {
-<span class="nc" id="L62">        return operations;</span>
+<span class="nc" id="L82">        return operations;</span>
     }
 
     public Label operations(Set&lt;Operation&gt; operations) {
-<span class="nc" id="L66">        this.operations = operations;</span>
-<span class="nc" id="L67">        return this;</span>
+<span class="nc" id="L86">        this.operations = operations;</span>
+<span class="nc" id="L87">        return this;</span>
     }
 
     public Label addOperation(Operation operation) {
-<span class="nc" id="L71">        this.operations.add(operation);</span>
-<span class="nc" id="L72">        operation.getLabels().add(this);</span>
-<span class="nc" id="L73">        return this;</span>
+<span class="nc" id="L91">        this.operations.add(operation);</span>
+<span class="nc" id="L92">        operation.getLabels().add(this);</span>
+<span class="nc" id="L93">        return this;</span>
     }
 
     public Label removeOperation(Operation operation) {
-<span class="nc" id="L77">        this.operations.remove(operation);</span>
-<span class="nc" id="L78">        operation.getLabels().remove(this);</span>
-<span class="nc" id="L79">        return this;</span>
+<span class="nc" id="L97">        this.operations.remove(operation);</span>
+<span class="nc" id="L98">        operation.getLabels().remove(this);</span>
+<span class="nc" id="L99">        return this;</span>
     }
 
     public void setOperations(Set&lt;Operation&gt; operations) {
-<span class="nc" id="L83">        this.operations = operations;</span>
-<span class="nc" id="L84">    }</span>
+<span class="nc" id="L103">        this.operations = operations;</span>
+<span class="nc" id="L104">    }</span>
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
     public boolean equals(Object o) {
-<span class="fc bfc" id="L89" title="All 2 branches covered.">        if (this == o) {</span>
-<span class="fc" id="L90">            return true;</span>
+<span class="fc bfc" id="L109" title="All 2 branches covered.">        if (this == o) {</span>
+<span class="fc" id="L110">            return true;</span>
         }
-<span class="fc bfc" id="L92" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
-<span class="fc" id="L93">            return false;</span>
+<span class="fc bfc" id="L112" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L113">            return false;</span>
         }
-<span class="fc" id="L95">        Label label = (Label) o;</span>
-<span class="fc bfc" id="L96" title="All 4 branches covered.">        if (label.getId() == null || getId() == null) {</span>
-<span class="fc" id="L97">            return false;</span>
+<span class="fc" id="L115">        Label label = (Label) o;</span>
+<span class="fc bfc" id="L116" title="All 4 branches covered.">        if (label.getId() == null || getId() == null) {</span>
+<span class="fc" id="L117">            return false;</span>
         }
-<span class="fc" id="L99">        return Objects.equals(getId(), label.getId());</span>
+<span class="fc" id="L119">        return Objects.equals(getId(), label.getId());</span>
     }
 
     @Override
     public int hashCode() {
-<span class="fc" id="L104">        return Objects.hashCode(getId());</span>
+<span class="fc" id="L124">        return Objects.hashCode(getId());</span>
     }
 
     @Override
     public String toString() {
-<span class="fc" id="L109">        return &quot;Label{&quot; +</span>
-<span class="fc" id="L110">            &quot;id=&quot; + getId() +</span>
-<span class="fc" id="L111">            &quot;, labelName='&quot; + getLabelName() + &quot;'&quot; +</span>
+<span class="fc" id="L129">        return &quot;Label{&quot; +</span>
+<span class="fc" id="L130">            &quot;id=&quot; + getId() +</span>
+<span class="fc" id="L131">            &quot;, labelName='&quot; + getLabelName() + &quot;'&quot; +</span>
             &quot;}&quot;;
     }
 }

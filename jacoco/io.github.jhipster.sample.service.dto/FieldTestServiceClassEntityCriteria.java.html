@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FieldTestServiceClassEntityCriteria.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.service.dto</a> &gt; <span class="el_source">FieldTestServiceClassEntityCriteria.java</span></div><h1>FieldTestServiceClassEntityCriteria.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.service.dto;
 
+/*-
+ * #%L
+ * Jhipster Sample Application
+ * %%
+ * Copyright (C) 2017 Osgiliath
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
 import java.io.Serializable;
 import io.github.jhipster.sample.domain.enumeration.EnumFieldClass;
 import io.github.jhipster.sample.domain.enumeration.EnumRequiredFieldClass;
@@ -28,13 +48,13 @@ public class FieldTestServiceClassEntityCriteria implements Serializable {
     /**
      * Class for filtering EnumFieldClass
      */
-<span class="fc" id="L31">    public static class EnumFieldClassFilter extends Filter&lt;EnumFieldClass&gt; {</span>
+<span class="fc" id="L51">    public static class EnumFieldClassFilter extends Filter&lt;EnumFieldClass&gt; {</span>
     }
 
     /**
      * Class for filtering EnumRequiredFieldClass
      */
-<span class="fc" id="L37">    public static class EnumRequiredFieldClassFilter extends Filter&lt;EnumRequiredFieldClass&gt; {</span>
+<span class="fc" id="L57">    public static class EnumRequiredFieldClassFilter extends Filter&lt;EnumRequiredFieldClass&gt; {</span>
     }
 
     private static final long serialVersionUID = 1L;
@@ -108,284 +128,284 @@ public class FieldTestServiceClassEntityCriteria implements Serializable {
 
     private EnumRequiredFieldClassFilter enumRequiredBob;
 
-<span class="fc" id="L111">    public FieldTestServiceClassEntityCriteria() {</span>
-<span class="fc" id="L112">    }</span>
+<span class="fc" id="L131">    public FieldTestServiceClassEntityCriteria() {</span>
+<span class="fc" id="L132">    }</span>
 
     public LongFilter getId() {
-<span class="fc" id="L115">        return id;</span>
+<span class="fc" id="L135">        return id;</span>
     }
 
     public void setId(LongFilter id) {
-<span class="nc" id="L119">        this.id = id;</span>
-<span class="nc" id="L120">    }</span>
+<span class="nc" id="L139">        this.id = id;</span>
+<span class="nc" id="L140">    }</span>
 
     public StringFilter getStringBob() {
-<span class="fc" id="L123">        return stringBob;</span>
+<span class="fc" id="L143">        return stringBob;</span>
     }
 
     public void setStringBob(StringFilter stringBob) {
-<span class="fc" id="L127">        this.stringBob = stringBob;</span>
-<span class="fc" id="L128">    }</span>
+<span class="fc" id="L147">        this.stringBob = stringBob;</span>
+<span class="fc" id="L148">    }</span>
 
     public StringFilter getStringRequiredBob() {
-<span class="fc" id="L131">        return stringRequiredBob;</span>
+<span class="fc" id="L151">        return stringRequiredBob;</span>
     }
 
     public void setStringRequiredBob(StringFilter stringRequiredBob) {
-<span class="fc" id="L135">        this.stringRequiredBob = stringRequiredBob;</span>
-<span class="fc" id="L136">    }</span>
+<span class="fc" id="L155">        this.stringRequiredBob = stringRequiredBob;</span>
+<span class="fc" id="L156">    }</span>
 
     public StringFilter getStringMinlengthBob() {
-<span class="fc" id="L139">        return stringMinlengthBob;</span>
+<span class="fc" id="L159">        return stringMinlengthBob;</span>
     }
 
     public void setStringMinlengthBob(StringFilter stringMinlengthBob) {
-<span class="fc" id="L143">        this.stringMinlengthBob = stringMinlengthBob;</span>
-<span class="fc" id="L144">    }</span>
+<span class="fc" id="L163">        this.stringMinlengthBob = stringMinlengthBob;</span>
+<span class="fc" id="L164">    }</span>
 
     public StringFilter getStringMaxlengthBob() {
-<span class="fc" id="L147">        return stringMaxlengthBob;</span>
+<span class="fc" id="L167">        return stringMaxlengthBob;</span>
     }
 
     public void setStringMaxlengthBob(StringFilter stringMaxlengthBob) {
-<span class="fc" id="L151">        this.stringMaxlengthBob = stringMaxlengthBob;</span>
-<span class="fc" id="L152">    }</span>
+<span class="fc" id="L171">        this.stringMaxlengthBob = stringMaxlengthBob;</span>
+<span class="fc" id="L172">    }</span>
 
     public StringFilter getStringPatternBob() {
-<span class="fc" id="L155">        return stringPatternBob;</span>
+<span class="fc" id="L175">        return stringPatternBob;</span>
     }
 
     public void setStringPatternBob(StringFilter stringPatternBob) {
-<span class="fc" id="L159">        this.stringPatternBob = stringPatternBob;</span>
-<span class="fc" id="L160">    }</span>
+<span class="fc" id="L179">        this.stringPatternBob = stringPatternBob;</span>
+<span class="fc" id="L180">    }</span>
 
     public IntegerFilter getIntegerBob() {
-<span class="fc" id="L163">        return integerBob;</span>
+<span class="fc" id="L183">        return integerBob;</span>
     }
 
     public void setIntegerBob(IntegerFilter integerBob) {
-<span class="fc" id="L167">        this.integerBob = integerBob;</span>
-<span class="fc" id="L168">    }</span>
+<span class="fc" id="L187">        this.integerBob = integerBob;</span>
+<span class="fc" id="L188">    }</span>
 
     public IntegerFilter getIntegerRequiredBob() {
-<span class="fc" id="L171">        return integerRequiredBob;</span>
+<span class="fc" id="L191">        return integerRequiredBob;</span>
     }
 
     public void setIntegerRequiredBob(IntegerFilter integerRequiredBob) {
-<span class="fc" id="L175">        this.integerRequiredBob = integerRequiredBob;</span>
-<span class="fc" id="L176">    }</span>
+<span class="fc" id="L195">        this.integerRequiredBob = integerRequiredBob;</span>
+<span class="fc" id="L196">    }</span>
 
     public IntegerFilter getIntegerMinBob() {
-<span class="fc" id="L179">        return integerMinBob;</span>
+<span class="fc" id="L199">        return integerMinBob;</span>
     }
 
     public void setIntegerMinBob(IntegerFilter integerMinBob) {
-<span class="fc" id="L183">        this.integerMinBob = integerMinBob;</span>
-<span class="fc" id="L184">    }</span>
+<span class="fc" id="L203">        this.integerMinBob = integerMinBob;</span>
+<span class="fc" id="L204">    }</span>
 
     public IntegerFilter getIntegerMaxBob() {
-<span class="fc" id="L187">        return integerMaxBob;</span>
+<span class="fc" id="L207">        return integerMaxBob;</span>
     }
 
     public void setIntegerMaxBob(IntegerFilter integerMaxBob) {
-<span class="fc" id="L191">        this.integerMaxBob = integerMaxBob;</span>
-<span class="fc" id="L192">    }</span>
+<span class="fc" id="L211">        this.integerMaxBob = integerMaxBob;</span>
+<span class="fc" id="L212">    }</span>
 
     public LongFilter getLongBob() {
-<span class="fc" id="L195">        return longBob;</span>
+<span class="fc" id="L215">        return longBob;</span>
     }
 
     public void setLongBob(LongFilter longBob) {
-<span class="fc" id="L199">        this.longBob = longBob;</span>
-<span class="fc" id="L200">    }</span>
+<span class="fc" id="L219">        this.longBob = longBob;</span>
+<span class="fc" id="L220">    }</span>
 
     public LongFilter getLongRequiredBob() {
-<span class="fc" id="L203">        return longRequiredBob;</span>
+<span class="fc" id="L223">        return longRequiredBob;</span>
     }
 
     public void setLongRequiredBob(LongFilter longRequiredBob) {
-<span class="fc" id="L207">        this.longRequiredBob = longRequiredBob;</span>
-<span class="fc" id="L208">    }</span>
+<span class="fc" id="L227">        this.longRequiredBob = longRequiredBob;</span>
+<span class="fc" id="L228">    }</span>
 
     public LongFilter getLongMinBob() {
-<span class="fc" id="L211">        return longMinBob;</span>
+<span class="fc" id="L231">        return longMinBob;</span>
     }
 
     public void setLongMinBob(LongFilter longMinBob) {
-<span class="fc" id="L215">        this.longMinBob = longMinBob;</span>
-<span class="fc" id="L216">    }</span>
+<span class="fc" id="L235">        this.longMinBob = longMinBob;</span>
+<span class="fc" id="L236">    }</span>
 
     public LongFilter getLongMaxBob() {
-<span class="fc" id="L219">        return longMaxBob;</span>
+<span class="fc" id="L239">        return longMaxBob;</span>
     }
 
     public void setLongMaxBob(LongFilter longMaxBob) {
-<span class="fc" id="L223">        this.longMaxBob = longMaxBob;</span>
-<span class="fc" id="L224">    }</span>
+<span class="fc" id="L243">        this.longMaxBob = longMaxBob;</span>
+<span class="fc" id="L244">    }</span>
 
     public FloatFilter getFloatBob() {
-<span class="fc" id="L227">        return floatBob;</span>
+<span class="fc" id="L247">        return floatBob;</span>
     }
 
     public void setFloatBob(FloatFilter floatBob) {
-<span class="fc" id="L231">        this.floatBob = floatBob;</span>
-<span class="fc" id="L232">    }</span>
+<span class="fc" id="L251">        this.floatBob = floatBob;</span>
+<span class="fc" id="L252">    }</span>
 
     public FloatFilter getFloatRequiredBob() {
-<span class="fc" id="L235">        return floatRequiredBob;</span>
+<span class="fc" id="L255">        return floatRequiredBob;</span>
     }
 
     public void setFloatRequiredBob(FloatFilter floatRequiredBob) {
-<span class="fc" id="L239">        this.floatRequiredBob = floatRequiredBob;</span>
-<span class="fc" id="L240">    }</span>
+<span class="fc" id="L259">        this.floatRequiredBob = floatRequiredBob;</span>
+<span class="fc" id="L260">    }</span>
 
     public FloatFilter getFloatMinBob() {
-<span class="fc" id="L243">        return floatMinBob;</span>
+<span class="fc" id="L263">        return floatMinBob;</span>
     }
 
     public void setFloatMinBob(FloatFilter floatMinBob) {
-<span class="fc" id="L247">        this.floatMinBob = floatMinBob;</span>
-<span class="fc" id="L248">    }</span>
+<span class="fc" id="L267">        this.floatMinBob = floatMinBob;</span>
+<span class="fc" id="L268">    }</span>
 
     public FloatFilter getFloatMaxBob() {
-<span class="fc" id="L251">        return floatMaxBob;</span>
+<span class="fc" id="L271">        return floatMaxBob;</span>
     }
 
     public void setFloatMaxBob(FloatFilter floatMaxBob) {
-<span class="fc" id="L255">        this.floatMaxBob = floatMaxBob;</span>
-<span class="fc" id="L256">    }</span>
+<span class="fc" id="L275">        this.floatMaxBob = floatMaxBob;</span>
+<span class="fc" id="L276">    }</span>
 
     public DoubleFilter getDoubleRequiredBob() {
-<span class="fc" id="L259">        return doubleRequiredBob;</span>
+<span class="fc" id="L279">        return doubleRequiredBob;</span>
     }
 
     public void setDoubleRequiredBob(DoubleFilter doubleRequiredBob) {
-<span class="fc" id="L263">        this.doubleRequiredBob = doubleRequiredBob;</span>
-<span class="fc" id="L264">    }</span>
+<span class="fc" id="L283">        this.doubleRequiredBob = doubleRequiredBob;</span>
+<span class="fc" id="L284">    }</span>
 
     public DoubleFilter getDoubleMinBob() {
-<span class="fc" id="L267">        return doubleMinBob;</span>
+<span class="fc" id="L287">        return doubleMinBob;</span>
     }
 
     public void setDoubleMinBob(DoubleFilter doubleMinBob) {
-<span class="fc" id="L271">        this.doubleMinBob = doubleMinBob;</span>
-<span class="fc" id="L272">    }</span>
+<span class="fc" id="L291">        this.doubleMinBob = doubleMinBob;</span>
+<span class="fc" id="L292">    }</span>
 
     public DoubleFilter getDoubleMaxBob() {
-<span class="fc" id="L275">        return doubleMaxBob;</span>
+<span class="fc" id="L295">        return doubleMaxBob;</span>
     }
 
     public void setDoubleMaxBob(DoubleFilter doubleMaxBob) {
-<span class="fc" id="L279">        this.doubleMaxBob = doubleMaxBob;</span>
-<span class="fc" id="L280">    }</span>
+<span class="fc" id="L299">        this.doubleMaxBob = doubleMaxBob;</span>
+<span class="fc" id="L300">    }</span>
 
     public BigDecimalFilter getBigDecimalRequiredBob() {
-<span class="fc" id="L283">        return bigDecimalRequiredBob;</span>
+<span class="fc" id="L303">        return bigDecimalRequiredBob;</span>
     }
 
     public void setBigDecimalRequiredBob(BigDecimalFilter bigDecimalRequiredBob) {
-<span class="fc" id="L287">        this.bigDecimalRequiredBob = bigDecimalRequiredBob;</span>
-<span class="fc" id="L288">    }</span>
+<span class="fc" id="L307">        this.bigDecimalRequiredBob = bigDecimalRequiredBob;</span>
+<span class="fc" id="L308">    }</span>
 
     public BigDecimalFilter getBigDecimalMinBob() {
-<span class="fc" id="L291">        return bigDecimalMinBob;</span>
+<span class="fc" id="L311">        return bigDecimalMinBob;</span>
     }
 
     public void setBigDecimalMinBob(BigDecimalFilter bigDecimalMinBob) {
-<span class="fc" id="L295">        this.bigDecimalMinBob = bigDecimalMinBob;</span>
-<span class="fc" id="L296">    }</span>
+<span class="fc" id="L315">        this.bigDecimalMinBob = bigDecimalMinBob;</span>
+<span class="fc" id="L316">    }</span>
 
     public BigDecimalFilter getBigDecimalMaxBob() {
-<span class="fc" id="L299">        return bigDecimalMaxBob;</span>
+<span class="fc" id="L319">        return bigDecimalMaxBob;</span>
     }
 
     public void setBigDecimalMaxBob(BigDecimalFilter bigDecimalMaxBob) {
-<span class="fc" id="L303">        this.bigDecimalMaxBob = bigDecimalMaxBob;</span>
-<span class="fc" id="L304">    }</span>
+<span class="fc" id="L323">        this.bigDecimalMaxBob = bigDecimalMaxBob;</span>
+<span class="fc" id="L324">    }</span>
 
     public LocalDateFilter getLocalDateBob() {
-<span class="fc" id="L307">        return localDateBob;</span>
+<span class="fc" id="L327">        return localDateBob;</span>
     }
 
     public void setLocalDateBob(LocalDateFilter localDateBob) {
-<span class="fc" id="L311">        this.localDateBob = localDateBob;</span>
-<span class="fc" id="L312">    }</span>
+<span class="fc" id="L331">        this.localDateBob = localDateBob;</span>
+<span class="fc" id="L332">    }</span>
 
     public LocalDateFilter getLocalDateRequiredBob() {
-<span class="fc" id="L315">        return localDateRequiredBob;</span>
+<span class="fc" id="L335">        return localDateRequiredBob;</span>
     }
 
     public void setLocalDateRequiredBob(LocalDateFilter localDateRequiredBob) {
-<span class="fc" id="L319">        this.localDateRequiredBob = localDateRequiredBob;</span>
-<span class="fc" id="L320">    }</span>
+<span class="fc" id="L339">        this.localDateRequiredBob = localDateRequiredBob;</span>
+<span class="fc" id="L340">    }</span>
 
     public InstantFilter getInstantBob() {
-<span class="fc" id="L323">        return instantBob;</span>
+<span class="fc" id="L343">        return instantBob;</span>
     }
 
     public void setInstantBob(InstantFilter instantBob) {
-<span class="fc" id="L327">        this.instantBob = instantBob;</span>
-<span class="fc" id="L328">    }</span>
+<span class="fc" id="L347">        this.instantBob = instantBob;</span>
+<span class="fc" id="L348">    }</span>
 
     public InstantFilter getInstanteRequiredBob() {
-<span class="fc" id="L331">        return instanteRequiredBob;</span>
+<span class="fc" id="L351">        return instanteRequiredBob;</span>
     }
 
     public void setInstanteRequiredBob(InstantFilter instanteRequiredBob) {
-<span class="fc" id="L335">        this.instanteRequiredBob = instanteRequiredBob;</span>
-<span class="fc" id="L336">    }</span>
+<span class="fc" id="L355">        this.instanteRequiredBob = instanteRequiredBob;</span>
+<span class="fc" id="L356">    }</span>
 
     public ZonedDateTimeFilter getZonedDateTimeBob() {
-<span class="fc" id="L339">        return zonedDateTimeBob;</span>
+<span class="fc" id="L359">        return zonedDateTimeBob;</span>
     }
 
     public void setZonedDateTimeBob(ZonedDateTimeFilter zonedDateTimeBob) {
-<span class="fc" id="L343">        this.zonedDateTimeBob = zonedDateTimeBob;</span>
-<span class="fc" id="L344">    }</span>
+<span class="fc" id="L363">        this.zonedDateTimeBob = zonedDateTimeBob;</span>
+<span class="fc" id="L364">    }</span>
 
     public ZonedDateTimeFilter getZonedDateTimeRequiredBob() {
-<span class="fc" id="L347">        return zonedDateTimeRequiredBob;</span>
+<span class="fc" id="L367">        return zonedDateTimeRequiredBob;</span>
     }
 
     public void setZonedDateTimeRequiredBob(ZonedDateTimeFilter zonedDateTimeRequiredBob) {
-<span class="fc" id="L351">        this.zonedDateTimeRequiredBob = zonedDateTimeRequiredBob;</span>
-<span class="fc" id="L352">    }</span>
+<span class="fc" id="L371">        this.zonedDateTimeRequiredBob = zonedDateTimeRequiredBob;</span>
+<span class="fc" id="L372">    }</span>
 
     public BooleanFilter getBooleanBob() {
-<span class="fc" id="L355">        return booleanBob;</span>
+<span class="fc" id="L375">        return booleanBob;</span>
     }
 
     public void setBooleanBob(BooleanFilter booleanBob) {
-<span class="fc" id="L359">        this.booleanBob = booleanBob;</span>
-<span class="fc" id="L360">    }</span>
+<span class="fc" id="L379">        this.booleanBob = booleanBob;</span>
+<span class="fc" id="L380">    }</span>
 
     public BooleanFilter getBooleanRequiredBob() {
-<span class="fc" id="L363">        return booleanRequiredBob;</span>
+<span class="fc" id="L383">        return booleanRequiredBob;</span>
     }
 
     public void setBooleanRequiredBob(BooleanFilter booleanRequiredBob) {
-<span class="fc" id="L367">        this.booleanRequiredBob = booleanRequiredBob;</span>
-<span class="fc" id="L368">    }</span>
+<span class="fc" id="L387">        this.booleanRequiredBob = booleanRequiredBob;</span>
+<span class="fc" id="L388">    }</span>
 
     public EnumFieldClassFilter getEnumBob() {
-<span class="fc" id="L371">        return enumBob;</span>
+<span class="fc" id="L391">        return enumBob;</span>
     }
 
     public void setEnumBob(EnumFieldClassFilter enumBob) {
-<span class="fc" id="L375">        this.enumBob = enumBob;</span>
-<span class="fc" id="L376">    }</span>
+<span class="fc" id="L395">        this.enumBob = enumBob;</span>
+<span class="fc" id="L396">    }</span>
 
     public EnumRequiredFieldClassFilter getEnumRequiredBob() {
-<span class="fc" id="L379">        return enumRequiredBob;</span>
+<span class="fc" id="L399">        return enumRequiredBob;</span>
     }
 
     public void setEnumRequiredBob(EnumRequiredFieldClassFilter enumRequiredBob) {
-<span class="fc" id="L383">        this.enumRequiredBob = enumRequiredBob;</span>
-<span class="fc" id="L384">    }</span>
+<span class="fc" id="L403">        this.enumRequiredBob = enumRequiredBob;</span>
+<span class="fc" id="L404">    }</span>
 
     @Override
     public String toString() {
-<span class="nc bnc" id="L388" title="All 68 branches missed.">        return &quot;FieldTestServiceClassEntityCriteria{&quot; +</span>
+<span class="nc bnc" id="L408" title="All 68 branches missed.">        return &quot;FieldTestServiceClassEntityCriteria{&quot; +</span>
                 (id != null ? &quot;id=&quot; + id + &quot;, &quot; : &quot;&quot;) +
                 (stringBob != null ? &quot;stringBob=&quot; + stringBob + &quot;, &quot; : &quot;&quot;) +
                 (stringRequiredBob != null ? &quot;stringRequiredBob=&quot; + stringRequiredBob + &quot;, &quot; : &quot;&quot;) +

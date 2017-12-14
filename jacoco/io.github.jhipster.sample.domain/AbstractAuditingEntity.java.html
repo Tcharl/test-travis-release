@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AbstractAuditingEntity.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.domain</a> &gt; <span class="el_source">AbstractAuditingEntity.java</span></div><h1>AbstractAuditingEntity.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.domain;
 
+/*-
+ * #%L
+ * Jhipster Sample Application
+ * %%
+ * Copyright (C) 2017 Osgiliath
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
 import java.io.Serializable;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -21,7 +41,7 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 @Audited
 @EntityListeners(AuditingEntityListener.class)
-<span class="fc" id="L24">public abstract class AbstractAuditingEntity implements Serializable {</span>
+<span class="fc" id="L44">public abstract class AbstractAuditingEntity implements Serializable {</span>
 
     private static final long serialVersionUID = 1L;
 
@@ -30,51 +50,51 @@ import javax.persistence.MappedSuperclass;
     @JsonIgnore
     private String createdBy;
 
-<span class="fc" id="L33">    @CreatedDate</span>
+<span class="fc" id="L53">    @CreatedDate</span>
     @Column(name = &quot;created_date&quot;, nullable = false)
     @JsonIgnore
-<span class="fc" id="L36">    private Instant createdDate = Instant.now();</span>
+<span class="fc" id="L56">    private Instant createdDate = Instant.now();</span>
 
     @LastModifiedBy
     @Column(name = &quot;last_modified_by&quot;, length = 50)
     @JsonIgnore
     private String lastModifiedBy;
 
-<span class="fc" id="L43">    @LastModifiedDate</span>
+<span class="fc" id="L63">    @LastModifiedDate</span>
     @Column(name = &quot;last_modified_date&quot;)
     @JsonIgnore
-<span class="fc" id="L46">    private Instant lastModifiedDate = Instant.now();</span>
+<span class="fc" id="L66">    private Instant lastModifiedDate = Instant.now();</span>
 
     public String getCreatedBy() {
-<span class="fc" id="L49">        return createdBy;</span>
+<span class="fc" id="L69">        return createdBy;</span>
     }
 
     public void setCreatedBy(String createdBy) {
-<span class="fc" id="L53">        this.createdBy = createdBy;</span>
-<span class="fc" id="L54">    }</span>
+<span class="fc" id="L73">        this.createdBy = createdBy;</span>
+<span class="fc" id="L74">    }</span>
 
     public Instant getCreatedDate() {
-<span class="fc" id="L57">        return createdDate;</span>
+<span class="fc" id="L77">        return createdDate;</span>
     }
 
     public void setCreatedDate(Instant createdDate) {
-<span class="fc" id="L61">        this.createdDate = createdDate;</span>
-<span class="fc" id="L62">    }</span>
+<span class="fc" id="L81">        this.createdDate = createdDate;</span>
+<span class="fc" id="L82">    }</span>
 
     public String getLastModifiedBy() {
-<span class="fc" id="L65">        return lastModifiedBy;</span>
+<span class="fc" id="L85">        return lastModifiedBy;</span>
     }
 
     public void setLastModifiedBy(String lastModifiedBy) {
-<span class="fc" id="L69">        this.lastModifiedBy = lastModifiedBy;</span>
-<span class="fc" id="L70">    }</span>
+<span class="fc" id="L89">        this.lastModifiedBy = lastModifiedBy;</span>
+<span class="fc" id="L90">    }</span>
 
     public Instant getLastModifiedDate() {
-<span class="fc" id="L73">        return lastModifiedDate;</span>
+<span class="fc" id="L93">        return lastModifiedDate;</span>
     }
 
     public void setLastModifiedDate(Instant lastModifiedDate) {
-<span class="fc" id="L77">        this.lastModifiedDate = lastModifiedDate;</span>
-<span class="fc" id="L78">    }</span>
+<span class="fc" id="L97">        this.lastModifiedDate = lastModifiedDate;</span>
+<span class="fc" id="L98">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

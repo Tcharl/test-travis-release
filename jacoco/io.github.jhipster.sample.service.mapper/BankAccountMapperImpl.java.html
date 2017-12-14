@@ -1,226 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BankAccountMapperImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.service.mapper</a> &gt; <span class="el_source">BankAccountMapperImpl.java</span></div><h1>BankAccountMapperImpl.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.service.mapper;
 
 import io.github.jhipster.sample.domain.BankAccount;
-
 import io.github.jhipster.sample.domain.User;
-
 import io.github.jhipster.sample.service.dto.BankAccountDTO;
-
 import java.util.ArrayList;
-
 import java.util.Arrays;
-
 import java.util.List;
-
 import javax.annotation.Generated;
-
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.stereotype.Component;
 
 @Generated(
-
     value = &quot;org.mapstruct.ap.MappingProcessor&quot;,
-
-    date = &quot;2017-12-02T23:16:21+0000&quot;,
-
-    comments = &quot;version: 1.1.0.Final, compiler: javac, environment: Java 1.8.0_144 (Oracle Corporation)&quot;
-
+    date = &quot;2017-12-14T19:40:11+0000&quot;,
+    comments = &quot;version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_151 (Oracle Corporation)&quot;
 )
-
 @Component
-
-<span class="fc" id="L33">public class BankAccountMapperImpl implements BankAccountMapper {</span>
+<span class="fc" id="L19">public class BankAccountMapperImpl implements BankAccountMapper {</span>
 
     @Autowired
-
     private UserMapper userMapper;
 
     @Override
-
     public List&lt;BankAccount&gt; toEntity(List&lt;BankAccountDTO&gt; dtoList) {
-
-<span class="nc bnc" id="L43" title="All 2 branches missed.">        if ( dtoList == null ) {</span>
-
-<span class="nc" id="L45">            return null;</span>
+<span class="nc bnc" id="L26" title="All 2 branches missed.">        if ( dtoList == null ) {</span>
+<span class="nc" id="L27">            return null;</span>
         }
 
-<span class="nc" id="L48">        List&lt;BankAccount&gt; list = new ArrayList&lt;BankAccount&gt;();</span>
+<span class="nc" id="L30">        List&lt;BankAccount&gt; list = new ArrayList&lt;BankAccount&gt;( dtoList.size() );</span>
+<span class="nc bnc" id="L31" title="All 2 branches missed.">        for ( BankAccountDTO bankAccountDTO : dtoList ) {</span>
+<span class="nc" id="L32">            list.add( toEntity( bankAccountDTO ) );</span>
+<span class="nc" id="L33">        }</span>
 
-<span class="nc bnc" id="L50" title="All 2 branches missed.">        for ( BankAccountDTO bankAccountDTO : dtoList ) {</span>
-
-<span class="nc" id="L52">            list.add( toEntity( bankAccountDTO ) );</span>
-<span class="nc" id="L53">        }</span>
-
-<span class="nc" id="L55">        return list;</span>
+<span class="nc" id="L35">        return list;</span>
     }
 
     @Override
-
     public List&lt;BankAccountDTO&gt; toDto(List&lt;BankAccount&gt; entityList) {
-
-<span class="pc bpc" id="L62" title="1 of 2 branches missed.">        if ( entityList == null ) {</span>
-
-<span class="nc" id="L64">            return null;</span>
+<span class="pc bpc" id="L40" title="1 of 2 branches missed.">        if ( entityList == null ) {</span>
+<span class="nc" id="L41">            return null;</span>
         }
 
-<span class="fc" id="L67">        List&lt;BankAccountDTO&gt; list = new ArrayList&lt;BankAccountDTO&gt;();</span>
+<span class="fc" id="L44">        List&lt;BankAccountDTO&gt; list = new ArrayList&lt;BankAccountDTO&gt;( entityList.size() );</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">        for ( BankAccount bankAccount : entityList ) {</span>
+<span class="fc" id="L46">            list.add( toDto( bankAccount ) );</span>
+<span class="fc" id="L47">        }</span>
 
-<span class="fc bfc" id="L69" title="All 2 branches covered.">        for ( BankAccount bankAccount : entityList ) {</span>
-
-<span class="fc" id="L71">            list.add( toDto( bankAccount ) );</span>
-<span class="fc" id="L72">        }</span>
-
-<span class="fc" id="L74">        return list;</span>
+<span class="fc" id="L49">        return list;</span>
     }
 
     @Override
-
     public BankAccountDTO toDto(BankAccount bankAccount) {
-
-<span class="fc bfc" id="L81" title="All 2 branches covered.">        if ( bankAccount == null ) {</span>
-
-<span class="fc" id="L83">            return null;</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">        if ( bankAccount == null ) {</span>
+<span class="fc" id="L55">            return null;</span>
         }
 
-<span class="fc" id="L86">        BankAccountDTO bankAccountDTO_ = new BankAccountDTO();</span>
+<span class="fc" id="L58">        BankAccountDTO bankAccountDTO = new BankAccountDTO();</span>
 
-<span class="fc" id="L88">        bankAccountDTO_.setUserLogin( bankAccountUserLogin( bankAccount ) );</span>
-
-<span class="fc" id="L90">        bankAccountDTO_.setUserId( bankAccountUserId( bankAccount ) );</span>
-
-<span class="fc" id="L92">        bankAccountDTO_.setId( bankAccount.getId() );</span>
-
-<span class="fc" id="L94">        bankAccountDTO_.setName( bankAccount.getName() );</span>
-
-<span class="fc" id="L96">        bankAccountDTO_.setBankNumber( bankAccount.getBankNumber() );</span>
-
-<span class="fc" id="L98">        bankAccountDTO_.setAgencyNumber( bankAccount.getAgencyNumber() );</span>
-
-<span class="fc" id="L100">        bankAccountDTO_.setLastOperationDuration( bankAccount.getLastOperationDuration() );</span>
-
-<span class="fc" id="L102">        bankAccountDTO_.setMeanOperationDuration( bankAccount.getMeanOperationDuration() );</span>
-
-<span class="fc" id="L104">        bankAccountDTO_.setBalance( bankAccount.getBalance() );</span>
-
-<span class="fc" id="L106">        bankAccountDTO_.setOpeningDay( bankAccount.getOpeningDay() );</span>
-
-<span class="fc" id="L108">        bankAccountDTO_.setLastOperationDate( bankAccount.getLastOperationDate() );</span>
-
-<span class="fc" id="L110">        bankAccountDTO_.setActive( bankAccount.isActive() );</span>
-
-<span class="fc" id="L112">        bankAccountDTO_.setAccountType( bankAccount.getAccountType() );</span>
-
-<span class="pc bpc" id="L114" title="1 of 2 branches missed.">        if ( bankAccount.getAttachment() != null ) {</span>
-
-<span class="fc" id="L116">            byte[] attachment = bankAccount.getAttachment();</span>
-
-<span class="fc" id="L118">            bankAccountDTO_.setAttachment( Arrays.copyOf( attachment, attachment.length ) );</span>
+<span class="fc" id="L60">        String login = bankAccountUserLogin( bankAccount );</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">        if ( login != null ) {</span>
+<span class="fc" id="L62">            bankAccountDTO.setUserLogin( login );</span>
         }
+<span class="fc" id="L64">        Long id = bankAccountUserId( bankAccount );</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">        if ( id != null ) {</span>
+<span class="fc" id="L66">            bankAccountDTO.setUserId( id );</span>
+        }
+<span class="fc" id="L68">        bankAccountDTO.setId( bankAccount.getId() );</span>
+<span class="fc" id="L69">        bankAccountDTO.setName( bankAccount.getName() );</span>
+<span class="fc" id="L70">        bankAccountDTO.setBankNumber( bankAccount.getBankNumber() );</span>
+<span class="fc" id="L71">        bankAccountDTO.setAgencyNumber( bankAccount.getAgencyNumber() );</span>
+<span class="fc" id="L72">        bankAccountDTO.setLastOperationDuration( bankAccount.getLastOperationDuration() );</span>
+<span class="fc" id="L73">        bankAccountDTO.setMeanOperationDuration( bankAccount.getMeanOperationDuration() );</span>
+<span class="fc" id="L74">        bankAccountDTO.setBalance( bankAccount.getBalance() );</span>
+<span class="fc" id="L75">        bankAccountDTO.setOpeningDay( bankAccount.getOpeningDay() );</span>
+<span class="fc" id="L76">        bankAccountDTO.setLastOperationDate( bankAccount.getLastOperationDate() );</span>
+<span class="fc" id="L77">        bankAccountDTO.setActive( bankAccount.isActive() );</span>
+<span class="fc" id="L78">        bankAccountDTO.setAccountType( bankAccount.getAccountType() );</span>
+<span class="fc" id="L79">        byte[] attachment = bankAccount.getAttachment();</span>
+<span class="pc bpc" id="L80" title="1 of 2 branches missed.">        if ( attachment != null ) {</span>
+<span class="fc" id="L81">            bankAccountDTO.setAttachment( Arrays.copyOf( attachment, attachment.length ) );</span>
+        }
+<span class="fc" id="L83">        bankAccountDTO.setAttachmentContentType( bankAccount.getAttachmentContentType() );</span>
+<span class="fc" id="L84">        bankAccountDTO.setDescription( bankAccount.getDescription() );</span>
 
-<span class="fc" id="L121">        bankAccountDTO_.setAttachmentContentType( bankAccount.getAttachmentContentType() );</span>
-
-<span class="fc" id="L123">        bankAccountDTO_.setDescription( bankAccount.getDescription() );</span>
-
-<span class="fc" id="L125">        return bankAccountDTO_;</span>
+<span class="fc" id="L86">        return bankAccountDTO;</span>
     }
 
     @Override
-
     public BankAccount toEntity(BankAccountDTO bankAccountDTO) {
-
-<span class="pc bpc" id="L132" title="1 of 2 branches missed.">        if ( bankAccountDTO == null ) {</span>
-
-<span class="nc" id="L134">            return null;</span>
+<span class="pc bpc" id="L91" title="1 of 2 branches missed.">        if ( bankAccountDTO == null ) {</span>
+<span class="nc" id="L92">            return null;</span>
         }
 
-<span class="fc" id="L137">        BankAccount bankAccount_ = new BankAccount();</span>
+<span class="fc" id="L95">        BankAccount bankAccount = new BankAccount();</span>
 
-<span class="fc" id="L139">        bankAccount_.setUser( userMapper.userFromId( bankAccountDTO.getUserId() ) );</span>
-
-<span class="fc" id="L141">        bankAccount_.setId( bankAccountDTO.getId() );</span>
-
-<span class="fc" id="L143">        bankAccount_.setName( bankAccountDTO.getName() );</span>
-
-<span class="fc" id="L145">        bankAccount_.setBankNumber( bankAccountDTO.getBankNumber() );</span>
-
-<span class="fc" id="L147">        bankAccount_.setAgencyNumber( bankAccountDTO.getAgencyNumber() );</span>
-
-<span class="fc" id="L149">        bankAccount_.setLastOperationDuration( bankAccountDTO.getLastOperationDuration() );</span>
-
-<span class="fc" id="L151">        bankAccount_.setMeanOperationDuration( bankAccountDTO.getMeanOperationDuration() );</span>
-
-<span class="fc" id="L153">        bankAccount_.setBalance( bankAccountDTO.getBalance() );</span>
-
-<span class="fc" id="L155">        bankAccount_.setOpeningDay( bankAccountDTO.getOpeningDay() );</span>
-
-<span class="fc" id="L157">        bankAccount_.setLastOperationDate( bankAccountDTO.getLastOperationDate() );</span>
-
-<span class="fc" id="L159">        bankAccount_.setActive( bankAccountDTO.isActive() );</span>
-
-<span class="fc" id="L161">        bankAccount_.setAccountType( bankAccountDTO.getAccountType() );</span>
-
-<span class="pc bpc" id="L163" title="1 of 2 branches missed.">        if ( bankAccountDTO.getAttachment() != null ) {</span>
-
-<span class="fc" id="L165">            byte[] attachment = bankAccountDTO.getAttachment();</span>
-
-<span class="fc" id="L167">            bankAccount_.setAttachment( Arrays.copyOf( attachment, attachment.length ) );</span>
+<span class="fc" id="L97">        bankAccount.setUser( userMapper.userFromId( bankAccountDTO.getUserId() ) );</span>
+<span class="fc" id="L98">        bankAccount.setId( bankAccountDTO.getId() );</span>
+<span class="fc" id="L99">        bankAccount.setName( bankAccountDTO.getName() );</span>
+<span class="fc" id="L100">        bankAccount.setBankNumber( bankAccountDTO.getBankNumber() );</span>
+<span class="fc" id="L101">        bankAccount.setAgencyNumber( bankAccountDTO.getAgencyNumber() );</span>
+<span class="fc" id="L102">        bankAccount.setLastOperationDuration( bankAccountDTO.getLastOperationDuration() );</span>
+<span class="fc" id="L103">        bankAccount.setMeanOperationDuration( bankAccountDTO.getMeanOperationDuration() );</span>
+<span class="fc" id="L104">        bankAccount.setBalance( bankAccountDTO.getBalance() );</span>
+<span class="fc" id="L105">        bankAccount.setOpeningDay( bankAccountDTO.getOpeningDay() );</span>
+<span class="fc" id="L106">        bankAccount.setLastOperationDate( bankAccountDTO.getLastOperationDate() );</span>
+<span class="fc" id="L107">        bankAccount.setActive( bankAccountDTO.isActive() );</span>
+<span class="fc" id="L108">        bankAccount.setAccountType( bankAccountDTO.getAccountType() );</span>
+<span class="fc" id="L109">        byte[] attachment = bankAccountDTO.getAttachment();</span>
+<span class="pc bpc" id="L110" title="1 of 2 branches missed.">        if ( attachment != null ) {</span>
+<span class="fc" id="L111">            bankAccount.setAttachment( Arrays.copyOf( attachment, attachment.length ) );</span>
         }
+<span class="fc" id="L113">        bankAccount.setAttachmentContentType( bankAccountDTO.getAttachmentContentType() );</span>
+<span class="fc" id="L114">        bankAccount.setDescription( bankAccountDTO.getDescription() );</span>
 
-<span class="fc" id="L170">        bankAccount_.setAttachmentContentType( bankAccountDTO.getAttachmentContentType() );</span>
-
-<span class="fc" id="L172">        bankAccount_.setDescription( bankAccountDTO.getDescription() );</span>
-
-<span class="fc" id="L174">        return bankAccount_;</span>
+<span class="fc" id="L116">        return bankAccount;</span>
     }
 
     private String bankAccountUserLogin(BankAccount bankAccount) {
-
-<span class="pc bpc" id="L179" title="1 of 2 branches missed.">        if ( bankAccount == null ) {</span>
-
-<span class="nc" id="L181">            return null;</span>
+<span class="pc bpc" id="L120" title="1 of 2 branches missed.">        if ( bankAccount == null ) {</span>
+<span class="nc" id="L121">            return null;</span>
         }
-
-<span class="fc" id="L184">        User user = bankAccount.getUser();</span>
-
-<span class="fc bfc" id="L186" title="All 2 branches covered.">        if ( user == null ) {</span>
-
-<span class="fc" id="L188">            return null;</span>
+<span class="fc" id="L123">        User user = bankAccount.getUser();</span>
+<span class="fc bfc" id="L124" title="All 2 branches covered.">        if ( user == null ) {</span>
+<span class="fc" id="L125">            return null;</span>
         }
-
-<span class="fc" id="L191">        String login = user.getLogin();</span>
-
-<span class="pc bpc" id="L193" title="1 of 2 branches missed.">        if ( login == null ) {</span>
-
-<span class="nc" id="L195">            return null;</span>
+<span class="fc" id="L127">        String login = user.getLogin();</span>
+<span class="pc bpc" id="L128" title="1 of 2 branches missed.">        if ( login == null ) {</span>
+<span class="nc" id="L129">            return null;</span>
         }
-
-<span class="fc" id="L198">        return login;</span>
+<span class="fc" id="L131">        return login;</span>
     }
 
     private Long bankAccountUserId(BankAccount bankAccount) {
-
-<span class="pc bpc" id="L203" title="1 of 2 branches missed.">        if ( bankAccount == null ) {</span>
-
-<span class="nc" id="L205">            return null;</span>
+<span class="pc bpc" id="L135" title="1 of 2 branches missed.">        if ( bankAccount == null ) {</span>
+<span class="nc" id="L136">            return null;</span>
         }
-
-<span class="fc" id="L208">        User user = bankAccount.getUser();</span>
-
-<span class="fc bfc" id="L210" title="All 2 branches covered.">        if ( user == null ) {</span>
-
-<span class="fc" id="L212">            return null;</span>
+<span class="fc" id="L138">        User user = bankAccount.getUser();</span>
+<span class="fc bfc" id="L139" title="All 2 branches covered.">        if ( user == null ) {</span>
+<span class="fc" id="L140">            return null;</span>
         }
-
-<span class="fc" id="L215">        Long id = user.getId();</span>
-
-<span class="pc bpc" id="L217" title="1 of 2 branches missed.">        if ( id == null ) {</span>
-
-<span class="nc" id="L219">            return null;</span>
+<span class="fc" id="L142">        Long id = user.getId();</span>
+<span class="pc bpc" id="L143" title="1 of 2 branches missed.">        if ( id == null ) {</span>
+<span class="nc" id="L144">            return null;</span>
         }
-
-<span class="fc" id="L222">        return id;</span>
+<span class="fc" id="L146">        return id;</span>
     }
 }
-
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

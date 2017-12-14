@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FieldTestPaginationEntity.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.domain</a> &gt; <span class="el_source">FieldTestPaginationEntity.java</span></div><h1>FieldTestPaginationEntity.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.domain;
 
+/*-
+ * #%L
+ * Jhipster Sample Application
+ * %%
+ * Copyright (C) 2017 Osgiliath
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.Instant;
@@ -16,14 +37,13 @@ import io.github.jhipster.sample.domain.enumeration.EnumFieldClass;
 
 import io.github.jhipster.sample.domain.enumeration.EnumRequiredFieldClass;
 
-
 /**
  * A FieldTestPaginationEntity.
  */
 @Entity
 @Table(name = &quot;field_test_pagination_entity&quot;)
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-<span class="fc" id="L26">public class FieldTestPaginationEntity implements Serializable {</span>
+<span class="fc" id="L46">public class FieldTestPaginationEntity implements Serializable {</span>
 
     private static final long serialVersionUID = 1L;
 
@@ -239,780 +259,780 @@ import io.github.jhipster.sample.domain.enumeration.EnumRequiredFieldClass;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
-<span class="fc" id="L242">        return id;</span>
+<span class="fc" id="L262">        return id;</span>
     }
 
     public void setId(Long id) {
-<span class="fc" id="L246">        this.id = id;</span>
-<span class="fc" id="L247">    }</span>
+<span class="fc" id="L266">        this.id = id;</span>
+<span class="fc" id="L267">    }</span>
 
     public String getStringAlice() {
-<span class="fc" id="L250">        return stringAlice;</span>
+<span class="fc" id="L270">        return stringAlice;</span>
     }
 
     public FieldTestPaginationEntity stringAlice(String stringAlice) {
-<span class="fc" id="L254">        this.stringAlice = stringAlice;</span>
-<span class="fc" id="L255">        return this;</span>
+<span class="fc" id="L274">        this.stringAlice = stringAlice;</span>
+<span class="fc" id="L275">        return this;</span>
     }
 
     public void setStringAlice(String stringAlice) {
-<span class="fc" id="L259">        this.stringAlice = stringAlice;</span>
-<span class="fc" id="L260">    }</span>
+<span class="fc" id="L279">        this.stringAlice = stringAlice;</span>
+<span class="fc" id="L280">    }</span>
 
     public String getStringRequiredAlice() {
-<span class="fc" id="L263">        return stringRequiredAlice;</span>
+<span class="fc" id="L283">        return stringRequiredAlice;</span>
     }
 
     public FieldTestPaginationEntity stringRequiredAlice(String stringRequiredAlice) {
-<span class="fc" id="L267">        this.stringRequiredAlice = stringRequiredAlice;</span>
-<span class="fc" id="L268">        return this;</span>
+<span class="fc" id="L287">        this.stringRequiredAlice = stringRequiredAlice;</span>
+<span class="fc" id="L288">        return this;</span>
     }
 
     public void setStringRequiredAlice(String stringRequiredAlice) {
-<span class="fc" id="L272">        this.stringRequiredAlice = stringRequiredAlice;</span>
-<span class="fc" id="L273">    }</span>
+<span class="fc" id="L292">        this.stringRequiredAlice = stringRequiredAlice;</span>
+<span class="fc" id="L293">    }</span>
 
     public String getStringMinlengthAlice() {
-<span class="fc" id="L276">        return stringMinlengthAlice;</span>
+<span class="fc" id="L296">        return stringMinlengthAlice;</span>
     }
 
     public FieldTestPaginationEntity stringMinlengthAlice(String stringMinlengthAlice) {
-<span class="fc" id="L280">        this.stringMinlengthAlice = stringMinlengthAlice;</span>
-<span class="fc" id="L281">        return this;</span>
+<span class="fc" id="L300">        this.stringMinlengthAlice = stringMinlengthAlice;</span>
+<span class="fc" id="L301">        return this;</span>
     }
 
     public void setStringMinlengthAlice(String stringMinlengthAlice) {
-<span class="fc" id="L285">        this.stringMinlengthAlice = stringMinlengthAlice;</span>
-<span class="fc" id="L286">    }</span>
+<span class="fc" id="L305">        this.stringMinlengthAlice = stringMinlengthAlice;</span>
+<span class="fc" id="L306">    }</span>
 
     public String getStringMaxlengthAlice() {
-<span class="fc" id="L289">        return stringMaxlengthAlice;</span>
+<span class="fc" id="L309">        return stringMaxlengthAlice;</span>
     }
 
     public FieldTestPaginationEntity stringMaxlengthAlice(String stringMaxlengthAlice) {
-<span class="fc" id="L293">        this.stringMaxlengthAlice = stringMaxlengthAlice;</span>
-<span class="fc" id="L294">        return this;</span>
+<span class="fc" id="L313">        this.stringMaxlengthAlice = stringMaxlengthAlice;</span>
+<span class="fc" id="L314">        return this;</span>
     }
 
     public void setStringMaxlengthAlice(String stringMaxlengthAlice) {
-<span class="fc" id="L298">        this.stringMaxlengthAlice = stringMaxlengthAlice;</span>
-<span class="fc" id="L299">    }</span>
+<span class="fc" id="L318">        this.stringMaxlengthAlice = stringMaxlengthAlice;</span>
+<span class="fc" id="L319">    }</span>
 
     public String getStringPatternAlice() {
-<span class="fc" id="L302">        return stringPatternAlice;</span>
+<span class="fc" id="L322">        return stringPatternAlice;</span>
     }
 
     public FieldTestPaginationEntity stringPatternAlice(String stringPatternAlice) {
-<span class="fc" id="L306">        this.stringPatternAlice = stringPatternAlice;</span>
-<span class="fc" id="L307">        return this;</span>
+<span class="fc" id="L326">        this.stringPatternAlice = stringPatternAlice;</span>
+<span class="fc" id="L327">        return this;</span>
     }
 
     public void setStringPatternAlice(String stringPatternAlice) {
-<span class="fc" id="L311">        this.stringPatternAlice = stringPatternAlice;</span>
-<span class="fc" id="L312">    }</span>
+<span class="fc" id="L331">        this.stringPatternAlice = stringPatternAlice;</span>
+<span class="fc" id="L332">    }</span>
 
     public Integer getIntegerAlice() {
-<span class="fc" id="L315">        return integerAlice;</span>
+<span class="fc" id="L335">        return integerAlice;</span>
     }
 
     public FieldTestPaginationEntity integerAlice(Integer integerAlice) {
-<span class="fc" id="L319">        this.integerAlice = integerAlice;</span>
-<span class="fc" id="L320">        return this;</span>
+<span class="fc" id="L339">        this.integerAlice = integerAlice;</span>
+<span class="fc" id="L340">        return this;</span>
     }
 
     public void setIntegerAlice(Integer integerAlice) {
-<span class="fc" id="L324">        this.integerAlice = integerAlice;</span>
-<span class="fc" id="L325">    }</span>
+<span class="fc" id="L344">        this.integerAlice = integerAlice;</span>
+<span class="fc" id="L345">    }</span>
 
     public Integer getIntegerRequiredAlice() {
-<span class="fc" id="L328">        return integerRequiredAlice;</span>
+<span class="fc" id="L348">        return integerRequiredAlice;</span>
     }
 
     public FieldTestPaginationEntity integerRequiredAlice(Integer integerRequiredAlice) {
-<span class="fc" id="L332">        this.integerRequiredAlice = integerRequiredAlice;</span>
-<span class="fc" id="L333">        return this;</span>
+<span class="fc" id="L352">        this.integerRequiredAlice = integerRequiredAlice;</span>
+<span class="fc" id="L353">        return this;</span>
     }
 
     public void setIntegerRequiredAlice(Integer integerRequiredAlice) {
-<span class="fc" id="L337">        this.integerRequiredAlice = integerRequiredAlice;</span>
-<span class="fc" id="L338">    }</span>
+<span class="fc" id="L357">        this.integerRequiredAlice = integerRequiredAlice;</span>
+<span class="fc" id="L358">    }</span>
 
     public Integer getIntegerMinAlice() {
-<span class="fc" id="L341">        return integerMinAlice;</span>
+<span class="fc" id="L361">        return integerMinAlice;</span>
     }
 
     public FieldTestPaginationEntity integerMinAlice(Integer integerMinAlice) {
-<span class="fc" id="L345">        this.integerMinAlice = integerMinAlice;</span>
-<span class="fc" id="L346">        return this;</span>
+<span class="fc" id="L365">        this.integerMinAlice = integerMinAlice;</span>
+<span class="fc" id="L366">        return this;</span>
     }
 
     public void setIntegerMinAlice(Integer integerMinAlice) {
-<span class="fc" id="L350">        this.integerMinAlice = integerMinAlice;</span>
-<span class="fc" id="L351">    }</span>
+<span class="fc" id="L370">        this.integerMinAlice = integerMinAlice;</span>
+<span class="fc" id="L371">    }</span>
 
     public Integer getIntegerMaxAlice() {
-<span class="fc" id="L354">        return integerMaxAlice;</span>
+<span class="fc" id="L374">        return integerMaxAlice;</span>
     }
 
     public FieldTestPaginationEntity integerMaxAlice(Integer integerMaxAlice) {
-<span class="fc" id="L358">        this.integerMaxAlice = integerMaxAlice;</span>
-<span class="fc" id="L359">        return this;</span>
+<span class="fc" id="L378">        this.integerMaxAlice = integerMaxAlice;</span>
+<span class="fc" id="L379">        return this;</span>
     }
 
     public void setIntegerMaxAlice(Integer integerMaxAlice) {
-<span class="fc" id="L363">        this.integerMaxAlice = integerMaxAlice;</span>
-<span class="fc" id="L364">    }</span>
+<span class="fc" id="L383">        this.integerMaxAlice = integerMaxAlice;</span>
+<span class="fc" id="L384">    }</span>
 
     public Long getLongAlice() {
-<span class="fc" id="L367">        return longAlice;</span>
+<span class="fc" id="L387">        return longAlice;</span>
     }
 
     public FieldTestPaginationEntity longAlice(Long longAlice) {
-<span class="fc" id="L371">        this.longAlice = longAlice;</span>
-<span class="fc" id="L372">        return this;</span>
+<span class="fc" id="L391">        this.longAlice = longAlice;</span>
+<span class="fc" id="L392">        return this;</span>
     }
 
     public void setLongAlice(Long longAlice) {
-<span class="fc" id="L376">        this.longAlice = longAlice;</span>
-<span class="fc" id="L377">    }</span>
+<span class="fc" id="L396">        this.longAlice = longAlice;</span>
+<span class="fc" id="L397">    }</span>
 
     public Long getLongRequiredAlice() {
-<span class="fc" id="L380">        return longRequiredAlice;</span>
+<span class="fc" id="L400">        return longRequiredAlice;</span>
     }
 
     public FieldTestPaginationEntity longRequiredAlice(Long longRequiredAlice) {
-<span class="fc" id="L384">        this.longRequiredAlice = longRequiredAlice;</span>
-<span class="fc" id="L385">        return this;</span>
+<span class="fc" id="L404">        this.longRequiredAlice = longRequiredAlice;</span>
+<span class="fc" id="L405">        return this;</span>
     }
 
     public void setLongRequiredAlice(Long longRequiredAlice) {
-<span class="fc" id="L389">        this.longRequiredAlice = longRequiredAlice;</span>
-<span class="fc" id="L390">    }</span>
+<span class="fc" id="L409">        this.longRequiredAlice = longRequiredAlice;</span>
+<span class="fc" id="L410">    }</span>
 
     public Long getLongMinAlice() {
-<span class="fc" id="L393">        return longMinAlice;</span>
+<span class="fc" id="L413">        return longMinAlice;</span>
     }
 
     public FieldTestPaginationEntity longMinAlice(Long longMinAlice) {
-<span class="fc" id="L397">        this.longMinAlice = longMinAlice;</span>
-<span class="fc" id="L398">        return this;</span>
+<span class="fc" id="L417">        this.longMinAlice = longMinAlice;</span>
+<span class="fc" id="L418">        return this;</span>
     }
 
     public void setLongMinAlice(Long longMinAlice) {
-<span class="fc" id="L402">        this.longMinAlice = longMinAlice;</span>
-<span class="fc" id="L403">    }</span>
+<span class="fc" id="L422">        this.longMinAlice = longMinAlice;</span>
+<span class="fc" id="L423">    }</span>
 
     public Long getLongMaxAlice() {
-<span class="fc" id="L406">        return longMaxAlice;</span>
+<span class="fc" id="L426">        return longMaxAlice;</span>
     }
 
     public FieldTestPaginationEntity longMaxAlice(Long longMaxAlice) {
-<span class="fc" id="L410">        this.longMaxAlice = longMaxAlice;</span>
-<span class="fc" id="L411">        return this;</span>
+<span class="fc" id="L430">        this.longMaxAlice = longMaxAlice;</span>
+<span class="fc" id="L431">        return this;</span>
     }
 
     public void setLongMaxAlice(Long longMaxAlice) {
-<span class="fc" id="L415">        this.longMaxAlice = longMaxAlice;</span>
-<span class="fc" id="L416">    }</span>
+<span class="fc" id="L435">        this.longMaxAlice = longMaxAlice;</span>
+<span class="fc" id="L436">    }</span>
 
     public Float getFloatAlice() {
-<span class="fc" id="L419">        return floatAlice;</span>
+<span class="fc" id="L439">        return floatAlice;</span>
     }
 
     public FieldTestPaginationEntity floatAlice(Float floatAlice) {
-<span class="fc" id="L423">        this.floatAlice = floatAlice;</span>
-<span class="fc" id="L424">        return this;</span>
+<span class="fc" id="L443">        this.floatAlice = floatAlice;</span>
+<span class="fc" id="L444">        return this;</span>
     }
 
     public void setFloatAlice(Float floatAlice) {
-<span class="fc" id="L428">        this.floatAlice = floatAlice;</span>
-<span class="fc" id="L429">    }</span>
+<span class="fc" id="L448">        this.floatAlice = floatAlice;</span>
+<span class="fc" id="L449">    }</span>
 
     public Float getFloatRequiredAlice() {
-<span class="fc" id="L432">        return floatRequiredAlice;</span>
+<span class="fc" id="L452">        return floatRequiredAlice;</span>
     }
 
     public FieldTestPaginationEntity floatRequiredAlice(Float floatRequiredAlice) {
-<span class="fc" id="L436">        this.floatRequiredAlice = floatRequiredAlice;</span>
-<span class="fc" id="L437">        return this;</span>
+<span class="fc" id="L456">        this.floatRequiredAlice = floatRequiredAlice;</span>
+<span class="fc" id="L457">        return this;</span>
     }
 
     public void setFloatRequiredAlice(Float floatRequiredAlice) {
-<span class="fc" id="L441">        this.floatRequiredAlice = floatRequiredAlice;</span>
-<span class="fc" id="L442">    }</span>
+<span class="fc" id="L461">        this.floatRequiredAlice = floatRequiredAlice;</span>
+<span class="fc" id="L462">    }</span>
 
     public Float getFloatMinAlice() {
-<span class="fc" id="L445">        return floatMinAlice;</span>
+<span class="fc" id="L465">        return floatMinAlice;</span>
     }
 
     public FieldTestPaginationEntity floatMinAlice(Float floatMinAlice) {
-<span class="fc" id="L449">        this.floatMinAlice = floatMinAlice;</span>
-<span class="fc" id="L450">        return this;</span>
+<span class="fc" id="L469">        this.floatMinAlice = floatMinAlice;</span>
+<span class="fc" id="L470">        return this;</span>
     }
 
     public void setFloatMinAlice(Float floatMinAlice) {
-<span class="fc" id="L454">        this.floatMinAlice = floatMinAlice;</span>
-<span class="fc" id="L455">    }</span>
+<span class="fc" id="L474">        this.floatMinAlice = floatMinAlice;</span>
+<span class="fc" id="L475">    }</span>
 
     public Float getFloatMaxAlice() {
-<span class="fc" id="L458">        return floatMaxAlice;</span>
+<span class="fc" id="L478">        return floatMaxAlice;</span>
     }
 
     public FieldTestPaginationEntity floatMaxAlice(Float floatMaxAlice) {
-<span class="fc" id="L462">        this.floatMaxAlice = floatMaxAlice;</span>
-<span class="fc" id="L463">        return this;</span>
+<span class="fc" id="L482">        this.floatMaxAlice = floatMaxAlice;</span>
+<span class="fc" id="L483">        return this;</span>
     }
 
     public void setFloatMaxAlice(Float floatMaxAlice) {
-<span class="fc" id="L467">        this.floatMaxAlice = floatMaxAlice;</span>
-<span class="fc" id="L468">    }</span>
+<span class="fc" id="L487">        this.floatMaxAlice = floatMaxAlice;</span>
+<span class="fc" id="L488">    }</span>
 
     public Double getDoubleRequiredAlice() {
-<span class="fc" id="L471">        return doubleRequiredAlice;</span>
+<span class="fc" id="L491">        return doubleRequiredAlice;</span>
     }
 
     public FieldTestPaginationEntity doubleRequiredAlice(Double doubleRequiredAlice) {
-<span class="fc" id="L475">        this.doubleRequiredAlice = doubleRequiredAlice;</span>
-<span class="fc" id="L476">        return this;</span>
+<span class="fc" id="L495">        this.doubleRequiredAlice = doubleRequiredAlice;</span>
+<span class="fc" id="L496">        return this;</span>
     }
 
     public void setDoubleRequiredAlice(Double doubleRequiredAlice) {
-<span class="fc" id="L480">        this.doubleRequiredAlice = doubleRequiredAlice;</span>
-<span class="fc" id="L481">    }</span>
+<span class="fc" id="L500">        this.doubleRequiredAlice = doubleRequiredAlice;</span>
+<span class="fc" id="L501">    }</span>
 
     public Double getDoubleMinAlice() {
-<span class="fc" id="L484">        return doubleMinAlice;</span>
+<span class="fc" id="L504">        return doubleMinAlice;</span>
     }
 
     public FieldTestPaginationEntity doubleMinAlice(Double doubleMinAlice) {
-<span class="fc" id="L488">        this.doubleMinAlice = doubleMinAlice;</span>
-<span class="fc" id="L489">        return this;</span>
+<span class="fc" id="L508">        this.doubleMinAlice = doubleMinAlice;</span>
+<span class="fc" id="L509">        return this;</span>
     }
 
     public void setDoubleMinAlice(Double doubleMinAlice) {
-<span class="fc" id="L493">        this.doubleMinAlice = doubleMinAlice;</span>
-<span class="fc" id="L494">    }</span>
+<span class="fc" id="L513">        this.doubleMinAlice = doubleMinAlice;</span>
+<span class="fc" id="L514">    }</span>
 
     public Double getDoubleMaxAlice() {
-<span class="fc" id="L497">        return doubleMaxAlice;</span>
+<span class="fc" id="L517">        return doubleMaxAlice;</span>
     }
 
     public FieldTestPaginationEntity doubleMaxAlice(Double doubleMaxAlice) {
-<span class="fc" id="L501">        this.doubleMaxAlice = doubleMaxAlice;</span>
-<span class="fc" id="L502">        return this;</span>
+<span class="fc" id="L521">        this.doubleMaxAlice = doubleMaxAlice;</span>
+<span class="fc" id="L522">        return this;</span>
     }
 
     public void setDoubleMaxAlice(Double doubleMaxAlice) {
-<span class="fc" id="L506">        this.doubleMaxAlice = doubleMaxAlice;</span>
-<span class="fc" id="L507">    }</span>
+<span class="fc" id="L526">        this.doubleMaxAlice = doubleMaxAlice;</span>
+<span class="fc" id="L527">    }</span>
 
     public BigDecimal getBigDecimalRequiredAlice() {
-<span class="fc" id="L510">        return bigDecimalRequiredAlice;</span>
+<span class="fc" id="L530">        return bigDecimalRequiredAlice;</span>
     }
 
     public FieldTestPaginationEntity bigDecimalRequiredAlice(BigDecimal bigDecimalRequiredAlice) {
-<span class="fc" id="L514">        this.bigDecimalRequiredAlice = bigDecimalRequiredAlice;</span>
-<span class="fc" id="L515">        return this;</span>
+<span class="fc" id="L534">        this.bigDecimalRequiredAlice = bigDecimalRequiredAlice;</span>
+<span class="fc" id="L535">        return this;</span>
     }
 
     public void setBigDecimalRequiredAlice(BigDecimal bigDecimalRequiredAlice) {
-<span class="fc" id="L519">        this.bigDecimalRequiredAlice = bigDecimalRequiredAlice;</span>
-<span class="fc" id="L520">    }</span>
+<span class="fc" id="L539">        this.bigDecimalRequiredAlice = bigDecimalRequiredAlice;</span>
+<span class="fc" id="L540">    }</span>
 
     public BigDecimal getBigDecimalMinAlice() {
-<span class="fc" id="L523">        return bigDecimalMinAlice;</span>
+<span class="fc" id="L543">        return bigDecimalMinAlice;</span>
     }
 
     public FieldTestPaginationEntity bigDecimalMinAlice(BigDecimal bigDecimalMinAlice) {
-<span class="fc" id="L527">        this.bigDecimalMinAlice = bigDecimalMinAlice;</span>
-<span class="fc" id="L528">        return this;</span>
+<span class="fc" id="L547">        this.bigDecimalMinAlice = bigDecimalMinAlice;</span>
+<span class="fc" id="L548">        return this;</span>
     }
 
     public void setBigDecimalMinAlice(BigDecimal bigDecimalMinAlice) {
-<span class="fc" id="L532">        this.bigDecimalMinAlice = bigDecimalMinAlice;</span>
-<span class="fc" id="L533">    }</span>
+<span class="fc" id="L552">        this.bigDecimalMinAlice = bigDecimalMinAlice;</span>
+<span class="fc" id="L553">    }</span>
 
     public BigDecimal getBigDecimalMaxAlice() {
-<span class="fc" id="L536">        return bigDecimalMaxAlice;</span>
+<span class="fc" id="L556">        return bigDecimalMaxAlice;</span>
     }
 
     public FieldTestPaginationEntity bigDecimalMaxAlice(BigDecimal bigDecimalMaxAlice) {
-<span class="fc" id="L540">        this.bigDecimalMaxAlice = bigDecimalMaxAlice;</span>
-<span class="fc" id="L541">        return this;</span>
+<span class="fc" id="L560">        this.bigDecimalMaxAlice = bigDecimalMaxAlice;</span>
+<span class="fc" id="L561">        return this;</span>
     }
 
     public void setBigDecimalMaxAlice(BigDecimal bigDecimalMaxAlice) {
-<span class="fc" id="L545">        this.bigDecimalMaxAlice = bigDecimalMaxAlice;</span>
-<span class="fc" id="L546">    }</span>
+<span class="fc" id="L565">        this.bigDecimalMaxAlice = bigDecimalMaxAlice;</span>
+<span class="fc" id="L566">    }</span>
 
     public LocalDate getLocalDateAlice() {
-<span class="fc" id="L549">        return localDateAlice;</span>
+<span class="fc" id="L569">        return localDateAlice;</span>
     }
 
     public FieldTestPaginationEntity localDateAlice(LocalDate localDateAlice) {
-<span class="fc" id="L553">        this.localDateAlice = localDateAlice;</span>
-<span class="fc" id="L554">        return this;</span>
+<span class="fc" id="L573">        this.localDateAlice = localDateAlice;</span>
+<span class="fc" id="L574">        return this;</span>
     }
 
     public void setLocalDateAlice(LocalDate localDateAlice) {
-<span class="fc" id="L558">        this.localDateAlice = localDateAlice;</span>
-<span class="fc" id="L559">    }</span>
+<span class="fc" id="L578">        this.localDateAlice = localDateAlice;</span>
+<span class="fc" id="L579">    }</span>
 
     public LocalDate getLocalDateRequiredAlice() {
-<span class="fc" id="L562">        return localDateRequiredAlice;</span>
+<span class="fc" id="L582">        return localDateRequiredAlice;</span>
     }
 
     public FieldTestPaginationEntity localDateRequiredAlice(LocalDate localDateRequiredAlice) {
-<span class="fc" id="L566">        this.localDateRequiredAlice = localDateRequiredAlice;</span>
-<span class="fc" id="L567">        return this;</span>
+<span class="fc" id="L586">        this.localDateRequiredAlice = localDateRequiredAlice;</span>
+<span class="fc" id="L587">        return this;</span>
     }
 
     public void setLocalDateRequiredAlice(LocalDate localDateRequiredAlice) {
-<span class="fc" id="L571">        this.localDateRequiredAlice = localDateRequiredAlice;</span>
-<span class="fc" id="L572">    }</span>
+<span class="fc" id="L591">        this.localDateRequiredAlice = localDateRequiredAlice;</span>
+<span class="fc" id="L592">    }</span>
 
     public Instant getInstantAlice() {
-<span class="fc" id="L575">        return instantAlice;</span>
+<span class="fc" id="L595">        return instantAlice;</span>
     }
 
     public FieldTestPaginationEntity instantAlice(Instant instantAlice) {
-<span class="fc" id="L579">        this.instantAlice = instantAlice;</span>
-<span class="fc" id="L580">        return this;</span>
+<span class="fc" id="L599">        this.instantAlice = instantAlice;</span>
+<span class="fc" id="L600">        return this;</span>
     }
 
     public void setInstantAlice(Instant instantAlice) {
-<span class="fc" id="L584">        this.instantAlice = instantAlice;</span>
-<span class="fc" id="L585">    }</span>
+<span class="fc" id="L604">        this.instantAlice = instantAlice;</span>
+<span class="fc" id="L605">    }</span>
 
     public Instant getInstanteRequiredAlice() {
-<span class="fc" id="L588">        return instanteRequiredAlice;</span>
+<span class="fc" id="L608">        return instanteRequiredAlice;</span>
     }
 
     public FieldTestPaginationEntity instanteRequiredAlice(Instant instanteRequiredAlice) {
-<span class="fc" id="L592">        this.instanteRequiredAlice = instanteRequiredAlice;</span>
-<span class="fc" id="L593">        return this;</span>
+<span class="fc" id="L612">        this.instanteRequiredAlice = instanteRequiredAlice;</span>
+<span class="fc" id="L613">        return this;</span>
     }
 
     public void setInstanteRequiredAlice(Instant instanteRequiredAlice) {
-<span class="fc" id="L597">        this.instanteRequiredAlice = instanteRequiredAlice;</span>
-<span class="fc" id="L598">    }</span>
+<span class="fc" id="L617">        this.instanteRequiredAlice = instanteRequiredAlice;</span>
+<span class="fc" id="L618">    }</span>
 
     public ZonedDateTime getZonedDateTimeAlice() {
-<span class="fc" id="L601">        return zonedDateTimeAlice;</span>
+<span class="fc" id="L621">        return zonedDateTimeAlice;</span>
     }
 
     public FieldTestPaginationEntity zonedDateTimeAlice(ZonedDateTime zonedDateTimeAlice) {
-<span class="fc" id="L605">        this.zonedDateTimeAlice = zonedDateTimeAlice;</span>
-<span class="fc" id="L606">        return this;</span>
+<span class="fc" id="L625">        this.zonedDateTimeAlice = zonedDateTimeAlice;</span>
+<span class="fc" id="L626">        return this;</span>
     }
 
     public void setZonedDateTimeAlice(ZonedDateTime zonedDateTimeAlice) {
-<span class="fc" id="L610">        this.zonedDateTimeAlice = zonedDateTimeAlice;</span>
-<span class="fc" id="L611">    }</span>
+<span class="fc" id="L630">        this.zonedDateTimeAlice = zonedDateTimeAlice;</span>
+<span class="fc" id="L631">    }</span>
 
     public ZonedDateTime getZonedDateTimeRequiredAlice() {
-<span class="fc" id="L614">        return zonedDateTimeRequiredAlice;</span>
+<span class="fc" id="L634">        return zonedDateTimeRequiredAlice;</span>
     }
 
     public FieldTestPaginationEntity zonedDateTimeRequiredAlice(ZonedDateTime zonedDateTimeRequiredAlice) {
-<span class="fc" id="L618">        this.zonedDateTimeRequiredAlice = zonedDateTimeRequiredAlice;</span>
-<span class="fc" id="L619">        return this;</span>
+<span class="fc" id="L638">        this.zonedDateTimeRequiredAlice = zonedDateTimeRequiredAlice;</span>
+<span class="fc" id="L639">        return this;</span>
     }
 
     public void setZonedDateTimeRequiredAlice(ZonedDateTime zonedDateTimeRequiredAlice) {
-<span class="fc" id="L623">        this.zonedDateTimeRequiredAlice = zonedDateTimeRequiredAlice;</span>
-<span class="fc" id="L624">    }</span>
+<span class="fc" id="L643">        this.zonedDateTimeRequiredAlice = zonedDateTimeRequiredAlice;</span>
+<span class="fc" id="L644">    }</span>
 
     public Boolean isBooleanAlice() {
-<span class="fc" id="L627">        return booleanAlice;</span>
+<span class="fc" id="L647">        return booleanAlice;</span>
     }
 
     public FieldTestPaginationEntity booleanAlice(Boolean booleanAlice) {
-<span class="fc" id="L631">        this.booleanAlice = booleanAlice;</span>
-<span class="fc" id="L632">        return this;</span>
+<span class="fc" id="L651">        this.booleanAlice = booleanAlice;</span>
+<span class="fc" id="L652">        return this;</span>
     }
 
     public void setBooleanAlice(Boolean booleanAlice) {
-<span class="fc" id="L636">        this.booleanAlice = booleanAlice;</span>
-<span class="fc" id="L637">    }</span>
+<span class="fc" id="L656">        this.booleanAlice = booleanAlice;</span>
+<span class="fc" id="L657">    }</span>
 
     public Boolean isBooleanRequiredAlice() {
-<span class="fc" id="L640">        return booleanRequiredAlice;</span>
+<span class="fc" id="L660">        return booleanRequiredAlice;</span>
     }
 
     public FieldTestPaginationEntity booleanRequiredAlice(Boolean booleanRequiredAlice) {
-<span class="fc" id="L644">        this.booleanRequiredAlice = booleanRequiredAlice;</span>
-<span class="fc" id="L645">        return this;</span>
+<span class="fc" id="L664">        this.booleanRequiredAlice = booleanRequiredAlice;</span>
+<span class="fc" id="L665">        return this;</span>
     }
 
     public void setBooleanRequiredAlice(Boolean booleanRequiredAlice) {
-<span class="fc" id="L649">        this.booleanRequiredAlice = booleanRequiredAlice;</span>
-<span class="fc" id="L650">    }</span>
+<span class="fc" id="L669">        this.booleanRequiredAlice = booleanRequiredAlice;</span>
+<span class="fc" id="L670">    }</span>
 
     public EnumFieldClass getEnumAlice() {
-<span class="fc" id="L653">        return enumAlice;</span>
+<span class="fc" id="L673">        return enumAlice;</span>
     }
 
     public FieldTestPaginationEntity enumAlice(EnumFieldClass enumAlice) {
-<span class="fc" id="L657">        this.enumAlice = enumAlice;</span>
-<span class="fc" id="L658">        return this;</span>
+<span class="fc" id="L677">        this.enumAlice = enumAlice;</span>
+<span class="fc" id="L678">        return this;</span>
     }
 
     public void setEnumAlice(EnumFieldClass enumAlice) {
-<span class="fc" id="L662">        this.enumAlice = enumAlice;</span>
-<span class="fc" id="L663">    }</span>
+<span class="fc" id="L682">        this.enumAlice = enumAlice;</span>
+<span class="fc" id="L683">    }</span>
 
     public EnumRequiredFieldClass getEnumRequiredAlice() {
-<span class="fc" id="L666">        return enumRequiredAlice;</span>
+<span class="fc" id="L686">        return enumRequiredAlice;</span>
     }
 
     public FieldTestPaginationEntity enumRequiredAlice(EnumRequiredFieldClass enumRequiredAlice) {
-<span class="fc" id="L670">        this.enumRequiredAlice = enumRequiredAlice;</span>
-<span class="fc" id="L671">        return this;</span>
+<span class="fc" id="L690">        this.enumRequiredAlice = enumRequiredAlice;</span>
+<span class="fc" id="L691">        return this;</span>
     }
 
     public void setEnumRequiredAlice(EnumRequiredFieldClass enumRequiredAlice) {
-<span class="fc" id="L675">        this.enumRequiredAlice = enumRequiredAlice;</span>
-<span class="fc" id="L676">    }</span>
+<span class="fc" id="L695">        this.enumRequiredAlice = enumRequiredAlice;</span>
+<span class="fc" id="L696">    }</span>
 
     public byte[] getByteImageAlice() {
-<span class="fc" id="L679">        return byteImageAlice;</span>
+<span class="fc" id="L699">        return byteImageAlice;</span>
     }
 
     public FieldTestPaginationEntity byteImageAlice(byte[] byteImageAlice) {
-<span class="fc" id="L683">        this.byteImageAlice = byteImageAlice;</span>
-<span class="fc" id="L684">        return this;</span>
+<span class="fc" id="L703">        this.byteImageAlice = byteImageAlice;</span>
+<span class="fc" id="L704">        return this;</span>
     }
 
     public void setByteImageAlice(byte[] byteImageAlice) {
-<span class="fc" id="L688">        this.byteImageAlice = byteImageAlice;</span>
-<span class="fc" id="L689">    }</span>
+<span class="fc" id="L708">        this.byteImageAlice = byteImageAlice;</span>
+<span class="fc" id="L709">    }</span>
 
     public String getByteImageAliceContentType() {
-<span class="fc" id="L692">        return byteImageAliceContentType;</span>
+<span class="fc" id="L712">        return byteImageAliceContentType;</span>
     }
 
     public FieldTestPaginationEntity byteImageAliceContentType(String byteImageAliceContentType) {
-<span class="fc" id="L696">        this.byteImageAliceContentType = byteImageAliceContentType;</span>
-<span class="fc" id="L697">        return this;</span>
+<span class="fc" id="L716">        this.byteImageAliceContentType = byteImageAliceContentType;</span>
+<span class="fc" id="L717">        return this;</span>
     }
 
     public void setByteImageAliceContentType(String byteImageAliceContentType) {
-<span class="fc" id="L701">        this.byteImageAliceContentType = byteImageAliceContentType;</span>
-<span class="fc" id="L702">    }</span>
+<span class="fc" id="L721">        this.byteImageAliceContentType = byteImageAliceContentType;</span>
+<span class="fc" id="L722">    }</span>
 
     public byte[] getByteImageRequiredAlice() {
-<span class="fc" id="L705">        return byteImageRequiredAlice;</span>
+<span class="fc" id="L725">        return byteImageRequiredAlice;</span>
     }
 
     public FieldTestPaginationEntity byteImageRequiredAlice(byte[] byteImageRequiredAlice) {
-<span class="fc" id="L709">        this.byteImageRequiredAlice = byteImageRequiredAlice;</span>
-<span class="fc" id="L710">        return this;</span>
+<span class="fc" id="L729">        this.byteImageRequiredAlice = byteImageRequiredAlice;</span>
+<span class="fc" id="L730">        return this;</span>
     }
 
     public void setByteImageRequiredAlice(byte[] byteImageRequiredAlice) {
-<span class="fc" id="L714">        this.byteImageRequiredAlice = byteImageRequiredAlice;</span>
-<span class="fc" id="L715">    }</span>
+<span class="fc" id="L734">        this.byteImageRequiredAlice = byteImageRequiredAlice;</span>
+<span class="fc" id="L735">    }</span>
 
     public String getByteImageRequiredAliceContentType() {
-<span class="fc" id="L718">        return byteImageRequiredAliceContentType;</span>
+<span class="fc" id="L738">        return byteImageRequiredAliceContentType;</span>
     }
 
     public FieldTestPaginationEntity byteImageRequiredAliceContentType(String byteImageRequiredAliceContentType) {
-<span class="fc" id="L722">        this.byteImageRequiredAliceContentType = byteImageRequiredAliceContentType;</span>
-<span class="fc" id="L723">        return this;</span>
+<span class="fc" id="L742">        this.byteImageRequiredAliceContentType = byteImageRequiredAliceContentType;</span>
+<span class="fc" id="L743">        return this;</span>
     }
 
     public void setByteImageRequiredAliceContentType(String byteImageRequiredAliceContentType) {
-<span class="fc" id="L727">        this.byteImageRequiredAliceContentType = byteImageRequiredAliceContentType;</span>
-<span class="fc" id="L728">    }</span>
+<span class="fc" id="L747">        this.byteImageRequiredAliceContentType = byteImageRequiredAliceContentType;</span>
+<span class="fc" id="L748">    }</span>
 
     public byte[] getByteImageMinbytesAlice() {
-<span class="fc" id="L731">        return byteImageMinbytesAlice;</span>
+<span class="fc" id="L751">        return byteImageMinbytesAlice;</span>
     }
 
     public FieldTestPaginationEntity byteImageMinbytesAlice(byte[] byteImageMinbytesAlice) {
-<span class="fc" id="L735">        this.byteImageMinbytesAlice = byteImageMinbytesAlice;</span>
-<span class="fc" id="L736">        return this;</span>
+<span class="fc" id="L755">        this.byteImageMinbytesAlice = byteImageMinbytesAlice;</span>
+<span class="fc" id="L756">        return this;</span>
     }
 
     public void setByteImageMinbytesAlice(byte[] byteImageMinbytesAlice) {
-<span class="fc" id="L740">        this.byteImageMinbytesAlice = byteImageMinbytesAlice;</span>
-<span class="fc" id="L741">    }</span>
+<span class="fc" id="L760">        this.byteImageMinbytesAlice = byteImageMinbytesAlice;</span>
+<span class="fc" id="L761">    }</span>
 
     public String getByteImageMinbytesAliceContentType() {
-<span class="fc" id="L744">        return byteImageMinbytesAliceContentType;</span>
+<span class="fc" id="L764">        return byteImageMinbytesAliceContentType;</span>
     }
 
     public FieldTestPaginationEntity byteImageMinbytesAliceContentType(String byteImageMinbytesAliceContentType) {
-<span class="fc" id="L748">        this.byteImageMinbytesAliceContentType = byteImageMinbytesAliceContentType;</span>
-<span class="fc" id="L749">        return this;</span>
+<span class="fc" id="L768">        this.byteImageMinbytesAliceContentType = byteImageMinbytesAliceContentType;</span>
+<span class="fc" id="L769">        return this;</span>
     }
 
     public void setByteImageMinbytesAliceContentType(String byteImageMinbytesAliceContentType) {
-<span class="fc" id="L753">        this.byteImageMinbytesAliceContentType = byteImageMinbytesAliceContentType;</span>
-<span class="fc" id="L754">    }</span>
+<span class="fc" id="L773">        this.byteImageMinbytesAliceContentType = byteImageMinbytesAliceContentType;</span>
+<span class="fc" id="L774">    }</span>
 
     public byte[] getByteImageMaxbytesAlice() {
-<span class="fc" id="L757">        return byteImageMaxbytesAlice;</span>
+<span class="fc" id="L777">        return byteImageMaxbytesAlice;</span>
     }
 
     public FieldTestPaginationEntity byteImageMaxbytesAlice(byte[] byteImageMaxbytesAlice) {
-<span class="fc" id="L761">        this.byteImageMaxbytesAlice = byteImageMaxbytesAlice;</span>
-<span class="fc" id="L762">        return this;</span>
+<span class="fc" id="L781">        this.byteImageMaxbytesAlice = byteImageMaxbytesAlice;</span>
+<span class="fc" id="L782">        return this;</span>
     }
 
     public void setByteImageMaxbytesAlice(byte[] byteImageMaxbytesAlice) {
-<span class="fc" id="L766">        this.byteImageMaxbytesAlice = byteImageMaxbytesAlice;</span>
-<span class="fc" id="L767">    }</span>
+<span class="fc" id="L786">        this.byteImageMaxbytesAlice = byteImageMaxbytesAlice;</span>
+<span class="fc" id="L787">    }</span>
 
     public String getByteImageMaxbytesAliceContentType() {
-<span class="fc" id="L770">        return byteImageMaxbytesAliceContentType;</span>
+<span class="fc" id="L790">        return byteImageMaxbytesAliceContentType;</span>
     }
 
     public FieldTestPaginationEntity byteImageMaxbytesAliceContentType(String byteImageMaxbytesAliceContentType) {
-<span class="fc" id="L774">        this.byteImageMaxbytesAliceContentType = byteImageMaxbytesAliceContentType;</span>
-<span class="fc" id="L775">        return this;</span>
+<span class="fc" id="L794">        this.byteImageMaxbytesAliceContentType = byteImageMaxbytesAliceContentType;</span>
+<span class="fc" id="L795">        return this;</span>
     }
 
     public void setByteImageMaxbytesAliceContentType(String byteImageMaxbytesAliceContentType) {
-<span class="fc" id="L779">        this.byteImageMaxbytesAliceContentType = byteImageMaxbytesAliceContentType;</span>
-<span class="fc" id="L780">    }</span>
+<span class="fc" id="L799">        this.byteImageMaxbytesAliceContentType = byteImageMaxbytesAliceContentType;</span>
+<span class="fc" id="L800">    }</span>
 
     public byte[] getByteAnyAlice() {
-<span class="fc" id="L783">        return byteAnyAlice;</span>
+<span class="fc" id="L803">        return byteAnyAlice;</span>
     }
 
     public FieldTestPaginationEntity byteAnyAlice(byte[] byteAnyAlice) {
-<span class="fc" id="L787">        this.byteAnyAlice = byteAnyAlice;</span>
-<span class="fc" id="L788">        return this;</span>
+<span class="fc" id="L807">        this.byteAnyAlice = byteAnyAlice;</span>
+<span class="fc" id="L808">        return this;</span>
     }
 
     public void setByteAnyAlice(byte[] byteAnyAlice) {
-<span class="fc" id="L792">        this.byteAnyAlice = byteAnyAlice;</span>
-<span class="fc" id="L793">    }</span>
+<span class="fc" id="L812">        this.byteAnyAlice = byteAnyAlice;</span>
+<span class="fc" id="L813">    }</span>
 
     public String getByteAnyAliceContentType() {
-<span class="fc" id="L796">        return byteAnyAliceContentType;</span>
+<span class="fc" id="L816">        return byteAnyAliceContentType;</span>
     }
 
     public FieldTestPaginationEntity byteAnyAliceContentType(String byteAnyAliceContentType) {
-<span class="fc" id="L800">        this.byteAnyAliceContentType = byteAnyAliceContentType;</span>
-<span class="fc" id="L801">        return this;</span>
+<span class="fc" id="L820">        this.byteAnyAliceContentType = byteAnyAliceContentType;</span>
+<span class="fc" id="L821">        return this;</span>
     }
 
     public void setByteAnyAliceContentType(String byteAnyAliceContentType) {
-<span class="fc" id="L805">        this.byteAnyAliceContentType = byteAnyAliceContentType;</span>
-<span class="fc" id="L806">    }</span>
+<span class="fc" id="L825">        this.byteAnyAliceContentType = byteAnyAliceContentType;</span>
+<span class="fc" id="L826">    }</span>
 
     public byte[] getByteAnyRequiredAlice() {
-<span class="fc" id="L809">        return byteAnyRequiredAlice;</span>
+<span class="fc" id="L829">        return byteAnyRequiredAlice;</span>
     }
 
     public FieldTestPaginationEntity byteAnyRequiredAlice(byte[] byteAnyRequiredAlice) {
-<span class="fc" id="L813">        this.byteAnyRequiredAlice = byteAnyRequiredAlice;</span>
-<span class="fc" id="L814">        return this;</span>
+<span class="fc" id="L833">        this.byteAnyRequiredAlice = byteAnyRequiredAlice;</span>
+<span class="fc" id="L834">        return this;</span>
     }
 
     public void setByteAnyRequiredAlice(byte[] byteAnyRequiredAlice) {
-<span class="fc" id="L818">        this.byteAnyRequiredAlice = byteAnyRequiredAlice;</span>
-<span class="fc" id="L819">    }</span>
+<span class="fc" id="L838">        this.byteAnyRequiredAlice = byteAnyRequiredAlice;</span>
+<span class="fc" id="L839">    }</span>
 
     public String getByteAnyRequiredAliceContentType() {
-<span class="fc" id="L822">        return byteAnyRequiredAliceContentType;</span>
+<span class="fc" id="L842">        return byteAnyRequiredAliceContentType;</span>
     }
 
     public FieldTestPaginationEntity byteAnyRequiredAliceContentType(String byteAnyRequiredAliceContentType) {
-<span class="fc" id="L826">        this.byteAnyRequiredAliceContentType = byteAnyRequiredAliceContentType;</span>
-<span class="fc" id="L827">        return this;</span>
+<span class="fc" id="L846">        this.byteAnyRequiredAliceContentType = byteAnyRequiredAliceContentType;</span>
+<span class="fc" id="L847">        return this;</span>
     }
 
     public void setByteAnyRequiredAliceContentType(String byteAnyRequiredAliceContentType) {
-<span class="fc" id="L831">        this.byteAnyRequiredAliceContentType = byteAnyRequiredAliceContentType;</span>
-<span class="fc" id="L832">    }</span>
+<span class="fc" id="L851">        this.byteAnyRequiredAliceContentType = byteAnyRequiredAliceContentType;</span>
+<span class="fc" id="L852">    }</span>
 
     public byte[] getByteAnyMinbytesAlice() {
-<span class="fc" id="L835">        return byteAnyMinbytesAlice;</span>
+<span class="fc" id="L855">        return byteAnyMinbytesAlice;</span>
     }
 
     public FieldTestPaginationEntity byteAnyMinbytesAlice(byte[] byteAnyMinbytesAlice) {
-<span class="fc" id="L839">        this.byteAnyMinbytesAlice = byteAnyMinbytesAlice;</span>
-<span class="fc" id="L840">        return this;</span>
+<span class="fc" id="L859">        this.byteAnyMinbytesAlice = byteAnyMinbytesAlice;</span>
+<span class="fc" id="L860">        return this;</span>
     }
 
     public void setByteAnyMinbytesAlice(byte[] byteAnyMinbytesAlice) {
-<span class="fc" id="L844">        this.byteAnyMinbytesAlice = byteAnyMinbytesAlice;</span>
-<span class="fc" id="L845">    }</span>
+<span class="fc" id="L864">        this.byteAnyMinbytesAlice = byteAnyMinbytesAlice;</span>
+<span class="fc" id="L865">    }</span>
 
     public String getByteAnyMinbytesAliceContentType() {
-<span class="fc" id="L848">        return byteAnyMinbytesAliceContentType;</span>
+<span class="fc" id="L868">        return byteAnyMinbytesAliceContentType;</span>
     }
 
     public FieldTestPaginationEntity byteAnyMinbytesAliceContentType(String byteAnyMinbytesAliceContentType) {
-<span class="fc" id="L852">        this.byteAnyMinbytesAliceContentType = byteAnyMinbytesAliceContentType;</span>
-<span class="fc" id="L853">        return this;</span>
+<span class="fc" id="L872">        this.byteAnyMinbytesAliceContentType = byteAnyMinbytesAliceContentType;</span>
+<span class="fc" id="L873">        return this;</span>
     }
 
     public void setByteAnyMinbytesAliceContentType(String byteAnyMinbytesAliceContentType) {
-<span class="fc" id="L857">        this.byteAnyMinbytesAliceContentType = byteAnyMinbytesAliceContentType;</span>
-<span class="fc" id="L858">    }</span>
+<span class="fc" id="L877">        this.byteAnyMinbytesAliceContentType = byteAnyMinbytesAliceContentType;</span>
+<span class="fc" id="L878">    }</span>
 
     public byte[] getByteAnyMaxbytesAlice() {
-<span class="fc" id="L861">        return byteAnyMaxbytesAlice;</span>
+<span class="fc" id="L881">        return byteAnyMaxbytesAlice;</span>
     }
 
     public FieldTestPaginationEntity byteAnyMaxbytesAlice(byte[] byteAnyMaxbytesAlice) {
-<span class="fc" id="L865">        this.byteAnyMaxbytesAlice = byteAnyMaxbytesAlice;</span>
-<span class="fc" id="L866">        return this;</span>
+<span class="fc" id="L885">        this.byteAnyMaxbytesAlice = byteAnyMaxbytesAlice;</span>
+<span class="fc" id="L886">        return this;</span>
     }
 
     public void setByteAnyMaxbytesAlice(byte[] byteAnyMaxbytesAlice) {
-<span class="fc" id="L870">        this.byteAnyMaxbytesAlice = byteAnyMaxbytesAlice;</span>
-<span class="fc" id="L871">    }</span>
+<span class="fc" id="L890">        this.byteAnyMaxbytesAlice = byteAnyMaxbytesAlice;</span>
+<span class="fc" id="L891">    }</span>
 
     public String getByteAnyMaxbytesAliceContentType() {
-<span class="fc" id="L874">        return byteAnyMaxbytesAliceContentType;</span>
+<span class="fc" id="L894">        return byteAnyMaxbytesAliceContentType;</span>
     }
 
     public FieldTestPaginationEntity byteAnyMaxbytesAliceContentType(String byteAnyMaxbytesAliceContentType) {
-<span class="fc" id="L878">        this.byteAnyMaxbytesAliceContentType = byteAnyMaxbytesAliceContentType;</span>
-<span class="fc" id="L879">        return this;</span>
+<span class="fc" id="L898">        this.byteAnyMaxbytesAliceContentType = byteAnyMaxbytesAliceContentType;</span>
+<span class="fc" id="L899">        return this;</span>
     }
 
     public void setByteAnyMaxbytesAliceContentType(String byteAnyMaxbytesAliceContentType) {
-<span class="fc" id="L883">        this.byteAnyMaxbytesAliceContentType = byteAnyMaxbytesAliceContentType;</span>
-<span class="fc" id="L884">    }</span>
+<span class="fc" id="L903">        this.byteAnyMaxbytesAliceContentType = byteAnyMaxbytesAliceContentType;</span>
+<span class="fc" id="L904">    }</span>
 
     public String getByteTextAlice() {
-<span class="fc" id="L887">        return byteTextAlice;</span>
+<span class="fc" id="L907">        return byteTextAlice;</span>
     }
 
     public FieldTestPaginationEntity byteTextAlice(String byteTextAlice) {
-<span class="fc" id="L891">        this.byteTextAlice = byteTextAlice;</span>
-<span class="fc" id="L892">        return this;</span>
+<span class="fc" id="L911">        this.byteTextAlice = byteTextAlice;</span>
+<span class="fc" id="L912">        return this;</span>
     }
 
     public void setByteTextAlice(String byteTextAlice) {
-<span class="fc" id="L896">        this.byteTextAlice = byteTextAlice;</span>
-<span class="fc" id="L897">    }</span>
+<span class="fc" id="L916">        this.byteTextAlice = byteTextAlice;</span>
+<span class="fc" id="L917">    }</span>
 
     public String getByteTextRequiredAlice() {
-<span class="fc" id="L900">        return byteTextRequiredAlice;</span>
+<span class="fc" id="L920">        return byteTextRequiredAlice;</span>
     }
 
     public FieldTestPaginationEntity byteTextRequiredAlice(String byteTextRequiredAlice) {
-<span class="fc" id="L904">        this.byteTextRequiredAlice = byteTextRequiredAlice;</span>
-<span class="fc" id="L905">        return this;</span>
+<span class="fc" id="L924">        this.byteTextRequiredAlice = byteTextRequiredAlice;</span>
+<span class="fc" id="L925">        return this;</span>
     }
 
     public void setByteTextRequiredAlice(String byteTextRequiredAlice) {
-<span class="fc" id="L909">        this.byteTextRequiredAlice = byteTextRequiredAlice;</span>
-<span class="fc" id="L910">    }</span>
+<span class="fc" id="L929">        this.byteTextRequiredAlice = byteTextRequiredAlice;</span>
+<span class="fc" id="L930">    }</span>
 
     public String getByteTextMinbytesAlice() {
-<span class="fc" id="L913">        return byteTextMinbytesAlice;</span>
+<span class="fc" id="L933">        return byteTextMinbytesAlice;</span>
     }
 
     public FieldTestPaginationEntity byteTextMinbytesAlice(String byteTextMinbytesAlice) {
-<span class="fc" id="L917">        this.byteTextMinbytesAlice = byteTextMinbytesAlice;</span>
-<span class="fc" id="L918">        return this;</span>
+<span class="fc" id="L937">        this.byteTextMinbytesAlice = byteTextMinbytesAlice;</span>
+<span class="fc" id="L938">        return this;</span>
     }
 
     public void setByteTextMinbytesAlice(String byteTextMinbytesAlice) {
-<span class="fc" id="L922">        this.byteTextMinbytesAlice = byteTextMinbytesAlice;</span>
-<span class="fc" id="L923">    }</span>
+<span class="fc" id="L942">        this.byteTextMinbytesAlice = byteTextMinbytesAlice;</span>
+<span class="fc" id="L943">    }</span>
 
     public String getByteTextMaxbytesAlice() {
-<span class="fc" id="L926">        return byteTextMaxbytesAlice;</span>
+<span class="fc" id="L946">        return byteTextMaxbytesAlice;</span>
     }
 
     public FieldTestPaginationEntity byteTextMaxbytesAlice(String byteTextMaxbytesAlice) {
-<span class="fc" id="L930">        this.byteTextMaxbytesAlice = byteTextMaxbytesAlice;</span>
-<span class="fc" id="L931">        return this;</span>
+<span class="fc" id="L950">        this.byteTextMaxbytesAlice = byteTextMaxbytesAlice;</span>
+<span class="fc" id="L951">        return this;</span>
     }
 
     public void setByteTextMaxbytesAlice(String byteTextMaxbytesAlice) {
-<span class="fc" id="L935">        this.byteTextMaxbytesAlice = byteTextMaxbytesAlice;</span>
-<span class="fc" id="L936">    }</span>
+<span class="fc" id="L955">        this.byteTextMaxbytesAlice = byteTextMaxbytesAlice;</span>
+<span class="fc" id="L956">    }</span>
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
     public boolean equals(Object o) {
-<span class="fc bfc" id="L941" title="All 2 branches covered.">        if (this == o) {</span>
-<span class="fc" id="L942">            return true;</span>
+<span class="fc bfc" id="L961" title="All 2 branches covered.">        if (this == o) {</span>
+<span class="fc" id="L962">            return true;</span>
         }
-<span class="fc bfc" id="L944" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
-<span class="fc" id="L945">            return false;</span>
+<span class="fc bfc" id="L964" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L965">            return false;</span>
         }
-<span class="fc" id="L947">        FieldTestPaginationEntity fieldTestPaginationEntity = (FieldTestPaginationEntity) o;</span>
-<span class="fc bfc" id="L948" title="All 4 branches covered.">        if (fieldTestPaginationEntity.getId() == null || getId() == null) {</span>
-<span class="fc" id="L949">            return false;</span>
+<span class="fc" id="L967">        FieldTestPaginationEntity fieldTestPaginationEntity = (FieldTestPaginationEntity) o;</span>
+<span class="fc bfc" id="L968" title="All 4 branches covered.">        if (fieldTestPaginationEntity.getId() == null || getId() == null) {</span>
+<span class="fc" id="L969">            return false;</span>
         }
-<span class="fc" id="L951">        return Objects.equals(getId(), fieldTestPaginationEntity.getId());</span>
+<span class="fc" id="L971">        return Objects.equals(getId(), fieldTestPaginationEntity.getId());</span>
     }
 
     @Override
     public int hashCode() {
-<span class="fc" id="L956">        return Objects.hashCode(getId());</span>
+<span class="fc" id="L976">        return Objects.hashCode(getId());</span>
     }
 
     @Override
     public String toString() {
-<span class="fc" id="L961">        return &quot;FieldTestPaginationEntity{&quot; +</span>
-<span class="fc" id="L962">            &quot;id=&quot; + getId() +</span>
-<span class="fc" id="L963">            &quot;, stringAlice='&quot; + getStringAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L964">            &quot;, stringRequiredAlice='&quot; + getStringRequiredAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L965">            &quot;, stringMinlengthAlice='&quot; + getStringMinlengthAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L966">            &quot;, stringMaxlengthAlice='&quot; + getStringMaxlengthAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L967">            &quot;, stringPatternAlice='&quot; + getStringPatternAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L968">            &quot;, integerAlice=&quot; + getIntegerAlice() +</span>
-<span class="fc" id="L969">            &quot;, integerRequiredAlice=&quot; + getIntegerRequiredAlice() +</span>
-<span class="fc" id="L970">            &quot;, integerMinAlice=&quot; + getIntegerMinAlice() +</span>
-<span class="fc" id="L971">            &quot;, integerMaxAlice=&quot; + getIntegerMaxAlice() +</span>
-<span class="fc" id="L972">            &quot;, longAlice=&quot; + getLongAlice() +</span>
-<span class="fc" id="L973">            &quot;, longRequiredAlice=&quot; + getLongRequiredAlice() +</span>
-<span class="fc" id="L974">            &quot;, longMinAlice=&quot; + getLongMinAlice() +</span>
-<span class="fc" id="L975">            &quot;, longMaxAlice=&quot; + getLongMaxAlice() +</span>
-<span class="fc" id="L976">            &quot;, floatAlice=&quot; + getFloatAlice() +</span>
-<span class="fc" id="L977">            &quot;, floatRequiredAlice=&quot; + getFloatRequiredAlice() +</span>
-<span class="fc" id="L978">            &quot;, floatMinAlice=&quot; + getFloatMinAlice() +</span>
-<span class="fc" id="L979">            &quot;, floatMaxAlice=&quot; + getFloatMaxAlice() +</span>
-<span class="fc" id="L980">            &quot;, doubleRequiredAlice=&quot; + getDoubleRequiredAlice() +</span>
-<span class="fc" id="L981">            &quot;, doubleMinAlice=&quot; + getDoubleMinAlice() +</span>
-<span class="fc" id="L982">            &quot;, doubleMaxAlice=&quot; + getDoubleMaxAlice() +</span>
-<span class="fc" id="L983">            &quot;, bigDecimalRequiredAlice=&quot; + getBigDecimalRequiredAlice() +</span>
-<span class="fc" id="L984">            &quot;, bigDecimalMinAlice=&quot; + getBigDecimalMinAlice() +</span>
-<span class="fc" id="L985">            &quot;, bigDecimalMaxAlice=&quot; + getBigDecimalMaxAlice() +</span>
-<span class="fc" id="L986">            &quot;, localDateAlice='&quot; + getLocalDateAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L987">            &quot;, localDateRequiredAlice='&quot; + getLocalDateRequiredAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L988">            &quot;, instantAlice='&quot; + getInstantAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L989">            &quot;, instanteRequiredAlice='&quot; + getInstanteRequiredAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L990">            &quot;, zonedDateTimeAlice='&quot; + getZonedDateTimeAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L991">            &quot;, zonedDateTimeRequiredAlice='&quot; + getZonedDateTimeRequiredAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L992">            &quot;, booleanAlice='&quot; + isBooleanAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L993">            &quot;, booleanRequiredAlice='&quot; + isBooleanRequiredAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L994">            &quot;, enumAlice='&quot; + getEnumAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L995">            &quot;, enumRequiredAlice='&quot; + getEnumRequiredAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L996">            &quot;, byteImageAlice='&quot; + getByteImageAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L997">            &quot;, byteImageAliceContentType='&quot; + getByteImageAliceContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L998">            &quot;, byteImageRequiredAlice='&quot; + getByteImageRequiredAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L999">            &quot;, byteImageRequiredAliceContentType='&quot; + getByteImageRequiredAliceContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1000">            &quot;, byteImageMinbytesAlice='&quot; + getByteImageMinbytesAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L1001">            &quot;, byteImageMinbytesAliceContentType='&quot; + getByteImageMinbytesAliceContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1002">            &quot;, byteImageMaxbytesAlice='&quot; + getByteImageMaxbytesAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L1003">            &quot;, byteImageMaxbytesAliceContentType='&quot; + getByteImageMaxbytesAliceContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1004">            &quot;, byteAnyAlice='&quot; + getByteAnyAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L1005">            &quot;, byteAnyAliceContentType='&quot; + getByteAnyAliceContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1006">            &quot;, byteAnyRequiredAlice='&quot; + getByteAnyRequiredAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L1007">            &quot;, byteAnyRequiredAliceContentType='&quot; + getByteAnyRequiredAliceContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1008">            &quot;, byteAnyMinbytesAlice='&quot; + getByteAnyMinbytesAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L1009">            &quot;, byteAnyMinbytesAliceContentType='&quot; + getByteAnyMinbytesAliceContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1010">            &quot;, byteAnyMaxbytesAlice='&quot; + getByteAnyMaxbytesAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L1011">            &quot;, byteAnyMaxbytesAliceContentType='&quot; + getByteAnyMaxbytesAliceContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1012">            &quot;, byteTextAlice='&quot; + getByteTextAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L1013">            &quot;, byteTextRequiredAlice='&quot; + getByteTextRequiredAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L1014">            &quot;, byteTextMinbytesAlice='&quot; + getByteTextMinbytesAlice() + &quot;'&quot; +</span>
-<span class="fc" id="L1015">            &quot;, byteTextMaxbytesAlice='&quot; + getByteTextMaxbytesAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L981">        return &quot;FieldTestPaginationEntity{&quot; +</span>
+<span class="fc" id="L982">            &quot;id=&quot; + getId() +</span>
+<span class="fc" id="L983">            &quot;, stringAlice='&quot; + getStringAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L984">            &quot;, stringRequiredAlice='&quot; + getStringRequiredAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L985">            &quot;, stringMinlengthAlice='&quot; + getStringMinlengthAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L986">            &quot;, stringMaxlengthAlice='&quot; + getStringMaxlengthAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L987">            &quot;, stringPatternAlice='&quot; + getStringPatternAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L988">            &quot;, integerAlice=&quot; + getIntegerAlice() +</span>
+<span class="fc" id="L989">            &quot;, integerRequiredAlice=&quot; + getIntegerRequiredAlice() +</span>
+<span class="fc" id="L990">            &quot;, integerMinAlice=&quot; + getIntegerMinAlice() +</span>
+<span class="fc" id="L991">            &quot;, integerMaxAlice=&quot; + getIntegerMaxAlice() +</span>
+<span class="fc" id="L992">            &quot;, longAlice=&quot; + getLongAlice() +</span>
+<span class="fc" id="L993">            &quot;, longRequiredAlice=&quot; + getLongRequiredAlice() +</span>
+<span class="fc" id="L994">            &quot;, longMinAlice=&quot; + getLongMinAlice() +</span>
+<span class="fc" id="L995">            &quot;, longMaxAlice=&quot; + getLongMaxAlice() +</span>
+<span class="fc" id="L996">            &quot;, floatAlice=&quot; + getFloatAlice() +</span>
+<span class="fc" id="L997">            &quot;, floatRequiredAlice=&quot; + getFloatRequiredAlice() +</span>
+<span class="fc" id="L998">            &quot;, floatMinAlice=&quot; + getFloatMinAlice() +</span>
+<span class="fc" id="L999">            &quot;, floatMaxAlice=&quot; + getFloatMaxAlice() +</span>
+<span class="fc" id="L1000">            &quot;, doubleRequiredAlice=&quot; + getDoubleRequiredAlice() +</span>
+<span class="fc" id="L1001">            &quot;, doubleMinAlice=&quot; + getDoubleMinAlice() +</span>
+<span class="fc" id="L1002">            &quot;, doubleMaxAlice=&quot; + getDoubleMaxAlice() +</span>
+<span class="fc" id="L1003">            &quot;, bigDecimalRequiredAlice=&quot; + getBigDecimalRequiredAlice() +</span>
+<span class="fc" id="L1004">            &quot;, bigDecimalMinAlice=&quot; + getBigDecimalMinAlice() +</span>
+<span class="fc" id="L1005">            &quot;, bigDecimalMaxAlice=&quot; + getBigDecimalMaxAlice() +</span>
+<span class="fc" id="L1006">            &quot;, localDateAlice='&quot; + getLocalDateAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1007">            &quot;, localDateRequiredAlice='&quot; + getLocalDateRequiredAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1008">            &quot;, instantAlice='&quot; + getInstantAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1009">            &quot;, instanteRequiredAlice='&quot; + getInstanteRequiredAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1010">            &quot;, zonedDateTimeAlice='&quot; + getZonedDateTimeAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1011">            &quot;, zonedDateTimeRequiredAlice='&quot; + getZonedDateTimeRequiredAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1012">            &quot;, booleanAlice='&quot; + isBooleanAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1013">            &quot;, booleanRequiredAlice='&quot; + isBooleanRequiredAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1014">            &quot;, enumAlice='&quot; + getEnumAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1015">            &quot;, enumRequiredAlice='&quot; + getEnumRequiredAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1016">            &quot;, byteImageAlice='&quot; + getByteImageAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1017">            &quot;, byteImageAliceContentType='&quot; + getByteImageAliceContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1018">            &quot;, byteImageRequiredAlice='&quot; + getByteImageRequiredAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1019">            &quot;, byteImageRequiredAliceContentType='&quot; + getByteImageRequiredAliceContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1020">            &quot;, byteImageMinbytesAlice='&quot; + getByteImageMinbytesAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1021">            &quot;, byteImageMinbytesAliceContentType='&quot; + getByteImageMinbytesAliceContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1022">            &quot;, byteImageMaxbytesAlice='&quot; + getByteImageMaxbytesAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1023">            &quot;, byteImageMaxbytesAliceContentType='&quot; + getByteImageMaxbytesAliceContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1024">            &quot;, byteAnyAlice='&quot; + getByteAnyAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1025">            &quot;, byteAnyAliceContentType='&quot; + getByteAnyAliceContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1026">            &quot;, byteAnyRequiredAlice='&quot; + getByteAnyRequiredAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1027">            &quot;, byteAnyRequiredAliceContentType='&quot; + getByteAnyRequiredAliceContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1028">            &quot;, byteAnyMinbytesAlice='&quot; + getByteAnyMinbytesAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1029">            &quot;, byteAnyMinbytesAliceContentType='&quot; + getByteAnyMinbytesAliceContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1030">            &quot;, byteAnyMaxbytesAlice='&quot; + getByteAnyMaxbytesAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1031">            &quot;, byteAnyMaxbytesAliceContentType='&quot; + getByteAnyMaxbytesAliceContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1032">            &quot;, byteTextAlice='&quot; + getByteTextAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1033">            &quot;, byteTextRequiredAlice='&quot; + getByteTextRequiredAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1034">            &quot;, byteTextMinbytesAlice='&quot; + getByteTextMinbytesAlice() + &quot;'&quot; +</span>
+<span class="fc" id="L1035">            &quot;, byteTextMaxbytesAlice='&quot; + getByteTextMaxbytesAlice() + &quot;'&quot; +</span>
             &quot;}&quot;;
     }
 }

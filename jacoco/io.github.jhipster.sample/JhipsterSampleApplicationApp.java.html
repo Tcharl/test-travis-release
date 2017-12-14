@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>JhipsterSampleApplicationApp.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample</a> &gt; <span class="el_source">JhipsterSampleApplicationApp.java</span></div><h1>JhipsterSampleApplicationApp.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample;
 
+/*-
+ * #%L
+ * Jhipster Sample Application
+ * %%
+ * Copyright (C) 2017 Osgiliath
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
 import io.github.jhipster.sample.config.ApplicationProperties;
 import io.github.jhipster.sample.config.DefaultProfileUtil;
 
@@ -26,13 +46,13 @@ import java.util.Collection;
 @EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class})
 public class JhipsterSampleApplicationApp {
 
-<span class="fc" id="L29">    private static final Logger log = LoggerFactory.getLogger(JhipsterSampleApplicationApp.class);</span>
+<span class="fc" id="L49">    private static final Logger log = LoggerFactory.getLogger(JhipsterSampleApplicationApp.class);</span>
 
     private final Environment env;
 
-<span class="fc" id="L33">    public JhipsterSampleApplicationApp(Environment env) {</span>
-<span class="fc" id="L34">        this.env = env;</span>
-<span class="fc" id="L35">    }</span>
+<span class="fc" id="L53">    public JhipsterSampleApplicationApp(Environment env) {</span>
+<span class="fc" id="L54">        this.env = env;</span>
+<span class="fc" id="L55">    }</span>
 
     /**
      * Initializes jhipsterSampleApplication.
@@ -43,16 +63,16 @@ public class JhipsterSampleApplicationApp {
      */
     @PostConstruct
     public void initApplication() {
-<span class="fc" id="L46">        Collection&lt;String&gt; activeProfiles = Arrays.asList(env.getActiveProfiles());</span>
-<span class="pc bpc" id="L47" title="3 of 4 branches missed.">        if (activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_DEVELOPMENT) &amp;&amp; activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_PRODUCTION)) {</span>
-<span class="nc" id="L48">            log.error(&quot;You have misconfigured your application! It should not run &quot; +</span>
+<span class="fc" id="L66">        Collection&lt;String&gt; activeProfiles = Arrays.asList(env.getActiveProfiles());</span>
+<span class="pc bpc" id="L67" title="3 of 4 branches missed.">        if (activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_DEVELOPMENT) &amp;&amp; activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_PRODUCTION)) {</span>
+<span class="nc" id="L68">            log.error(&quot;You have misconfigured your application! It should not run &quot; +</span>
                 &quot;with both the 'dev' and 'prod' profiles at the same time.&quot;);
         }
-<span class="pc bpc" id="L51" title="3 of 4 branches missed.">        if (activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_DEVELOPMENT) &amp;&amp; activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_CLOUD)) {</span>
-<span class="nc" id="L52">            log.error(&quot;You have misconfigured your application! It should not &quot; +</span>
+<span class="pc bpc" id="L71" title="3 of 4 branches missed.">        if (activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_DEVELOPMENT) &amp;&amp; activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_CLOUD)) {</span>
+<span class="nc" id="L72">            log.error(&quot;You have misconfigured your application! It should not &quot; +</span>
                 &quot;run with both the 'dev' and 'cloud' profiles at the same time.&quot;);
         }
-<span class="fc" id="L55">    }</span>
+<span class="fc" id="L75">    }</span>
 
     /**
      * Main method, used to run the application.
@@ -61,25 +81,25 @@ public class JhipsterSampleApplicationApp {
      * @throws UnknownHostException if the local host name could not be resolved into an address
      */
     public static void main(String[] args) throws UnknownHostException {
-<span class="nc" id="L64">        SpringApplication app = new SpringApplication(JhipsterSampleApplicationApp.class);</span>
-<span class="nc" id="L65">        DefaultProfileUtil.addDefaultProfile(app);</span>
-<span class="nc" id="L66">        Environment env = app.run(args).getEnvironment();</span>
-<span class="nc" id="L67">        String protocol = &quot;http&quot;;</span>
-<span class="nc bnc" id="L68" title="All 2 branches missed.">        if (env.getProperty(&quot;server.ssl.key-store&quot;) != null) {</span>
-<span class="nc" id="L69">            protocol = &quot;https&quot;;</span>
+<span class="nc" id="L84">        SpringApplication app = new SpringApplication(JhipsterSampleApplicationApp.class);</span>
+<span class="nc" id="L85">        DefaultProfileUtil.addDefaultProfile(app);</span>
+<span class="nc" id="L86">        Environment env = app.run(args).getEnvironment();</span>
+<span class="nc" id="L87">        String protocol = &quot;http&quot;;</span>
+<span class="nc bnc" id="L88" title="All 2 branches missed.">        if (env.getProperty(&quot;server.ssl.key-store&quot;) != null) {</span>
+<span class="nc" id="L89">            protocol = &quot;https&quot;;</span>
         }
-<span class="nc" id="L71">        log.info(&quot;\n----------------------------------------------------------\n\t&quot; +</span>
+<span class="nc" id="L91">        log.info(&quot;\n----------------------------------------------------------\n\t&quot; +</span>
                 &quot;Application '{}' is running! Access URLs:\n\t&quot; +
                 &quot;Local: \t\t{}://localhost:{}\n\t&quot; +
                 &quot;External: \t{}://{}:{}\n\t&quot; +
                 &quot;Profile(s): \t{}\n----------------------------------------------------------&quot;,
-<span class="nc" id="L76">            env.getProperty(&quot;spring.application.name&quot;),</span>
+<span class="nc" id="L96">            env.getProperty(&quot;spring.application.name&quot;),</span>
             protocol,
-<span class="nc" id="L78">            env.getProperty(&quot;server.port&quot;),</span>
+<span class="nc" id="L98">            env.getProperty(&quot;server.port&quot;),</span>
             protocol,
-<span class="nc" id="L80">            InetAddress.getLocalHost().getHostAddress(),</span>
-<span class="nc" id="L81">            env.getProperty(&quot;server.port&quot;),</span>
-<span class="nc" id="L82">            env.getActiveProfiles());</span>
-<span class="nc" id="L83">    }</span>
+<span class="nc" id="L100">            InetAddress.getLocalHost().getHostAddress(),</span>
+<span class="nc" id="L101">            env.getProperty(&quot;server.port&quot;),</span>
+<span class="nc" id="L102">            env.getActiveProfiles());</span>
+<span class="nc" id="L103">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

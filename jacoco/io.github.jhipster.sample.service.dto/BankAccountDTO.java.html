@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BankAccountDTO.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.service.dto</a> &gt; <span class="el_source">BankAccountDTO.java</span></div><h1>BankAccountDTO.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.service.dto;
 
+/*-
+ * #%L
+ * Jhipster Sample Application
+ * %%
+ * Copyright (C) 2017 Osgiliath
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
 
 import java.time.Instant;
 import java.time.LocalDate;
@@ -15,7 +35,7 @@ import io.github.jhipster.sample.domain.enumeration.BankAccountType;
 /**
  * A DTO for the BankAccount entity.
  */
-<span class="fc" id="L18">public class BankAccountDTO implements Serializable {</span>
+<span class="fc" id="L38">public class BankAccountDTO implements Serializable {</span>
 
     private Long id;
 
@@ -53,170 +73,170 @@ import io.github.jhipster.sample.domain.enumeration.BankAccountType;
     private String userLogin;
 
     public Long getId() {
-<span class="fc" id="L56">        return id;</span>
+<span class="fc" id="L76">        return id;</span>
     }
 
     public void setId(Long id) {
-<span class="fc" id="L60">        this.id = id;</span>
-<span class="fc" id="L61">    }</span>
+<span class="fc" id="L80">        this.id = id;</span>
+<span class="fc" id="L81">    }</span>
 
     public String getName() {
-<span class="fc" id="L64">        return name;</span>
+<span class="fc" id="L84">        return name;</span>
     }
 
     public void setName(String name) {
-<span class="fc" id="L68">        this.name = name;</span>
-<span class="fc" id="L69">    }</span>
+<span class="fc" id="L88">        this.name = name;</span>
+<span class="fc" id="L89">    }</span>
 
     public Integer getBankNumber() {
-<span class="fc" id="L72">        return bankNumber;</span>
+<span class="fc" id="L92">        return bankNumber;</span>
     }
 
     public void setBankNumber(Integer bankNumber) {
-<span class="fc" id="L76">        this.bankNumber = bankNumber;</span>
-<span class="fc" id="L77">    }</span>
+<span class="fc" id="L96">        this.bankNumber = bankNumber;</span>
+<span class="fc" id="L97">    }</span>
 
     public Long getAgencyNumber() {
-<span class="fc" id="L80">        return agencyNumber;</span>
+<span class="fc" id="L100">        return agencyNumber;</span>
     }
 
     public void setAgencyNumber(Long agencyNumber) {
-<span class="fc" id="L84">        this.agencyNumber = agencyNumber;</span>
-<span class="fc" id="L85">    }</span>
+<span class="fc" id="L104">        this.agencyNumber = agencyNumber;</span>
+<span class="fc" id="L105">    }</span>
 
     public Float getLastOperationDuration() {
-<span class="fc" id="L88">        return lastOperationDuration;</span>
+<span class="fc" id="L108">        return lastOperationDuration;</span>
     }
 
     public void setLastOperationDuration(Float lastOperationDuration) {
-<span class="fc" id="L92">        this.lastOperationDuration = lastOperationDuration;</span>
-<span class="fc" id="L93">    }</span>
+<span class="fc" id="L112">        this.lastOperationDuration = lastOperationDuration;</span>
+<span class="fc" id="L113">    }</span>
 
     public Double getMeanOperationDuration() {
-<span class="fc" id="L96">        return meanOperationDuration;</span>
+<span class="fc" id="L116">        return meanOperationDuration;</span>
     }
 
     public void setMeanOperationDuration(Double meanOperationDuration) {
-<span class="fc" id="L100">        this.meanOperationDuration = meanOperationDuration;</span>
-<span class="fc" id="L101">    }</span>
+<span class="fc" id="L120">        this.meanOperationDuration = meanOperationDuration;</span>
+<span class="fc" id="L121">    }</span>
 
     public BigDecimal getBalance() {
-<span class="fc" id="L104">        return balance;</span>
+<span class="fc" id="L124">        return balance;</span>
     }
 
     public void setBalance(BigDecimal balance) {
-<span class="fc" id="L108">        this.balance = balance;</span>
-<span class="fc" id="L109">    }</span>
+<span class="fc" id="L128">        this.balance = balance;</span>
+<span class="fc" id="L129">    }</span>
 
     public LocalDate getOpeningDay() {
-<span class="fc" id="L112">        return openingDay;</span>
+<span class="fc" id="L132">        return openingDay;</span>
     }
 
     public void setOpeningDay(LocalDate openingDay) {
-<span class="fc" id="L116">        this.openingDay = openingDay;</span>
-<span class="fc" id="L117">    }</span>
+<span class="fc" id="L136">        this.openingDay = openingDay;</span>
+<span class="fc" id="L137">    }</span>
 
     public Instant getLastOperationDate() {
-<span class="fc" id="L120">        return lastOperationDate;</span>
+<span class="fc" id="L140">        return lastOperationDate;</span>
     }
 
     public void setLastOperationDate(Instant lastOperationDate) {
-<span class="fc" id="L124">        this.lastOperationDate = lastOperationDate;</span>
-<span class="fc" id="L125">    }</span>
+<span class="fc" id="L144">        this.lastOperationDate = lastOperationDate;</span>
+<span class="fc" id="L145">    }</span>
 
     public Boolean isActive() {
-<span class="fc" id="L128">        return active;</span>
+<span class="fc" id="L148">        return active;</span>
     }
 
     public void setActive(Boolean active) {
-<span class="fc" id="L132">        this.active = active;</span>
-<span class="fc" id="L133">    }</span>
+<span class="fc" id="L152">        this.active = active;</span>
+<span class="fc" id="L153">    }</span>
 
     public BankAccountType getAccountType() {
-<span class="fc" id="L136">        return accountType;</span>
+<span class="fc" id="L156">        return accountType;</span>
     }
 
     public void setAccountType(BankAccountType accountType) {
-<span class="fc" id="L140">        this.accountType = accountType;</span>
-<span class="fc" id="L141">    }</span>
+<span class="fc" id="L160">        this.accountType = accountType;</span>
+<span class="fc" id="L161">    }</span>
 
     public byte[] getAttachment() {
-<span class="fc" id="L144">        return attachment;</span>
+<span class="fc" id="L164">        return attachment;</span>
     }
 
     public void setAttachment(byte[] attachment) {
-<span class="fc" id="L148">        this.attachment = attachment;</span>
-<span class="fc" id="L149">    }</span>
+<span class="fc" id="L168">        this.attachment = attachment;</span>
+<span class="fc" id="L169">    }</span>
 
     public String getAttachmentContentType() {
-<span class="fc" id="L152">        return attachmentContentType;</span>
+<span class="fc" id="L172">        return attachmentContentType;</span>
     }
 
     public void setAttachmentContentType(String attachmentContentType) {
-<span class="fc" id="L156">        this.attachmentContentType = attachmentContentType;</span>
-<span class="fc" id="L157">    }</span>
+<span class="fc" id="L176">        this.attachmentContentType = attachmentContentType;</span>
+<span class="fc" id="L177">    }</span>
 
     public String getDescription() {
-<span class="fc" id="L160">        return description;</span>
+<span class="fc" id="L180">        return description;</span>
     }
 
     public void setDescription(String description) {
-<span class="fc" id="L164">        this.description = description;</span>
-<span class="fc" id="L165">    }</span>
+<span class="fc" id="L184">        this.description = description;</span>
+<span class="fc" id="L185">    }</span>
 
     public Long getUserId() {
-<span class="fc" id="L168">        return userId;</span>
+<span class="fc" id="L188">        return userId;</span>
     }
 
     public void setUserId(Long userId) {
-<span class="fc" id="L172">        this.userId = userId;</span>
-<span class="fc" id="L173">    }</span>
+<span class="fc" id="L192">        this.userId = userId;</span>
+<span class="fc" id="L193">    }</span>
 
     public String getUserLogin() {
-<span class="fc" id="L176">        return userLogin;</span>
+<span class="fc" id="L196">        return userLogin;</span>
     }
 
     public void setUserLogin(String userLogin) {
-<span class="fc" id="L180">        this.userLogin = userLogin;</span>
-<span class="fc" id="L181">    }</span>
+<span class="fc" id="L200">        this.userLogin = userLogin;</span>
+<span class="fc" id="L201">    }</span>
 
     @Override
     public boolean equals(Object o) {
-<span class="fc bfc" id="L185" title="All 2 branches covered.">        if (this == o) {</span>
-<span class="fc" id="L186">            return true;</span>
+<span class="fc bfc" id="L205" title="All 2 branches covered.">        if (this == o) {</span>
+<span class="fc" id="L206">            return true;</span>
         }
-<span class="fc bfc" id="L188" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
-<span class="fc" id="L189">            return false;</span>
+<span class="fc bfc" id="L208" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L209">            return false;</span>
         }
 
-<span class="fc" id="L192">        BankAccountDTO bankAccountDTO = (BankAccountDTO) o;</span>
-<span class="fc bfc" id="L193" title="All 4 branches covered.">        if(bankAccountDTO.getId() == null || getId() == null) {</span>
-<span class="fc" id="L194">            return false;</span>
+<span class="fc" id="L212">        BankAccountDTO bankAccountDTO = (BankAccountDTO) o;</span>
+<span class="fc bfc" id="L213" title="All 4 branches covered.">        if(bankAccountDTO.getId() == null || getId() == null) {</span>
+<span class="fc" id="L214">            return false;</span>
         }
-<span class="fc" id="L196">        return Objects.equals(getId(), bankAccountDTO.getId());</span>
+<span class="fc" id="L216">        return Objects.equals(getId(), bankAccountDTO.getId());</span>
     }
 
     @Override
     public int hashCode() {
-<span class="fc" id="L201">        return Objects.hashCode(getId());</span>
+<span class="fc" id="L221">        return Objects.hashCode(getId());</span>
     }
 
     @Override
     public String toString() {
-<span class="fc" id="L206">        return &quot;BankAccountDTO{&quot; +</span>
-<span class="fc" id="L207">            &quot;id=&quot; + getId() +</span>
-<span class="fc" id="L208">            &quot;, name='&quot; + getName() + &quot;'&quot; +</span>
-<span class="fc" id="L209">            &quot;, bankNumber=&quot; + getBankNumber() +</span>
-<span class="fc" id="L210">            &quot;, agencyNumber=&quot; + getAgencyNumber() +</span>
-<span class="fc" id="L211">            &quot;, lastOperationDuration=&quot; + getLastOperationDuration() +</span>
-<span class="fc" id="L212">            &quot;, meanOperationDuration=&quot; + getMeanOperationDuration() +</span>
-<span class="fc" id="L213">            &quot;, balance=&quot; + getBalance() +</span>
-<span class="fc" id="L214">            &quot;, openingDay='&quot; + getOpeningDay() + &quot;'&quot; +</span>
-<span class="fc" id="L215">            &quot;, lastOperationDate='&quot; + getLastOperationDate() + &quot;'&quot; +</span>
-<span class="fc" id="L216">            &quot;, active='&quot; + isActive() + &quot;'&quot; +</span>
-<span class="fc" id="L217">            &quot;, accountType='&quot; + getAccountType() + &quot;'&quot; +</span>
-<span class="fc" id="L218">            &quot;, attachment='&quot; + getAttachment() + &quot;'&quot; +</span>
-<span class="fc" id="L219">            &quot;, description='&quot; + getDescription() + &quot;'&quot; +</span>
+<span class="fc" id="L226">        return &quot;BankAccountDTO{&quot; +</span>
+<span class="fc" id="L227">            &quot;id=&quot; + getId() +</span>
+<span class="fc" id="L228">            &quot;, name='&quot; + getName() + &quot;'&quot; +</span>
+<span class="fc" id="L229">            &quot;, bankNumber=&quot; + getBankNumber() +</span>
+<span class="fc" id="L230">            &quot;, agencyNumber=&quot; + getAgencyNumber() +</span>
+<span class="fc" id="L231">            &quot;, lastOperationDuration=&quot; + getLastOperationDuration() +</span>
+<span class="fc" id="L232">            &quot;, meanOperationDuration=&quot; + getMeanOperationDuration() +</span>
+<span class="fc" id="L233">            &quot;, balance=&quot; + getBalance() +</span>
+<span class="fc" id="L234">            &quot;, openingDay='&quot; + getOpeningDay() + &quot;'&quot; +</span>
+<span class="fc" id="L235">            &quot;, lastOperationDate='&quot; + getLastOperationDate() + &quot;'&quot; +</span>
+<span class="fc" id="L236">            &quot;, active='&quot; + isActive() + &quot;'&quot; +</span>
+<span class="fc" id="L237">            &quot;, accountType='&quot; + getAccountType() + &quot;'&quot; +</span>
+<span class="fc" id="L238">            &quot;, attachment='&quot; + getAttachment() + &quot;'&quot; +</span>
+<span class="fc" id="L239">            &quot;, description='&quot; + getDescription() + &quot;'&quot; +</span>
             &quot;}&quot;;
     }
 }

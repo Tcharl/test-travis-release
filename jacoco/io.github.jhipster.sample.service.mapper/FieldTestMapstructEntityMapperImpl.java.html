@@ -1,394 +1,227 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FieldTestMapstructEntityMapperImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.service.mapper</a> &gt; <span class="el_source">FieldTestMapstructEntityMapperImpl.java</span></div><h1>FieldTestMapstructEntityMapperImpl.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.service.mapper;
 
 import io.github.jhipster.sample.domain.FieldTestMapstructEntity;
-
 import io.github.jhipster.sample.service.dto.FieldTestMapstructEntityDTO;
-
 import java.util.ArrayList;
-
 import java.util.Arrays;
-
 import java.util.List;
-
 import javax.annotation.Generated;
-
 import org.springframework.stereotype.Component;
 
 @Generated(
-
     value = &quot;org.mapstruct.ap.MappingProcessor&quot;,
-
-    date = &quot;2017-12-02T23:16:21+0000&quot;,
-
-    comments = &quot;version: 1.1.0.Final, compiler: javac, environment: Java 1.8.0_144 (Oracle Corporation)&quot;
-
+    date = &quot;2017-12-14T19:40:11+0000&quot;,
+    comments = &quot;version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_151 (Oracle Corporation)&quot;
 )
-
 @Component
-
-<span class="fc" id="L29">public class FieldTestMapstructEntityMapperImpl implements FieldTestMapstructEntityMapper {</span>
+<span class="fc" id="L17">public class FieldTestMapstructEntityMapperImpl implements FieldTestMapstructEntityMapper {</span>
 
     @Override
-
     public FieldTestMapstructEntity toEntity(FieldTestMapstructEntityDTO dto) {
-
-<span class="pc bpc" id="L35" title="1 of 2 branches missed.">        if ( dto == null ) {</span>
-
-<span class="nc" id="L37">            return null;</span>
+<span class="pc bpc" id="L21" title="1 of 2 branches missed.">        if ( dto == null ) {</span>
+<span class="nc" id="L22">            return null;</span>
         }
 
-<span class="fc" id="L40">        FieldTestMapstructEntity fieldTestMapstructEntity = new FieldTestMapstructEntity();</span>
+<span class="fc" id="L25">        FieldTestMapstructEntity fieldTestMapstructEntity = new FieldTestMapstructEntity();</span>
 
-<span class="fc" id="L42">        fieldTestMapstructEntity.setId( dto.getId() );</span>
-
-<span class="fc" id="L44">        fieldTestMapstructEntity.setStringEva( dto.getStringEva() );</span>
-
-<span class="fc" id="L46">        fieldTestMapstructEntity.setStringRequiredEva( dto.getStringRequiredEva() );</span>
-
-<span class="fc" id="L48">        fieldTestMapstructEntity.setStringMinlengthEva( dto.getStringMinlengthEva() );</span>
-
-<span class="fc" id="L50">        fieldTestMapstructEntity.setStringMaxlengthEva( dto.getStringMaxlengthEva() );</span>
-
-<span class="fc" id="L52">        fieldTestMapstructEntity.setStringPatternEva( dto.getStringPatternEva() );</span>
-
-<span class="fc" id="L54">        fieldTestMapstructEntity.setIntegerEva( dto.getIntegerEva() );</span>
-
-<span class="fc" id="L56">        fieldTestMapstructEntity.setIntegerRequiredEva( dto.getIntegerRequiredEva() );</span>
-
-<span class="fc" id="L58">        fieldTestMapstructEntity.setIntegerMinEva( dto.getIntegerMinEva() );</span>
-
-<span class="fc" id="L60">        fieldTestMapstructEntity.setIntegerMaxEva( dto.getIntegerMaxEva() );</span>
-
-<span class="fc" id="L62">        fieldTestMapstructEntity.setLongEva( dto.getLongEva() );</span>
-
-<span class="fc" id="L64">        fieldTestMapstructEntity.setLongRequiredEva( dto.getLongRequiredEva() );</span>
-
-<span class="fc" id="L66">        fieldTestMapstructEntity.setLongMinEva( dto.getLongMinEva() );</span>
-
-<span class="fc" id="L68">        fieldTestMapstructEntity.setLongMaxEva( dto.getLongMaxEva() );</span>
-
-<span class="fc" id="L70">        fieldTestMapstructEntity.setFloatEva( dto.getFloatEva() );</span>
-
-<span class="fc" id="L72">        fieldTestMapstructEntity.setFloatRequiredEva( dto.getFloatRequiredEva() );</span>
-
-<span class="fc" id="L74">        fieldTestMapstructEntity.setFloatMinEva( dto.getFloatMinEva() );</span>
-
-<span class="fc" id="L76">        fieldTestMapstructEntity.setFloatMaxEva( dto.getFloatMaxEva() );</span>
-
-<span class="fc" id="L78">        fieldTestMapstructEntity.setDoubleRequiredEva( dto.getDoubleRequiredEva() );</span>
-
-<span class="fc" id="L80">        fieldTestMapstructEntity.setDoubleMinEva( dto.getDoubleMinEva() );</span>
-
-<span class="fc" id="L82">        fieldTestMapstructEntity.setDoubleMaxEva( dto.getDoubleMaxEva() );</span>
-
-<span class="fc" id="L84">        fieldTestMapstructEntity.setBigDecimalRequiredEva( dto.getBigDecimalRequiredEva() );</span>
-
-<span class="fc" id="L86">        fieldTestMapstructEntity.setBigDecimalMinEva( dto.getBigDecimalMinEva() );</span>
-
-<span class="fc" id="L88">        fieldTestMapstructEntity.setBigDecimalMaxEva( dto.getBigDecimalMaxEva() );</span>
-
-<span class="fc" id="L90">        fieldTestMapstructEntity.setLocalDateEva( dto.getLocalDateEva() );</span>
-
-<span class="fc" id="L92">        fieldTestMapstructEntity.setLocalDateRequiredEva( dto.getLocalDateRequiredEva() );</span>
-
-<span class="fc" id="L94">        fieldTestMapstructEntity.setInstantEva( dto.getInstantEva() );</span>
-
-<span class="fc" id="L96">        fieldTestMapstructEntity.setInstanteRequiredEva( dto.getInstanteRequiredEva() );</span>
-
-<span class="fc" id="L98">        fieldTestMapstructEntity.setZonedDateTimeEva( dto.getZonedDateTimeEva() );</span>
-
-<span class="fc" id="L100">        fieldTestMapstructEntity.setZonedDateTimeRequiredEva( dto.getZonedDateTimeRequiredEva() );</span>
-
-<span class="fc" id="L102">        fieldTestMapstructEntity.setBooleanEva( dto.isBooleanEva() );</span>
-
-<span class="fc" id="L104">        fieldTestMapstructEntity.setBooleanRequiredEva( dto.isBooleanRequiredEva() );</span>
-
-<span class="fc" id="L106">        fieldTestMapstructEntity.setEnumEva( dto.getEnumEva() );</span>
-
-<span class="fc" id="L108">        fieldTestMapstructEntity.setEnumRequiredEva( dto.getEnumRequiredEva() );</span>
-
-<span class="pc bpc" id="L110" title="1 of 2 branches missed.">        if ( dto.getByteImageEva() != null ) {</span>
-
-<span class="fc" id="L112">            byte[] byteImageEva = dto.getByteImageEva();</span>
-
-<span class="fc" id="L114">            fieldTestMapstructEntity.setByteImageEva( Arrays.copyOf( byteImageEva, byteImageEva.length ) );</span>
+<span class="fc" id="L27">        fieldTestMapstructEntity.setId( dto.getId() );</span>
+<span class="fc" id="L28">        fieldTestMapstructEntity.setStringEva( dto.getStringEva() );</span>
+<span class="fc" id="L29">        fieldTestMapstructEntity.setStringRequiredEva( dto.getStringRequiredEva() );</span>
+<span class="fc" id="L30">        fieldTestMapstructEntity.setStringMinlengthEva( dto.getStringMinlengthEva() );</span>
+<span class="fc" id="L31">        fieldTestMapstructEntity.setStringMaxlengthEva( dto.getStringMaxlengthEva() );</span>
+<span class="fc" id="L32">        fieldTestMapstructEntity.setStringPatternEva( dto.getStringPatternEva() );</span>
+<span class="fc" id="L33">        fieldTestMapstructEntity.setIntegerEva( dto.getIntegerEva() );</span>
+<span class="fc" id="L34">        fieldTestMapstructEntity.setIntegerRequiredEva( dto.getIntegerRequiredEva() );</span>
+<span class="fc" id="L35">        fieldTestMapstructEntity.setIntegerMinEva( dto.getIntegerMinEva() );</span>
+<span class="fc" id="L36">        fieldTestMapstructEntity.setIntegerMaxEva( dto.getIntegerMaxEva() );</span>
+<span class="fc" id="L37">        fieldTestMapstructEntity.setLongEva( dto.getLongEva() );</span>
+<span class="fc" id="L38">        fieldTestMapstructEntity.setLongRequiredEva( dto.getLongRequiredEva() );</span>
+<span class="fc" id="L39">        fieldTestMapstructEntity.setLongMinEva( dto.getLongMinEva() );</span>
+<span class="fc" id="L40">        fieldTestMapstructEntity.setLongMaxEva( dto.getLongMaxEva() );</span>
+<span class="fc" id="L41">        fieldTestMapstructEntity.setFloatEva( dto.getFloatEva() );</span>
+<span class="fc" id="L42">        fieldTestMapstructEntity.setFloatRequiredEva( dto.getFloatRequiredEva() );</span>
+<span class="fc" id="L43">        fieldTestMapstructEntity.setFloatMinEva( dto.getFloatMinEva() );</span>
+<span class="fc" id="L44">        fieldTestMapstructEntity.setFloatMaxEva( dto.getFloatMaxEva() );</span>
+<span class="fc" id="L45">        fieldTestMapstructEntity.setDoubleRequiredEva( dto.getDoubleRequiredEva() );</span>
+<span class="fc" id="L46">        fieldTestMapstructEntity.setDoubleMinEva( dto.getDoubleMinEva() );</span>
+<span class="fc" id="L47">        fieldTestMapstructEntity.setDoubleMaxEva( dto.getDoubleMaxEva() );</span>
+<span class="fc" id="L48">        fieldTestMapstructEntity.setBigDecimalRequiredEva( dto.getBigDecimalRequiredEva() );</span>
+<span class="fc" id="L49">        fieldTestMapstructEntity.setBigDecimalMinEva( dto.getBigDecimalMinEva() );</span>
+<span class="fc" id="L50">        fieldTestMapstructEntity.setBigDecimalMaxEva( dto.getBigDecimalMaxEva() );</span>
+<span class="fc" id="L51">        fieldTestMapstructEntity.setLocalDateEva( dto.getLocalDateEva() );</span>
+<span class="fc" id="L52">        fieldTestMapstructEntity.setLocalDateRequiredEva( dto.getLocalDateRequiredEva() );</span>
+<span class="fc" id="L53">        fieldTestMapstructEntity.setInstantEva( dto.getInstantEva() );</span>
+<span class="fc" id="L54">        fieldTestMapstructEntity.setInstanteRequiredEva( dto.getInstanteRequiredEva() );</span>
+<span class="fc" id="L55">        fieldTestMapstructEntity.setZonedDateTimeEva( dto.getZonedDateTimeEva() );</span>
+<span class="fc" id="L56">        fieldTestMapstructEntity.setZonedDateTimeRequiredEva( dto.getZonedDateTimeRequiredEva() );</span>
+<span class="fc" id="L57">        fieldTestMapstructEntity.setBooleanEva( dto.isBooleanEva() );</span>
+<span class="fc" id="L58">        fieldTestMapstructEntity.setBooleanRequiredEva( dto.isBooleanRequiredEva() );</span>
+<span class="fc" id="L59">        fieldTestMapstructEntity.setEnumEva( dto.getEnumEva() );</span>
+<span class="fc" id="L60">        fieldTestMapstructEntity.setEnumRequiredEva( dto.getEnumRequiredEva() );</span>
+<span class="fc" id="L61">        byte[] byteImageEva = dto.getByteImageEva();</span>
+<span class="pc bpc" id="L62" title="1 of 2 branches missed.">        if ( byteImageEva != null ) {</span>
+<span class="fc" id="L63">            fieldTestMapstructEntity.setByteImageEva( Arrays.copyOf( byteImageEva, byteImageEva.length ) );</span>
         }
-
-<span class="fc" id="L117">        fieldTestMapstructEntity.setByteImageEvaContentType( dto.getByteImageEvaContentType() );</span>
-
-<span class="pc bpc" id="L119" title="1 of 2 branches missed.">        if ( dto.getByteImageRequiredEva() != null ) {</span>
-
-<span class="fc" id="L121">            byte[] byteImageRequiredEva = dto.getByteImageRequiredEva();</span>
-
-<span class="fc" id="L123">            fieldTestMapstructEntity.setByteImageRequiredEva( Arrays.copyOf( byteImageRequiredEva, byteImageRequiredEva.length ) );</span>
+<span class="fc" id="L65">        fieldTestMapstructEntity.setByteImageEvaContentType( dto.getByteImageEvaContentType() );</span>
+<span class="fc" id="L66">        byte[] byteImageRequiredEva = dto.getByteImageRequiredEva();</span>
+<span class="pc bpc" id="L67" title="1 of 2 branches missed.">        if ( byteImageRequiredEva != null ) {</span>
+<span class="fc" id="L68">            fieldTestMapstructEntity.setByteImageRequiredEva( Arrays.copyOf( byteImageRequiredEva, byteImageRequiredEva.length ) );</span>
         }
-
-<span class="fc" id="L126">        fieldTestMapstructEntity.setByteImageRequiredEvaContentType( dto.getByteImageRequiredEvaContentType() );</span>
-
-<span class="pc bpc" id="L128" title="1 of 2 branches missed.">        if ( dto.getByteImageMinbytesEva() != null ) {</span>
-
-<span class="fc" id="L130">            byte[] byteImageMinbytesEva = dto.getByteImageMinbytesEva();</span>
-
-<span class="fc" id="L132">            fieldTestMapstructEntity.setByteImageMinbytesEva( Arrays.copyOf( byteImageMinbytesEva, byteImageMinbytesEva.length ) );</span>
+<span class="fc" id="L70">        fieldTestMapstructEntity.setByteImageRequiredEvaContentType( dto.getByteImageRequiredEvaContentType() );</span>
+<span class="fc" id="L71">        byte[] byteImageMinbytesEva = dto.getByteImageMinbytesEva();</span>
+<span class="pc bpc" id="L72" title="1 of 2 branches missed.">        if ( byteImageMinbytesEva != null ) {</span>
+<span class="fc" id="L73">            fieldTestMapstructEntity.setByteImageMinbytesEva( Arrays.copyOf( byteImageMinbytesEva, byteImageMinbytesEva.length ) );</span>
         }
-
-<span class="fc" id="L135">        fieldTestMapstructEntity.setByteImageMinbytesEvaContentType( dto.getByteImageMinbytesEvaContentType() );</span>
-
-<span class="pc bpc" id="L137" title="1 of 2 branches missed.">        if ( dto.getByteImageMaxbytesEva() != null ) {</span>
-
-<span class="fc" id="L139">            byte[] byteImageMaxbytesEva = dto.getByteImageMaxbytesEva();</span>
-
-<span class="fc" id="L141">            fieldTestMapstructEntity.setByteImageMaxbytesEva( Arrays.copyOf( byteImageMaxbytesEva, byteImageMaxbytesEva.length ) );</span>
+<span class="fc" id="L75">        fieldTestMapstructEntity.setByteImageMinbytesEvaContentType( dto.getByteImageMinbytesEvaContentType() );</span>
+<span class="fc" id="L76">        byte[] byteImageMaxbytesEva = dto.getByteImageMaxbytesEva();</span>
+<span class="pc bpc" id="L77" title="1 of 2 branches missed.">        if ( byteImageMaxbytesEva != null ) {</span>
+<span class="fc" id="L78">            fieldTestMapstructEntity.setByteImageMaxbytesEva( Arrays.copyOf( byteImageMaxbytesEva, byteImageMaxbytesEva.length ) );</span>
         }
-
-<span class="fc" id="L144">        fieldTestMapstructEntity.setByteImageMaxbytesEvaContentType( dto.getByteImageMaxbytesEvaContentType() );</span>
-
-<span class="pc bpc" id="L146" title="1 of 2 branches missed.">        if ( dto.getByteAnyEva() != null ) {</span>
-
-<span class="fc" id="L148">            byte[] byteAnyEva = dto.getByteAnyEva();</span>
-
-<span class="fc" id="L150">            fieldTestMapstructEntity.setByteAnyEva( Arrays.copyOf( byteAnyEva, byteAnyEva.length ) );</span>
+<span class="fc" id="L80">        fieldTestMapstructEntity.setByteImageMaxbytesEvaContentType( dto.getByteImageMaxbytesEvaContentType() );</span>
+<span class="fc" id="L81">        byte[] byteAnyEva = dto.getByteAnyEva();</span>
+<span class="pc bpc" id="L82" title="1 of 2 branches missed.">        if ( byteAnyEva != null ) {</span>
+<span class="fc" id="L83">            fieldTestMapstructEntity.setByteAnyEva( Arrays.copyOf( byteAnyEva, byteAnyEva.length ) );</span>
         }
-
-<span class="fc" id="L153">        fieldTestMapstructEntity.setByteAnyEvaContentType( dto.getByteAnyEvaContentType() );</span>
-
-<span class="pc bpc" id="L155" title="1 of 2 branches missed.">        if ( dto.getByteAnyRequiredEva() != null ) {</span>
-
-<span class="fc" id="L157">            byte[] byteAnyRequiredEva = dto.getByteAnyRequiredEva();</span>
-
-<span class="fc" id="L159">            fieldTestMapstructEntity.setByteAnyRequiredEva( Arrays.copyOf( byteAnyRequiredEva, byteAnyRequiredEva.length ) );</span>
+<span class="fc" id="L85">        fieldTestMapstructEntity.setByteAnyEvaContentType( dto.getByteAnyEvaContentType() );</span>
+<span class="fc" id="L86">        byte[] byteAnyRequiredEva = dto.getByteAnyRequiredEva();</span>
+<span class="pc bpc" id="L87" title="1 of 2 branches missed.">        if ( byteAnyRequiredEva != null ) {</span>
+<span class="fc" id="L88">            fieldTestMapstructEntity.setByteAnyRequiredEva( Arrays.copyOf( byteAnyRequiredEva, byteAnyRequiredEva.length ) );</span>
         }
-
-<span class="fc" id="L162">        fieldTestMapstructEntity.setByteAnyRequiredEvaContentType( dto.getByteAnyRequiredEvaContentType() );</span>
-
-<span class="pc bpc" id="L164" title="1 of 2 branches missed.">        if ( dto.getByteAnyMinbytesEva() != null ) {</span>
-
-<span class="fc" id="L166">            byte[] byteAnyMinbytesEva = dto.getByteAnyMinbytesEva();</span>
-
-<span class="fc" id="L168">            fieldTestMapstructEntity.setByteAnyMinbytesEva( Arrays.copyOf( byteAnyMinbytesEva, byteAnyMinbytesEva.length ) );</span>
+<span class="fc" id="L90">        fieldTestMapstructEntity.setByteAnyRequiredEvaContentType( dto.getByteAnyRequiredEvaContentType() );</span>
+<span class="fc" id="L91">        byte[] byteAnyMinbytesEva = dto.getByteAnyMinbytesEva();</span>
+<span class="pc bpc" id="L92" title="1 of 2 branches missed.">        if ( byteAnyMinbytesEva != null ) {</span>
+<span class="fc" id="L93">            fieldTestMapstructEntity.setByteAnyMinbytesEva( Arrays.copyOf( byteAnyMinbytesEva, byteAnyMinbytesEva.length ) );</span>
         }
-
-<span class="fc" id="L171">        fieldTestMapstructEntity.setByteAnyMinbytesEvaContentType( dto.getByteAnyMinbytesEvaContentType() );</span>
-
-<span class="pc bpc" id="L173" title="1 of 2 branches missed.">        if ( dto.getByteAnyMaxbytesEva() != null ) {</span>
-
-<span class="fc" id="L175">            byte[] byteAnyMaxbytesEva = dto.getByteAnyMaxbytesEva();</span>
-
-<span class="fc" id="L177">            fieldTestMapstructEntity.setByteAnyMaxbytesEva( Arrays.copyOf( byteAnyMaxbytesEva, byteAnyMaxbytesEva.length ) );</span>
+<span class="fc" id="L95">        fieldTestMapstructEntity.setByteAnyMinbytesEvaContentType( dto.getByteAnyMinbytesEvaContentType() );</span>
+<span class="fc" id="L96">        byte[] byteAnyMaxbytesEva = dto.getByteAnyMaxbytesEva();</span>
+<span class="pc bpc" id="L97" title="1 of 2 branches missed.">        if ( byteAnyMaxbytesEva != null ) {</span>
+<span class="fc" id="L98">            fieldTestMapstructEntity.setByteAnyMaxbytesEva( Arrays.copyOf( byteAnyMaxbytesEva, byteAnyMaxbytesEva.length ) );</span>
         }
+<span class="fc" id="L100">        fieldTestMapstructEntity.setByteAnyMaxbytesEvaContentType( dto.getByteAnyMaxbytesEvaContentType() );</span>
+<span class="fc" id="L101">        fieldTestMapstructEntity.setByteTextEva( dto.getByteTextEva() );</span>
+<span class="fc" id="L102">        fieldTestMapstructEntity.setByteTextRequiredEva( dto.getByteTextRequiredEva() );</span>
+<span class="fc" id="L103">        fieldTestMapstructEntity.setByteTextMinbytesEva( dto.getByteTextMinbytesEva() );</span>
+<span class="fc" id="L104">        fieldTestMapstructEntity.setByteTextMaxbytesEva( dto.getByteTextMaxbytesEva() );</span>
 
-<span class="fc" id="L180">        fieldTestMapstructEntity.setByteAnyMaxbytesEvaContentType( dto.getByteAnyMaxbytesEvaContentType() );</span>
-
-<span class="fc" id="L182">        fieldTestMapstructEntity.setByteTextEva( dto.getByteTextEva() );</span>
-
-<span class="fc" id="L184">        fieldTestMapstructEntity.setByteTextRequiredEva( dto.getByteTextRequiredEva() );</span>
-
-<span class="fc" id="L186">        fieldTestMapstructEntity.setByteTextMinbytesEva( dto.getByteTextMinbytesEva() );</span>
-
-<span class="fc" id="L188">        fieldTestMapstructEntity.setByteTextMaxbytesEva( dto.getByteTextMaxbytesEva() );</span>
-
-<span class="fc" id="L190">        return fieldTestMapstructEntity;</span>
+<span class="fc" id="L106">        return fieldTestMapstructEntity;</span>
     }
 
     @Override
-
     public FieldTestMapstructEntityDTO toDto(FieldTestMapstructEntity entity) {
-
-<span class="fc bfc" id="L197" title="All 2 branches covered.">        if ( entity == null ) {</span>
-
-<span class="fc" id="L199">            return null;</span>
+<span class="fc bfc" id="L111" title="All 2 branches covered.">        if ( entity == null ) {</span>
+<span class="fc" id="L112">            return null;</span>
         }
 
-<span class="fc" id="L202">        FieldTestMapstructEntityDTO fieldTestMapstructEntityDTO = new FieldTestMapstructEntityDTO();</span>
+<span class="fc" id="L115">        FieldTestMapstructEntityDTO fieldTestMapstructEntityDTO = new FieldTestMapstructEntityDTO();</span>
 
-<span class="fc" id="L204">        fieldTestMapstructEntityDTO.setId( entity.getId() );</span>
-
-<span class="fc" id="L206">        fieldTestMapstructEntityDTO.setStringEva( entity.getStringEva() );</span>
-
-<span class="fc" id="L208">        fieldTestMapstructEntityDTO.setStringRequiredEva( entity.getStringRequiredEva() );</span>
-
-<span class="fc" id="L210">        fieldTestMapstructEntityDTO.setStringMinlengthEva( entity.getStringMinlengthEva() );</span>
-
-<span class="fc" id="L212">        fieldTestMapstructEntityDTO.setStringMaxlengthEva( entity.getStringMaxlengthEva() );</span>
-
-<span class="fc" id="L214">        fieldTestMapstructEntityDTO.setStringPatternEva( entity.getStringPatternEva() );</span>
-
-<span class="fc" id="L216">        fieldTestMapstructEntityDTO.setIntegerEva( entity.getIntegerEva() );</span>
-
-<span class="fc" id="L218">        fieldTestMapstructEntityDTO.setIntegerRequiredEva( entity.getIntegerRequiredEva() );</span>
-
-<span class="fc" id="L220">        fieldTestMapstructEntityDTO.setIntegerMinEva( entity.getIntegerMinEva() );</span>
-
-<span class="fc" id="L222">        fieldTestMapstructEntityDTO.setIntegerMaxEva( entity.getIntegerMaxEva() );</span>
-
-<span class="fc" id="L224">        fieldTestMapstructEntityDTO.setLongEva( entity.getLongEva() );</span>
-
-<span class="fc" id="L226">        fieldTestMapstructEntityDTO.setLongRequiredEva( entity.getLongRequiredEva() );</span>
-
-<span class="fc" id="L228">        fieldTestMapstructEntityDTO.setLongMinEva( entity.getLongMinEva() );</span>
-
-<span class="fc" id="L230">        fieldTestMapstructEntityDTO.setLongMaxEva( entity.getLongMaxEva() );</span>
-
-<span class="fc" id="L232">        fieldTestMapstructEntityDTO.setFloatEva( entity.getFloatEva() );</span>
-
-<span class="fc" id="L234">        fieldTestMapstructEntityDTO.setFloatRequiredEva( entity.getFloatRequiredEva() );</span>
-
-<span class="fc" id="L236">        fieldTestMapstructEntityDTO.setFloatMinEva( entity.getFloatMinEva() );</span>
-
-<span class="fc" id="L238">        fieldTestMapstructEntityDTO.setFloatMaxEva( entity.getFloatMaxEva() );</span>
-
-<span class="fc" id="L240">        fieldTestMapstructEntityDTO.setDoubleRequiredEva( entity.getDoubleRequiredEva() );</span>
-
-<span class="fc" id="L242">        fieldTestMapstructEntityDTO.setDoubleMinEva( entity.getDoubleMinEva() );</span>
-
-<span class="fc" id="L244">        fieldTestMapstructEntityDTO.setDoubleMaxEva( entity.getDoubleMaxEva() );</span>
-
-<span class="fc" id="L246">        fieldTestMapstructEntityDTO.setBigDecimalRequiredEva( entity.getBigDecimalRequiredEva() );</span>
-
-<span class="fc" id="L248">        fieldTestMapstructEntityDTO.setBigDecimalMinEva( entity.getBigDecimalMinEva() );</span>
-
-<span class="fc" id="L250">        fieldTestMapstructEntityDTO.setBigDecimalMaxEva( entity.getBigDecimalMaxEva() );</span>
-
-<span class="fc" id="L252">        fieldTestMapstructEntityDTO.setLocalDateEva( entity.getLocalDateEva() );</span>
-
-<span class="fc" id="L254">        fieldTestMapstructEntityDTO.setLocalDateRequiredEva( entity.getLocalDateRequiredEva() );</span>
-
-<span class="fc" id="L256">        fieldTestMapstructEntityDTO.setInstantEva( entity.getInstantEva() );</span>
-
-<span class="fc" id="L258">        fieldTestMapstructEntityDTO.setInstanteRequiredEva( entity.getInstanteRequiredEva() );</span>
-
-<span class="fc" id="L260">        fieldTestMapstructEntityDTO.setZonedDateTimeEva( entity.getZonedDateTimeEva() );</span>
-
-<span class="fc" id="L262">        fieldTestMapstructEntityDTO.setZonedDateTimeRequiredEva( entity.getZonedDateTimeRequiredEva() );</span>
-
-<span class="fc" id="L264">        fieldTestMapstructEntityDTO.setBooleanEva( entity.isBooleanEva() );</span>
-
-<span class="fc" id="L266">        fieldTestMapstructEntityDTO.setBooleanRequiredEva( entity.isBooleanRequiredEva() );</span>
-
-<span class="fc" id="L268">        fieldTestMapstructEntityDTO.setEnumEva( entity.getEnumEva() );</span>
-
-<span class="fc" id="L270">        fieldTestMapstructEntityDTO.setEnumRequiredEva( entity.getEnumRequiredEva() );</span>
-
-<span class="pc bpc" id="L272" title="1 of 2 branches missed.">        if ( entity.getByteImageEva() != null ) {</span>
-
-<span class="fc" id="L274">            byte[] byteImageEva = entity.getByteImageEva();</span>
-
-<span class="fc" id="L276">            fieldTestMapstructEntityDTO.setByteImageEva( Arrays.copyOf( byteImageEva, byteImageEva.length ) );</span>
+<span class="fc" id="L117">        fieldTestMapstructEntityDTO.setId( entity.getId() );</span>
+<span class="fc" id="L118">        fieldTestMapstructEntityDTO.setStringEva( entity.getStringEva() );</span>
+<span class="fc" id="L119">        fieldTestMapstructEntityDTO.setStringRequiredEva( entity.getStringRequiredEva() );</span>
+<span class="fc" id="L120">        fieldTestMapstructEntityDTO.setStringMinlengthEva( entity.getStringMinlengthEva() );</span>
+<span class="fc" id="L121">        fieldTestMapstructEntityDTO.setStringMaxlengthEva( entity.getStringMaxlengthEva() );</span>
+<span class="fc" id="L122">        fieldTestMapstructEntityDTO.setStringPatternEva( entity.getStringPatternEva() );</span>
+<span class="fc" id="L123">        fieldTestMapstructEntityDTO.setIntegerEva( entity.getIntegerEva() );</span>
+<span class="fc" id="L124">        fieldTestMapstructEntityDTO.setIntegerRequiredEva( entity.getIntegerRequiredEva() );</span>
+<span class="fc" id="L125">        fieldTestMapstructEntityDTO.setIntegerMinEva( entity.getIntegerMinEva() );</span>
+<span class="fc" id="L126">        fieldTestMapstructEntityDTO.setIntegerMaxEva( entity.getIntegerMaxEva() );</span>
+<span class="fc" id="L127">        fieldTestMapstructEntityDTO.setLongEva( entity.getLongEva() );</span>
+<span class="fc" id="L128">        fieldTestMapstructEntityDTO.setLongRequiredEva( entity.getLongRequiredEva() );</span>
+<span class="fc" id="L129">        fieldTestMapstructEntityDTO.setLongMinEva( entity.getLongMinEva() );</span>
+<span class="fc" id="L130">        fieldTestMapstructEntityDTO.setLongMaxEva( entity.getLongMaxEva() );</span>
+<span class="fc" id="L131">        fieldTestMapstructEntityDTO.setFloatEva( entity.getFloatEva() );</span>
+<span class="fc" id="L132">        fieldTestMapstructEntityDTO.setFloatRequiredEva( entity.getFloatRequiredEva() );</span>
+<span class="fc" id="L133">        fieldTestMapstructEntityDTO.setFloatMinEva( entity.getFloatMinEva() );</span>
+<span class="fc" id="L134">        fieldTestMapstructEntityDTO.setFloatMaxEva( entity.getFloatMaxEva() );</span>
+<span class="fc" id="L135">        fieldTestMapstructEntityDTO.setDoubleRequiredEva( entity.getDoubleRequiredEva() );</span>
+<span class="fc" id="L136">        fieldTestMapstructEntityDTO.setDoubleMinEva( entity.getDoubleMinEva() );</span>
+<span class="fc" id="L137">        fieldTestMapstructEntityDTO.setDoubleMaxEva( entity.getDoubleMaxEva() );</span>
+<span class="fc" id="L138">        fieldTestMapstructEntityDTO.setBigDecimalRequiredEva( entity.getBigDecimalRequiredEva() );</span>
+<span class="fc" id="L139">        fieldTestMapstructEntityDTO.setBigDecimalMinEva( entity.getBigDecimalMinEva() );</span>
+<span class="fc" id="L140">        fieldTestMapstructEntityDTO.setBigDecimalMaxEva( entity.getBigDecimalMaxEva() );</span>
+<span class="fc" id="L141">        fieldTestMapstructEntityDTO.setLocalDateEva( entity.getLocalDateEva() );</span>
+<span class="fc" id="L142">        fieldTestMapstructEntityDTO.setLocalDateRequiredEva( entity.getLocalDateRequiredEva() );</span>
+<span class="fc" id="L143">        fieldTestMapstructEntityDTO.setInstantEva( entity.getInstantEva() );</span>
+<span class="fc" id="L144">        fieldTestMapstructEntityDTO.setInstanteRequiredEva( entity.getInstanteRequiredEva() );</span>
+<span class="fc" id="L145">        fieldTestMapstructEntityDTO.setZonedDateTimeEva( entity.getZonedDateTimeEva() );</span>
+<span class="fc" id="L146">        fieldTestMapstructEntityDTO.setZonedDateTimeRequiredEva( entity.getZonedDateTimeRequiredEva() );</span>
+<span class="fc" id="L147">        fieldTestMapstructEntityDTO.setBooleanEva( entity.isBooleanEva() );</span>
+<span class="fc" id="L148">        fieldTestMapstructEntityDTO.setBooleanRequiredEva( entity.isBooleanRequiredEva() );</span>
+<span class="fc" id="L149">        fieldTestMapstructEntityDTO.setEnumEva( entity.getEnumEva() );</span>
+<span class="fc" id="L150">        fieldTestMapstructEntityDTO.setEnumRequiredEva( entity.getEnumRequiredEva() );</span>
+<span class="fc" id="L151">        byte[] byteImageEva = entity.getByteImageEva();</span>
+<span class="pc bpc" id="L152" title="1 of 2 branches missed.">        if ( byteImageEva != null ) {</span>
+<span class="fc" id="L153">            fieldTestMapstructEntityDTO.setByteImageEva( Arrays.copyOf( byteImageEva, byteImageEva.length ) );</span>
         }
-
-<span class="fc" id="L279">        fieldTestMapstructEntityDTO.setByteImageEvaContentType( entity.getByteImageEvaContentType() );</span>
-
-<span class="fc bfc" id="L281" title="All 2 branches covered.">        if ( entity.getByteImageRequiredEva() != null ) {</span>
-
-<span class="fc" id="L283">            byte[] byteImageRequiredEva = entity.getByteImageRequiredEva();</span>
-
-<span class="fc" id="L285">            fieldTestMapstructEntityDTO.setByteImageRequiredEva( Arrays.copyOf( byteImageRequiredEva, byteImageRequiredEva.length ) );</span>
+<span class="fc" id="L155">        fieldTestMapstructEntityDTO.setByteImageEvaContentType( entity.getByteImageEvaContentType() );</span>
+<span class="fc" id="L156">        byte[] byteImageRequiredEva = entity.getByteImageRequiredEva();</span>
+<span class="fc bfc" id="L157" title="All 2 branches covered.">        if ( byteImageRequiredEva != null ) {</span>
+<span class="fc" id="L158">            fieldTestMapstructEntityDTO.setByteImageRequiredEva( Arrays.copyOf( byteImageRequiredEva, byteImageRequiredEva.length ) );</span>
         }
-
-<span class="fc" id="L288">        fieldTestMapstructEntityDTO.setByteImageRequiredEvaContentType( entity.getByteImageRequiredEvaContentType() );</span>
-
-<span class="pc bpc" id="L290" title="1 of 2 branches missed.">        if ( entity.getByteImageMinbytesEva() != null ) {</span>
-
-<span class="fc" id="L292">            byte[] byteImageMinbytesEva = entity.getByteImageMinbytesEva();</span>
-
-<span class="fc" id="L294">            fieldTestMapstructEntityDTO.setByteImageMinbytesEva( Arrays.copyOf( byteImageMinbytesEva, byteImageMinbytesEva.length ) );</span>
+<span class="fc" id="L160">        fieldTestMapstructEntityDTO.setByteImageRequiredEvaContentType( entity.getByteImageRequiredEvaContentType() );</span>
+<span class="fc" id="L161">        byte[] byteImageMinbytesEva = entity.getByteImageMinbytesEva();</span>
+<span class="pc bpc" id="L162" title="1 of 2 branches missed.">        if ( byteImageMinbytesEva != null ) {</span>
+<span class="fc" id="L163">            fieldTestMapstructEntityDTO.setByteImageMinbytesEva( Arrays.copyOf( byteImageMinbytesEva, byteImageMinbytesEva.length ) );</span>
         }
-
-<span class="fc" id="L297">        fieldTestMapstructEntityDTO.setByteImageMinbytesEvaContentType( entity.getByteImageMinbytesEvaContentType() );</span>
-
-<span class="pc bpc" id="L299" title="1 of 2 branches missed.">        if ( entity.getByteImageMaxbytesEva() != null ) {</span>
-
-<span class="fc" id="L301">            byte[] byteImageMaxbytesEva = entity.getByteImageMaxbytesEva();</span>
-
-<span class="fc" id="L303">            fieldTestMapstructEntityDTO.setByteImageMaxbytesEva( Arrays.copyOf( byteImageMaxbytesEva, byteImageMaxbytesEva.length ) );</span>
+<span class="fc" id="L165">        fieldTestMapstructEntityDTO.setByteImageMinbytesEvaContentType( entity.getByteImageMinbytesEvaContentType() );</span>
+<span class="fc" id="L166">        byte[] byteImageMaxbytesEva = entity.getByteImageMaxbytesEva();</span>
+<span class="pc bpc" id="L167" title="1 of 2 branches missed.">        if ( byteImageMaxbytesEva != null ) {</span>
+<span class="fc" id="L168">            fieldTestMapstructEntityDTO.setByteImageMaxbytesEva( Arrays.copyOf( byteImageMaxbytesEva, byteImageMaxbytesEva.length ) );</span>
         }
-
-<span class="fc" id="L306">        fieldTestMapstructEntityDTO.setByteImageMaxbytesEvaContentType( entity.getByteImageMaxbytesEvaContentType() );</span>
-
-<span class="pc bpc" id="L308" title="1 of 2 branches missed.">        if ( entity.getByteAnyEva() != null ) {</span>
-
-<span class="fc" id="L310">            byte[] byteAnyEva = entity.getByteAnyEva();</span>
-
-<span class="fc" id="L312">            fieldTestMapstructEntityDTO.setByteAnyEva( Arrays.copyOf( byteAnyEva, byteAnyEva.length ) );</span>
+<span class="fc" id="L170">        fieldTestMapstructEntityDTO.setByteImageMaxbytesEvaContentType( entity.getByteImageMaxbytesEvaContentType() );</span>
+<span class="fc" id="L171">        byte[] byteAnyEva = entity.getByteAnyEva();</span>
+<span class="pc bpc" id="L172" title="1 of 2 branches missed.">        if ( byteAnyEva != null ) {</span>
+<span class="fc" id="L173">            fieldTestMapstructEntityDTO.setByteAnyEva( Arrays.copyOf( byteAnyEva, byteAnyEva.length ) );</span>
         }
-
-<span class="fc" id="L315">        fieldTestMapstructEntityDTO.setByteAnyEvaContentType( entity.getByteAnyEvaContentType() );</span>
-
-<span class="fc bfc" id="L317" title="All 2 branches covered.">        if ( entity.getByteAnyRequiredEva() != null ) {</span>
-
-<span class="fc" id="L319">            byte[] byteAnyRequiredEva = entity.getByteAnyRequiredEva();</span>
-
-<span class="fc" id="L321">            fieldTestMapstructEntityDTO.setByteAnyRequiredEva( Arrays.copyOf( byteAnyRequiredEva, byteAnyRequiredEva.length ) );</span>
+<span class="fc" id="L175">        fieldTestMapstructEntityDTO.setByteAnyEvaContentType( entity.getByteAnyEvaContentType() );</span>
+<span class="fc" id="L176">        byte[] byteAnyRequiredEva = entity.getByteAnyRequiredEva();</span>
+<span class="fc bfc" id="L177" title="All 2 branches covered.">        if ( byteAnyRequiredEva != null ) {</span>
+<span class="fc" id="L178">            fieldTestMapstructEntityDTO.setByteAnyRequiredEva( Arrays.copyOf( byteAnyRequiredEva, byteAnyRequiredEva.length ) );</span>
         }
-
-<span class="fc" id="L324">        fieldTestMapstructEntityDTO.setByteAnyRequiredEvaContentType( entity.getByteAnyRequiredEvaContentType() );</span>
-
-<span class="pc bpc" id="L326" title="1 of 2 branches missed.">        if ( entity.getByteAnyMinbytesEva() != null ) {</span>
-
-<span class="fc" id="L328">            byte[] byteAnyMinbytesEva = entity.getByteAnyMinbytesEva();</span>
-
-<span class="fc" id="L330">            fieldTestMapstructEntityDTO.setByteAnyMinbytesEva( Arrays.copyOf( byteAnyMinbytesEva, byteAnyMinbytesEva.length ) );</span>
+<span class="fc" id="L180">        fieldTestMapstructEntityDTO.setByteAnyRequiredEvaContentType( entity.getByteAnyRequiredEvaContentType() );</span>
+<span class="fc" id="L181">        byte[] byteAnyMinbytesEva = entity.getByteAnyMinbytesEva();</span>
+<span class="pc bpc" id="L182" title="1 of 2 branches missed.">        if ( byteAnyMinbytesEva != null ) {</span>
+<span class="fc" id="L183">            fieldTestMapstructEntityDTO.setByteAnyMinbytesEva( Arrays.copyOf( byteAnyMinbytesEva, byteAnyMinbytesEva.length ) );</span>
         }
-
-<span class="fc" id="L333">        fieldTestMapstructEntityDTO.setByteAnyMinbytesEvaContentType( entity.getByteAnyMinbytesEvaContentType() );</span>
-
-<span class="pc bpc" id="L335" title="1 of 2 branches missed.">        if ( entity.getByteAnyMaxbytesEva() != null ) {</span>
-
-<span class="fc" id="L337">            byte[] byteAnyMaxbytesEva = entity.getByteAnyMaxbytesEva();</span>
-
-<span class="fc" id="L339">            fieldTestMapstructEntityDTO.setByteAnyMaxbytesEva( Arrays.copyOf( byteAnyMaxbytesEva, byteAnyMaxbytesEva.length ) );</span>
+<span class="fc" id="L185">        fieldTestMapstructEntityDTO.setByteAnyMinbytesEvaContentType( entity.getByteAnyMinbytesEvaContentType() );</span>
+<span class="fc" id="L186">        byte[] byteAnyMaxbytesEva = entity.getByteAnyMaxbytesEva();</span>
+<span class="pc bpc" id="L187" title="1 of 2 branches missed.">        if ( byteAnyMaxbytesEva != null ) {</span>
+<span class="fc" id="L188">            fieldTestMapstructEntityDTO.setByteAnyMaxbytesEva( Arrays.copyOf( byteAnyMaxbytesEva, byteAnyMaxbytesEva.length ) );</span>
         }
+<span class="fc" id="L190">        fieldTestMapstructEntityDTO.setByteAnyMaxbytesEvaContentType( entity.getByteAnyMaxbytesEvaContentType() );</span>
+<span class="fc" id="L191">        fieldTestMapstructEntityDTO.setByteTextEva( entity.getByteTextEva() );</span>
+<span class="fc" id="L192">        fieldTestMapstructEntityDTO.setByteTextRequiredEva( entity.getByteTextRequiredEva() );</span>
+<span class="fc" id="L193">        fieldTestMapstructEntityDTO.setByteTextMinbytesEva( entity.getByteTextMinbytesEva() );</span>
+<span class="fc" id="L194">        fieldTestMapstructEntityDTO.setByteTextMaxbytesEva( entity.getByteTextMaxbytesEva() );</span>
 
-<span class="fc" id="L342">        fieldTestMapstructEntityDTO.setByteAnyMaxbytesEvaContentType( entity.getByteAnyMaxbytesEvaContentType() );</span>
-
-<span class="fc" id="L344">        fieldTestMapstructEntityDTO.setByteTextEva( entity.getByteTextEva() );</span>
-
-<span class="fc" id="L346">        fieldTestMapstructEntityDTO.setByteTextRequiredEva( entity.getByteTextRequiredEva() );</span>
-
-<span class="fc" id="L348">        fieldTestMapstructEntityDTO.setByteTextMinbytesEva( entity.getByteTextMinbytesEva() );</span>
-
-<span class="fc" id="L350">        fieldTestMapstructEntityDTO.setByteTextMaxbytesEva( entity.getByteTextMaxbytesEva() );</span>
-
-<span class="fc" id="L352">        return fieldTestMapstructEntityDTO;</span>
+<span class="fc" id="L196">        return fieldTestMapstructEntityDTO;</span>
     }
 
     @Override
-
     public List&lt;FieldTestMapstructEntity&gt; toEntity(List&lt;FieldTestMapstructEntityDTO&gt; dtoList) {
-
-<span class="nc bnc" id="L359" title="All 2 branches missed.">        if ( dtoList == null ) {</span>
-
-<span class="nc" id="L361">            return null;</span>
+<span class="nc bnc" id="L201" title="All 2 branches missed.">        if ( dtoList == null ) {</span>
+<span class="nc" id="L202">            return null;</span>
         }
 
-<span class="nc" id="L364">        List&lt;FieldTestMapstructEntity&gt; list = new ArrayList&lt;FieldTestMapstructEntity&gt;();</span>
+<span class="nc" id="L205">        List&lt;FieldTestMapstructEntity&gt; list = new ArrayList&lt;FieldTestMapstructEntity&gt;( dtoList.size() );</span>
+<span class="nc bnc" id="L206" title="All 2 branches missed.">        for ( FieldTestMapstructEntityDTO fieldTestMapstructEntityDTO : dtoList ) {</span>
+<span class="nc" id="L207">            list.add( toEntity( fieldTestMapstructEntityDTO ) );</span>
+<span class="nc" id="L208">        }</span>
 
-<span class="nc bnc" id="L366" title="All 2 branches missed.">        for ( FieldTestMapstructEntityDTO fieldTestMapstructEntityDTO : dtoList ) {</span>
-
-<span class="nc" id="L368">            list.add( toEntity( fieldTestMapstructEntityDTO ) );</span>
-<span class="nc" id="L369">        }</span>
-
-<span class="nc" id="L371">        return list;</span>
+<span class="nc" id="L210">        return list;</span>
     }
 
     @Override
-
     public List&lt;FieldTestMapstructEntityDTO&gt; toDto(List&lt;FieldTestMapstructEntity&gt; entityList) {
-
-<span class="pc bpc" id="L378" title="1 of 2 branches missed.">        if ( entityList == null ) {</span>
-
-<span class="nc" id="L380">            return null;</span>
+<span class="pc bpc" id="L215" title="1 of 2 branches missed.">        if ( entityList == null ) {</span>
+<span class="nc" id="L216">            return null;</span>
         }
 
-<span class="fc" id="L383">        List&lt;FieldTestMapstructEntityDTO&gt; list = new ArrayList&lt;FieldTestMapstructEntityDTO&gt;();</span>
+<span class="fc" id="L219">        List&lt;FieldTestMapstructEntityDTO&gt; list = new ArrayList&lt;FieldTestMapstructEntityDTO&gt;( entityList.size() );</span>
+<span class="fc bfc" id="L220" title="All 2 branches covered.">        for ( FieldTestMapstructEntity fieldTestMapstructEntity : entityList ) {</span>
+<span class="fc" id="L221">            list.add( toDto( fieldTestMapstructEntity ) );</span>
+<span class="fc" id="L222">        }</span>
 
-<span class="fc bfc" id="L385" title="All 2 branches covered.">        for ( FieldTestMapstructEntity fieldTestMapstructEntity : entityList ) {</span>
-
-<span class="fc" id="L387">            list.add( toDto( fieldTestMapstructEntity ) );</span>
-<span class="fc" id="L388">        }</span>
-
-<span class="fc" id="L390">        return list;</span>
+<span class="fc" id="L224">        return list;</span>
     }
 }
-
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

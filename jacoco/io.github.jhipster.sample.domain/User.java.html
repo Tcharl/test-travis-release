@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>User.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.domain</a> &gt; <span class="el_source">User.java</span></div><h1>User.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.domain;
 
+/*-
+ * #%L
+ * Jhipster Sample Application
+ * %%
+ * Copyright (C) 2017 Osgiliath
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
 import io.github.jhipster.sample.config.Constants;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -26,7 +46,7 @@ import java.time.Instant;
 @Entity
 @Table(name = &quot;jhi_user&quot;)
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-<span class="fc" id="L29">public class User extends AbstractAuditingEntity implements Serializable {</span>
+<span class="fc" id="L49">public class User extends AbstractAuditingEntity implements Serializable {</span>
 
     private static final long serialVersionUID = 1L;
 
@@ -59,7 +79,7 @@ import java.time.Instant;
     @Column(length = 100, unique = true)
     private String email;
 
-<span class="fc" id="L62">    @NotNull</span>
+<span class="fc" id="L82">    @NotNull</span>
     @Column(nullable = false)
     private boolean activated = false;
 
@@ -81,10 +101,10 @@ import java.time.Instant;
     @JsonIgnore
     private String resetKey;
 
-<span class="fc" id="L84">    @Column(name = &quot;reset_date&quot;)</span>
+<span class="fc" id="L104">    @Column(name = &quot;reset_date&quot;)</span>
     private Instant resetDate = null;
 
-<span class="fc" id="L87">    @JsonIgnore</span>
+<span class="fc" id="L107">    @JsonIgnore</span>
     @ManyToMany
     @JoinTable(
         name = &quot;jhi_user_authority&quot;,
@@ -95,131 +115,131 @@ import java.time.Instant;
     private Set&lt;Authority&gt; authorities = new HashSet&lt;&gt;();
 
     public Long getId() {
-<span class="fc" id="L98">        return id;</span>
+<span class="fc" id="L118">        return id;</span>
     }
 
     public void setId(Long id) {
-<span class="fc" id="L102">        this.id = id;</span>
-<span class="fc" id="L103">    }</span>
+<span class="fc" id="L122">        this.id = id;</span>
+<span class="fc" id="L123">    }</span>
 
     public String getLogin() {
-<span class="fc" id="L106">        return login;</span>
+<span class="fc" id="L126">        return login;</span>
     }
 
     // Lowercase the login before saving it in database
     public void setLogin(String login) {
-<span class="fc" id="L111">        this.login = StringUtils.lowerCase(login, Locale.ENGLISH);</span>
-<span class="fc" id="L112">    }</span>
+<span class="fc" id="L131">        this.login = StringUtils.lowerCase(login, Locale.ENGLISH);</span>
+<span class="fc" id="L132">    }</span>
 
     public String getPassword() {
-<span class="fc" id="L115">        return password;</span>
+<span class="fc" id="L135">        return password;</span>
     }
 
     public void setPassword(String password) {
-<span class="fc" id="L119">        this.password = password;</span>
-<span class="fc" id="L120">    }</span>
+<span class="fc" id="L139">        this.password = password;</span>
+<span class="fc" id="L140">    }</span>
 
     public String getFirstName() {
-<span class="fc" id="L123">        return firstName;</span>
+<span class="fc" id="L143">        return firstName;</span>
     }
 
     public void setFirstName(String firstName) {
-<span class="fc" id="L127">        this.firstName = firstName;</span>
-<span class="fc" id="L128">    }</span>
+<span class="fc" id="L147">        this.firstName = firstName;</span>
+<span class="fc" id="L148">    }</span>
 
     public String getLastName() {
-<span class="fc" id="L131">        return lastName;</span>
+<span class="fc" id="L151">        return lastName;</span>
     }
 
     public void setLastName(String lastName) {
-<span class="fc" id="L135">        this.lastName = lastName;</span>
-<span class="fc" id="L136">    }</span>
+<span class="fc" id="L155">        this.lastName = lastName;</span>
+<span class="fc" id="L156">    }</span>
 
     public String getEmail() {
-<span class="fc" id="L139">        return email;</span>
+<span class="fc" id="L159">        return email;</span>
     }
 
     public void setEmail(String email) {
-<span class="fc" id="L143">        this.email = email;</span>
-<span class="fc" id="L144">    }</span>
+<span class="fc" id="L163">        this.email = email;</span>
+<span class="fc" id="L164">    }</span>
 
     public String getImageUrl() {
-<span class="fc" id="L147">        return imageUrl;</span>
+<span class="fc" id="L167">        return imageUrl;</span>
     }
 
     public void setImageUrl(String imageUrl) {
-<span class="fc" id="L151">        this.imageUrl = imageUrl;</span>
-<span class="fc" id="L152">    }</span>
+<span class="fc" id="L171">        this.imageUrl = imageUrl;</span>
+<span class="fc" id="L172">    }</span>
 
     public boolean getActivated() {
-<span class="fc" id="L155">        return activated;</span>
+<span class="fc" id="L175">        return activated;</span>
     }
 
     public void setActivated(boolean activated) {
-<span class="fc" id="L159">        this.activated = activated;</span>
-<span class="fc" id="L160">    }</span>
+<span class="fc" id="L179">        this.activated = activated;</span>
+<span class="fc" id="L180">    }</span>
 
     public String getActivationKey() {
-<span class="fc" id="L163">        return activationKey;</span>
+<span class="fc" id="L183">        return activationKey;</span>
     }
 
     public void setActivationKey(String activationKey) {
-<span class="fc" id="L167">        this.activationKey = activationKey;</span>
-<span class="fc" id="L168">    }</span>
+<span class="fc" id="L187">        this.activationKey = activationKey;</span>
+<span class="fc" id="L188">    }</span>
 
     public String getResetKey() {
-<span class="fc" id="L171">        return resetKey;</span>
+<span class="fc" id="L191">        return resetKey;</span>
     }
 
     public void setResetKey(String resetKey) {
-<span class="fc" id="L175">        this.resetKey = resetKey;</span>
-<span class="fc" id="L176">    }</span>
+<span class="fc" id="L195">        this.resetKey = resetKey;</span>
+<span class="fc" id="L196">    }</span>
 
     public Instant getResetDate() {
-<span class="fc" id="L179">        return resetDate;</span>
+<span class="fc" id="L199">        return resetDate;</span>
     }
 
     public void setResetDate(Instant resetDate) {
-<span class="fc" id="L183">        this.resetDate = resetDate;</span>
-<span class="fc" id="L184">    }</span>
+<span class="fc" id="L203">        this.resetDate = resetDate;</span>
+<span class="fc" id="L204">    }</span>
 
     public String getLangKey() {
-<span class="fc" id="L187">        return langKey;</span>
+<span class="fc" id="L207">        return langKey;</span>
     }
 
     public void setLangKey(String langKey) {
-<span class="fc" id="L191">        this.langKey = langKey;</span>
-<span class="fc" id="L192">    }</span>
+<span class="fc" id="L211">        this.langKey = langKey;</span>
+<span class="fc" id="L212">    }</span>
 
     public Set&lt;Authority&gt; getAuthorities() {
-<span class="fc" id="L195">        return authorities;</span>
+<span class="fc" id="L215">        return authorities;</span>
     }
 
     public void setAuthorities(Set&lt;Authority&gt; authorities) {
-<span class="fc" id="L199">        this.authorities = authorities;</span>
-<span class="fc" id="L200">    }</span>
+<span class="fc" id="L219">        this.authorities = authorities;</span>
+<span class="fc" id="L220">    }</span>
 
     @Override
     public boolean equals(Object o) {
-<span class="fc bfc" id="L204" title="All 2 branches covered.">        if (this == o) {</span>
-<span class="fc" id="L205">            return true;</span>
+<span class="fc bfc" id="L224" title="All 2 branches covered.">        if (this == o) {</span>
+<span class="fc" id="L225">            return true;</span>
         }
-<span class="fc bfc" id="L207" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
-<span class="fc" id="L208">            return false;</span>
+<span class="fc bfc" id="L227" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L228">            return false;</span>
         }
 
-<span class="fc" id="L211">        User user = (User) o;</span>
-<span class="fc bfc" id="L212" title="All 6 branches covered.">        return !(user.getId() == null || getId() == null) &amp;&amp; Objects.equals(getId(), user.getId());</span>
+<span class="fc" id="L231">        User user = (User) o;</span>
+<span class="fc bfc" id="L232" title="All 6 branches covered.">        return !(user.getId() == null || getId() == null) &amp;&amp; Objects.equals(getId(), user.getId());</span>
     }
 
     @Override
     public int hashCode() {
-<span class="fc" id="L217">        return Objects.hashCode(getId());</span>
+<span class="fc" id="L237">        return Objects.hashCode(getId());</span>
     }
 
     @Override
     public String toString() {
-<span class="fc" id="L222">        return &quot;User{&quot; +</span>
+<span class="fc" id="L242">        return &quot;User{&quot; +</span>
             &quot;login='&quot; + login + '\'' +
             &quot;, firstName='&quot; + firstName + '\'' +
             &quot;, lastName='&quot; + lastName + '\'' +

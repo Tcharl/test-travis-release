@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EntityWithServiceClassPaginationAndDTO.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.domain</a> &gt; <span class="el_source">EntityWithServiceClassPaginationAndDTO.java</span></div><h1>EntityWithServiceClassPaginationAndDTO.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.domain;
 
+/*-
+ * #%L
+ * Jhipster Sample Application
+ * %%
+ * Copyright (C) 2017 Osgiliath
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
+
 import java.io.Serializable;
 import java.util.Objects;
-
 
 /**
  * A EntityWithServiceClassPaginationAndDTO.
@@ -14,7 +34,7 @@ import java.util.Objects;
 @Entity
 @Table(name = &quot;entity_with_service_class_pagination_and_dto&quot;)
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-<span class="fc" id="L17">public class EntityWithServiceClassPaginationAndDTO implements Serializable {</span>
+<span class="fc" id="L37">public class EntityWithServiceClassPaginationAndDTO implements Serializable {</span>
 
     private static final long serialVersionUID = 1L;
 
@@ -27,52 +47,52 @@ import java.util.Objects;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
-<span class="fc" id="L30">        return id;</span>
+<span class="fc" id="L50">        return id;</span>
     }
 
     public void setId(Long id) {
-<span class="fc" id="L34">        this.id = id;</span>
-<span class="fc" id="L35">    }</span>
+<span class="fc" id="L54">        this.id = id;</span>
+<span class="fc" id="L55">    }</span>
 
     public String getLena() {
-<span class="fc" id="L38">        return lena;</span>
+<span class="fc" id="L58">        return lena;</span>
     }
 
     public EntityWithServiceClassPaginationAndDTO lena(String lena) {
-<span class="fc" id="L42">        this.lena = lena;</span>
-<span class="fc" id="L43">        return this;</span>
+<span class="fc" id="L62">        this.lena = lena;</span>
+<span class="fc" id="L63">        return this;</span>
     }
 
     public void setLena(String lena) {
-<span class="fc" id="L47">        this.lena = lena;</span>
-<span class="fc" id="L48">    }</span>
+<span class="fc" id="L67">        this.lena = lena;</span>
+<span class="fc" id="L68">    }</span>
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
     public boolean equals(Object o) {
-<span class="fc bfc" id="L53" title="All 2 branches covered.">        if (this == o) {</span>
-<span class="fc" id="L54">            return true;</span>
+<span class="fc bfc" id="L73" title="All 2 branches covered.">        if (this == o) {</span>
+<span class="fc" id="L74">            return true;</span>
         }
-<span class="fc bfc" id="L56" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
-<span class="fc" id="L57">            return false;</span>
+<span class="fc bfc" id="L76" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L77">            return false;</span>
         }
-<span class="fc" id="L59">        EntityWithServiceClassPaginationAndDTO entityWithServiceClassPaginationAndDTO = (EntityWithServiceClassPaginationAndDTO) o;</span>
-<span class="fc bfc" id="L60" title="All 4 branches covered.">        if (entityWithServiceClassPaginationAndDTO.getId() == null || getId() == null) {</span>
-<span class="fc" id="L61">            return false;</span>
+<span class="fc" id="L79">        EntityWithServiceClassPaginationAndDTO entityWithServiceClassPaginationAndDTO = (EntityWithServiceClassPaginationAndDTO) o;</span>
+<span class="fc bfc" id="L80" title="All 4 branches covered.">        if (entityWithServiceClassPaginationAndDTO.getId() == null || getId() == null) {</span>
+<span class="fc" id="L81">            return false;</span>
         }
-<span class="fc" id="L63">        return Objects.equals(getId(), entityWithServiceClassPaginationAndDTO.getId());</span>
+<span class="fc" id="L83">        return Objects.equals(getId(), entityWithServiceClassPaginationAndDTO.getId());</span>
     }
 
     @Override
     public int hashCode() {
-<span class="fc" id="L68">        return Objects.hashCode(getId());</span>
+<span class="fc" id="L88">        return Objects.hashCode(getId());</span>
     }
 
     @Override
     public String toString() {
-<span class="fc" id="L73">        return &quot;EntityWithServiceClassPaginationAndDTO{&quot; +</span>
-<span class="fc" id="L74">            &quot;id=&quot; + getId() +</span>
-<span class="fc" id="L75">            &quot;, lena='&quot; + getLena() + &quot;'&quot; +</span>
+<span class="fc" id="L93">        return &quot;EntityWithServiceClassPaginationAndDTO{&quot; +</span>
+<span class="fc" id="L94">            &quot;id=&quot; + getId() +</span>
+<span class="fc" id="L95">            &quot;, lena='&quot; + getLena() + &quot;'&quot; +</span>
             &quot;}&quot;;
     }
 }

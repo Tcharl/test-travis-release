@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SecurityConfiguration.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.config</a> &gt; <span class="el_source">SecurityConfiguration.java</span></div><h1>SecurityConfiguration.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.config;
 
+/*-
+ * #%L
+ * Jhipster Sample Application
+ * %%
+ * Copyright (C) 2017 Osgiliath
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
 import io.github.jhipster.sample.security.*;
 import io.github.jhipster.sample.security.jwt.*;
 
@@ -41,84 +61,84 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private final SecurityProblemSupport problemSupport;
 
-<span class="fc" id="L44">    public SecurityConfiguration(AuthenticationManagerBuilder authenticationManagerBuilder, UserDetailsService userDetailsService,TokenProvider tokenProvider,CorsFilter corsFilter, SecurityProblemSupport problemSupport) {</span>
-<span class="fc" id="L45">        this.authenticationManagerBuilder = authenticationManagerBuilder;</span>
-<span class="fc" id="L46">        this.userDetailsService = userDetailsService;</span>
-<span class="fc" id="L47">        this.tokenProvider = tokenProvider;</span>
-<span class="fc" id="L48">        this.corsFilter = corsFilter;</span>
-<span class="fc" id="L49">        this.problemSupport = problemSupport;</span>
-<span class="fc" id="L50">    }</span>
+<span class="fc" id="L64">    public SecurityConfiguration(AuthenticationManagerBuilder authenticationManagerBuilder, UserDetailsService userDetailsService,TokenProvider tokenProvider,CorsFilter corsFilter, SecurityProblemSupport problemSupport) {</span>
+<span class="fc" id="L65">        this.authenticationManagerBuilder = authenticationManagerBuilder;</span>
+<span class="fc" id="L66">        this.userDetailsService = userDetailsService;</span>
+<span class="fc" id="L67">        this.tokenProvider = tokenProvider;</span>
+<span class="fc" id="L68">        this.corsFilter = corsFilter;</span>
+<span class="fc" id="L69">        this.problemSupport = problemSupport;</span>
+<span class="fc" id="L70">    }</span>
 
     @PostConstruct
     public void init() {
         try {
-<span class="fc" id="L55">            authenticationManagerBuilder</span>
-<span class="fc" id="L56">                .userDetailsService(userDetailsService)</span>
-<span class="fc" id="L57">                .passwordEncoder(passwordEncoder());</span>
-<span class="nc" id="L58">        } catch (Exception e) {</span>
-<span class="nc" id="L59">            throw new BeanInitializationException(&quot;Security configuration failed&quot;, e);</span>
-<span class="fc" id="L60">        }</span>
-<span class="fc" id="L61">    }</span>
+<span class="fc" id="L75">            authenticationManagerBuilder</span>
+<span class="fc" id="L76">                .userDetailsService(userDetailsService)</span>
+<span class="fc" id="L77">                .passwordEncoder(passwordEncoder());</span>
+<span class="nc" id="L78">        } catch (Exception e) {</span>
+<span class="nc" id="L79">            throw new BeanInitializationException(&quot;Security configuration failed&quot;, e);</span>
+<span class="fc" id="L80">        }</span>
+<span class="fc" id="L81">    }</span>
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-<span class="fc" id="L65">        return new BCryptPasswordEncoder();</span>
+<span class="fc" id="L85">        return new BCryptPasswordEncoder();</span>
     }
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-<span class="fc" id="L70">        web.ignoring()</span>
-<span class="fc" id="L71">            .antMatchers(HttpMethod.OPTIONS, &quot;/**&quot;)</span>
-<span class="fc" id="L72">            .antMatchers(&quot;/app/**/*.{js,html}&quot;)</span>
-<span class="fc" id="L73">            .antMatchers(&quot;/i18n/**&quot;)</span>
-<span class="fc" id="L74">            .antMatchers(&quot;/content/**&quot;)</span>
-<span class="fc" id="L75">            .antMatchers(&quot;/swagger-ui/index.html&quot;)</span>
-<span class="fc" id="L76">            .antMatchers(&quot;/test/**&quot;)</span>
-<span class="fc" id="L77">            .antMatchers(&quot;/h2-console/**&quot;);</span>
-<span class="fc" id="L78">    }</span>
+<span class="fc" id="L90">        web.ignoring()</span>
+<span class="fc" id="L91">            .antMatchers(HttpMethod.OPTIONS, &quot;/**&quot;)</span>
+<span class="fc" id="L92">            .antMatchers(&quot;/app/**/*.{js,html}&quot;)</span>
+<span class="fc" id="L93">            .antMatchers(&quot;/i18n/**&quot;)</span>
+<span class="fc" id="L94">            .antMatchers(&quot;/content/**&quot;)</span>
+<span class="fc" id="L95">            .antMatchers(&quot;/swagger-ui/index.html&quot;)</span>
+<span class="fc" id="L96">            .antMatchers(&quot;/test/**&quot;)</span>
+<span class="fc" id="L97">            .antMatchers(&quot;/h2-console/**&quot;);</span>
+<span class="fc" id="L98">    }</span>
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-<span class="fc" id="L82">        http</span>
-<span class="fc" id="L83">            .addFilterBefore(corsFilter, UsernamePasswordAuthenticationFilter.class)</span>
-<span class="fc" id="L84">            .exceptionHandling()</span>
-<span class="fc" id="L85">            .authenticationEntryPoint(problemSupport)</span>
-<span class="fc" id="L86">            .accessDeniedHandler(problemSupport)</span>
-<span class="fc" id="L87">        .and()</span>
-<span class="fc" id="L88">            .csrf()</span>
-<span class="fc" id="L89">            .disable()</span>
-<span class="fc" id="L90">            .headers()</span>
-<span class="fc" id="L91">            .frameOptions()</span>
-<span class="fc" id="L92">            .disable()</span>
-<span class="fc" id="L93">        .and()</span>
-<span class="fc" id="L94">            .sessionManagement()</span>
-<span class="fc" id="L95">            .sessionCreationPolicy(SessionCreationPolicy.STATELESS)</span>
-<span class="fc" id="L96">        .and()</span>
-<span class="fc" id="L97">            .authorizeRequests()</span>
-<span class="fc" id="L98">            .antMatchers(&quot;/api/register&quot;).permitAll()</span>
-<span class="fc" id="L99">            .antMatchers(&quot;/api/activate&quot;).permitAll()</span>
-<span class="fc" id="L100">            .antMatchers(&quot;/api/authenticate&quot;).permitAll()</span>
-<span class="fc" id="L101">            .antMatchers(&quot;/api/account/reset-password/init&quot;).permitAll()</span>
-<span class="fc" id="L102">            .antMatchers(&quot;/api/account/reset-password/finish&quot;).permitAll()</span>
-<span class="fc" id="L103">            .antMatchers(&quot;/api/profile-info&quot;).permitAll()</span>
-<span class="fc" id="L104">            .antMatchers(&quot;/api/**&quot;).authenticated()</span>
-<span class="fc" id="L105">            .antMatchers(&quot;/management/health&quot;).permitAll()</span>
-<span class="fc" id="L106">            .antMatchers(&quot;/management/**&quot;).hasAuthority(AuthoritiesConstants.ADMIN)</span>
-<span class="fc" id="L107">            .antMatchers(&quot;/v2/api-docs/**&quot;).permitAll()</span>
-<span class="fc" id="L108">            .antMatchers(&quot;/swagger-resources/configuration/ui&quot;).permitAll()</span>
-<span class="fc" id="L109">            .antMatchers(&quot;/swagger-ui/index.html&quot;).hasAuthority(AuthoritiesConstants.ADMIN)</span>
-<span class="fc" id="L110">        .and()</span>
-<span class="fc" id="L111">            .apply(securityConfigurerAdapter());</span>
+<span class="fc" id="L102">        http</span>
+<span class="fc" id="L103">            .addFilterBefore(corsFilter, UsernamePasswordAuthenticationFilter.class)</span>
+<span class="fc" id="L104">            .exceptionHandling()</span>
+<span class="fc" id="L105">            .authenticationEntryPoint(problemSupport)</span>
+<span class="fc" id="L106">            .accessDeniedHandler(problemSupport)</span>
+<span class="fc" id="L107">        .and()</span>
+<span class="fc" id="L108">            .csrf()</span>
+<span class="fc" id="L109">            .disable()</span>
+<span class="fc" id="L110">            .headers()</span>
+<span class="fc" id="L111">            .frameOptions()</span>
+<span class="fc" id="L112">            .disable()</span>
+<span class="fc" id="L113">        .and()</span>
+<span class="fc" id="L114">            .sessionManagement()</span>
+<span class="fc" id="L115">            .sessionCreationPolicy(SessionCreationPolicy.STATELESS)</span>
+<span class="fc" id="L116">        .and()</span>
+<span class="fc" id="L117">            .authorizeRequests()</span>
+<span class="fc" id="L118">            .antMatchers(&quot;/api/register&quot;).permitAll()</span>
+<span class="fc" id="L119">            .antMatchers(&quot;/api/activate&quot;).permitAll()</span>
+<span class="fc" id="L120">            .antMatchers(&quot;/api/authenticate&quot;).permitAll()</span>
+<span class="fc" id="L121">            .antMatchers(&quot;/api/account/reset-password/init&quot;).permitAll()</span>
+<span class="fc" id="L122">            .antMatchers(&quot;/api/account/reset-password/finish&quot;).permitAll()</span>
+<span class="fc" id="L123">            .antMatchers(&quot;/api/profile-info&quot;).permitAll()</span>
+<span class="fc" id="L124">            .antMatchers(&quot;/api/**&quot;).authenticated()</span>
+<span class="fc" id="L125">            .antMatchers(&quot;/management/health&quot;).permitAll()</span>
+<span class="fc" id="L126">            .antMatchers(&quot;/management/**&quot;).hasAuthority(AuthoritiesConstants.ADMIN)</span>
+<span class="fc" id="L127">            .antMatchers(&quot;/v2/api-docs/**&quot;).permitAll()</span>
+<span class="fc" id="L128">            .antMatchers(&quot;/swagger-resources/configuration/ui&quot;).permitAll()</span>
+<span class="fc" id="L129">            .antMatchers(&quot;/swagger-ui/index.html&quot;).hasAuthority(AuthoritiesConstants.ADMIN)</span>
+<span class="fc" id="L130">        .and()</span>
+<span class="fc" id="L131">            .apply(securityConfigurerAdapter());</span>
 
-<span class="fc" id="L113">    }</span>
+<span class="fc" id="L133">    }</span>
 
     private JWTConfigurer securityConfigurerAdapter() {
-<span class="fc" id="L116">        return new JWTConfigurer(tokenProvider);</span>
+<span class="fc" id="L136">        return new JWTConfigurer(tokenProvider);</span>
     }
 
     @Bean
     public SecurityEvaluationContextExtension securityEvaluationContextExtension() {
-<span class="fc" id="L121">        return new SecurityEvaluationContextExtension();</span>
+<span class="fc" id="L141">        return new SecurityEvaluationContextExtension();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

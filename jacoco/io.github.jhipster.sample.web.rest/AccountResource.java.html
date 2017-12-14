@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AccountResource.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.web.rest</a> &gt; <span class="el_source">AccountResource.java</span></div><h1>AccountResource.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.web.rest;
 
+/*-
+ * #%L
+ * Jhipster Sample Application
+ * %%
+ * Copyright (C) 2017 Osgiliath
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
 import com.codahale.metrics.annotation.Timed;
 
 import io.github.jhipster.sample.domain.User;
@@ -29,7 +49,7 @@ import java.util.*;
 @RequestMapping(&quot;/api&quot;)
 public class AccountResource {
 
-<span class="fc" id="L32">    private final Logger log = LoggerFactory.getLogger(AccountResource.class);</span>
+<span class="fc" id="L52">    private final Logger log = LoggerFactory.getLogger(AccountResource.class);</span>
 
     private final UserRepository userRepository;
 
@@ -37,12 +57,12 @@ public class AccountResource {
 
     private final MailService mailService;
 
-<span class="fc" id="L40">    public AccountResource(UserRepository userRepository, UserService userService, MailService mailService) {</span>
+<span class="fc" id="L60">    public AccountResource(UserRepository userRepository, UserService userService, MailService mailService) {</span>
 
-<span class="fc" id="L42">        this.userRepository = userRepository;</span>
-<span class="fc" id="L43">        this.userService = userService;</span>
-<span class="fc" id="L44">        this.mailService = mailService;</span>
-<span class="fc" id="L45">    }</span>
+<span class="fc" id="L62">        this.userRepository = userRepository;</span>
+<span class="fc" id="L63">        this.userService = userService;</span>
+<span class="fc" id="L64">        this.mailService = mailService;</span>
+<span class="fc" id="L65">    }</span>
 
     /**
      * POST  /register : register the user.
@@ -56,14 +76,14 @@ public class AccountResource {
     @Timed
     @ResponseStatus(HttpStatus.CREATED)
     public void registerAccount(@Valid @RequestBody ManagedUserVM managedUserVM) {
-<span class="fc bfc" id="L59" title="All 2 branches covered.">        if (!checkPasswordLength(managedUserVM.getPassword())) {</span>
-<span class="fc" id="L60">            throw new InvalidPasswordException();</span>
+<span class="fc bfc" id="L79" title="All 2 branches covered.">        if (!checkPasswordLength(managedUserVM.getPassword())) {</span>
+<span class="fc" id="L80">            throw new InvalidPasswordException();</span>
         }
-<span class="fc" id="L62">        userRepository.findOneByLogin(managedUserVM.getLogin().toLowerCase()).ifPresent(u -&gt; {throw new LoginAlreadyUsedException();});</span>
-<span class="fc" id="L63">        userRepository.findOneByEmailIgnoreCase(managedUserVM.getEmail()).ifPresent(u -&gt; {throw new EmailAlreadyUsedException();});</span>
-<span class="fc" id="L64">        User user = userService.registerUser(managedUserVM, managedUserVM.getPassword());</span>
-<span class="fc" id="L65">        mailService.sendActivationEmail(user);</span>
-<span class="fc" id="L66">    }</span>
+<span class="fc" id="L82">        userRepository.findOneByLogin(managedUserVM.getLogin().toLowerCase()).ifPresent(u -&gt; {throw new LoginAlreadyUsedException();});</span>
+<span class="fc" id="L83">        userRepository.findOneByEmailIgnoreCase(managedUserVM.getEmail()).ifPresent(u -&gt; {throw new EmailAlreadyUsedException();});</span>
+<span class="fc" id="L84">        User user = userService.registerUser(managedUserVM, managedUserVM.getPassword());</span>
+<span class="fc" id="L85">        mailService.sendActivationEmail(user);</span>
+<span class="fc" id="L86">    }</span>
 
     /**
      * GET  /activate : activate the registered user.
@@ -74,11 +94,11 @@ public class AccountResource {
     @GetMapping(&quot;/activate&quot;)
     @Timed
     public void activateAccount(@RequestParam(value = &quot;key&quot;) String key) {
-<span class="fc" id="L77">        Optional&lt;User&gt; user = userService.activateRegistration(key);</span>
-<span class="fc bfc" id="L78" title="All 2 branches covered.">        if (!user.isPresent()) {</span>
-<span class="fc" id="L79">            throw new InternalServerErrorException(&quot;No user was found for this reset key&quot;);</span>
+<span class="fc" id="L97">        Optional&lt;User&gt; user = userService.activateRegistration(key);</span>
+<span class="fc bfc" id="L98" title="All 2 branches covered.">        if (!user.isPresent()) {</span>
+<span class="fc" id="L99">            throw new InternalServerErrorException(&quot;No user was found for this reset key&quot;);</span>
         }
-<span class="fc" id="L81">    }</span>
+<span class="fc" id="L101">    }</span>
 
     /**
      * GET  /authenticate : check if the user is authenticated, and return its login.
@@ -89,8 +109,8 @@ public class AccountResource {
     @GetMapping(&quot;/authenticate&quot;)
     @Timed
     public String isAuthenticated(HttpServletRequest request) {
-<span class="fc" id="L92">        log.debug(&quot;REST request to check if the current user is authenticated&quot;);</span>
-<span class="fc" id="L93">        return request.getRemoteUser();</span>
+<span class="fc" id="L112">        log.debug(&quot;REST request to check if the current user is authenticated&quot;);</span>
+<span class="fc" id="L113">        return request.getRemoteUser();</span>
     }
 
     /**
@@ -102,9 +122,9 @@ public class AccountResource {
     @GetMapping(&quot;/account&quot;)
     @Timed
     public UserDTO getAccount() {
-<span class="fc" id="L105">        return userService.getUserWithAuthorities()</span>
-<span class="fc" id="L106">            .map(UserDTO::new)</span>
-<span class="fc" id="L107">            .orElseThrow(() -&gt; new InternalServerErrorException(&quot;User could not be found&quot;));</span>
+<span class="fc" id="L125">        return userService.getUserWithAuthorities()</span>
+<span class="fc" id="L126">            .map(UserDTO::new)</span>
+<span class="fc" id="L127">            .orElseThrow(() -&gt; new InternalServerErrorException(&quot;User could not be found&quot;));</span>
     }
 
     /**
@@ -117,18 +137,18 @@ public class AccountResource {
     @PostMapping(&quot;/account&quot;)
     @Timed
     public void saveAccount(@Valid @RequestBody UserDTO userDTO) {
-<span class="pc" id="L120">        final String userLogin = SecurityUtils.getCurrentUserLogin().orElseThrow(() -&gt; new InternalServerErrorException(&quot;Current user login not found&quot;));</span>
-<span class="fc" id="L121">        Optional&lt;User&gt; existingUser = userRepository.findOneByEmailIgnoreCase(userDTO.getEmail());</span>
-<span class="pc bpc" id="L122" title="1 of 4 branches missed.">        if (existingUser.isPresent() &amp;&amp; (!existingUser.get().getLogin().equalsIgnoreCase(userLogin))) {</span>
-<span class="fc" id="L123">            throw new EmailAlreadyUsedException();</span>
+<span class="pc" id="L140">        final String userLogin = SecurityUtils.getCurrentUserLogin().orElseThrow(() -&gt; new InternalServerErrorException(&quot;Current user login not found&quot;));</span>
+<span class="fc" id="L141">        Optional&lt;User&gt; existingUser = userRepository.findOneByEmailIgnoreCase(userDTO.getEmail());</span>
+<span class="pc bpc" id="L142" title="1 of 4 branches missed.">        if (existingUser.isPresent() &amp;&amp; (!existingUser.get().getLogin().equalsIgnoreCase(userLogin))) {</span>
+<span class="fc" id="L143">            throw new EmailAlreadyUsedException();</span>
         }
-<span class="fc" id="L125">        Optional&lt;User&gt; user = userRepository.findOneByLogin(userLogin);</span>
-<span class="pc bpc" id="L126" title="1 of 2 branches missed.">        if (!user.isPresent()) {</span>
-<span class="nc" id="L127">            throw new InternalServerErrorException(&quot;User could not be found&quot;);</span>
+<span class="fc" id="L145">        Optional&lt;User&gt; user = userRepository.findOneByLogin(userLogin);</span>
+<span class="pc bpc" id="L146" title="1 of 2 branches missed.">        if (!user.isPresent()) {</span>
+<span class="nc" id="L147">            throw new InternalServerErrorException(&quot;User could not be found&quot;);</span>
         }
-<span class="fc" id="L129">        userService.updateUser(userDTO.getFirstName(), userDTO.getLastName(), userDTO.getEmail(),</span>
-<span class="fc" id="L130">            userDTO.getLangKey(), userDTO.getImageUrl());</span>
-<span class="fc" id="L131">   }</span>
+<span class="fc" id="L149">        userService.updateUser(userDTO.getFirstName(), userDTO.getLastName(), userDTO.getEmail(),</span>
+<span class="fc" id="L150">            userDTO.getLangKey(), userDTO.getImageUrl());</span>
+<span class="fc" id="L151">   }</span>
 
     /**
      * POST  /account/change-password : changes the current user's password
@@ -139,11 +159,11 @@ public class AccountResource {
     @PostMapping(path = &quot;/account/change-password&quot;)
     @Timed
     public void changePassword(@RequestBody String password) {
-<span class="fc bfc" id="L142" title="All 2 branches covered.">        if (!checkPasswordLength(password)) {</span>
-<span class="fc" id="L143">            throw new InvalidPasswordException();</span>
+<span class="fc bfc" id="L162" title="All 2 branches covered.">        if (!checkPasswordLength(password)) {</span>
+<span class="fc" id="L163">            throw new InvalidPasswordException();</span>
         }
-<span class="fc" id="L145">        userService.changePassword(password);</span>
-<span class="fc" id="L146">   }</span>
+<span class="fc" id="L165">        userService.changePassword(password);</span>
+<span class="fc" id="L166">   }</span>
 
     /**
      * POST   /account/reset-password/init : Send an email to reset the password of the user
@@ -154,11 +174,11 @@ public class AccountResource {
     @PostMapping(path = &quot;/account/reset-password/init&quot;)
     @Timed
     public void requestPasswordReset(@RequestBody String mail) {
-<span class="fc" id="L157">       mailService.sendPasswordResetMail(</span>
-<span class="fc" id="L158">           userService.requestPasswordReset(mail)</span>
-<span class="fc" id="L159">               .orElseThrow(EmailNotFoundException::new)</span>
+<span class="fc" id="L177">       mailService.sendPasswordResetMail(</span>
+<span class="fc" id="L178">           userService.requestPasswordReset(mail)</span>
+<span class="fc" id="L179">               .orElseThrow(EmailNotFoundException::new)</span>
        );
-<span class="fc" id="L161">    }</span>
+<span class="fc" id="L181">    }</span>
 
     /**
      * POST   /account/reset-password/finish : Finish to reset the password of the user
@@ -170,21 +190,21 @@ public class AccountResource {
     @PostMapping(path = &quot;/account/reset-password/finish&quot;)
     @Timed
     public void finishPasswordReset(@RequestBody KeyAndPasswordVM keyAndPassword) {
-<span class="fc bfc" id="L173" title="All 2 branches covered.">        if (!checkPasswordLength(keyAndPassword.getNewPassword())) {</span>
-<span class="fc" id="L174">            throw new InvalidPasswordException();</span>
+<span class="fc bfc" id="L193" title="All 2 branches covered.">        if (!checkPasswordLength(keyAndPassword.getNewPassword())) {</span>
+<span class="fc" id="L194">            throw new InvalidPasswordException();</span>
         }
-<span class="fc" id="L176">        Optional&lt;User&gt; user =</span>
-<span class="fc" id="L177">            userService.completePasswordReset(keyAndPassword.getNewPassword(), keyAndPassword.getKey());</span>
+<span class="fc" id="L196">        Optional&lt;User&gt; user =</span>
+<span class="fc" id="L197">            userService.completePasswordReset(keyAndPassword.getNewPassword(), keyAndPassword.getKey());</span>
 
-<span class="fc bfc" id="L179" title="All 2 branches covered.">        if (!user.isPresent()) {</span>
-<span class="fc" id="L180">            throw new InternalServerErrorException(&quot;No user was found for this reset key&quot;);</span>
+<span class="fc bfc" id="L199" title="All 2 branches covered.">        if (!user.isPresent()) {</span>
+<span class="fc" id="L200">            throw new InternalServerErrorException(&quot;No user was found for this reset key&quot;);</span>
         }
-<span class="fc" id="L182">    }</span>
+<span class="fc" id="L202">    }</span>
 
     private static boolean checkPasswordLength(String password) {
-<span class="fc bfc" id="L185" title="All 2 branches covered.">        return !StringUtils.isEmpty(password) &amp;&amp;</span>
-<span class="fc bfc" id="L186" title="All 2 branches covered.">            password.length() &gt;= ManagedUserVM.PASSWORD_MIN_LENGTH &amp;&amp;</span>
-<span class="fc bfc" id="L187" title="All 2 branches covered.">            password.length() &lt;= ManagedUserVM.PASSWORD_MAX_LENGTH;</span>
+<span class="fc bfc" id="L205" title="All 2 branches covered.">        return !StringUtils.isEmpty(password) &amp;&amp;</span>
+<span class="fc bfc" id="L206" title="All 2 branches covered.">            password.length() &gt;= ManagedUserVM.PASSWORD_MIN_LENGTH &amp;&amp;</span>
+<span class="fc bfc" id="L207" title="All 2 branches covered.">            password.length() &lt;= ManagedUserVM.PASSWORD_MAX_LENGTH;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

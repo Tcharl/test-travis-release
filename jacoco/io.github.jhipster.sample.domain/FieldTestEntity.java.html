@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FieldTestEntity.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.domain</a> &gt; <span class="el_source">FieldTestEntity.java</span></div><h1>FieldTestEntity.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.domain;
 
+/*-
+ * #%L
+ * Jhipster Sample Application
+ * %%
+ * Copyright (C) 2017 Osgiliath
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.Instant;
@@ -16,14 +37,13 @@ import io.github.jhipster.sample.domain.enumeration.EnumFieldClass;
 
 import io.github.jhipster.sample.domain.enumeration.EnumRequiredFieldClass;
 
-
 /**
  * A FieldTestEntity.
  */
 @Entity
 @Table(name = &quot;field_test_entity&quot;)
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-<span class="fc" id="L26">public class FieldTestEntity implements Serializable {</span>
+<span class="fc" id="L46">public class FieldTestEntity implements Serializable {</span>
 
     private static final long serialVersionUID = 1L;
 
@@ -239,780 +259,780 @@ import io.github.jhipster.sample.domain.enumeration.EnumRequiredFieldClass;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
-<span class="fc" id="L242">        return id;</span>
+<span class="fc" id="L262">        return id;</span>
     }
 
     public void setId(Long id) {
-<span class="fc" id="L246">        this.id = id;</span>
-<span class="fc" id="L247">    }</span>
+<span class="fc" id="L266">        this.id = id;</span>
+<span class="fc" id="L267">    }</span>
 
     public String getStringTom() {
-<span class="fc" id="L250">        return stringTom;</span>
+<span class="fc" id="L270">        return stringTom;</span>
     }
 
     public FieldTestEntity stringTom(String stringTom) {
-<span class="fc" id="L254">        this.stringTom = stringTom;</span>
-<span class="fc" id="L255">        return this;</span>
+<span class="fc" id="L274">        this.stringTom = stringTom;</span>
+<span class="fc" id="L275">        return this;</span>
     }
 
     public void setStringTom(String stringTom) {
-<span class="fc" id="L259">        this.stringTom = stringTom;</span>
-<span class="fc" id="L260">    }</span>
+<span class="fc" id="L279">        this.stringTom = stringTom;</span>
+<span class="fc" id="L280">    }</span>
 
     public String getStringRequiredTom() {
-<span class="fc" id="L263">        return stringRequiredTom;</span>
+<span class="fc" id="L283">        return stringRequiredTom;</span>
     }
 
     public FieldTestEntity stringRequiredTom(String stringRequiredTom) {
-<span class="fc" id="L267">        this.stringRequiredTom = stringRequiredTom;</span>
-<span class="fc" id="L268">        return this;</span>
+<span class="fc" id="L287">        this.stringRequiredTom = stringRequiredTom;</span>
+<span class="fc" id="L288">        return this;</span>
     }
 
     public void setStringRequiredTom(String stringRequiredTom) {
-<span class="fc" id="L272">        this.stringRequiredTom = stringRequiredTom;</span>
-<span class="fc" id="L273">    }</span>
+<span class="fc" id="L292">        this.stringRequiredTom = stringRequiredTom;</span>
+<span class="fc" id="L293">    }</span>
 
     public String getStringMinlengthTom() {
-<span class="fc" id="L276">        return stringMinlengthTom;</span>
+<span class="fc" id="L296">        return stringMinlengthTom;</span>
     }
 
     public FieldTestEntity stringMinlengthTom(String stringMinlengthTom) {
-<span class="fc" id="L280">        this.stringMinlengthTom = stringMinlengthTom;</span>
-<span class="fc" id="L281">        return this;</span>
+<span class="fc" id="L300">        this.stringMinlengthTom = stringMinlengthTom;</span>
+<span class="fc" id="L301">        return this;</span>
     }
 
     public void setStringMinlengthTom(String stringMinlengthTom) {
-<span class="fc" id="L285">        this.stringMinlengthTom = stringMinlengthTom;</span>
-<span class="fc" id="L286">    }</span>
+<span class="fc" id="L305">        this.stringMinlengthTom = stringMinlengthTom;</span>
+<span class="fc" id="L306">    }</span>
 
     public String getStringMaxlengthTom() {
-<span class="fc" id="L289">        return stringMaxlengthTom;</span>
+<span class="fc" id="L309">        return stringMaxlengthTom;</span>
     }
 
     public FieldTestEntity stringMaxlengthTom(String stringMaxlengthTom) {
-<span class="fc" id="L293">        this.stringMaxlengthTom = stringMaxlengthTom;</span>
-<span class="fc" id="L294">        return this;</span>
+<span class="fc" id="L313">        this.stringMaxlengthTom = stringMaxlengthTom;</span>
+<span class="fc" id="L314">        return this;</span>
     }
 
     public void setStringMaxlengthTom(String stringMaxlengthTom) {
-<span class="fc" id="L298">        this.stringMaxlengthTom = stringMaxlengthTom;</span>
-<span class="fc" id="L299">    }</span>
+<span class="fc" id="L318">        this.stringMaxlengthTom = stringMaxlengthTom;</span>
+<span class="fc" id="L319">    }</span>
 
     public String getStringPatternTom() {
-<span class="fc" id="L302">        return stringPatternTom;</span>
+<span class="fc" id="L322">        return stringPatternTom;</span>
     }
 
     public FieldTestEntity stringPatternTom(String stringPatternTom) {
-<span class="fc" id="L306">        this.stringPatternTom = stringPatternTom;</span>
-<span class="fc" id="L307">        return this;</span>
+<span class="fc" id="L326">        this.stringPatternTom = stringPatternTom;</span>
+<span class="fc" id="L327">        return this;</span>
     }
 
     public void setStringPatternTom(String stringPatternTom) {
-<span class="fc" id="L311">        this.stringPatternTom = stringPatternTom;</span>
-<span class="fc" id="L312">    }</span>
+<span class="fc" id="L331">        this.stringPatternTom = stringPatternTom;</span>
+<span class="fc" id="L332">    }</span>
 
     public Integer getIntegerTom() {
-<span class="fc" id="L315">        return integerTom;</span>
+<span class="fc" id="L335">        return integerTom;</span>
     }
 
     public FieldTestEntity integerTom(Integer integerTom) {
-<span class="fc" id="L319">        this.integerTom = integerTom;</span>
-<span class="fc" id="L320">        return this;</span>
+<span class="fc" id="L339">        this.integerTom = integerTom;</span>
+<span class="fc" id="L340">        return this;</span>
     }
 
     public void setIntegerTom(Integer integerTom) {
-<span class="fc" id="L324">        this.integerTom = integerTom;</span>
-<span class="fc" id="L325">    }</span>
+<span class="fc" id="L344">        this.integerTom = integerTom;</span>
+<span class="fc" id="L345">    }</span>
 
     public Integer getIntegerRequiredTom() {
-<span class="fc" id="L328">        return integerRequiredTom;</span>
+<span class="fc" id="L348">        return integerRequiredTom;</span>
     }
 
     public FieldTestEntity integerRequiredTom(Integer integerRequiredTom) {
-<span class="fc" id="L332">        this.integerRequiredTom = integerRequiredTom;</span>
-<span class="fc" id="L333">        return this;</span>
+<span class="fc" id="L352">        this.integerRequiredTom = integerRequiredTom;</span>
+<span class="fc" id="L353">        return this;</span>
     }
 
     public void setIntegerRequiredTom(Integer integerRequiredTom) {
-<span class="fc" id="L337">        this.integerRequiredTom = integerRequiredTom;</span>
-<span class="fc" id="L338">    }</span>
+<span class="fc" id="L357">        this.integerRequiredTom = integerRequiredTom;</span>
+<span class="fc" id="L358">    }</span>
 
     public Integer getIntegerMinTom() {
-<span class="fc" id="L341">        return integerMinTom;</span>
+<span class="fc" id="L361">        return integerMinTom;</span>
     }
 
     public FieldTestEntity integerMinTom(Integer integerMinTom) {
-<span class="fc" id="L345">        this.integerMinTom = integerMinTom;</span>
-<span class="fc" id="L346">        return this;</span>
+<span class="fc" id="L365">        this.integerMinTom = integerMinTom;</span>
+<span class="fc" id="L366">        return this;</span>
     }
 
     public void setIntegerMinTom(Integer integerMinTom) {
-<span class="fc" id="L350">        this.integerMinTom = integerMinTom;</span>
-<span class="fc" id="L351">    }</span>
+<span class="fc" id="L370">        this.integerMinTom = integerMinTom;</span>
+<span class="fc" id="L371">    }</span>
 
     public Integer getIntegerMaxTom() {
-<span class="fc" id="L354">        return integerMaxTom;</span>
+<span class="fc" id="L374">        return integerMaxTom;</span>
     }
 
     public FieldTestEntity integerMaxTom(Integer integerMaxTom) {
-<span class="fc" id="L358">        this.integerMaxTom = integerMaxTom;</span>
-<span class="fc" id="L359">        return this;</span>
+<span class="fc" id="L378">        this.integerMaxTom = integerMaxTom;</span>
+<span class="fc" id="L379">        return this;</span>
     }
 
     public void setIntegerMaxTom(Integer integerMaxTom) {
-<span class="fc" id="L363">        this.integerMaxTom = integerMaxTom;</span>
-<span class="fc" id="L364">    }</span>
+<span class="fc" id="L383">        this.integerMaxTom = integerMaxTom;</span>
+<span class="fc" id="L384">    }</span>
 
     public Long getLongTom() {
-<span class="fc" id="L367">        return longTom;</span>
+<span class="fc" id="L387">        return longTom;</span>
     }
 
     public FieldTestEntity longTom(Long longTom) {
-<span class="fc" id="L371">        this.longTom = longTom;</span>
-<span class="fc" id="L372">        return this;</span>
+<span class="fc" id="L391">        this.longTom = longTom;</span>
+<span class="fc" id="L392">        return this;</span>
     }
 
     public void setLongTom(Long longTom) {
-<span class="fc" id="L376">        this.longTom = longTom;</span>
-<span class="fc" id="L377">    }</span>
+<span class="fc" id="L396">        this.longTom = longTom;</span>
+<span class="fc" id="L397">    }</span>
 
     public Long getLongRequiredTom() {
-<span class="fc" id="L380">        return longRequiredTom;</span>
+<span class="fc" id="L400">        return longRequiredTom;</span>
     }
 
     public FieldTestEntity longRequiredTom(Long longRequiredTom) {
-<span class="fc" id="L384">        this.longRequiredTom = longRequiredTom;</span>
-<span class="fc" id="L385">        return this;</span>
+<span class="fc" id="L404">        this.longRequiredTom = longRequiredTom;</span>
+<span class="fc" id="L405">        return this;</span>
     }
 
     public void setLongRequiredTom(Long longRequiredTom) {
-<span class="fc" id="L389">        this.longRequiredTom = longRequiredTom;</span>
-<span class="fc" id="L390">    }</span>
+<span class="fc" id="L409">        this.longRequiredTom = longRequiredTom;</span>
+<span class="fc" id="L410">    }</span>
 
     public Long getLongMinTom() {
-<span class="fc" id="L393">        return longMinTom;</span>
+<span class="fc" id="L413">        return longMinTom;</span>
     }
 
     public FieldTestEntity longMinTom(Long longMinTom) {
-<span class="fc" id="L397">        this.longMinTom = longMinTom;</span>
-<span class="fc" id="L398">        return this;</span>
+<span class="fc" id="L417">        this.longMinTom = longMinTom;</span>
+<span class="fc" id="L418">        return this;</span>
     }
 
     public void setLongMinTom(Long longMinTom) {
-<span class="fc" id="L402">        this.longMinTom = longMinTom;</span>
-<span class="fc" id="L403">    }</span>
+<span class="fc" id="L422">        this.longMinTom = longMinTom;</span>
+<span class="fc" id="L423">    }</span>
 
     public Long getLongMaxTom() {
-<span class="fc" id="L406">        return longMaxTom;</span>
+<span class="fc" id="L426">        return longMaxTom;</span>
     }
 
     public FieldTestEntity longMaxTom(Long longMaxTom) {
-<span class="fc" id="L410">        this.longMaxTom = longMaxTom;</span>
-<span class="fc" id="L411">        return this;</span>
+<span class="fc" id="L430">        this.longMaxTom = longMaxTom;</span>
+<span class="fc" id="L431">        return this;</span>
     }
 
     public void setLongMaxTom(Long longMaxTom) {
-<span class="fc" id="L415">        this.longMaxTom = longMaxTom;</span>
-<span class="fc" id="L416">    }</span>
+<span class="fc" id="L435">        this.longMaxTom = longMaxTom;</span>
+<span class="fc" id="L436">    }</span>
 
     public Float getFloatTom() {
-<span class="fc" id="L419">        return floatTom;</span>
+<span class="fc" id="L439">        return floatTom;</span>
     }
 
     public FieldTestEntity floatTom(Float floatTom) {
-<span class="fc" id="L423">        this.floatTom = floatTom;</span>
-<span class="fc" id="L424">        return this;</span>
+<span class="fc" id="L443">        this.floatTom = floatTom;</span>
+<span class="fc" id="L444">        return this;</span>
     }
 
     public void setFloatTom(Float floatTom) {
-<span class="fc" id="L428">        this.floatTom = floatTom;</span>
-<span class="fc" id="L429">    }</span>
+<span class="fc" id="L448">        this.floatTom = floatTom;</span>
+<span class="fc" id="L449">    }</span>
 
     public Float getFloatRequiredTom() {
-<span class="fc" id="L432">        return floatRequiredTom;</span>
+<span class="fc" id="L452">        return floatRequiredTom;</span>
     }
 
     public FieldTestEntity floatRequiredTom(Float floatRequiredTom) {
-<span class="fc" id="L436">        this.floatRequiredTom = floatRequiredTom;</span>
-<span class="fc" id="L437">        return this;</span>
+<span class="fc" id="L456">        this.floatRequiredTom = floatRequiredTom;</span>
+<span class="fc" id="L457">        return this;</span>
     }
 
     public void setFloatRequiredTom(Float floatRequiredTom) {
-<span class="fc" id="L441">        this.floatRequiredTom = floatRequiredTom;</span>
-<span class="fc" id="L442">    }</span>
+<span class="fc" id="L461">        this.floatRequiredTom = floatRequiredTom;</span>
+<span class="fc" id="L462">    }</span>
 
     public Float getFloatMinTom() {
-<span class="fc" id="L445">        return floatMinTom;</span>
+<span class="fc" id="L465">        return floatMinTom;</span>
     }
 
     public FieldTestEntity floatMinTom(Float floatMinTom) {
-<span class="fc" id="L449">        this.floatMinTom = floatMinTom;</span>
-<span class="fc" id="L450">        return this;</span>
+<span class="fc" id="L469">        this.floatMinTom = floatMinTom;</span>
+<span class="fc" id="L470">        return this;</span>
     }
 
     public void setFloatMinTom(Float floatMinTom) {
-<span class="fc" id="L454">        this.floatMinTom = floatMinTom;</span>
-<span class="fc" id="L455">    }</span>
+<span class="fc" id="L474">        this.floatMinTom = floatMinTom;</span>
+<span class="fc" id="L475">    }</span>
 
     public Float getFloatMaxTom() {
-<span class="fc" id="L458">        return floatMaxTom;</span>
+<span class="fc" id="L478">        return floatMaxTom;</span>
     }
 
     public FieldTestEntity floatMaxTom(Float floatMaxTom) {
-<span class="fc" id="L462">        this.floatMaxTom = floatMaxTom;</span>
-<span class="fc" id="L463">        return this;</span>
+<span class="fc" id="L482">        this.floatMaxTom = floatMaxTom;</span>
+<span class="fc" id="L483">        return this;</span>
     }
 
     public void setFloatMaxTom(Float floatMaxTom) {
-<span class="fc" id="L467">        this.floatMaxTom = floatMaxTom;</span>
-<span class="fc" id="L468">    }</span>
+<span class="fc" id="L487">        this.floatMaxTom = floatMaxTom;</span>
+<span class="fc" id="L488">    }</span>
 
     public Double getDoubleRequiredTom() {
-<span class="fc" id="L471">        return doubleRequiredTom;</span>
+<span class="fc" id="L491">        return doubleRequiredTom;</span>
     }
 
     public FieldTestEntity doubleRequiredTom(Double doubleRequiredTom) {
-<span class="fc" id="L475">        this.doubleRequiredTom = doubleRequiredTom;</span>
-<span class="fc" id="L476">        return this;</span>
+<span class="fc" id="L495">        this.doubleRequiredTom = doubleRequiredTom;</span>
+<span class="fc" id="L496">        return this;</span>
     }
 
     public void setDoubleRequiredTom(Double doubleRequiredTom) {
-<span class="fc" id="L480">        this.doubleRequiredTom = doubleRequiredTom;</span>
-<span class="fc" id="L481">    }</span>
+<span class="fc" id="L500">        this.doubleRequiredTom = doubleRequiredTom;</span>
+<span class="fc" id="L501">    }</span>
 
     public Double getDoubleMinTom() {
-<span class="fc" id="L484">        return doubleMinTom;</span>
+<span class="fc" id="L504">        return doubleMinTom;</span>
     }
 
     public FieldTestEntity doubleMinTom(Double doubleMinTom) {
-<span class="fc" id="L488">        this.doubleMinTom = doubleMinTom;</span>
-<span class="fc" id="L489">        return this;</span>
+<span class="fc" id="L508">        this.doubleMinTom = doubleMinTom;</span>
+<span class="fc" id="L509">        return this;</span>
     }
 
     public void setDoubleMinTom(Double doubleMinTom) {
-<span class="fc" id="L493">        this.doubleMinTom = doubleMinTom;</span>
-<span class="fc" id="L494">    }</span>
+<span class="fc" id="L513">        this.doubleMinTom = doubleMinTom;</span>
+<span class="fc" id="L514">    }</span>
 
     public Double getDoubleMaxTom() {
-<span class="fc" id="L497">        return doubleMaxTom;</span>
+<span class="fc" id="L517">        return doubleMaxTom;</span>
     }
 
     public FieldTestEntity doubleMaxTom(Double doubleMaxTom) {
-<span class="fc" id="L501">        this.doubleMaxTom = doubleMaxTom;</span>
-<span class="fc" id="L502">        return this;</span>
+<span class="fc" id="L521">        this.doubleMaxTom = doubleMaxTom;</span>
+<span class="fc" id="L522">        return this;</span>
     }
 
     public void setDoubleMaxTom(Double doubleMaxTom) {
-<span class="fc" id="L506">        this.doubleMaxTom = doubleMaxTom;</span>
-<span class="fc" id="L507">    }</span>
+<span class="fc" id="L526">        this.doubleMaxTom = doubleMaxTom;</span>
+<span class="fc" id="L527">    }</span>
 
     public BigDecimal getBigDecimalRequiredTom() {
-<span class="fc" id="L510">        return bigDecimalRequiredTom;</span>
+<span class="fc" id="L530">        return bigDecimalRequiredTom;</span>
     }
 
     public FieldTestEntity bigDecimalRequiredTom(BigDecimal bigDecimalRequiredTom) {
-<span class="fc" id="L514">        this.bigDecimalRequiredTom = bigDecimalRequiredTom;</span>
-<span class="fc" id="L515">        return this;</span>
+<span class="fc" id="L534">        this.bigDecimalRequiredTom = bigDecimalRequiredTom;</span>
+<span class="fc" id="L535">        return this;</span>
     }
 
     public void setBigDecimalRequiredTom(BigDecimal bigDecimalRequiredTom) {
-<span class="fc" id="L519">        this.bigDecimalRequiredTom = bigDecimalRequiredTom;</span>
-<span class="fc" id="L520">    }</span>
+<span class="fc" id="L539">        this.bigDecimalRequiredTom = bigDecimalRequiredTom;</span>
+<span class="fc" id="L540">    }</span>
 
     public BigDecimal getBigDecimalMinTom() {
-<span class="fc" id="L523">        return bigDecimalMinTom;</span>
+<span class="fc" id="L543">        return bigDecimalMinTom;</span>
     }
 
     public FieldTestEntity bigDecimalMinTom(BigDecimal bigDecimalMinTom) {
-<span class="fc" id="L527">        this.bigDecimalMinTom = bigDecimalMinTom;</span>
-<span class="fc" id="L528">        return this;</span>
+<span class="fc" id="L547">        this.bigDecimalMinTom = bigDecimalMinTom;</span>
+<span class="fc" id="L548">        return this;</span>
     }
 
     public void setBigDecimalMinTom(BigDecimal bigDecimalMinTom) {
-<span class="fc" id="L532">        this.bigDecimalMinTom = bigDecimalMinTom;</span>
-<span class="fc" id="L533">    }</span>
+<span class="fc" id="L552">        this.bigDecimalMinTom = bigDecimalMinTom;</span>
+<span class="fc" id="L553">    }</span>
 
     public BigDecimal getBigDecimalMaxTom() {
-<span class="fc" id="L536">        return bigDecimalMaxTom;</span>
+<span class="fc" id="L556">        return bigDecimalMaxTom;</span>
     }
 
     public FieldTestEntity bigDecimalMaxTom(BigDecimal bigDecimalMaxTom) {
-<span class="fc" id="L540">        this.bigDecimalMaxTom = bigDecimalMaxTom;</span>
-<span class="fc" id="L541">        return this;</span>
+<span class="fc" id="L560">        this.bigDecimalMaxTom = bigDecimalMaxTom;</span>
+<span class="fc" id="L561">        return this;</span>
     }
 
     public void setBigDecimalMaxTom(BigDecimal bigDecimalMaxTom) {
-<span class="fc" id="L545">        this.bigDecimalMaxTom = bigDecimalMaxTom;</span>
-<span class="fc" id="L546">    }</span>
+<span class="fc" id="L565">        this.bigDecimalMaxTom = bigDecimalMaxTom;</span>
+<span class="fc" id="L566">    }</span>
 
     public LocalDate getLocalDateTom() {
-<span class="fc" id="L549">        return localDateTom;</span>
+<span class="fc" id="L569">        return localDateTom;</span>
     }
 
     public FieldTestEntity localDateTom(LocalDate localDateTom) {
-<span class="fc" id="L553">        this.localDateTom = localDateTom;</span>
-<span class="fc" id="L554">        return this;</span>
+<span class="fc" id="L573">        this.localDateTom = localDateTom;</span>
+<span class="fc" id="L574">        return this;</span>
     }
 
     public void setLocalDateTom(LocalDate localDateTom) {
-<span class="fc" id="L558">        this.localDateTom = localDateTom;</span>
-<span class="fc" id="L559">    }</span>
+<span class="fc" id="L578">        this.localDateTom = localDateTom;</span>
+<span class="fc" id="L579">    }</span>
 
     public LocalDate getLocalDateRequiredTom() {
-<span class="fc" id="L562">        return localDateRequiredTom;</span>
+<span class="fc" id="L582">        return localDateRequiredTom;</span>
     }
 
     public FieldTestEntity localDateRequiredTom(LocalDate localDateRequiredTom) {
-<span class="fc" id="L566">        this.localDateRequiredTom = localDateRequiredTom;</span>
-<span class="fc" id="L567">        return this;</span>
+<span class="fc" id="L586">        this.localDateRequiredTom = localDateRequiredTom;</span>
+<span class="fc" id="L587">        return this;</span>
     }
 
     public void setLocalDateRequiredTom(LocalDate localDateRequiredTom) {
-<span class="fc" id="L571">        this.localDateRequiredTom = localDateRequiredTom;</span>
-<span class="fc" id="L572">    }</span>
+<span class="fc" id="L591">        this.localDateRequiredTom = localDateRequiredTom;</span>
+<span class="fc" id="L592">    }</span>
 
     public Instant getInstantTom() {
-<span class="fc" id="L575">        return instantTom;</span>
+<span class="fc" id="L595">        return instantTom;</span>
     }
 
     public FieldTestEntity instantTom(Instant instantTom) {
-<span class="fc" id="L579">        this.instantTom = instantTom;</span>
-<span class="fc" id="L580">        return this;</span>
+<span class="fc" id="L599">        this.instantTom = instantTom;</span>
+<span class="fc" id="L600">        return this;</span>
     }
 
     public void setInstantTom(Instant instantTom) {
-<span class="fc" id="L584">        this.instantTom = instantTom;</span>
-<span class="fc" id="L585">    }</span>
+<span class="fc" id="L604">        this.instantTom = instantTom;</span>
+<span class="fc" id="L605">    }</span>
 
     public Instant getInstanteRequiredTom() {
-<span class="fc" id="L588">        return instanteRequiredTom;</span>
+<span class="fc" id="L608">        return instanteRequiredTom;</span>
     }
 
     public FieldTestEntity instanteRequiredTom(Instant instanteRequiredTom) {
-<span class="fc" id="L592">        this.instanteRequiredTom = instanteRequiredTom;</span>
-<span class="fc" id="L593">        return this;</span>
+<span class="fc" id="L612">        this.instanteRequiredTom = instanteRequiredTom;</span>
+<span class="fc" id="L613">        return this;</span>
     }
 
     public void setInstanteRequiredTom(Instant instanteRequiredTom) {
-<span class="fc" id="L597">        this.instanteRequiredTom = instanteRequiredTom;</span>
-<span class="fc" id="L598">    }</span>
+<span class="fc" id="L617">        this.instanteRequiredTom = instanteRequiredTom;</span>
+<span class="fc" id="L618">    }</span>
 
     public ZonedDateTime getZonedDateTimeTom() {
-<span class="fc" id="L601">        return zonedDateTimeTom;</span>
+<span class="fc" id="L621">        return zonedDateTimeTom;</span>
     }
 
     public FieldTestEntity zonedDateTimeTom(ZonedDateTime zonedDateTimeTom) {
-<span class="fc" id="L605">        this.zonedDateTimeTom = zonedDateTimeTom;</span>
-<span class="fc" id="L606">        return this;</span>
+<span class="fc" id="L625">        this.zonedDateTimeTom = zonedDateTimeTom;</span>
+<span class="fc" id="L626">        return this;</span>
     }
 
     public void setZonedDateTimeTom(ZonedDateTime zonedDateTimeTom) {
-<span class="fc" id="L610">        this.zonedDateTimeTom = zonedDateTimeTom;</span>
-<span class="fc" id="L611">    }</span>
+<span class="fc" id="L630">        this.zonedDateTimeTom = zonedDateTimeTom;</span>
+<span class="fc" id="L631">    }</span>
 
     public ZonedDateTime getZonedDateTimeRequiredTom() {
-<span class="fc" id="L614">        return zonedDateTimeRequiredTom;</span>
+<span class="fc" id="L634">        return zonedDateTimeRequiredTom;</span>
     }
 
     public FieldTestEntity zonedDateTimeRequiredTom(ZonedDateTime zonedDateTimeRequiredTom) {
-<span class="fc" id="L618">        this.zonedDateTimeRequiredTom = zonedDateTimeRequiredTom;</span>
-<span class="fc" id="L619">        return this;</span>
+<span class="fc" id="L638">        this.zonedDateTimeRequiredTom = zonedDateTimeRequiredTom;</span>
+<span class="fc" id="L639">        return this;</span>
     }
 
     public void setZonedDateTimeRequiredTom(ZonedDateTime zonedDateTimeRequiredTom) {
-<span class="fc" id="L623">        this.zonedDateTimeRequiredTom = zonedDateTimeRequiredTom;</span>
-<span class="fc" id="L624">    }</span>
+<span class="fc" id="L643">        this.zonedDateTimeRequiredTom = zonedDateTimeRequiredTom;</span>
+<span class="fc" id="L644">    }</span>
 
     public Boolean isBooleanTom() {
-<span class="fc" id="L627">        return booleanTom;</span>
+<span class="fc" id="L647">        return booleanTom;</span>
     }
 
     public FieldTestEntity booleanTom(Boolean booleanTom) {
-<span class="fc" id="L631">        this.booleanTom = booleanTom;</span>
-<span class="fc" id="L632">        return this;</span>
+<span class="fc" id="L651">        this.booleanTom = booleanTom;</span>
+<span class="fc" id="L652">        return this;</span>
     }
 
     public void setBooleanTom(Boolean booleanTom) {
-<span class="fc" id="L636">        this.booleanTom = booleanTom;</span>
-<span class="fc" id="L637">    }</span>
+<span class="fc" id="L656">        this.booleanTom = booleanTom;</span>
+<span class="fc" id="L657">    }</span>
 
     public Boolean isBooleanRequiredTom() {
-<span class="fc" id="L640">        return booleanRequiredTom;</span>
+<span class="fc" id="L660">        return booleanRequiredTom;</span>
     }
 
     public FieldTestEntity booleanRequiredTom(Boolean booleanRequiredTom) {
-<span class="fc" id="L644">        this.booleanRequiredTom = booleanRequiredTom;</span>
-<span class="fc" id="L645">        return this;</span>
+<span class="fc" id="L664">        this.booleanRequiredTom = booleanRequiredTom;</span>
+<span class="fc" id="L665">        return this;</span>
     }
 
     public void setBooleanRequiredTom(Boolean booleanRequiredTom) {
-<span class="fc" id="L649">        this.booleanRequiredTom = booleanRequiredTom;</span>
-<span class="fc" id="L650">    }</span>
+<span class="fc" id="L669">        this.booleanRequiredTom = booleanRequiredTom;</span>
+<span class="fc" id="L670">    }</span>
 
     public EnumFieldClass getEnumTom() {
-<span class="fc" id="L653">        return enumTom;</span>
+<span class="fc" id="L673">        return enumTom;</span>
     }
 
     public FieldTestEntity enumTom(EnumFieldClass enumTom) {
-<span class="fc" id="L657">        this.enumTom = enumTom;</span>
-<span class="fc" id="L658">        return this;</span>
+<span class="fc" id="L677">        this.enumTom = enumTom;</span>
+<span class="fc" id="L678">        return this;</span>
     }
 
     public void setEnumTom(EnumFieldClass enumTom) {
-<span class="fc" id="L662">        this.enumTom = enumTom;</span>
-<span class="fc" id="L663">    }</span>
+<span class="fc" id="L682">        this.enumTom = enumTom;</span>
+<span class="fc" id="L683">    }</span>
 
     public EnumRequiredFieldClass getEnumRequiredTom() {
-<span class="fc" id="L666">        return enumRequiredTom;</span>
+<span class="fc" id="L686">        return enumRequiredTom;</span>
     }
 
     public FieldTestEntity enumRequiredTom(EnumRequiredFieldClass enumRequiredTom) {
-<span class="fc" id="L670">        this.enumRequiredTom = enumRequiredTom;</span>
-<span class="fc" id="L671">        return this;</span>
+<span class="fc" id="L690">        this.enumRequiredTom = enumRequiredTom;</span>
+<span class="fc" id="L691">        return this;</span>
     }
 
     public void setEnumRequiredTom(EnumRequiredFieldClass enumRequiredTom) {
-<span class="fc" id="L675">        this.enumRequiredTom = enumRequiredTom;</span>
-<span class="fc" id="L676">    }</span>
+<span class="fc" id="L695">        this.enumRequiredTom = enumRequiredTom;</span>
+<span class="fc" id="L696">    }</span>
 
     public byte[] getByteImageTom() {
-<span class="fc" id="L679">        return byteImageTom;</span>
+<span class="fc" id="L699">        return byteImageTom;</span>
     }
 
     public FieldTestEntity byteImageTom(byte[] byteImageTom) {
-<span class="fc" id="L683">        this.byteImageTom = byteImageTom;</span>
-<span class="fc" id="L684">        return this;</span>
+<span class="fc" id="L703">        this.byteImageTom = byteImageTom;</span>
+<span class="fc" id="L704">        return this;</span>
     }
 
     public void setByteImageTom(byte[] byteImageTom) {
-<span class="fc" id="L688">        this.byteImageTom = byteImageTom;</span>
-<span class="fc" id="L689">    }</span>
+<span class="fc" id="L708">        this.byteImageTom = byteImageTom;</span>
+<span class="fc" id="L709">    }</span>
 
     public String getByteImageTomContentType() {
-<span class="fc" id="L692">        return byteImageTomContentType;</span>
+<span class="fc" id="L712">        return byteImageTomContentType;</span>
     }
 
     public FieldTestEntity byteImageTomContentType(String byteImageTomContentType) {
-<span class="fc" id="L696">        this.byteImageTomContentType = byteImageTomContentType;</span>
-<span class="fc" id="L697">        return this;</span>
+<span class="fc" id="L716">        this.byteImageTomContentType = byteImageTomContentType;</span>
+<span class="fc" id="L717">        return this;</span>
     }
 
     public void setByteImageTomContentType(String byteImageTomContentType) {
-<span class="fc" id="L701">        this.byteImageTomContentType = byteImageTomContentType;</span>
-<span class="fc" id="L702">    }</span>
+<span class="fc" id="L721">        this.byteImageTomContentType = byteImageTomContentType;</span>
+<span class="fc" id="L722">    }</span>
 
     public byte[] getByteImageRequiredTom() {
-<span class="fc" id="L705">        return byteImageRequiredTom;</span>
+<span class="fc" id="L725">        return byteImageRequiredTom;</span>
     }
 
     public FieldTestEntity byteImageRequiredTom(byte[] byteImageRequiredTom) {
-<span class="fc" id="L709">        this.byteImageRequiredTom = byteImageRequiredTom;</span>
-<span class="fc" id="L710">        return this;</span>
+<span class="fc" id="L729">        this.byteImageRequiredTom = byteImageRequiredTom;</span>
+<span class="fc" id="L730">        return this;</span>
     }
 
     public void setByteImageRequiredTom(byte[] byteImageRequiredTom) {
-<span class="fc" id="L714">        this.byteImageRequiredTom = byteImageRequiredTom;</span>
-<span class="fc" id="L715">    }</span>
+<span class="fc" id="L734">        this.byteImageRequiredTom = byteImageRequiredTom;</span>
+<span class="fc" id="L735">    }</span>
 
     public String getByteImageRequiredTomContentType() {
-<span class="fc" id="L718">        return byteImageRequiredTomContentType;</span>
+<span class="fc" id="L738">        return byteImageRequiredTomContentType;</span>
     }
 
     public FieldTestEntity byteImageRequiredTomContentType(String byteImageRequiredTomContentType) {
-<span class="fc" id="L722">        this.byteImageRequiredTomContentType = byteImageRequiredTomContentType;</span>
-<span class="fc" id="L723">        return this;</span>
+<span class="fc" id="L742">        this.byteImageRequiredTomContentType = byteImageRequiredTomContentType;</span>
+<span class="fc" id="L743">        return this;</span>
     }
 
     public void setByteImageRequiredTomContentType(String byteImageRequiredTomContentType) {
-<span class="fc" id="L727">        this.byteImageRequiredTomContentType = byteImageRequiredTomContentType;</span>
-<span class="fc" id="L728">    }</span>
+<span class="fc" id="L747">        this.byteImageRequiredTomContentType = byteImageRequiredTomContentType;</span>
+<span class="fc" id="L748">    }</span>
 
     public byte[] getByteImageMinbytesTom() {
-<span class="fc" id="L731">        return byteImageMinbytesTom;</span>
+<span class="fc" id="L751">        return byteImageMinbytesTom;</span>
     }
 
     public FieldTestEntity byteImageMinbytesTom(byte[] byteImageMinbytesTom) {
-<span class="fc" id="L735">        this.byteImageMinbytesTom = byteImageMinbytesTom;</span>
-<span class="fc" id="L736">        return this;</span>
+<span class="fc" id="L755">        this.byteImageMinbytesTom = byteImageMinbytesTom;</span>
+<span class="fc" id="L756">        return this;</span>
     }
 
     public void setByteImageMinbytesTom(byte[] byteImageMinbytesTom) {
-<span class="fc" id="L740">        this.byteImageMinbytesTom = byteImageMinbytesTom;</span>
-<span class="fc" id="L741">    }</span>
+<span class="fc" id="L760">        this.byteImageMinbytesTom = byteImageMinbytesTom;</span>
+<span class="fc" id="L761">    }</span>
 
     public String getByteImageMinbytesTomContentType() {
-<span class="fc" id="L744">        return byteImageMinbytesTomContentType;</span>
+<span class="fc" id="L764">        return byteImageMinbytesTomContentType;</span>
     }
 
     public FieldTestEntity byteImageMinbytesTomContentType(String byteImageMinbytesTomContentType) {
-<span class="fc" id="L748">        this.byteImageMinbytesTomContentType = byteImageMinbytesTomContentType;</span>
-<span class="fc" id="L749">        return this;</span>
+<span class="fc" id="L768">        this.byteImageMinbytesTomContentType = byteImageMinbytesTomContentType;</span>
+<span class="fc" id="L769">        return this;</span>
     }
 
     public void setByteImageMinbytesTomContentType(String byteImageMinbytesTomContentType) {
-<span class="fc" id="L753">        this.byteImageMinbytesTomContentType = byteImageMinbytesTomContentType;</span>
-<span class="fc" id="L754">    }</span>
+<span class="fc" id="L773">        this.byteImageMinbytesTomContentType = byteImageMinbytesTomContentType;</span>
+<span class="fc" id="L774">    }</span>
 
     public byte[] getByteImageMaxbytesTom() {
-<span class="fc" id="L757">        return byteImageMaxbytesTom;</span>
+<span class="fc" id="L777">        return byteImageMaxbytesTom;</span>
     }
 
     public FieldTestEntity byteImageMaxbytesTom(byte[] byteImageMaxbytesTom) {
-<span class="fc" id="L761">        this.byteImageMaxbytesTom = byteImageMaxbytesTom;</span>
-<span class="fc" id="L762">        return this;</span>
+<span class="fc" id="L781">        this.byteImageMaxbytesTom = byteImageMaxbytesTom;</span>
+<span class="fc" id="L782">        return this;</span>
     }
 
     public void setByteImageMaxbytesTom(byte[] byteImageMaxbytesTom) {
-<span class="fc" id="L766">        this.byteImageMaxbytesTom = byteImageMaxbytesTom;</span>
-<span class="fc" id="L767">    }</span>
+<span class="fc" id="L786">        this.byteImageMaxbytesTom = byteImageMaxbytesTom;</span>
+<span class="fc" id="L787">    }</span>
 
     public String getByteImageMaxbytesTomContentType() {
-<span class="fc" id="L770">        return byteImageMaxbytesTomContentType;</span>
+<span class="fc" id="L790">        return byteImageMaxbytesTomContentType;</span>
     }
 
     public FieldTestEntity byteImageMaxbytesTomContentType(String byteImageMaxbytesTomContentType) {
-<span class="fc" id="L774">        this.byteImageMaxbytesTomContentType = byteImageMaxbytesTomContentType;</span>
-<span class="fc" id="L775">        return this;</span>
+<span class="fc" id="L794">        this.byteImageMaxbytesTomContentType = byteImageMaxbytesTomContentType;</span>
+<span class="fc" id="L795">        return this;</span>
     }
 
     public void setByteImageMaxbytesTomContentType(String byteImageMaxbytesTomContentType) {
-<span class="fc" id="L779">        this.byteImageMaxbytesTomContentType = byteImageMaxbytesTomContentType;</span>
-<span class="fc" id="L780">    }</span>
+<span class="fc" id="L799">        this.byteImageMaxbytesTomContentType = byteImageMaxbytesTomContentType;</span>
+<span class="fc" id="L800">    }</span>
 
     public byte[] getByteAnyTom() {
-<span class="fc" id="L783">        return byteAnyTom;</span>
+<span class="fc" id="L803">        return byteAnyTom;</span>
     }
 
     public FieldTestEntity byteAnyTom(byte[] byteAnyTom) {
-<span class="fc" id="L787">        this.byteAnyTom = byteAnyTom;</span>
-<span class="fc" id="L788">        return this;</span>
+<span class="fc" id="L807">        this.byteAnyTom = byteAnyTom;</span>
+<span class="fc" id="L808">        return this;</span>
     }
 
     public void setByteAnyTom(byte[] byteAnyTom) {
-<span class="fc" id="L792">        this.byteAnyTom = byteAnyTom;</span>
-<span class="fc" id="L793">    }</span>
+<span class="fc" id="L812">        this.byteAnyTom = byteAnyTom;</span>
+<span class="fc" id="L813">    }</span>
 
     public String getByteAnyTomContentType() {
-<span class="fc" id="L796">        return byteAnyTomContentType;</span>
+<span class="fc" id="L816">        return byteAnyTomContentType;</span>
     }
 
     public FieldTestEntity byteAnyTomContentType(String byteAnyTomContentType) {
-<span class="fc" id="L800">        this.byteAnyTomContentType = byteAnyTomContentType;</span>
-<span class="fc" id="L801">        return this;</span>
+<span class="fc" id="L820">        this.byteAnyTomContentType = byteAnyTomContentType;</span>
+<span class="fc" id="L821">        return this;</span>
     }
 
     public void setByteAnyTomContentType(String byteAnyTomContentType) {
-<span class="fc" id="L805">        this.byteAnyTomContentType = byteAnyTomContentType;</span>
-<span class="fc" id="L806">    }</span>
+<span class="fc" id="L825">        this.byteAnyTomContentType = byteAnyTomContentType;</span>
+<span class="fc" id="L826">    }</span>
 
     public byte[] getByteAnyRequiredTom() {
-<span class="fc" id="L809">        return byteAnyRequiredTom;</span>
+<span class="fc" id="L829">        return byteAnyRequiredTom;</span>
     }
 
     public FieldTestEntity byteAnyRequiredTom(byte[] byteAnyRequiredTom) {
-<span class="fc" id="L813">        this.byteAnyRequiredTom = byteAnyRequiredTom;</span>
-<span class="fc" id="L814">        return this;</span>
+<span class="fc" id="L833">        this.byteAnyRequiredTom = byteAnyRequiredTom;</span>
+<span class="fc" id="L834">        return this;</span>
     }
 
     public void setByteAnyRequiredTom(byte[] byteAnyRequiredTom) {
-<span class="fc" id="L818">        this.byteAnyRequiredTom = byteAnyRequiredTom;</span>
-<span class="fc" id="L819">    }</span>
+<span class="fc" id="L838">        this.byteAnyRequiredTom = byteAnyRequiredTom;</span>
+<span class="fc" id="L839">    }</span>
 
     public String getByteAnyRequiredTomContentType() {
-<span class="fc" id="L822">        return byteAnyRequiredTomContentType;</span>
+<span class="fc" id="L842">        return byteAnyRequiredTomContentType;</span>
     }
 
     public FieldTestEntity byteAnyRequiredTomContentType(String byteAnyRequiredTomContentType) {
-<span class="fc" id="L826">        this.byteAnyRequiredTomContentType = byteAnyRequiredTomContentType;</span>
-<span class="fc" id="L827">        return this;</span>
+<span class="fc" id="L846">        this.byteAnyRequiredTomContentType = byteAnyRequiredTomContentType;</span>
+<span class="fc" id="L847">        return this;</span>
     }
 
     public void setByteAnyRequiredTomContentType(String byteAnyRequiredTomContentType) {
-<span class="fc" id="L831">        this.byteAnyRequiredTomContentType = byteAnyRequiredTomContentType;</span>
-<span class="fc" id="L832">    }</span>
+<span class="fc" id="L851">        this.byteAnyRequiredTomContentType = byteAnyRequiredTomContentType;</span>
+<span class="fc" id="L852">    }</span>
 
     public byte[] getByteAnyMinbytesTom() {
-<span class="fc" id="L835">        return byteAnyMinbytesTom;</span>
+<span class="fc" id="L855">        return byteAnyMinbytesTom;</span>
     }
 
     public FieldTestEntity byteAnyMinbytesTom(byte[] byteAnyMinbytesTom) {
-<span class="fc" id="L839">        this.byteAnyMinbytesTom = byteAnyMinbytesTom;</span>
-<span class="fc" id="L840">        return this;</span>
+<span class="fc" id="L859">        this.byteAnyMinbytesTom = byteAnyMinbytesTom;</span>
+<span class="fc" id="L860">        return this;</span>
     }
 
     public void setByteAnyMinbytesTom(byte[] byteAnyMinbytesTom) {
-<span class="fc" id="L844">        this.byteAnyMinbytesTom = byteAnyMinbytesTom;</span>
-<span class="fc" id="L845">    }</span>
+<span class="fc" id="L864">        this.byteAnyMinbytesTom = byteAnyMinbytesTom;</span>
+<span class="fc" id="L865">    }</span>
 
     public String getByteAnyMinbytesTomContentType() {
-<span class="fc" id="L848">        return byteAnyMinbytesTomContentType;</span>
+<span class="fc" id="L868">        return byteAnyMinbytesTomContentType;</span>
     }
 
     public FieldTestEntity byteAnyMinbytesTomContentType(String byteAnyMinbytesTomContentType) {
-<span class="fc" id="L852">        this.byteAnyMinbytesTomContentType = byteAnyMinbytesTomContentType;</span>
-<span class="fc" id="L853">        return this;</span>
+<span class="fc" id="L872">        this.byteAnyMinbytesTomContentType = byteAnyMinbytesTomContentType;</span>
+<span class="fc" id="L873">        return this;</span>
     }
 
     public void setByteAnyMinbytesTomContentType(String byteAnyMinbytesTomContentType) {
-<span class="fc" id="L857">        this.byteAnyMinbytesTomContentType = byteAnyMinbytesTomContentType;</span>
-<span class="fc" id="L858">    }</span>
+<span class="fc" id="L877">        this.byteAnyMinbytesTomContentType = byteAnyMinbytesTomContentType;</span>
+<span class="fc" id="L878">    }</span>
 
     public byte[] getByteAnyMaxbytesTom() {
-<span class="fc" id="L861">        return byteAnyMaxbytesTom;</span>
+<span class="fc" id="L881">        return byteAnyMaxbytesTom;</span>
     }
 
     public FieldTestEntity byteAnyMaxbytesTom(byte[] byteAnyMaxbytesTom) {
-<span class="fc" id="L865">        this.byteAnyMaxbytesTom = byteAnyMaxbytesTom;</span>
-<span class="fc" id="L866">        return this;</span>
+<span class="fc" id="L885">        this.byteAnyMaxbytesTom = byteAnyMaxbytesTom;</span>
+<span class="fc" id="L886">        return this;</span>
     }
 
     public void setByteAnyMaxbytesTom(byte[] byteAnyMaxbytesTom) {
-<span class="fc" id="L870">        this.byteAnyMaxbytesTom = byteAnyMaxbytesTom;</span>
-<span class="fc" id="L871">    }</span>
+<span class="fc" id="L890">        this.byteAnyMaxbytesTom = byteAnyMaxbytesTom;</span>
+<span class="fc" id="L891">    }</span>
 
     public String getByteAnyMaxbytesTomContentType() {
-<span class="fc" id="L874">        return byteAnyMaxbytesTomContentType;</span>
+<span class="fc" id="L894">        return byteAnyMaxbytesTomContentType;</span>
     }
 
     public FieldTestEntity byteAnyMaxbytesTomContentType(String byteAnyMaxbytesTomContentType) {
-<span class="fc" id="L878">        this.byteAnyMaxbytesTomContentType = byteAnyMaxbytesTomContentType;</span>
-<span class="fc" id="L879">        return this;</span>
+<span class="fc" id="L898">        this.byteAnyMaxbytesTomContentType = byteAnyMaxbytesTomContentType;</span>
+<span class="fc" id="L899">        return this;</span>
     }
 
     public void setByteAnyMaxbytesTomContentType(String byteAnyMaxbytesTomContentType) {
-<span class="fc" id="L883">        this.byteAnyMaxbytesTomContentType = byteAnyMaxbytesTomContentType;</span>
-<span class="fc" id="L884">    }</span>
+<span class="fc" id="L903">        this.byteAnyMaxbytesTomContentType = byteAnyMaxbytesTomContentType;</span>
+<span class="fc" id="L904">    }</span>
 
     public String getByteTextTom() {
-<span class="fc" id="L887">        return byteTextTom;</span>
+<span class="fc" id="L907">        return byteTextTom;</span>
     }
 
     public FieldTestEntity byteTextTom(String byteTextTom) {
-<span class="fc" id="L891">        this.byteTextTom = byteTextTom;</span>
-<span class="fc" id="L892">        return this;</span>
+<span class="fc" id="L911">        this.byteTextTom = byteTextTom;</span>
+<span class="fc" id="L912">        return this;</span>
     }
 
     public void setByteTextTom(String byteTextTom) {
-<span class="fc" id="L896">        this.byteTextTom = byteTextTom;</span>
-<span class="fc" id="L897">    }</span>
+<span class="fc" id="L916">        this.byteTextTom = byteTextTom;</span>
+<span class="fc" id="L917">    }</span>
 
     public String getByteTextRequiredTom() {
-<span class="fc" id="L900">        return byteTextRequiredTom;</span>
+<span class="fc" id="L920">        return byteTextRequiredTom;</span>
     }
 
     public FieldTestEntity byteTextRequiredTom(String byteTextRequiredTom) {
-<span class="fc" id="L904">        this.byteTextRequiredTom = byteTextRequiredTom;</span>
-<span class="fc" id="L905">        return this;</span>
+<span class="fc" id="L924">        this.byteTextRequiredTom = byteTextRequiredTom;</span>
+<span class="fc" id="L925">        return this;</span>
     }
 
     public void setByteTextRequiredTom(String byteTextRequiredTom) {
-<span class="fc" id="L909">        this.byteTextRequiredTom = byteTextRequiredTom;</span>
-<span class="fc" id="L910">    }</span>
+<span class="fc" id="L929">        this.byteTextRequiredTom = byteTextRequiredTom;</span>
+<span class="fc" id="L930">    }</span>
 
     public String getByteTextMinbytesTom() {
-<span class="fc" id="L913">        return byteTextMinbytesTom;</span>
+<span class="fc" id="L933">        return byteTextMinbytesTom;</span>
     }
 
     public FieldTestEntity byteTextMinbytesTom(String byteTextMinbytesTom) {
-<span class="fc" id="L917">        this.byteTextMinbytesTom = byteTextMinbytesTom;</span>
-<span class="fc" id="L918">        return this;</span>
+<span class="fc" id="L937">        this.byteTextMinbytesTom = byteTextMinbytesTom;</span>
+<span class="fc" id="L938">        return this;</span>
     }
 
     public void setByteTextMinbytesTom(String byteTextMinbytesTom) {
-<span class="fc" id="L922">        this.byteTextMinbytesTom = byteTextMinbytesTom;</span>
-<span class="fc" id="L923">    }</span>
+<span class="fc" id="L942">        this.byteTextMinbytesTom = byteTextMinbytesTom;</span>
+<span class="fc" id="L943">    }</span>
 
     public String getByteTextMaxbytesTom() {
-<span class="fc" id="L926">        return byteTextMaxbytesTom;</span>
+<span class="fc" id="L946">        return byteTextMaxbytesTom;</span>
     }
 
     public FieldTestEntity byteTextMaxbytesTom(String byteTextMaxbytesTom) {
-<span class="fc" id="L930">        this.byteTextMaxbytesTom = byteTextMaxbytesTom;</span>
-<span class="fc" id="L931">        return this;</span>
+<span class="fc" id="L950">        this.byteTextMaxbytesTom = byteTextMaxbytesTom;</span>
+<span class="fc" id="L951">        return this;</span>
     }
 
     public void setByteTextMaxbytesTom(String byteTextMaxbytesTom) {
-<span class="fc" id="L935">        this.byteTextMaxbytesTom = byteTextMaxbytesTom;</span>
-<span class="fc" id="L936">    }</span>
+<span class="fc" id="L955">        this.byteTextMaxbytesTom = byteTextMaxbytesTom;</span>
+<span class="fc" id="L956">    }</span>
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
     public boolean equals(Object o) {
-<span class="fc bfc" id="L941" title="All 2 branches covered.">        if (this == o) {</span>
-<span class="fc" id="L942">            return true;</span>
+<span class="fc bfc" id="L961" title="All 2 branches covered.">        if (this == o) {</span>
+<span class="fc" id="L962">            return true;</span>
         }
-<span class="fc bfc" id="L944" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
-<span class="fc" id="L945">            return false;</span>
+<span class="fc bfc" id="L964" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L965">            return false;</span>
         }
-<span class="fc" id="L947">        FieldTestEntity fieldTestEntity = (FieldTestEntity) o;</span>
-<span class="fc bfc" id="L948" title="All 4 branches covered.">        if (fieldTestEntity.getId() == null || getId() == null) {</span>
-<span class="fc" id="L949">            return false;</span>
+<span class="fc" id="L967">        FieldTestEntity fieldTestEntity = (FieldTestEntity) o;</span>
+<span class="fc bfc" id="L968" title="All 4 branches covered.">        if (fieldTestEntity.getId() == null || getId() == null) {</span>
+<span class="fc" id="L969">            return false;</span>
         }
-<span class="fc" id="L951">        return Objects.equals(getId(), fieldTestEntity.getId());</span>
+<span class="fc" id="L971">        return Objects.equals(getId(), fieldTestEntity.getId());</span>
     }
 
     @Override
     public int hashCode() {
-<span class="fc" id="L956">        return Objects.hashCode(getId());</span>
+<span class="fc" id="L976">        return Objects.hashCode(getId());</span>
     }
 
     @Override
     public String toString() {
-<span class="fc" id="L961">        return &quot;FieldTestEntity{&quot; +</span>
-<span class="fc" id="L962">            &quot;id=&quot; + getId() +</span>
-<span class="fc" id="L963">            &quot;, stringTom='&quot; + getStringTom() + &quot;'&quot; +</span>
-<span class="fc" id="L964">            &quot;, stringRequiredTom='&quot; + getStringRequiredTom() + &quot;'&quot; +</span>
-<span class="fc" id="L965">            &quot;, stringMinlengthTom='&quot; + getStringMinlengthTom() + &quot;'&quot; +</span>
-<span class="fc" id="L966">            &quot;, stringMaxlengthTom='&quot; + getStringMaxlengthTom() + &quot;'&quot; +</span>
-<span class="fc" id="L967">            &quot;, stringPatternTom='&quot; + getStringPatternTom() + &quot;'&quot; +</span>
-<span class="fc" id="L968">            &quot;, integerTom=&quot; + getIntegerTom() +</span>
-<span class="fc" id="L969">            &quot;, integerRequiredTom=&quot; + getIntegerRequiredTom() +</span>
-<span class="fc" id="L970">            &quot;, integerMinTom=&quot; + getIntegerMinTom() +</span>
-<span class="fc" id="L971">            &quot;, integerMaxTom=&quot; + getIntegerMaxTom() +</span>
-<span class="fc" id="L972">            &quot;, longTom=&quot; + getLongTom() +</span>
-<span class="fc" id="L973">            &quot;, longRequiredTom=&quot; + getLongRequiredTom() +</span>
-<span class="fc" id="L974">            &quot;, longMinTom=&quot; + getLongMinTom() +</span>
-<span class="fc" id="L975">            &quot;, longMaxTom=&quot; + getLongMaxTom() +</span>
-<span class="fc" id="L976">            &quot;, floatTom=&quot; + getFloatTom() +</span>
-<span class="fc" id="L977">            &quot;, floatRequiredTom=&quot; + getFloatRequiredTom() +</span>
-<span class="fc" id="L978">            &quot;, floatMinTom=&quot; + getFloatMinTom() +</span>
-<span class="fc" id="L979">            &quot;, floatMaxTom=&quot; + getFloatMaxTom() +</span>
-<span class="fc" id="L980">            &quot;, doubleRequiredTom=&quot; + getDoubleRequiredTom() +</span>
-<span class="fc" id="L981">            &quot;, doubleMinTom=&quot; + getDoubleMinTom() +</span>
-<span class="fc" id="L982">            &quot;, doubleMaxTom=&quot; + getDoubleMaxTom() +</span>
-<span class="fc" id="L983">            &quot;, bigDecimalRequiredTom=&quot; + getBigDecimalRequiredTom() +</span>
-<span class="fc" id="L984">            &quot;, bigDecimalMinTom=&quot; + getBigDecimalMinTom() +</span>
-<span class="fc" id="L985">            &quot;, bigDecimalMaxTom=&quot; + getBigDecimalMaxTom() +</span>
-<span class="fc" id="L986">            &quot;, localDateTom='&quot; + getLocalDateTom() + &quot;'&quot; +</span>
-<span class="fc" id="L987">            &quot;, localDateRequiredTom='&quot; + getLocalDateRequiredTom() + &quot;'&quot; +</span>
-<span class="fc" id="L988">            &quot;, instantTom='&quot; + getInstantTom() + &quot;'&quot; +</span>
-<span class="fc" id="L989">            &quot;, instanteRequiredTom='&quot; + getInstanteRequiredTom() + &quot;'&quot; +</span>
-<span class="fc" id="L990">            &quot;, zonedDateTimeTom='&quot; + getZonedDateTimeTom() + &quot;'&quot; +</span>
-<span class="fc" id="L991">            &quot;, zonedDateTimeRequiredTom='&quot; + getZonedDateTimeRequiredTom() + &quot;'&quot; +</span>
-<span class="fc" id="L992">            &quot;, booleanTom='&quot; + isBooleanTom() + &quot;'&quot; +</span>
-<span class="fc" id="L993">            &quot;, booleanRequiredTom='&quot; + isBooleanRequiredTom() + &quot;'&quot; +</span>
-<span class="fc" id="L994">            &quot;, enumTom='&quot; + getEnumTom() + &quot;'&quot; +</span>
-<span class="fc" id="L995">            &quot;, enumRequiredTom='&quot; + getEnumRequiredTom() + &quot;'&quot; +</span>
-<span class="fc" id="L996">            &quot;, byteImageTom='&quot; + getByteImageTom() + &quot;'&quot; +</span>
-<span class="fc" id="L997">            &quot;, byteImageTomContentType='&quot; + getByteImageTomContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L998">            &quot;, byteImageRequiredTom='&quot; + getByteImageRequiredTom() + &quot;'&quot; +</span>
-<span class="fc" id="L999">            &quot;, byteImageRequiredTomContentType='&quot; + getByteImageRequiredTomContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1000">            &quot;, byteImageMinbytesTom='&quot; + getByteImageMinbytesTom() + &quot;'&quot; +</span>
-<span class="fc" id="L1001">            &quot;, byteImageMinbytesTomContentType='&quot; + getByteImageMinbytesTomContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1002">            &quot;, byteImageMaxbytesTom='&quot; + getByteImageMaxbytesTom() + &quot;'&quot; +</span>
-<span class="fc" id="L1003">            &quot;, byteImageMaxbytesTomContentType='&quot; + getByteImageMaxbytesTomContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1004">            &quot;, byteAnyTom='&quot; + getByteAnyTom() + &quot;'&quot; +</span>
-<span class="fc" id="L1005">            &quot;, byteAnyTomContentType='&quot; + getByteAnyTomContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1006">            &quot;, byteAnyRequiredTom='&quot; + getByteAnyRequiredTom() + &quot;'&quot; +</span>
-<span class="fc" id="L1007">            &quot;, byteAnyRequiredTomContentType='&quot; + getByteAnyRequiredTomContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1008">            &quot;, byteAnyMinbytesTom='&quot; + getByteAnyMinbytesTom() + &quot;'&quot; +</span>
-<span class="fc" id="L1009">            &quot;, byteAnyMinbytesTomContentType='&quot; + getByteAnyMinbytesTomContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1010">            &quot;, byteAnyMaxbytesTom='&quot; + getByteAnyMaxbytesTom() + &quot;'&quot; +</span>
-<span class="fc" id="L1011">            &quot;, byteAnyMaxbytesTomContentType='&quot; + getByteAnyMaxbytesTomContentType() + &quot;'&quot; +</span>
-<span class="fc" id="L1012">            &quot;, byteTextTom='&quot; + getByteTextTom() + &quot;'&quot; +</span>
-<span class="fc" id="L1013">            &quot;, byteTextRequiredTom='&quot; + getByteTextRequiredTom() + &quot;'&quot; +</span>
-<span class="fc" id="L1014">            &quot;, byteTextMinbytesTom='&quot; + getByteTextMinbytesTom() + &quot;'&quot; +</span>
-<span class="fc" id="L1015">            &quot;, byteTextMaxbytesTom='&quot; + getByteTextMaxbytesTom() + &quot;'&quot; +</span>
+<span class="fc" id="L981">        return &quot;FieldTestEntity{&quot; +</span>
+<span class="fc" id="L982">            &quot;id=&quot; + getId() +</span>
+<span class="fc" id="L983">            &quot;, stringTom='&quot; + getStringTom() + &quot;'&quot; +</span>
+<span class="fc" id="L984">            &quot;, stringRequiredTom='&quot; + getStringRequiredTom() + &quot;'&quot; +</span>
+<span class="fc" id="L985">            &quot;, stringMinlengthTom='&quot; + getStringMinlengthTom() + &quot;'&quot; +</span>
+<span class="fc" id="L986">            &quot;, stringMaxlengthTom='&quot; + getStringMaxlengthTom() + &quot;'&quot; +</span>
+<span class="fc" id="L987">            &quot;, stringPatternTom='&quot; + getStringPatternTom() + &quot;'&quot; +</span>
+<span class="fc" id="L988">            &quot;, integerTom=&quot; + getIntegerTom() +</span>
+<span class="fc" id="L989">            &quot;, integerRequiredTom=&quot; + getIntegerRequiredTom() +</span>
+<span class="fc" id="L990">            &quot;, integerMinTom=&quot; + getIntegerMinTom() +</span>
+<span class="fc" id="L991">            &quot;, integerMaxTom=&quot; + getIntegerMaxTom() +</span>
+<span class="fc" id="L992">            &quot;, longTom=&quot; + getLongTom() +</span>
+<span class="fc" id="L993">            &quot;, longRequiredTom=&quot; + getLongRequiredTom() +</span>
+<span class="fc" id="L994">            &quot;, longMinTom=&quot; + getLongMinTom() +</span>
+<span class="fc" id="L995">            &quot;, longMaxTom=&quot; + getLongMaxTom() +</span>
+<span class="fc" id="L996">            &quot;, floatTom=&quot; + getFloatTom() +</span>
+<span class="fc" id="L997">            &quot;, floatRequiredTom=&quot; + getFloatRequiredTom() +</span>
+<span class="fc" id="L998">            &quot;, floatMinTom=&quot; + getFloatMinTom() +</span>
+<span class="fc" id="L999">            &quot;, floatMaxTom=&quot; + getFloatMaxTom() +</span>
+<span class="fc" id="L1000">            &quot;, doubleRequiredTom=&quot; + getDoubleRequiredTom() +</span>
+<span class="fc" id="L1001">            &quot;, doubleMinTom=&quot; + getDoubleMinTom() +</span>
+<span class="fc" id="L1002">            &quot;, doubleMaxTom=&quot; + getDoubleMaxTom() +</span>
+<span class="fc" id="L1003">            &quot;, bigDecimalRequiredTom=&quot; + getBigDecimalRequiredTom() +</span>
+<span class="fc" id="L1004">            &quot;, bigDecimalMinTom=&quot; + getBigDecimalMinTom() +</span>
+<span class="fc" id="L1005">            &quot;, bigDecimalMaxTom=&quot; + getBigDecimalMaxTom() +</span>
+<span class="fc" id="L1006">            &quot;, localDateTom='&quot; + getLocalDateTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1007">            &quot;, localDateRequiredTom='&quot; + getLocalDateRequiredTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1008">            &quot;, instantTom='&quot; + getInstantTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1009">            &quot;, instanteRequiredTom='&quot; + getInstanteRequiredTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1010">            &quot;, zonedDateTimeTom='&quot; + getZonedDateTimeTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1011">            &quot;, zonedDateTimeRequiredTom='&quot; + getZonedDateTimeRequiredTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1012">            &quot;, booleanTom='&quot; + isBooleanTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1013">            &quot;, booleanRequiredTom='&quot; + isBooleanRequiredTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1014">            &quot;, enumTom='&quot; + getEnumTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1015">            &quot;, enumRequiredTom='&quot; + getEnumRequiredTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1016">            &quot;, byteImageTom='&quot; + getByteImageTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1017">            &quot;, byteImageTomContentType='&quot; + getByteImageTomContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1018">            &quot;, byteImageRequiredTom='&quot; + getByteImageRequiredTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1019">            &quot;, byteImageRequiredTomContentType='&quot; + getByteImageRequiredTomContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1020">            &quot;, byteImageMinbytesTom='&quot; + getByteImageMinbytesTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1021">            &quot;, byteImageMinbytesTomContentType='&quot; + getByteImageMinbytesTomContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1022">            &quot;, byteImageMaxbytesTom='&quot; + getByteImageMaxbytesTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1023">            &quot;, byteImageMaxbytesTomContentType='&quot; + getByteImageMaxbytesTomContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1024">            &quot;, byteAnyTom='&quot; + getByteAnyTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1025">            &quot;, byteAnyTomContentType='&quot; + getByteAnyTomContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1026">            &quot;, byteAnyRequiredTom='&quot; + getByteAnyRequiredTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1027">            &quot;, byteAnyRequiredTomContentType='&quot; + getByteAnyRequiredTomContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1028">            &quot;, byteAnyMinbytesTom='&quot; + getByteAnyMinbytesTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1029">            &quot;, byteAnyMinbytesTomContentType='&quot; + getByteAnyMinbytesTomContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1030">            &quot;, byteAnyMaxbytesTom='&quot; + getByteAnyMaxbytesTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1031">            &quot;, byteAnyMaxbytesTomContentType='&quot; + getByteAnyMaxbytesTomContentType() + &quot;'&quot; +</span>
+<span class="fc" id="L1032">            &quot;, byteTextTom='&quot; + getByteTextTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1033">            &quot;, byteTextRequiredTom='&quot; + getByteTextRequiredTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1034">            &quot;, byteTextMinbytesTom='&quot; + getByteTextMinbytesTom() + &quot;'&quot; +</span>
+<span class="fc" id="L1035">            &quot;, byteTextMaxbytesTom='&quot; + getByteTextMaxbytesTom() + &quot;'&quot; +</span>
             &quot;}&quot;;
     }
 }

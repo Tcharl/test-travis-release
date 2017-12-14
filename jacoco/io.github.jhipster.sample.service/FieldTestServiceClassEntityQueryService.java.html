@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FieldTestServiceClassEntityQueryService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.service</a> &gt; <span class="el_source">FieldTestServiceClassEntityQueryService.java</span></div><h1>FieldTestServiceClassEntityQueryService.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.service;
 
+/*-
+ * #%L
+ * Jhipster Sample Application
+ * %%
+ * Copyright (C) 2017 Osgiliath
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
 import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import java.math.BigDecimal;
@@ -33,14 +53,14 @@ import io.github.jhipster.sample.domain.enumeration.EnumRequiredFieldClass;
 @Transactional(readOnly = true)
 public class FieldTestServiceClassEntityQueryService extends QueryService&lt;FieldTestServiceClassEntity&gt; {
 
-<span class="fc" id="L36">    private final Logger log = LoggerFactory.getLogger(FieldTestServiceClassEntityQueryService.class);</span>
+<span class="fc" id="L56">    private final Logger log = LoggerFactory.getLogger(FieldTestServiceClassEntityQueryService.class);</span>
 
 
     private final FieldTestServiceClassEntityRepository fieldTestServiceClassEntityRepository;
 
-<span class="fc" id="L41">    public FieldTestServiceClassEntityQueryService(FieldTestServiceClassEntityRepository fieldTestServiceClassEntityRepository) {</span>
-<span class="fc" id="L42">        this.fieldTestServiceClassEntityRepository = fieldTestServiceClassEntityRepository;</span>
-<span class="fc" id="L43">    }</span>
+<span class="fc" id="L61">    public FieldTestServiceClassEntityQueryService(FieldTestServiceClassEntityRepository fieldTestServiceClassEntityRepository) {</span>
+<span class="fc" id="L62">        this.fieldTestServiceClassEntityRepository = fieldTestServiceClassEntityRepository;</span>
+<span class="fc" id="L63">    }</span>
 
     /**
      * Return a {@link List} of {@link FieldTestServiceClassEntity} which matches the criteria from the database
@@ -49,9 +69,9 @@ public class FieldTestServiceClassEntityQueryService extends QueryService&lt;Fie
      */
     @Transactional(readOnly = true)
     public List&lt;FieldTestServiceClassEntity&gt; findByCriteria(FieldTestServiceClassEntityCriteria criteria) {
-<span class="fc" id="L52">        log.debug(&quot;find by criteria : {}&quot;, criteria);</span>
-<span class="fc" id="L53">        final Specifications&lt;FieldTestServiceClassEntity&gt; specification = createSpecification(criteria);</span>
-<span class="fc" id="L54">        return fieldTestServiceClassEntityRepository.findAll(specification);</span>
+<span class="fc" id="L72">        log.debug(&quot;find by criteria : {}&quot;, criteria);</span>
+<span class="fc" id="L73">        final Specifications&lt;FieldTestServiceClassEntity&gt; specification = createSpecification(criteria);</span>
+<span class="fc" id="L74">        return fieldTestServiceClassEntityRepository.findAll(specification);</span>
     }
 
     /**
@@ -62,121 +82,121 @@ public class FieldTestServiceClassEntityQueryService extends QueryService&lt;Fie
      */
     @Transactional(readOnly = true)
     public Page&lt;FieldTestServiceClassEntity&gt; findByCriteria(FieldTestServiceClassEntityCriteria criteria, Pageable page) {
-<span class="nc" id="L65">        log.debug(&quot;find by criteria : {}, page: {}&quot;, criteria, page);</span>
-<span class="nc" id="L66">        final Specifications&lt;FieldTestServiceClassEntity&gt; specification = createSpecification(criteria);</span>
-<span class="nc" id="L67">        return fieldTestServiceClassEntityRepository.findAll(specification, page);</span>
+<span class="nc" id="L85">        log.debug(&quot;find by criteria : {}, page: {}&quot;, criteria, page);</span>
+<span class="nc" id="L86">        final Specifications&lt;FieldTestServiceClassEntity&gt; specification = createSpecification(criteria);</span>
+<span class="nc" id="L87">        return fieldTestServiceClassEntityRepository.findAll(specification, page);</span>
     }
 
     /**
      * Function to convert FieldTestServiceClassEntityCriteria to a {@link Specifications}
      */
     private Specifications&lt;FieldTestServiceClassEntity&gt; createSpecification(FieldTestServiceClassEntityCriteria criteria) {
-<span class="fc" id="L74">        Specifications&lt;FieldTestServiceClassEntity&gt; specification = Specifications.where(null);</span>
-<span class="pc bpc" id="L75" title="1 of 2 branches missed.">        if (criteria != null) {</span>
-<span class="pc bpc" id="L76" title="1 of 2 branches missed.">            if (criteria.getId() != null) {</span>
-<span class="nc" id="L77">                specification = specification.and(buildSpecification(criteria.getId(), FieldTestServiceClassEntity_.id));</span>
+<span class="fc" id="L94">        Specifications&lt;FieldTestServiceClassEntity&gt; specification = Specifications.where(null);</span>
+<span class="pc bpc" id="L95" title="1 of 2 branches missed.">        if (criteria != null) {</span>
+<span class="pc bpc" id="L96" title="1 of 2 branches missed.">            if (criteria.getId() != null) {</span>
+<span class="nc" id="L97">                specification = specification.and(buildSpecification(criteria.getId(), FieldTestServiceClassEntity_.id));</span>
             }
-<span class="fc bfc" id="L79" title="All 2 branches covered.">            if (criteria.getStringBob() != null) {</span>
-<span class="fc" id="L80">                specification = specification.and(buildStringSpecification(criteria.getStringBob(), FieldTestServiceClassEntity_.stringBob));</span>
+<span class="fc bfc" id="L99" title="All 2 branches covered.">            if (criteria.getStringBob() != null) {</span>
+<span class="fc" id="L100">                specification = specification.and(buildStringSpecification(criteria.getStringBob(), FieldTestServiceClassEntity_.stringBob));</span>
             }
-<span class="fc bfc" id="L82" title="All 2 branches covered.">            if (criteria.getStringRequiredBob() != null) {</span>
-<span class="fc" id="L83">                specification = specification.and(buildStringSpecification(criteria.getStringRequiredBob(), FieldTestServiceClassEntity_.stringRequiredBob));</span>
+<span class="fc bfc" id="L102" title="All 2 branches covered.">            if (criteria.getStringRequiredBob() != null) {</span>
+<span class="fc" id="L103">                specification = specification.and(buildStringSpecification(criteria.getStringRequiredBob(), FieldTestServiceClassEntity_.stringRequiredBob));</span>
             }
-<span class="fc bfc" id="L85" title="All 2 branches covered.">            if (criteria.getStringMinlengthBob() != null) {</span>
-<span class="fc" id="L86">                specification = specification.and(buildStringSpecification(criteria.getStringMinlengthBob(), FieldTestServiceClassEntity_.stringMinlengthBob));</span>
+<span class="fc bfc" id="L105" title="All 2 branches covered.">            if (criteria.getStringMinlengthBob() != null) {</span>
+<span class="fc" id="L106">                specification = specification.and(buildStringSpecification(criteria.getStringMinlengthBob(), FieldTestServiceClassEntity_.stringMinlengthBob));</span>
             }
-<span class="fc bfc" id="L88" title="All 2 branches covered.">            if (criteria.getStringMaxlengthBob() != null) {</span>
-<span class="fc" id="L89">                specification = specification.and(buildStringSpecification(criteria.getStringMaxlengthBob(), FieldTestServiceClassEntity_.stringMaxlengthBob));</span>
+<span class="fc bfc" id="L108" title="All 2 branches covered.">            if (criteria.getStringMaxlengthBob() != null) {</span>
+<span class="fc" id="L109">                specification = specification.and(buildStringSpecification(criteria.getStringMaxlengthBob(), FieldTestServiceClassEntity_.stringMaxlengthBob));</span>
             }
-<span class="fc bfc" id="L91" title="All 2 branches covered.">            if (criteria.getStringPatternBob() != null) {</span>
-<span class="fc" id="L92">                specification = specification.and(buildStringSpecification(criteria.getStringPatternBob(), FieldTestServiceClassEntity_.stringPatternBob));</span>
+<span class="fc bfc" id="L111" title="All 2 branches covered.">            if (criteria.getStringPatternBob() != null) {</span>
+<span class="fc" id="L112">                specification = specification.and(buildStringSpecification(criteria.getStringPatternBob(), FieldTestServiceClassEntity_.stringPatternBob));</span>
             }
-<span class="fc bfc" id="L94" title="All 2 branches covered.">            if (criteria.getIntegerBob() != null) {</span>
-<span class="fc" id="L95">                specification = specification.and(buildRangeSpecification(criteria.getIntegerBob(), FieldTestServiceClassEntity_.integerBob));</span>
+<span class="fc bfc" id="L114" title="All 2 branches covered.">            if (criteria.getIntegerBob() != null) {</span>
+<span class="fc" id="L115">                specification = specification.and(buildRangeSpecification(criteria.getIntegerBob(), FieldTestServiceClassEntity_.integerBob));</span>
             }
-<span class="fc bfc" id="L97" title="All 2 branches covered.">            if (criteria.getIntegerRequiredBob() != null) {</span>
-<span class="fc" id="L98">                specification = specification.and(buildRangeSpecification(criteria.getIntegerRequiredBob(), FieldTestServiceClassEntity_.integerRequiredBob));</span>
+<span class="fc bfc" id="L117" title="All 2 branches covered.">            if (criteria.getIntegerRequiredBob() != null) {</span>
+<span class="fc" id="L118">                specification = specification.and(buildRangeSpecification(criteria.getIntegerRequiredBob(), FieldTestServiceClassEntity_.integerRequiredBob));</span>
             }
-<span class="fc bfc" id="L100" title="All 2 branches covered.">            if (criteria.getIntegerMinBob() != null) {</span>
-<span class="fc" id="L101">                specification = specification.and(buildRangeSpecification(criteria.getIntegerMinBob(), FieldTestServiceClassEntity_.integerMinBob));</span>
+<span class="fc bfc" id="L120" title="All 2 branches covered.">            if (criteria.getIntegerMinBob() != null) {</span>
+<span class="fc" id="L121">                specification = specification.and(buildRangeSpecification(criteria.getIntegerMinBob(), FieldTestServiceClassEntity_.integerMinBob));</span>
             }
-<span class="fc bfc" id="L103" title="All 2 branches covered.">            if (criteria.getIntegerMaxBob() != null) {</span>
-<span class="fc" id="L104">                specification = specification.and(buildRangeSpecification(criteria.getIntegerMaxBob(), FieldTestServiceClassEntity_.integerMaxBob));</span>
+<span class="fc bfc" id="L123" title="All 2 branches covered.">            if (criteria.getIntegerMaxBob() != null) {</span>
+<span class="fc" id="L124">                specification = specification.and(buildRangeSpecification(criteria.getIntegerMaxBob(), FieldTestServiceClassEntity_.integerMaxBob));</span>
             }
-<span class="fc bfc" id="L106" title="All 2 branches covered.">            if (criteria.getLongBob() != null) {</span>
-<span class="fc" id="L107">                specification = specification.and(buildRangeSpecification(criteria.getLongBob(), FieldTestServiceClassEntity_.longBob));</span>
+<span class="fc bfc" id="L126" title="All 2 branches covered.">            if (criteria.getLongBob() != null) {</span>
+<span class="fc" id="L127">                specification = specification.and(buildRangeSpecification(criteria.getLongBob(), FieldTestServiceClassEntity_.longBob));</span>
             }
-<span class="fc bfc" id="L109" title="All 2 branches covered.">            if (criteria.getLongRequiredBob() != null) {</span>
-<span class="fc" id="L110">                specification = specification.and(buildRangeSpecification(criteria.getLongRequiredBob(), FieldTestServiceClassEntity_.longRequiredBob));</span>
+<span class="fc bfc" id="L129" title="All 2 branches covered.">            if (criteria.getLongRequiredBob() != null) {</span>
+<span class="fc" id="L130">                specification = specification.and(buildRangeSpecification(criteria.getLongRequiredBob(), FieldTestServiceClassEntity_.longRequiredBob));</span>
             }
-<span class="fc bfc" id="L112" title="All 2 branches covered.">            if (criteria.getLongMinBob() != null) {</span>
-<span class="fc" id="L113">                specification = specification.and(buildRangeSpecification(criteria.getLongMinBob(), FieldTestServiceClassEntity_.longMinBob));</span>
+<span class="fc bfc" id="L132" title="All 2 branches covered.">            if (criteria.getLongMinBob() != null) {</span>
+<span class="fc" id="L133">                specification = specification.and(buildRangeSpecification(criteria.getLongMinBob(), FieldTestServiceClassEntity_.longMinBob));</span>
             }
-<span class="fc bfc" id="L115" title="All 2 branches covered.">            if (criteria.getLongMaxBob() != null) {</span>
-<span class="fc" id="L116">                specification = specification.and(buildRangeSpecification(criteria.getLongMaxBob(), FieldTestServiceClassEntity_.longMaxBob));</span>
+<span class="fc bfc" id="L135" title="All 2 branches covered.">            if (criteria.getLongMaxBob() != null) {</span>
+<span class="fc" id="L136">                specification = specification.and(buildRangeSpecification(criteria.getLongMaxBob(), FieldTestServiceClassEntity_.longMaxBob));</span>
             }
-<span class="fc bfc" id="L118" title="All 2 branches covered.">            if (criteria.getFloatBob() != null) {</span>
-<span class="fc" id="L119">                specification = specification.and(buildRangeSpecification(criteria.getFloatBob(), FieldTestServiceClassEntity_.floatBob));</span>
+<span class="fc bfc" id="L138" title="All 2 branches covered.">            if (criteria.getFloatBob() != null) {</span>
+<span class="fc" id="L139">                specification = specification.and(buildRangeSpecification(criteria.getFloatBob(), FieldTestServiceClassEntity_.floatBob));</span>
             }
-<span class="fc bfc" id="L121" title="All 2 branches covered.">            if (criteria.getFloatRequiredBob() != null) {</span>
-<span class="fc" id="L122">                specification = specification.and(buildRangeSpecification(criteria.getFloatRequiredBob(), FieldTestServiceClassEntity_.floatRequiredBob));</span>
+<span class="fc bfc" id="L141" title="All 2 branches covered.">            if (criteria.getFloatRequiredBob() != null) {</span>
+<span class="fc" id="L142">                specification = specification.and(buildRangeSpecification(criteria.getFloatRequiredBob(), FieldTestServiceClassEntity_.floatRequiredBob));</span>
             }
-<span class="fc bfc" id="L124" title="All 2 branches covered.">            if (criteria.getFloatMinBob() != null) {</span>
-<span class="fc" id="L125">                specification = specification.and(buildRangeSpecification(criteria.getFloatMinBob(), FieldTestServiceClassEntity_.floatMinBob));</span>
+<span class="fc bfc" id="L144" title="All 2 branches covered.">            if (criteria.getFloatMinBob() != null) {</span>
+<span class="fc" id="L145">                specification = specification.and(buildRangeSpecification(criteria.getFloatMinBob(), FieldTestServiceClassEntity_.floatMinBob));</span>
             }
-<span class="fc bfc" id="L127" title="All 2 branches covered.">            if (criteria.getFloatMaxBob() != null) {</span>
-<span class="fc" id="L128">                specification = specification.and(buildRangeSpecification(criteria.getFloatMaxBob(), FieldTestServiceClassEntity_.floatMaxBob));</span>
+<span class="fc bfc" id="L147" title="All 2 branches covered.">            if (criteria.getFloatMaxBob() != null) {</span>
+<span class="fc" id="L148">                specification = specification.and(buildRangeSpecification(criteria.getFloatMaxBob(), FieldTestServiceClassEntity_.floatMaxBob));</span>
             }
-<span class="fc bfc" id="L130" title="All 2 branches covered.">            if (criteria.getDoubleRequiredBob() != null) {</span>
-<span class="fc" id="L131">                specification = specification.and(buildRangeSpecification(criteria.getDoubleRequiredBob(), FieldTestServiceClassEntity_.doubleRequiredBob));</span>
+<span class="fc bfc" id="L150" title="All 2 branches covered.">            if (criteria.getDoubleRequiredBob() != null) {</span>
+<span class="fc" id="L151">                specification = specification.and(buildRangeSpecification(criteria.getDoubleRequiredBob(), FieldTestServiceClassEntity_.doubleRequiredBob));</span>
             }
-<span class="fc bfc" id="L133" title="All 2 branches covered.">            if (criteria.getDoubleMinBob() != null) {</span>
-<span class="fc" id="L134">                specification = specification.and(buildRangeSpecification(criteria.getDoubleMinBob(), FieldTestServiceClassEntity_.doubleMinBob));</span>
+<span class="fc bfc" id="L153" title="All 2 branches covered.">            if (criteria.getDoubleMinBob() != null) {</span>
+<span class="fc" id="L154">                specification = specification.and(buildRangeSpecification(criteria.getDoubleMinBob(), FieldTestServiceClassEntity_.doubleMinBob));</span>
             }
-<span class="fc bfc" id="L136" title="All 2 branches covered.">            if (criteria.getDoubleMaxBob() != null) {</span>
-<span class="fc" id="L137">                specification = specification.and(buildRangeSpecification(criteria.getDoubleMaxBob(), FieldTestServiceClassEntity_.doubleMaxBob));</span>
+<span class="fc bfc" id="L156" title="All 2 branches covered.">            if (criteria.getDoubleMaxBob() != null) {</span>
+<span class="fc" id="L157">                specification = specification.and(buildRangeSpecification(criteria.getDoubleMaxBob(), FieldTestServiceClassEntity_.doubleMaxBob));</span>
             }
-<span class="fc bfc" id="L139" title="All 2 branches covered.">            if (criteria.getBigDecimalRequiredBob() != null) {</span>
-<span class="fc" id="L140">                specification = specification.and(buildRangeSpecification(criteria.getBigDecimalRequiredBob(), FieldTestServiceClassEntity_.bigDecimalRequiredBob));</span>
+<span class="fc bfc" id="L159" title="All 2 branches covered.">            if (criteria.getBigDecimalRequiredBob() != null) {</span>
+<span class="fc" id="L160">                specification = specification.and(buildRangeSpecification(criteria.getBigDecimalRequiredBob(), FieldTestServiceClassEntity_.bigDecimalRequiredBob));</span>
             }
-<span class="fc bfc" id="L142" title="All 2 branches covered.">            if (criteria.getBigDecimalMinBob() != null) {</span>
-<span class="fc" id="L143">                specification = specification.and(buildRangeSpecification(criteria.getBigDecimalMinBob(), FieldTestServiceClassEntity_.bigDecimalMinBob));</span>
+<span class="fc bfc" id="L162" title="All 2 branches covered.">            if (criteria.getBigDecimalMinBob() != null) {</span>
+<span class="fc" id="L163">                specification = specification.and(buildRangeSpecification(criteria.getBigDecimalMinBob(), FieldTestServiceClassEntity_.bigDecimalMinBob));</span>
             }
-<span class="fc bfc" id="L145" title="All 2 branches covered.">            if (criteria.getBigDecimalMaxBob() != null) {</span>
-<span class="fc" id="L146">                specification = specification.and(buildRangeSpecification(criteria.getBigDecimalMaxBob(), FieldTestServiceClassEntity_.bigDecimalMaxBob));</span>
+<span class="fc bfc" id="L165" title="All 2 branches covered.">            if (criteria.getBigDecimalMaxBob() != null) {</span>
+<span class="fc" id="L166">                specification = specification.and(buildRangeSpecification(criteria.getBigDecimalMaxBob(), FieldTestServiceClassEntity_.bigDecimalMaxBob));</span>
             }
-<span class="fc bfc" id="L148" title="All 2 branches covered.">            if (criteria.getLocalDateBob() != null) {</span>
-<span class="fc" id="L149">                specification = specification.and(buildRangeSpecification(criteria.getLocalDateBob(), FieldTestServiceClassEntity_.localDateBob));</span>
+<span class="fc bfc" id="L168" title="All 2 branches covered.">            if (criteria.getLocalDateBob() != null) {</span>
+<span class="fc" id="L169">                specification = specification.and(buildRangeSpecification(criteria.getLocalDateBob(), FieldTestServiceClassEntity_.localDateBob));</span>
             }
-<span class="fc bfc" id="L151" title="All 2 branches covered.">            if (criteria.getLocalDateRequiredBob() != null) {</span>
-<span class="fc" id="L152">                specification = specification.and(buildRangeSpecification(criteria.getLocalDateRequiredBob(), FieldTestServiceClassEntity_.localDateRequiredBob));</span>
+<span class="fc bfc" id="L171" title="All 2 branches covered.">            if (criteria.getLocalDateRequiredBob() != null) {</span>
+<span class="fc" id="L172">                specification = specification.and(buildRangeSpecification(criteria.getLocalDateRequiredBob(), FieldTestServiceClassEntity_.localDateRequiredBob));</span>
             }
-<span class="fc bfc" id="L154" title="All 2 branches covered.">            if (criteria.getInstantBob() != null) {</span>
-<span class="fc" id="L155">                specification = specification.and(buildRangeSpecification(criteria.getInstantBob(), FieldTestServiceClassEntity_.instantBob));</span>
+<span class="fc bfc" id="L174" title="All 2 branches covered.">            if (criteria.getInstantBob() != null) {</span>
+<span class="fc" id="L175">                specification = specification.and(buildRangeSpecification(criteria.getInstantBob(), FieldTestServiceClassEntity_.instantBob));</span>
             }
-<span class="fc bfc" id="L157" title="All 2 branches covered.">            if (criteria.getInstanteRequiredBob() != null) {</span>
-<span class="fc" id="L158">                specification = specification.and(buildRangeSpecification(criteria.getInstanteRequiredBob(), FieldTestServiceClassEntity_.instanteRequiredBob));</span>
+<span class="fc bfc" id="L177" title="All 2 branches covered.">            if (criteria.getInstanteRequiredBob() != null) {</span>
+<span class="fc" id="L178">                specification = specification.and(buildRangeSpecification(criteria.getInstanteRequiredBob(), FieldTestServiceClassEntity_.instanteRequiredBob));</span>
             }
-<span class="fc bfc" id="L160" title="All 2 branches covered.">            if (criteria.getZonedDateTimeBob() != null) {</span>
-<span class="fc" id="L161">                specification = specification.and(buildRangeSpecification(criteria.getZonedDateTimeBob(), FieldTestServiceClassEntity_.zonedDateTimeBob));</span>
+<span class="fc bfc" id="L180" title="All 2 branches covered.">            if (criteria.getZonedDateTimeBob() != null) {</span>
+<span class="fc" id="L181">                specification = specification.and(buildRangeSpecification(criteria.getZonedDateTimeBob(), FieldTestServiceClassEntity_.zonedDateTimeBob));</span>
             }
-<span class="fc bfc" id="L163" title="All 2 branches covered.">            if (criteria.getZonedDateTimeRequiredBob() != null) {</span>
-<span class="fc" id="L164">                specification = specification.and(buildRangeSpecification(criteria.getZonedDateTimeRequiredBob(), FieldTestServiceClassEntity_.zonedDateTimeRequiredBob));</span>
+<span class="fc bfc" id="L183" title="All 2 branches covered.">            if (criteria.getZonedDateTimeRequiredBob() != null) {</span>
+<span class="fc" id="L184">                specification = specification.and(buildRangeSpecification(criteria.getZonedDateTimeRequiredBob(), FieldTestServiceClassEntity_.zonedDateTimeRequiredBob));</span>
             }
-<span class="fc bfc" id="L166" title="All 2 branches covered.">            if (criteria.getBooleanBob() != null) {</span>
-<span class="fc" id="L167">                specification = specification.and(buildSpecification(criteria.getBooleanBob(), FieldTestServiceClassEntity_.booleanBob));</span>
+<span class="fc bfc" id="L186" title="All 2 branches covered.">            if (criteria.getBooleanBob() != null) {</span>
+<span class="fc" id="L187">                specification = specification.and(buildSpecification(criteria.getBooleanBob(), FieldTestServiceClassEntity_.booleanBob));</span>
             }
-<span class="fc bfc" id="L169" title="All 2 branches covered.">            if (criteria.getBooleanRequiredBob() != null) {</span>
-<span class="fc" id="L170">                specification = specification.and(buildSpecification(criteria.getBooleanRequiredBob(), FieldTestServiceClassEntity_.booleanRequiredBob));</span>
+<span class="fc bfc" id="L189" title="All 2 branches covered.">            if (criteria.getBooleanRequiredBob() != null) {</span>
+<span class="fc" id="L190">                specification = specification.and(buildSpecification(criteria.getBooleanRequiredBob(), FieldTestServiceClassEntity_.booleanRequiredBob));</span>
             }
-<span class="fc bfc" id="L172" title="All 2 branches covered.">            if (criteria.getEnumBob() != null) {</span>
-<span class="fc" id="L173">                specification = specification.and(buildSpecification(criteria.getEnumBob(), FieldTestServiceClassEntity_.enumBob));</span>
+<span class="fc bfc" id="L192" title="All 2 branches covered.">            if (criteria.getEnumBob() != null) {</span>
+<span class="fc" id="L193">                specification = specification.and(buildSpecification(criteria.getEnumBob(), FieldTestServiceClassEntity_.enumBob));</span>
             }
-<span class="fc bfc" id="L175" title="All 2 branches covered.">            if (criteria.getEnumRequiredBob() != null) {</span>
-<span class="fc" id="L176">                specification = specification.and(buildSpecification(criteria.getEnumRequiredBob(), FieldTestServiceClassEntity_.enumRequiredBob));</span>
+<span class="fc bfc" id="L195" title="All 2 branches covered.">            if (criteria.getEnumRequiredBob() != null) {</span>
+<span class="fc" id="L196">                specification = specification.and(buildSpecification(criteria.getEnumRequiredBob(), FieldTestServiceClassEntity_.enumRequiredBob));</span>
             }
         }
-<span class="fc" id="L179">        return specification;</span>
+<span class="fc" id="L199">        return specification;</span>
     }
 
 }

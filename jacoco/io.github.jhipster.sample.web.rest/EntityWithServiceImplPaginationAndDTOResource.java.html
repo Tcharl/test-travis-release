@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EntityWithServiceImplPaginationAndDTOResource.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.web.rest</a> &gt; <span class="el_source">EntityWithServiceImplPaginationAndDTOResource.java</span></div><h1>EntityWithServiceImplPaginationAndDTOResource.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.web.rest;
 
+/*-
+ * #%L
+ * Jhipster Sample Application
+ * %%
+ * Copyright (C) 2017 Osgiliath
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
 import com.codahale.metrics.annotation.Timed;
 import io.github.jhipster.sample.service.EntityWithServiceImplPaginationAndDTOService;
 import io.github.jhipster.sample.web.rest.errors.BadRequestAlertException;
@@ -29,15 +49,15 @@ import java.util.Optional;
 @RequestMapping(&quot;/api&quot;)
 public class EntityWithServiceImplPaginationAndDTOResource {
 
-<span class="fc" id="L32">    private final Logger log = LoggerFactory.getLogger(EntityWithServiceImplPaginationAndDTOResource.class);</span>
+<span class="fc" id="L52">    private final Logger log = LoggerFactory.getLogger(EntityWithServiceImplPaginationAndDTOResource.class);</span>
 
     private static final String ENTITY_NAME = &quot;entityWithServiceImplPaginationAndDTO&quot;;
 
     private final EntityWithServiceImplPaginationAndDTOService entityWithServiceImplPaginationAndDTOService;
 
-<span class="fc" id="L38">    public EntityWithServiceImplPaginationAndDTOResource(EntityWithServiceImplPaginationAndDTOService entityWithServiceImplPaginationAndDTOService) {</span>
-<span class="fc" id="L39">        this.entityWithServiceImplPaginationAndDTOService = entityWithServiceImplPaginationAndDTOService;</span>
-<span class="fc" id="L40">    }</span>
+<span class="fc" id="L58">    public EntityWithServiceImplPaginationAndDTOResource(EntityWithServiceImplPaginationAndDTOService entityWithServiceImplPaginationAndDTOService) {</span>
+<span class="fc" id="L59">        this.entityWithServiceImplPaginationAndDTOService = entityWithServiceImplPaginationAndDTOService;</span>
+<span class="fc" id="L60">    }</span>
 
     /**
      * POST  /entity-with-service-impl-pagination-and-dtos : Create a new entityWithServiceImplPaginationAndDTO.
@@ -49,14 +69,14 @@ public class EntityWithServiceImplPaginationAndDTOResource {
     @PostMapping(&quot;/entity-with-service-impl-pagination-and-dtos&quot;)
     @Timed
     public ResponseEntity&lt;EntityWithServiceImplPaginationAndDTODTO&gt; createEntityWithServiceImplPaginationAndDTO(@RequestBody EntityWithServiceImplPaginationAndDTODTO entityWithServiceImplPaginationAndDTODTO) throws URISyntaxException {
-<span class="fc" id="L52">        log.debug(&quot;REST request to save EntityWithServiceImplPaginationAndDTO : {}&quot;, entityWithServiceImplPaginationAndDTODTO);</span>
-<span class="fc bfc" id="L53" title="All 2 branches covered.">        if (entityWithServiceImplPaginationAndDTODTO.getId() != null) {</span>
-<span class="fc" id="L54">            throw new BadRequestAlertException(&quot;A new entityWithServiceImplPaginationAndDTO cannot already have an ID&quot;, ENTITY_NAME, &quot;idexists&quot;);</span>
+<span class="fc" id="L72">        log.debug(&quot;REST request to save EntityWithServiceImplPaginationAndDTO : {}&quot;, entityWithServiceImplPaginationAndDTODTO);</span>
+<span class="fc bfc" id="L73" title="All 2 branches covered.">        if (entityWithServiceImplPaginationAndDTODTO.getId() != null) {</span>
+<span class="fc" id="L74">            throw new BadRequestAlertException(&quot;A new entityWithServiceImplPaginationAndDTO cannot already have an ID&quot;, ENTITY_NAME, &quot;idexists&quot;);</span>
         }
-<span class="fc" id="L56">        EntityWithServiceImplPaginationAndDTODTO result = entityWithServiceImplPaginationAndDTOService.save(entityWithServiceImplPaginationAndDTODTO);</span>
-<span class="fc" id="L57">        return ResponseEntity.created(new URI(&quot;/api/entity-with-service-impl-pagination-and-dtos/&quot; + result.getId()))</span>
-<span class="fc" id="L58">            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))</span>
-<span class="fc" id="L59">            .body(result);</span>
+<span class="fc" id="L76">        EntityWithServiceImplPaginationAndDTODTO result = entityWithServiceImplPaginationAndDTOService.save(entityWithServiceImplPaginationAndDTODTO);</span>
+<span class="fc" id="L77">        return ResponseEntity.created(new URI(&quot;/api/entity-with-service-impl-pagination-and-dtos/&quot; + result.getId()))</span>
+<span class="fc" id="L78">            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))</span>
+<span class="fc" id="L79">            .body(result);</span>
     }
 
     /**
@@ -71,14 +91,14 @@ public class EntityWithServiceImplPaginationAndDTOResource {
     @PutMapping(&quot;/entity-with-service-impl-pagination-and-dtos&quot;)
     @Timed
     public ResponseEntity&lt;EntityWithServiceImplPaginationAndDTODTO&gt; updateEntityWithServiceImplPaginationAndDTO(@RequestBody EntityWithServiceImplPaginationAndDTODTO entityWithServiceImplPaginationAndDTODTO) throws URISyntaxException {
-<span class="fc" id="L74">        log.debug(&quot;REST request to update EntityWithServiceImplPaginationAndDTO : {}&quot;, entityWithServiceImplPaginationAndDTODTO);</span>
-<span class="fc bfc" id="L75" title="All 2 branches covered.">        if (entityWithServiceImplPaginationAndDTODTO.getId() == null) {</span>
-<span class="fc" id="L76">            return createEntityWithServiceImplPaginationAndDTO(entityWithServiceImplPaginationAndDTODTO);</span>
+<span class="fc" id="L94">        log.debug(&quot;REST request to update EntityWithServiceImplPaginationAndDTO : {}&quot;, entityWithServiceImplPaginationAndDTODTO);</span>
+<span class="fc bfc" id="L95" title="All 2 branches covered.">        if (entityWithServiceImplPaginationAndDTODTO.getId() == null) {</span>
+<span class="fc" id="L96">            return createEntityWithServiceImplPaginationAndDTO(entityWithServiceImplPaginationAndDTODTO);</span>
         }
-<span class="fc" id="L78">        EntityWithServiceImplPaginationAndDTODTO result = entityWithServiceImplPaginationAndDTOService.save(entityWithServiceImplPaginationAndDTODTO);</span>
-<span class="fc" id="L79">        return ResponseEntity.ok()</span>
-<span class="fc" id="L80">            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, entityWithServiceImplPaginationAndDTODTO.getId().toString()))</span>
-<span class="fc" id="L81">            .body(result);</span>
+<span class="fc" id="L98">        EntityWithServiceImplPaginationAndDTODTO result = entityWithServiceImplPaginationAndDTOService.save(entityWithServiceImplPaginationAndDTODTO);</span>
+<span class="fc" id="L99">        return ResponseEntity.ok()</span>
+<span class="fc" id="L100">            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, entityWithServiceImplPaginationAndDTODTO.getId().toString()))</span>
+<span class="fc" id="L101">            .body(result);</span>
     }
 
     /**
@@ -90,10 +110,10 @@ public class EntityWithServiceImplPaginationAndDTOResource {
     @GetMapping(&quot;/entity-with-service-impl-pagination-and-dtos&quot;)
     @Timed
     public ResponseEntity&lt;List&lt;EntityWithServiceImplPaginationAndDTODTO&gt;&gt; getAllEntityWithServiceImplPaginationAndDTOS(Pageable pageable) {
-<span class="fc" id="L93">        log.debug(&quot;REST request to get a page of EntityWithServiceImplPaginationAndDTOS&quot;);</span>
-<span class="fc" id="L94">        Page&lt;EntityWithServiceImplPaginationAndDTODTO&gt; page = entityWithServiceImplPaginationAndDTOService.findAll(pageable);</span>
-<span class="fc" id="L95">        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, &quot;/api/entity-with-service-impl-pagination-and-dtos&quot;);</span>
-<span class="fc" id="L96">        return new ResponseEntity&lt;&gt;(page.getContent(), headers, HttpStatus.OK);</span>
+<span class="fc" id="L113">        log.debug(&quot;REST request to get a page of EntityWithServiceImplPaginationAndDTOS&quot;);</span>
+<span class="fc" id="L114">        Page&lt;EntityWithServiceImplPaginationAndDTODTO&gt; page = entityWithServiceImplPaginationAndDTOService.findAll(pageable);</span>
+<span class="fc" id="L115">        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, &quot;/api/entity-with-service-impl-pagination-and-dtos&quot;);</span>
+<span class="fc" id="L116">        return new ResponseEntity&lt;&gt;(page.getContent(), headers, HttpStatus.OK);</span>
     }
 
     /**
@@ -105,9 +125,9 @@ public class EntityWithServiceImplPaginationAndDTOResource {
     @GetMapping(&quot;/entity-with-service-impl-pagination-and-dtos/{id}&quot;)
     @Timed
     public ResponseEntity&lt;EntityWithServiceImplPaginationAndDTODTO&gt; getEntityWithServiceImplPaginationAndDTO(@PathVariable Long id) {
-<span class="fc" id="L108">        log.debug(&quot;REST request to get EntityWithServiceImplPaginationAndDTO : {}&quot;, id);</span>
-<span class="fc" id="L109">        EntityWithServiceImplPaginationAndDTODTO entityWithServiceImplPaginationAndDTODTO = entityWithServiceImplPaginationAndDTOService.findOne(id);</span>
-<span class="fc" id="L110">        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(entityWithServiceImplPaginationAndDTODTO));</span>
+<span class="fc" id="L128">        log.debug(&quot;REST request to get EntityWithServiceImplPaginationAndDTO : {}&quot;, id);</span>
+<span class="fc" id="L129">        EntityWithServiceImplPaginationAndDTODTO entityWithServiceImplPaginationAndDTODTO = entityWithServiceImplPaginationAndDTOService.findOne(id);</span>
+<span class="fc" id="L130">        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(entityWithServiceImplPaginationAndDTODTO));</span>
     }
 
     /**
@@ -119,9 +139,9 @@ public class EntityWithServiceImplPaginationAndDTOResource {
     @DeleteMapping(&quot;/entity-with-service-impl-pagination-and-dtos/{id}&quot;)
     @Timed
     public ResponseEntity&lt;Void&gt; deleteEntityWithServiceImplPaginationAndDTO(@PathVariable Long id) {
-<span class="fc" id="L122">        log.debug(&quot;REST request to delete EntityWithServiceImplPaginationAndDTO : {}&quot;, id);</span>
-<span class="fc" id="L123">        entityWithServiceImplPaginationAndDTOService.delete(id);</span>
-<span class="fc" id="L124">        return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();</span>
+<span class="fc" id="L142">        log.debug(&quot;REST request to delete EntityWithServiceImplPaginationAndDTO : {}&quot;, id);</span>
+<span class="fc" id="L143">        entityWithServiceImplPaginationAndDTOService.delete(id);</span>
+<span class="fc" id="L144">        return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

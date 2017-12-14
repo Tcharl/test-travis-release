@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DomainUserDetailsService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jhipster Sample Application</a> &gt; <a href="index.source.html" class="el_package">io.github.jhipster.sample.security</a> &gt; <span class="el_source">DomainUserDetailsService.java</span></div><h1>DomainUserDetailsService.java</h1><pre class="source lang-java linenums">package io.github.jhipster.sample.security;
 
+/*-
+ * #%L
+ * Jhipster Sample Application
+ * %%
+ * Copyright (C) 2017 Osgiliath
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
 import io.github.jhipster.sample.domain.User;
 import io.github.jhipster.sample.repository.UserRepository;
 import org.slf4j.Logger;
@@ -21,31 +41,31 @@ import java.util.stream.Collectors;
 @Component(&quot;userDetailsService&quot;)
 public class DomainUserDetailsService implements UserDetailsService {
 
-<span class="fc" id="L24">    private final Logger log = LoggerFactory.getLogger(DomainUserDetailsService.class);</span>
+<span class="fc" id="L44">    private final Logger log = LoggerFactory.getLogger(DomainUserDetailsService.class);</span>
 
     private final UserRepository userRepository;
 
-<span class="fc" id="L28">    public DomainUserDetailsService(UserRepository userRepository) {</span>
-<span class="fc" id="L29">        this.userRepository = userRepository;</span>
-<span class="fc" id="L30">    }</span>
+<span class="fc" id="L48">    public DomainUserDetailsService(UserRepository userRepository) {</span>
+<span class="fc" id="L49">        this.userRepository = userRepository;</span>
+<span class="fc" id="L50">    }</span>
 
     @Override
     @Transactional
     public UserDetails loadUserByUsername(final String login) {
-<span class="fc" id="L35">        log.debug(&quot;Authenticating {}&quot;, login);</span>
-<span class="fc" id="L36">        String lowercaseLogin = login.toLowerCase(Locale.ENGLISH);</span>
-<span class="fc" id="L37">        Optional&lt;User&gt; userFromDatabase = userRepository.findOneWithAuthoritiesByLogin(lowercaseLogin);</span>
-<span class="fc" id="L38">        return userFromDatabase.map(user -&gt; {</span>
-<span class="pc bpc" id="L39" title="1 of 2 branches missed.">            if (!user.getActivated()) {</span>
-<span class="nc" id="L40">                throw new UserNotActivatedException(&quot;User &quot; + lowercaseLogin + &quot; was not activated&quot;);</span>
+<span class="fc" id="L55">        log.debug(&quot;Authenticating {}&quot;, login);</span>
+<span class="fc" id="L56">        String lowercaseLogin = login.toLowerCase(Locale.ENGLISH);</span>
+<span class="fc" id="L57">        Optional&lt;User&gt; userFromDatabase = userRepository.findOneWithAuthoritiesByLogin(lowercaseLogin);</span>
+<span class="fc" id="L58">        return userFromDatabase.map(user -&gt; {</span>
+<span class="pc bpc" id="L59" title="1 of 2 branches missed.">            if (!user.getActivated()) {</span>
+<span class="nc" id="L60">                throw new UserNotActivatedException(&quot;User &quot; + lowercaseLogin + &quot; was not activated&quot;);</span>
             }
-<span class="fc" id="L42">            List&lt;GrantedAuthority&gt; grantedAuthorities = user.getAuthorities().stream()</span>
-<span class="pc" id="L43">                .map(authority -&gt; new SimpleGrantedAuthority(authority.getName()))</span>
-<span class="fc" id="L44">                .collect(Collectors.toList());</span>
-<span class="fc" id="L45">            return new org.springframework.security.core.userdetails.User(lowercaseLogin,</span>
-<span class="fc" id="L46">                user.getPassword(),</span>
+<span class="fc" id="L62">            List&lt;GrantedAuthority&gt; grantedAuthorities = user.getAuthorities().stream()</span>
+<span class="pc" id="L63">                .map(authority -&gt; new SimpleGrantedAuthority(authority.getName()))</span>
+<span class="fc" id="L64">                .collect(Collectors.toList());</span>
+<span class="fc" id="L65">            return new org.springframework.security.core.userdetails.User(lowercaseLogin,</span>
+<span class="fc" id="L66">                user.getPassword(),</span>
                 grantedAuthorities);
-<span class="fc" id="L48">        }).orElseThrow(() -&gt; new UsernameNotFoundException(&quot;User &quot; + lowercaseLogin + &quot; was not found in the &quot; +</span>
+<span class="fc" id="L68">        }).orElseThrow(() -&gt; new UsernameNotFoundException(&quot;User &quot; + lowercaseLogin + &quot; was not found in the &quot; +</span>
         &quot;database&quot;));
     }
 }
