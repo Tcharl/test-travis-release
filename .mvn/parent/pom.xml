@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.osgiliath.jhipster.sample</groupId>
     <artifactId>jhipster-sample-application-parent</artifactId>
-    <version>0.0.23</version>
+    <version>0.0.24-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>jhipster-sample-application parent pom</name>
     <description>Parent project embedding the server side Jhipster Sample Application stuff</description>
@@ -14,7 +14,7 @@
         <connection>scm:git:git@github.com:Tcharl/test-travis-release.git</connection>
         <developerConnection>scm:git:git@github.com:Tcharl/test-travis-release.git</developerConnection>
         <url>https://github.com/Tcharl/test-travis-release</url>
-        <tag>jhipster-sample-application-parent-0.0.23</tag>
+        <tag>HEAD</tag>
     </scm>
 
 
